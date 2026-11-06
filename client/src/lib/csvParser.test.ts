@@ -565,13 +565,13 @@ describe('seeded dataset', () => {
   const stats = computeTrip(transactions);
 
   it('parses every row', () => {
-    expect(transactions).toHaveLength(929);
-    expect(stats.summary.transactionCount).toBe(928);
+    expect(transactions).toHaveLength(921);
+    expect(stats.summary.transactionCount).toBe(920);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.summary.grandTotal).toBeCloseTo(8822.01, 2);
-    expect(stats.summary.daysTracked).toBe(175);
+    expect(stats.summary.grandTotal).toBeCloseTo(8484.35, 2);
+    expect(stats.summary.daysTracked).toBe(169);
     expect(stats.cities.visitedCount).toBe(38);
   });
 
@@ -625,14 +625,14 @@ describe('seeded dataset', () => {
     expect(route).toEqual([...CITY_ROUTE]);
   });
 
-  it('keeps the date range', () => {
-    expect(stats.summary.dateRange).toEqual({ start: '2026-02-18', end: '2026-11-01' });
+  it('keeps the trip window', () => {
+    expect(stats.summary.dateRange).toEqual({ start: '2026-02-23', end: '2026-10-28' });
   });
 
   it('keeps the category breakdown', () => {
     expect(stats.categories.top?.category).toBe('Food');
-    expect(stats.categories.top?.total).toBeCloseTo(2515.14, 2);
-    expect(stats.categories.top?.count).toBe(475);
+    expect(stats.categories.top?.total).toBeCloseTo(2400.19, 2);
+    expect(stats.categories.top?.count).toBe(469);
     expect(stats.categories.accommodationTotal).toBeCloseTo(1823.58, 2);
     expect(stats.categories.transportTotal).toBeCloseTo(2339.52, 2);
   });
@@ -667,18 +667,20 @@ describe('seeded dataset', () => {
     ).toBeCloseTo(228.9, 1);
   });
 
-  it('keeps the Whitehaven income file intact', () => {
+  it('keeps the income file intact', () => {
     const incomeCsv = readFileSync(
       new URL('../../public/data/income.csv', import.meta.url),
       'utf8',
     );
     const entries = parseIncome(incomeCsv);
     const summary = summarizeIncome(entries);
-    expect(entries).toHaveLength(7);
-    expect(summary.totalUSD).toBeCloseTo(5680.58, 2);
+    expect(entries).toHaveLength(8);
+    expect(summary.totalUSD).toBeCloseTo(6296.94, 2);
     expect(summary.nativeTotals).toHaveLength(1);
     expect(summary.nativeTotals[0].currency).toBe('NZD');
-    expect(summary.nativeTotals[0].total).toBeCloseTo(9467.65, 2);
+    expect(summary.nativeTotals[0].total).toBeCloseTo(10494.92, 2);
+    expect(summary.sources).toHaveLength(2);
     expect(summary.sources[0].source).toBe('WHITEHAVEN WINE COMP');
+    expect(summary.sources[1].source).toBe('I.R.D. 148-135-460');
   });
 });

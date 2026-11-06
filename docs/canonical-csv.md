@@ -76,6 +76,13 @@ display layer formats dates; nothing re-parses a string it already owns.
 refunds and are excluded from every spend aggregate. No aggregate sums
 `Math.abs` over a mixed set.
 
+**Trip window.** The wrapped analyses 2026-02-23 (first New Zealand day)
+through 2026-10-28 (last South Korea day), inclusive. Rows outside that window
+are removed from the ledger during conversion and listed in
+[`excluded-spend.md`](./excluded-spend.md). Los Angeles stays the start and
+finish city because the route is the fixed travelled itinerary, not a function
+of spend dates.
+
 **Currency.** `Amount` stays native; `AmountUSD` is the normalized base amount.
 When the bank statement shows a USD amount, that is `AmountUSD` and `FXRate` is
 derived from it. Otherwise use a dated reference rate and record it.
@@ -130,7 +137,9 @@ When a statement is pasted into the conversation:
 4. Flag transfers between own accounts, credit-card payments, ATM withdrawals,
    refunds, and rows missing a city or country. These double-count silently.
 5. Do not write the canonical files until open questions are answered.
-6. Write the files, then record resolved merchant → category mappings in
+6. Trim rows outside the trip window and record them in
+   [`excluded-spend.md`](./excluded-spend.md).
+7. Write the files, then record resolved merchant → category mappings in
    [`merchant-categories.md`](./merchant-categories.md).
 
 ## Validation
