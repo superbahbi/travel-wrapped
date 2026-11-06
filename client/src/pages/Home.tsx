@@ -4,14 +4,14 @@
 // Dark canvas, vivid gradient cards, animated stats
 // ============================================================
 import { useState, useEffect, useCallback } from 'react';
-import { parseTransactions, computeTripStats, TripStats, formatDate, formatDateFull, getCategoryColor, getCityGradient, CATEGORY_COLORS, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
+import { parseTransactions, computeTripStats, TripStats, formatDate, formatDateFull, getCategoryColor, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
 import { getAchievements } from '@/lib/achievements';
-import { WrappedCard, StatNumber, CategoryPill, ProgressBar, GlassPanel } from '@/components/WrappedCard';
+import { WrappedCard, CategoryPill, ProgressBar, GlassPanel } from '@/components/WrappedCard';
 import { AchievementsCard } from '@/components/Achievements';
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
-import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap, Award, DollarSign, ArrowRight, RefreshCw } from 'lucide-react';
+import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap, Award, DollarSign, ArrowRight } from 'lucide-react';
 
 const HERO_BG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/hero-bg-ZsqqDYb5LYENCn3sc2jL3g.webp';
 const LOGO = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/logo-yuan-6cy4BnEm6t85zTyUz2wrCC.webp';
@@ -22,7 +22,6 @@ const TRANSACTIONS_CSV_URL = '/data/transactions.csv';
 export default function Home() {
   const [stats, setStats] = useState<TripStats | null>(null);
   const [accommodations, setAccommodations] = useState<AccommodationEntry[]>([]);
-  const [csvFilename, setCsvFilename] = useState<string>('');
   const [loadStatus, setLoadStatus] = useState<'idle' | 'loaded' | 'error'>('idle');
   const [autoLoaded, setAutoLoaded] = useState(false);
   const [currency, setCurrency] = useState<'cny' | 'usd'>('usd');
@@ -36,7 +35,7 @@ export default function Home() {
     return currency === 'usd' ? Math.abs(usd) : Math.abs(cny);
   };
 
-  const processCSV = useCallback((text: string, filename: string) => {
+  const processCSV = useCallback((text: string) => {
     console.log('Processing CSV, text length:', text.length);
     const txns = parseTransactions(text);
     console.log('Parsed transactions:', txns.length);
@@ -48,7 +47,6 @@ export default function Home() {
     const computed = computeTripStats(txns);
     console.log('Computed stats:', computed);
     setStats(computed);
-    setCsvFilename(filename);
     setLoadStatus('loaded');
   }, []);
 
@@ -66,7 +64,7 @@ export default function Home() {
       .then(text => {
         console.log('CSV loaded, size:', text.length);
         if (!text || text.trim().length === 0) throw new Error('Empty CSV');
-        processCSV(text, 'transactions.csv');
+        processCSV(text);
       })
       .catch(err => {
         console.error('Failed to load CSV:', err);

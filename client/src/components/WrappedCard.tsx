@@ -4,7 +4,6 @@
 // ============================================================
 import { cn } from '@/lib/utils';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { useCountUp } from '@/hooks/useCountUp';
 
 interface WrappedCardProps {
   gradient: string;
@@ -27,25 +26,6 @@ export function WrappedCard({ gradient, children, className, delay = 0 }: Wrappe
     >
       {children}
     </div>
-  );
-}
-
-// Animated stat number
-interface StatNumberProps {
-  value: number;
-  prefix?: string;
-  suffix?: string;
-  decimals?: number;
-  active?: boolean;
-  className?: string;
-}
-
-export function StatNumber({ value, prefix = '', suffix = '', decimals = 0, active = true, className }: StatNumberProps) {
-  const display = useCountUp(value, 1200, active, decimals);
-  return (
-    <span className={cn('stat-number', className)}>
-      {prefix}{display}{suffix}
-    </span>
   );
 }
 
