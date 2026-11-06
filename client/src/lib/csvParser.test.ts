@@ -3,8 +3,10 @@ import { describe, expect, it } from 'vitest';
 import {
   CanonicalCsvError,
   computeTrip,
+  isLayover,
   parseAccommodations,
   parseTransactions,
+  type Transaction,
 } from './csvParser';
 
 const TRANSACTION_HEADER =
@@ -308,6 +310,69 @@ describe('layover cities', () => {
     expect(stats.cities.visitedCount).toBe(1);
     expect(stats.cities.items.map((city) => city.city)).toEqual(['Bali']);
     expect(stats.days.items[0].cities).toEqual(['Bali']);
+  });
+});
+
+describe('layover note matching', () => {
+  const candidate = (notes: string): Transaction => ({
+    id: 0,
+    date: '2026-05-13',
+    time: null,
+    merchant: 'MCDONALDS BRIS AIRP',
+    amount: -11.36,
+    currency: 'USD',
+    amountUSD: -11.36,
+    fxRate: 1,
+    fxDate: '2026-05-13',
+    category: 'Food',
+    payment: 'Chase 1388',
+    city: 'Brisbane',
+    country: 'Australia',
+    notes,
+  });
+
+  it.each([
+    'Layover Sydney → Bali',
+    '  Layover Sydney → Bali  ',
+    'layover sydney → bali',
+    'LAYOVER SYDNEY → BALI',
+    'Layover',
+    'Chase 1388: MCDONALDS BRIS AIRP | Layover Sydney → Bali',
+    'Chase 1388: MCDONALDS BRIS AIRP |layover sydney → bali',
+  ])('treats %j as a layover', (notes) => {
+    expect(isLayover(candidate(notes))).toBe(true);
+  });
+
+  it.each([
+    '',
+    'no layover',
+    'Layovers',
+    'layover-free',
+    'Chase 1388: MCDONALDS BRIS AIRP',
+    'arrived after a layover',
+    'Chase 1388: MCDONALDS BRIS AIRP | no layover',
+    'Chase 1388: MCDONALDS BRIS AIRP | Layovers',
+    'Chase 1388: MCDONALDS BRIS AIRP | layover-free',
+  ])('does not treat %j as a layover', (notes) => {
+    expect(isLayover(candidate(notes))).toBe(false);
+  });
+});
+
+describe('layover notes only in the opening word', () => {
+  const csv = [
+    TRANSACTION_HEADER,
+    '2026-05-13 09:00:00,Brisbane Food,-11.36,USD,-11.36,1.0000,2026-05-13,Food,Chase 1388,Brisbane,Australia,no layover',
+    '2026-05-13 12:00:00,Bali Food,-10.00,USD,-10.00,1.0000,2026-05-13,Food,Chase 1388,Bali,Indonesia,',
+  ].join('\n');
+  const stats = computeTrip(parseTransactions(csv));
+
+  it('keeps the city when a note merely mentions a layover', () => {
+    expect(stats.summary.grandTotal).toBeCloseTo(21.36, 2);
+    expect(stats.cities.visitedCount).toBe(2);
+    expect(stats.cities.items.map((city) => city.city)).toEqual([
+      'Brisbane',
+      'Bali',
+    ]);
   });
 });
 

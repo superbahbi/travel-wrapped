@@ -149,10 +149,20 @@ const GENERIC_CITIES = new Set(['china', 'unknown', '']);
 export const isGenericCity = (city: string) =>
   GENERIC_CITIES.has((city || '').trim().toLowerCase());
 
-/** A transit purchase: its spend counts, but the city is not a visit. */
-const LAYOVER_PATTERN = /\blayover\b/i;
+/**
+ * A transit purchase: its spend counts, but the city is not a visit.
+ *
+ * Notes are free bank text, so the marker must be the opening word of the
+ * note or of a `|`-separated annotation segment—not a substring anywhere.
+ * The bank appends annotations after `|` (`Chase 1388: … | Layover Sydney →
+ * Bali`). Segments are trimmed and matched case-insensitively; `no layover`,
+ * `Layovers`, and `layover-free` are therefore not layovers.
+ */
+const LAYOVER_PATTERN = /^layover(?=\s|$)/i;
 export const isLayover = (transaction: Transaction) =>
-  LAYOVER_PATTERN.test(transaction.notes);
+  transaction.notes
+    .split('|')
+    .some((segment) => LAYOVER_PATTERN.test(segment.trim()));
 
 // Category color palette — Spotify Wrapped style
 const CATEGORY_COLORS: Record<string, string> = {
