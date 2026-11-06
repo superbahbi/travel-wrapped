@@ -12,6 +12,7 @@ and rejects anything that drifts from the documented shape.
 
 | Column      | Type                | Required | Notes                                              |
 | ----------- | ------------------- | -------- | -------------------------------------------------- |
+| `Line`      | integer             | no       | 1-based data-row number, for referencing a row     |
 | `Date`      | `YYYY-MM-DD HH:mm:ss` | yes    | `00:00:00` means the source had no time            |
 | `Merchant`  | text                | yes      | Quoted when it contains a comma                    |
 | `Amount`    | signed number       | yes      | Native currency; negative is spend, positive refund |
@@ -28,9 +29,13 @@ and rejects anything that drifts from the documented shape.
 Example row:
 
 ```csv
-Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes
-2026-06-08 00:00:00,Dengba Hostel,-60.10,CNY,-8.89,6.7593,2026-06-08,Accommodation,Other,Shenzhen,China,1 night Jun 8
+Line,Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes
+1,2026-06-08 00:00:00,Dengba Hostel,-60.10,CNY,-8.89,6.7593,2026-06-08,Accommodation,Other,Shenzhen,China,1 night Jun 8
 ```
+
+`Line` numbers the data rows 1..N in file order; the header row is not counted.
+It is a reference aid, not a stable identity: it shifts when rows are added or
+removed.
 
 ## `accommodation.csv`
 
