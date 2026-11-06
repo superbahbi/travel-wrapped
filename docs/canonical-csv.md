@@ -72,8 +72,10 @@ none of these, and only after confirming it in the question batch.
 bucket. They are excluded from city stats and counted in `tripWideTotal`.
 
 **Layover.** A row whose `Notes` contains `Layover` is a transit purchase. Its
-city is excluded from city stats and the city route, while the spend still
-counts in totals and categories.
+city is excluded from city stats, the city route, and the accommodation-city
+count. Its spend is attributed to `tripWideTotal` — the same bucket as a generic
+city — so every expense lands in exactly one place while still counting in
+`grandTotal` and the category totals.
 
 ## Conversion workflow
 

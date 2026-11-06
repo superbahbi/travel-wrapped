@@ -5,7 +5,7 @@ import type {
   TripSeries,
   TripSummary,
 } from './csvParser';
-import { isGenericCity } from './csvParser';
+import { isCountedCity } from './csvParser';
 import { hourOfTime, weekdayIndex } from './tripDate';
 
 const BADGE_BASE =
@@ -64,8 +64,8 @@ function buildFacts(
     accommodationCities: new Set(
       spend
         .filter((t) => t.category === 'Accommodation')
-        .map((t) => t.city)
-        .filter((city) => !isGenericCity(city)),
+        .filter(isCountedCity)
+        .map((t) => t.city),
     ).size,
     foodTotal: series.categories.foodTotal,
     activitiesTotal: categoryTotal(series.categories, 'Activities'),
