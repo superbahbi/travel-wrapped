@@ -97,8 +97,8 @@ describe('buildJourneyView', () => {
     ]);
   });
 
-  it('builds the city route in visit order', () => {
-    expect(view.route.cityOrder).toEqual(['Chengdu', 'Lijiang']);
+  it('orders the city route by the travelled itinerary', () => {
+    expect(view.route.cityOrder).toEqual(['Lijiang', 'Chengdu']);
   });
 
   it('accumulates the running total', () => {

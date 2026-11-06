@@ -4,6 +4,7 @@ import type {
   Transaction,
   TripSeries,
 } from './csvParser';
+import { buildCityRoute } from './city';
 
 export interface SpendRow {
   id: number;
@@ -114,11 +115,9 @@ export function buildJourneyView(
     return { date: day.date, running, daily: day.total };
   });
 
-  const cityOrder: string[] = [];
-  series.days.items.forEach((day) => {
-    const city = day.cities[0];
-    if (city && !cityOrder.includes(city)) cityOrder.push(city);
-  });
+  const cityOrder = buildCityRoute(
+    series.days.items.flatMap((day) => day.cities),
+  );
 
   const grandTotal = series.summary.grandTotal;
   const payments = Object.entries(series.summary.paymentMethods)
