@@ -1,50 +1,95 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
+  CanonicalCsvError,
   computeTripStats,
   parseAccommodations,
   parseTransactions,
 } from './csvParser';
 
 const TRANSACTION_HEADER =
-  '#,"Date","Merchant","CNY","USD","Category","Payment","City","Expense Type","Notes"';
+  'Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes';
 
 const TRANSACTION_FIXTURE = [
   TRANSACTION_HEADER,
-  '1,"2026-06-08 09:30:00","Cafe, Central",-28.00,-4.00,"Food","Alipay","Chengdu","Core","breakfast"',
-  '2,"2026-06-08 21:30:00","Metro",-7.00,-1.00,"Transport","WeChat","Chengdu","Core",""',
-  '3,"2026-06-09 12:00:00","Hostel",-200.00,-28.57,"Accommodation","Other","Lijiang","Core","2 nights"',
-  '4,"2026-06-09 12:00:00","Refund",20.00,2.86,"Accommodation","Other","Lijiang","Irregular","refund"',
-  '5,"not-a-date","Broken",-1,-1,"Food","Other","China","Core",""',
-  '6,"2026-06-10 18:00:00","Train 12306",-300.00,-42.86,"Intercity Transport","Alipay","China","Core",""',
+  '2026-06-08 09:30:00,"Cafe, Central",-28.00,CNY,-4.00,7.0000,2026-06-08,Food,Alipay,Chengdu,China,breakfast',
+  '2026-06-08 21:30:00,Metro,-7.00,CNY,-1.00,7.0000,2026-06-08,Transport,WeChat,Chengdu,China,',
+  '2026-06-09 12:00:00,Hostel,-200.00,CNY,-28.57,7.0000,2026-06-09,Accommodation,Other,Lijiang,China,2 nights',
+  '2026-06-09 12:00:00,Refund,20.00,CNY,2.86,7.0000,2026-06-09,Accommodation,Other,Lijiang,China,refund',
+  '2026-06-10 18:00:00,Train 12306,-300.00,CNY,-42.86,7.0000,2026-06-10,Intercity Transport,Alipay,China,China,',
 ].join('\n');
 
 const ACCOMMODATION_FIXTURE = [
-  '"Date","Amount (CNY)","City","Merchant","Notes"',
-  '"2026-06-08 12:00:00",60.10,"Shenzhen","Dengba Hostel","1 night (line 2)"',
-  '"2026-06-09",58.67,"Shenzhen","Dengba Hostel","line 3 (night 1 of 3)"',
+  'Date,Merchant,City,Country,Amount,Currency,AmountUSD,FXRate,FXDate,Notes',
+  '2026-06-08,Dengba Hostel,Shenzhen,China,60.10,CNY,8.347222,7.2000,2026-06-08,1 night',
+  '2026-06-09,Dengba Hostel,Shenzhen,China,58.67,CNY,8.148611,7.2000,2026-06-09,night 2',
 ].join('\n');
 
 describe('parseTransactions', () => {
   it('reads columns by header name and keeps quoted commas', () => {
     const [first] = parseTransactions(TRANSACTION_FIXTURE);
     expect(first.merchant).toBe('Cafe, Central');
-    expect(first.cny).toBe(-28);
-    expect(first.usd).toBe(-4);
-    expect(first.category).toBe('Food');
+    expect(first.amount).toBe(-28);
+    expect(first.currency).toBe('CNY');
+    expect(first.amountUSD).toBe(-4);
+    expect(first.fxRate).toBe(7);
+    expect(first.fxDate).toBe('2026-06-08');
+    expect(first.country).toBe('China');
   });
 
-  it('drops the time from the date', () => {
+  it('splits the timestamp into date and time', () => {
     const [first] = parseTransactions(TRANSACTION_FIXTURE);
     expect(first.date).toBe('2026-06-08');
+    expect(first.time).toBe('09:30:00');
   });
 
-  it('filters rows whose date is not YYYY-MM-DD', () => {
-    expect(parseTransactions(TRANSACTION_FIXTURE)).toHaveLength(5);
+  it('treats midnight as an unknown time', () => {
+    const [first] = parseTransactions(
+      [
+        TRANSACTION_HEADER,
+        '2026-06-08 00:00:00,Hostel,-100.00,CNY,-14.29,7.0000,2026-06-08,Accommodation,Other,Lijiang,China,',
+      ].join('\n'),
+    );
+    expect(first.date).toBe('2026-06-08');
+    expect(first.time).toBeNull();
   });
 
-  it('returns nothing for a header-only file', () => {
+  it('returns nothing for an empty or header-only file', () => {
+    expect(parseTransactions('')).toHaveLength(0);
     expect(parseTransactions(TRANSACTION_HEADER)).toHaveLength(0);
+  });
+});
+
+describe('canonical schema validation', () => {
+  it('rejects a missing column', () => {
+    const csv = TRANSACTION_FIXTURE.replace(',Country', '');
+    expect(() => parseTransactions(csv)).toThrow(CanonicalCsvError);
+    expect(() => parseTransactions(csv)).toThrow(
+      /missing required columns: Country/,
+    );
+  });
+
+  it('rejects a malformed date and names the row', () => {
+    const csv = TRANSACTION_FIXTURE.replace(
+      '2026-06-08 09:30:00',
+      '08/06/2026',
+    );
+    expect(() => parseTransactions(csv)).toThrow(/Row 2: Date must be/);
+  });
+
+  it('rejects a malformed currency', () => {
+    const csv = TRANSACTION_FIXTURE.replace(',CNY,', ',EURO,');
+    expect(() => parseTransactions(csv)).toThrow(/Currency must be/);
+  });
+
+  it('rejects a non-numeric amount', () => {
+    const csv = TRANSACTION_FIXTURE.replace(',-28.00,CNY', ',abc,CNY');
+    expect(() => parseTransactions(csv)).toThrow(/Amount must be a number/);
+  });
+
+  it('rejects a malformed FX date', () => {
+    const csv = TRANSACTION_FIXTURE.replace(',2026-06-08,Food', ',06/08,Food');
+    expect(() => parseTransactions(csv)).toThrow(/FXDate must be/);
   });
 });
 
@@ -82,7 +127,10 @@ describe('computeTripStats', () => {
 
   it('excludes generic cities from city stats', () => {
     expect(stats.citiesVisited).toBe(2);
-    expect(stats.cityStats.map((city) => city.city)).toEqual(['Lijiang', 'Chengdu']);
+    expect(stats.cityStats.map((city) => city.city)).toEqual([
+      'Lijiang',
+      'Chengdu',
+    ]);
   });
 
   it('sorts city stats by total, descending, after picking the most visited', () => {
@@ -120,12 +168,14 @@ describe('computeTripStats', () => {
 });
 
 describe('parseAccommodations', () => {
-  it('reads the per-night file and converts with its fixed rate', () => {
+  it('reads the canonical per-night file', () => {
     const entries = parseAccommodations(ACCOMMODATION_FIXTURE);
     expect(entries).toHaveLength(2);
     expect(entries[0].date).toBe('2026-06-08');
-    expect(entries[0].amountCNY).toBeCloseTo(60.1, 2);
-    expect(entries[0].amountUSD).toBeCloseTo(60.1 / 7.2, 2);
+    expect(entries[0].amount).toBeCloseTo(60.1, 2);
+    expect(entries[0].amountUSD).toBeCloseTo(8.347222, 4);
+    expect(entries[0].currency).toBe('CNY');
+    expect(entries[0].country).toBe('China');
   });
 });
 
@@ -169,7 +219,7 @@ describe('seeded dataset', () => {
     expect(stats.topMerchant?.name).toBe('Fast Food');
     expect(stats.topMerchant?.count).toBe(13);
     expect(stats.biggestPurchase?.merchant).toBe('Railway 12306');
-    expect(Math.abs(stats.biggestPurchase?.usd ?? 0)).toBeCloseTo(62.4, 2);
+    expect(Math.abs(stats.biggestPurchase?.amountUSD ?? 0)).toBeCloseTo(62.4, 2);
   });
 
   it('keeps the day highlights', () => {
@@ -186,9 +236,12 @@ describe('seeded dataset', () => {
     );
     const entries = parseAccommodations(accommodationCsv);
     expect(entries).toHaveLength(38);
-    expect(entries.reduce((sum, entry) => sum + entry.amountCNY, 0)).toBeCloseTo(
+    expect(entries.reduce((sum, entry) => sum + entry.amount, 0)).toBeCloseTo(
       1648.11,
       2,
     );
+    expect(
+      entries.reduce((sum, entry) => sum + entry.amountUSD, 0),
+    ).toBeCloseTo(228.9, 1);
   });
 });

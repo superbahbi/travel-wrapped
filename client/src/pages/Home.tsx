@@ -27,8 +27,8 @@ export default function Home() {
   const [autoLoaded, setAutoLoaded] = useState(false);
   const [currency, setCurrency] = useState<'cny' | 'usd'>('usd');
 
-  const formatCurrency = (usd: number, cny: number, showBoth = false) => {
-    const absUsd = Math.abs(usd);
+  const formatCurrency = (amountUSD: number) => {
+    const absUsd = Math.abs(amountUSD);
     return `$${absUsd.toFixed(2)}`;
   };
 
@@ -182,7 +182,7 @@ export default function Home() {
                 <div className="text-sm font-semibold tracking-widest uppercase opacity-70 mb-2">I've spent</div>
                 <div className="flex items-end gap-3 mb-1">
                   <div className="text-7xl sm:text-8xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                    {formatCurrency(stats.grandTotal, stats.grandTotalCNY)}
+                    {formatCurrency(stats.grandTotal)}
                   </div>
                 </div>
                 <div className="text-white/70 text-lg mb-6">
@@ -398,8 +398,8 @@ export default function Home() {
                 </div>
                 <div className="space-y-2">
                   {stats.transactions
-                    .filter(t => t.category === 'Accommodation' && t.usd < 0)
-                    .sort((a, b) => Math.abs(b.usd) - Math.abs(a.usd))
+                    .filter(t => t.category === 'Accommodation' && t.amountUSD < 0)
+                    .sort((a, b) => Math.abs(b.amountUSD) - Math.abs(a.amountUSD))
                     .slice(0, 5)
                     .map((t, i) => (
                       <div key={i} className="flex justify-between items-center py-2 border-b border-white/10">
@@ -407,7 +407,7 @@ export default function Home() {
                           <div className="text-sm font-semibold">{t.merchant}</div>
                           <div className="text-xs text-white/50">{t.city} · {formatDate(t.date)}</div>
                         </div>
-                        <div className="mono text-sm font-bold">{currency === "usd" ? `$${Math.abs(t.usd).toFixed(2)}` : `¥${Math.abs(t.cny).toFixed(0)}`}</div>
+                        <div className="mono text-sm font-bold">{currency === "usd" ? `$${Math.abs(t.amountUSD).toFixed(2)}` : `¥${Math.abs(t.amount).toFixed(0)}`}</div>
                       </div>
                     ))}
                 </div>
@@ -453,7 +453,7 @@ export default function Home() {
                     <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Biggest splurge</div>
                   </div>
                   <div className="text-7xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif', color: '#1a1a1a' }}>
-                    {currency === 'usd' ? '$' : '¥'}{Math.abs(stats.biggestPurchase.usd).toFixed(0)}
+                    {currency === 'usd' ? '$' : '¥'}{Math.abs(stats.biggestPurchase.amountUSD).toFixed(0)}
                   </div>
                   <div className="text-black/60 text-lg mb-4">
                     <span className="font-bold text-black">{stats.biggestPurchase.merchant}</span>
@@ -533,8 +533,8 @@ export default function Home() {
                   </div>
                   <div className="space-y-2">
                     {stats.transactions
-                      .filter(t => t.category === 'Activities' && t.usd < 0)
-                      .sort((a, b) => Math.abs(b.usd) - Math.abs(a.usd))
+                      .filter(t => t.category === 'Activities' && t.amountUSD < 0)
+                      .sort((a, b) => Math.abs(b.amountUSD) - Math.abs(a.amountUSD))
                       .slice(0, 5)
                       .map((t, i) => (
                         <div key={i} className="flex justify-between items-center py-2 border-b border-white/10">
@@ -542,7 +542,7 @@ export default function Home() {
                             <div className="text-sm font-semibold">{t.merchant}</div>
                             <div className="text-xs text-white/50">{t.city} · {formatDate(t.date)}</div>
                           </div>
-                          <div className="mono text-sm font-bold">{currency === 'usd' ? '$' : '¥'}{Math.abs(t.usd).toFixed(2)}</div>
+                          <div className="mono text-sm font-bold">{currency === 'usd' ? '$' : '¥'}{Math.abs(t.amountUSD).toFixed(2)}</div>
                         </div>
                       ))}
                   </div>
@@ -807,13 +807,13 @@ function DailyLogCard({ stats, currency }: { stats: TripStats; currency: 'cny' |
             </button>
             {expanded === day.date && (
               <div className="px-6 py-3 space-y-2 bg-white/2 border-t border-white/5">
-                {day.transactions.filter(t => t.usd < 0).map((t, i) => (
+                {day.transactions.filter(t => t.amountUSD < 0).map((t, i) => (
                   <div key={i} className="flex justify-between items-start py-2 hover:bg-white/5 px-2 rounded transition-colors">
                     <div className="flex-1 min-w-0">
                       <div className="text-sm text-white/90 font-medium truncate">{t.merchant}</div>
                       <div className="text-xs text-white/40 mt-0.5">{t.category}</div>
                     </div>
-                    <span className="mono text-sm text-white/70 font-semibold ml-3 flex-shrink-0">{currency === "usd" ? `$${Math.abs(t.usd).toFixed(2)}` : `¥${Math.abs(t.cny).toFixed(0)}`}</span>
+                    <span className="mono text-sm text-white/70 font-semibold ml-3 flex-shrink-0">{currency === "usd" ? `$${Math.abs(t.amountUSD).toFixed(2)}` : `¥${Math.abs(t.amount).toFixed(0)}`}</span>
                   </div>
                 ))}
               </div>

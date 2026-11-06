@@ -70,7 +70,7 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
   // Food Lover - spent >30% on food
   const foodTotal = transactions
     .filter(t => t.category === 'Food')
-    .reduce((sum, t) => sum + Math.abs(t.usd), 0);
+    .reduce((sum, t) => sum + Math.abs(t.amountUSD), 0);
   const foodPercentage = stats.grandTotal > 0 ? (foodTotal / stats.grandTotal) * 100 : 0;
   achievements.push({
     id: 'food-lover',
@@ -171,7 +171,7 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
     .filter(t => t.merchant?.toLowerCase().includes('noodle') || 
                  t.merchant?.toLowerCase().includes('ramen') ||
                  t.merchant?.toLowerCase().includes('pho'))
-    .reduce((sum, t) => sum + Math.abs(t.usd), 0);
+    .reduce((sum, t) => sum + Math.abs(t.amountUSD), 0);
   achievements.push({
     id: 'noodle-master',
     name: 'Noodle Master',
@@ -199,7 +199,7 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
   // Spender Supreme - spent $500+ on food
   const foodTotalSpender = transactions
     .filter(t => t.category === 'Food')
-    .reduce((sum, t) => sum + Math.abs(t.usd), 0);
+    .reduce((sum, t) => sum + Math.abs(t.amountUSD), 0);
   achievements.push({
     id: 'spender-supreme',
     name: 'Spender Supreme',
@@ -222,7 +222,7 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
   // Activity Seeker - spent $100+ on activities
   const activitiesTotal = transactions
     .filter(t => t.category === 'Activities')
-    .reduce((sum, t) => sum + Math.abs(t.usd), 0);
+    .reduce((sum, t) => sum + Math.abs(t.amountUSD), 0);
   achievements.push({
     id: 'activity-seeker',
     name: 'Activity Seeker',

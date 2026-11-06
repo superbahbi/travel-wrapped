@@ -19,8 +19,8 @@ function generateDayHighlights(dayStats: any[]): DayHighlight[] {
   return dayStats.map(day => {
     const categoryStats = new Map<string, number>();
     day.transactions.forEach((t: any) => {
-      if (t.usd < 0) {
-        categoryStats.set(t.category, (categoryStats.get(t.category) || 0) + Math.abs(t.usd));
+      if (t.amountUSD < 0) {
+        categoryStats.set(t.category, (categoryStats.get(t.category) || 0) + Math.abs(t.amountUSD));
       }
     });
     
@@ -48,7 +48,7 @@ function generateDayHighlights(dayStats: any[]): DayHighlight[] {
       topCategory: topCategory ? topCategory[0] : 'Other',
       topCategoryAmount,
       cities: day.cities,
-      transactionCount: day.transactions.filter((t: any) => t.usd < 0).length,
+      transactionCount: day.transactions.filter((t: any) => t.amountUSD < 0).length,
       highlight
     };
   });
