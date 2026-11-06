@@ -1,4 +1,6 @@
 // Achievement detection helper
+import { hourOfTime, weekdayIndex } from './tripDate';
+
 export interface Achievement {
   id: string;
   name: string;
@@ -115,9 +117,9 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
   });
 
   // Early Bird - made purchases before 8am
-  const earlyBirdCount = transactions.filter(t => {
-    const hour = new Date(t.date).getHours();
-    return hour < 8 && hour >= 0;
+  const earlyBirdCount = transactions.filter((t) => {
+    const hour = hourOfTime(t.time);
+    return hour !== null && hour < 8;
   }).length;
   achievements.push({
     id: 'early-bird',
@@ -129,9 +131,9 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
   });
 
   // Night Owl - made purchases after 10pm
-  const nightOwlCount = transactions.filter(t => {
-    const hour = new Date(t.date).getHours();
-    return hour >= 22;
+  const nightOwlCount = transactions.filter((t) => {
+    const hour = hourOfTime(t.time);
+    return hour !== null && hour >= 22;
   }).length;
   achievements.push({
     id: 'night-owl',
@@ -153,8 +155,8 @@ export function getAchievements(transactions: any[], stats: any): Achievement[] 
   });
 
   // Weekend Warrior - made 10+ purchases on weekends
-  const weekendCount = transactions.filter(t => {
-    const day = new Date(t.date).getDay();
+  const weekendCount = transactions.filter((t) => {
+    const day = weekdayIndex(t.date);
     return day === 0 || day === 6; // Sunday or Saturday
   }).length;
   achievements.push({

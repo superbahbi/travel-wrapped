@@ -4,7 +4,8 @@
 // Dark canvas, vivid gradient cards, animated stats
 // ============================================================
 import { useState, useEffect, useCallback } from 'react';
-import { parseTransactions, computeTrip, TripSeries, Transaction, formatDate, formatDateFull, getCategoryColor, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
+import { parseTransactions, computeTrip, TripSeries, Transaction, getCategoryColor, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
+import { formatFullDate, formatShortDate } from '@/lib/tripDate';
 import { formatUSD } from '@/lib/money';
 import { getAchievements } from '@/lib/achievements';
 import { WrappedCard, CategoryPill, ProgressBar, GlassPanel } from '@/components/WrappedCard';
@@ -206,10 +207,10 @@ export default function Home() {
                   {formatUSD(stats.days.mostExpensive?.total, 0)} peak
                 </div>
                 <div className="text-white/50 text-sm mb-6">
-                  on {formatDate(stats.days.mostExpensive?.date || '')} · my biggest spending day
+                  on {formatShortDate(stats.days.mostExpensive?.date || '')} · my biggest spending day
                 </div>
                 <ResponsiveContainer width="100%" height={200}>
-                  <AreaChart data={stats.days.items.map(d => ({ date: formatDate(d.date), total: d.total, city: d.cities[0] || 'Trip' }))}>
+                  <AreaChart data={stats.days.items.map(d => ({ date: formatShortDate(d.date), total: d.total, city: d.cities[0] || 'Trip' }))}>
                     <defs>
                       <linearGradient id="burnGrad" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#FF6B6B" stopOpacity={0.4} />
@@ -226,7 +227,7 @@ export default function Home() {
                   </AreaChart>
                 </ResponsiveContainer>
                 <div className="flex items-center justify-between mt-4 text-sm">
-                  <span className="text-white/50">Lightest day: <span className="text-white font-semibold">{formatUSD(stats.days.cheapest?.total, 2)}</span> on {formatDate(stats.days.cheapest?.date || '')}</span>
+                  <span className="text-white/50">Lightest day: <span className="text-white font-semibold">{formatUSD(stats.days.cheapest?.total, 2)}</span> on {formatShortDate(stats.days.cheapest?.date || '')}</span>
                 </div>
               </div>
             </WrappedCard>
@@ -393,7 +394,7 @@ export default function Home() {
                       <div key={i} className="flex justify-between items-center py-2 border-b border-white/10">
                         <div>
                           <div className="text-sm font-semibold">{t.merchant}</div>
-                          <div className="text-xs text-white/50">{t.city} · {formatDate(t.date)}</div>
+                          <div className="text-xs text-white/50">{t.city} · {formatShortDate(t.date)}</div>
                         </div>
                         <div className="mono text-sm font-bold">{formatUSD(t.amountUSD)}</div>
                       </div>
@@ -449,7 +450,7 @@ export default function Home() {
                   <div className="flex gap-2 flex-wrap">
                     <CategoryPill label={stats.summary.biggestPurchase.category} color="#1a1a1a" />
                     <CategoryPill label={stats.summary.biggestPurchase.city} color="#1a1a1a" />
-                    <CategoryPill label={formatDate(stats.summary.biggestPurchase.date)} color="#1a1a1a" />
+                    <CategoryPill label={formatShortDate(stats.summary.biggestPurchase.date)} color="#1a1a1a" />
                   </div>
                 </div>
               </WrappedCard>
@@ -528,7 +529,7 @@ export default function Home() {
                         <div key={i} className="flex justify-between items-center py-2 border-b border-white/10">
                           <div>
                             <div className="text-sm font-semibold">{t.merchant}</div>
-                            <div className="text-xs text-white/50">{t.city} · {formatDate(t.date)}</div>
+                            <div className="text-xs text-white/50">{t.city} · {formatShortDate(t.date)}</div>
                           </div>
                           <div className="mono text-sm font-bold">{formatUSD(Math.abs(t.amountUSD), 2)}</div>
                         </div>
@@ -562,7 +563,7 @@ export default function Home() {
                 gradient="linear-gradient(135deg, #8360c3 0%, #2ebf91 100%)"
                 label="Cheapest Day"
                 value={`${formatUSD(stats.days.cheapest?.total, 2)}`}
-                sub={formatDate(stats.days.cheapest?.date || '')}
+                sub={formatShortDate(stats.days.cheapest?.date || '')}
                 delay={200}
               />
               <HighlightMiniCard
@@ -614,7 +615,7 @@ export default function Home() {
                       <div key={i} className="flex justify-between items-center py-2 border-b border-white/10">
                         <div>
                           <div className="text-sm font-medium text-white">{acc.merchant}</div>
-                          <div className="text-xs text-white/50">{formatDateFull(acc.date)} · {acc.city}</div>
+                          <div className="text-xs text-white/50">{formatFullDate(acc.date)} · {acc.city}</div>
                         </div>
                         <div className="text-sm mono font-bold text-white/80">{formatUSD(acc.amountUSD)}</div>
                       </div>
@@ -672,7 +673,7 @@ function PaceTrackerCard({ stats }: { stats: TripSeries }) {
   let running = 0;
   const runningData = stats.days.items.map(d => {
     running += d.total;
-    return { date: formatDate(d.date), running, daily: d.total };
+    return { date: formatShortDate(d.date), running, daily: d.total };
   });
 
   // Projected total if pace continues
@@ -781,7 +782,7 @@ function DailyLogCard({ stats }: { stats: TripSeries }) {
               onClick={() => setExpanded(expanded === day.date ? null : day.date)}
             >
               <div className="flex items-center gap-4 flex-1 min-w-0">
-                <span className="text-white/40 text-xs mono font-medium flex-shrink-0">{formatDateFull(day.date)}</span>
+                <span className="text-white/40 text-xs mono font-medium flex-shrink-0">{formatFullDate(day.date)}</span>
                 {day.cities.length > 0 && (
                   <span className="text-xs text-white/50 flex items-center gap-1 flex-shrink-0">
                     <MapPin className="w-3 h-3" />{day.cities.join(' → ')}

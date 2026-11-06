@@ -2,6 +2,8 @@
 // The canonical schema is documented in docs/canonical-csv.md.
 // ============================================================
 
+import { WEEKDAYS, daysBetween, weekdayIndex } from './tripDate';
+
 export interface Transaction {
   id: number;
   date: string; // YYYY-MM-DD
@@ -444,15 +446,14 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
     .filter((t) => isGenericCity(t.city))
     .reduce((s, t) => s + Math.abs(t.amountUSD), 0);
 
-  const weekdayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const weekdaySpend: Record<string, number> = {};
-  weekdayNames.forEach((day) => {
+  WEEKDAYS.forEach((day) => {
     weekdaySpend[day] = 0;
   });
   dayItems.forEach((day) => {
-    const date = new Date(day.date + 'T00:00:00');
-    if (!isNaN(date.getTime())) {
-      weekdaySpend[weekdayNames[date.getDay()]] += day.total;
+    const index = weekdayIndex(day.date);
+    if (index !== null) {
+      weekdaySpend[WEEKDAYS[index]] += day.total;
     }
   });
 
@@ -469,9 +470,7 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
       currentStreak = 1;
       continue;
     }
-    const prev = new Date(days[i - 1] + 'T00:00:00');
-    const curr = new Date(days[i] + 'T00:00:00');
-    const diff = (curr.getTime() - prev.getTime()) / (1000 * 60 * 60 * 24);
+    const diff = daysBetween(days[i - 1], days[i]);
     if (diff === 1) {
       currentStreak++;
     } else {
@@ -523,24 +522,6 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
       transportTotal,
     },
   };
-}
-
-export function formatDate(dateStr: string): string {
-  if (!dateStr) return '—';
-  const dt = new Date(dateStr + 'T00:00:00');
-  if (isNaN(dt.getTime())) return dateStr;
-  return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-}
-
-export function formatDateFull(dateStr: string): string {
-  if (!dateStr) return '—';
-  const dt = new Date(dateStr + 'T00:00:00');
-  if (isNaN(dt.getTime())) return dateStr;
-  return dt.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: '2-digit',
-  });
 }
 
 export function parseAccommodations(csv: string): AccommodationEntry[] {
