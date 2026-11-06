@@ -65,8 +65,8 @@ derived from it. Otherwise use a dated reference rate and record it.
 
 **Categories.** Current set: `Food`, `Accommodation`, `Transport`,
 `Intercity Transport`, `Activities`, `Shopping`, `Laundry`, `Personal Care`,
-`Subscription`. A new category is added only when a row genuinely fits none of
-these, and only after confirming it in the question batch.
+`Subscription`, `Fees`. A new category is added only when a row genuinely fits
+none of these, and only after confirming it in the question batch.
 
 **Generic city.** `China`, `Unknown`, and an empty city are the trip-wide
 bucket. They are excluded from city stats and counted in `tripWideTotal`.

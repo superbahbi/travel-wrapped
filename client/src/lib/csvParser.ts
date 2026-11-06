@@ -158,6 +158,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   Activities: '#F4A261',
   Shopping: '#E76F51',
   'Trip-wide': '#95B8D1',
+  Fees: '#64748B',
 };
 
 export function getCategoryColor(category: string): string {

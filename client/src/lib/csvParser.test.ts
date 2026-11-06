@@ -356,9 +356,9 @@ describe('parseAccommodations validation', () => {
 });
 
 /**
- * Baseline for the seeded 2026 trip. These numbers are the contract the
- * refactor must preserve; the accommodation total is intentionally the
- * ledger's, not the per-night file's.
+ * Baseline for the merged 2026 ledger (China trip + Chase import). These
+ * numbers are the contract the app renders; the accommodation total is
+ * intentionally the ledger's, not the per-night file's.
  */
 describe('seeded dataset', () => {
   const csv = readFileSync(
@@ -369,40 +369,40 @@ describe('seeded dataset', () => {
   const stats = computeTrip(transactions);
 
   it('parses every row', () => {
-    expect(transactions).toHaveLength(292);
-    expect(stats.summary.transactionCount).toBe(291);
+    expect(transactions).toHaveLength(616);
+    expect(stats.summary.transactionCount).toBe(615);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.summary.grandTotal).toBeCloseTo(1234.48, 2);
-    expect(stats.summary.daysTracked).toBe(39);
-    expect(stats.cities.visitedCount).toBe(11);
+    expect(stats.summary.grandTotal).toBeCloseTo(6331.46, 2);
+    expect(stats.summary.daysTracked).toBe(158);
+    expect(stats.cities.visitedCount).toBe(35);
   });
 
   it('keeps the date range', () => {
-    expect(stats.summary.dateRange).toEqual({ start: '2026-06-08', end: '2026-07-16' });
+    expect(stats.summary.dateRange).toEqual({ start: '2026-02-17', end: '2026-11-02' });
   });
 
   it('keeps the category breakdown', () => {
     expect(stats.categories.top?.category).toBe('Food');
-    expect(stats.categories.top?.total).toBeCloseTo(460.95, 2);
-    expect(stats.categories.top?.count).toBe(144);
-    expect(stats.categories.accommodationTotal).toBeCloseTo(250.91, 2);
-    expect(stats.categories.transportTotal).toBeCloseTo(322.42, 2);
+    expect(stats.categories.top?.total).toBeCloseTo(1945.74, 2);
+    expect(stats.categories.top?.count).toBe(310);
+    expect(stats.categories.accommodationTotal).toBeCloseTo(1119.91, 2);
+    expect(stats.categories.transportTotal).toBeCloseTo(1270.36, 2);
   });
 
   it('keeps the merchant and purchase highlights', () => {
     expect(stats.summary.topMerchant?.name).toBe('Fast Food');
     expect(stats.summary.topMerchant?.count).toBe(13);
-    expect(stats.summary.biggestPurchase?.merchant).toBe('Railway 12306');
-    expect(Math.abs(stats.summary.biggestPurchase?.amountUSD ?? 0)).toBeCloseTo(62.4, 2);
+    expect(stats.summary.biggestPurchase?.merchant).toBe('VIRGIN AU');
+    expect(Math.abs(stats.summary.biggestPurchase?.amountUSD ?? 0)).toBeCloseTo(338.25, 2);
   });
 
   it('keeps the day highlights', () => {
-    expect(stats.days.mostExpensive?.date).toBe('2026-07-13');
-    expect(stats.days.mostExpensive?.total).toBeCloseTo(90.77, 2);
-    expect(stats.days.cheapest?.date).toBe('2026-06-29');
-    expect(stats.days.cheapest?.total).toBeCloseTo(3.98, 2);
+    expect(stats.days.mostExpensive?.date).toBe('2026-05-05');
+    expect(stats.days.mostExpensive?.total).toBeCloseTo(443.12, 2);
+    expect(stats.days.cheapest?.date).toBe('2026-08-01');
+    expect(stats.days.cheapest?.total).toBeCloseTo(0.1, 2);
   });
 
   it('keeps the per-night accommodations file intact', () => {

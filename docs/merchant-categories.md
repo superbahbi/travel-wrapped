@@ -174,3 +174,224 @@ category is listed with each one. This file grows with each paste.
 | Zhiyu Youth Hostel (laundry) | `Laundry` | 1 |
 | Zhu Zhenzhen | `Food` | 1 |
 | Zigong Sichuan Restaurant | `Food` | 1 |
+
+## Chase 2026 import
+
+Resolved from the Feb–Nov 2026 Chase checking and credit-card exports.
+Transfers, card payments, investments, income, and ATM withdrawals are excluded;
+bank/card fees use the `Fees` category.
+
+| Merchant | Category | Rows |
+| --- | --- | ---: |
+| COUPLAND'S BAKERIES BLENH | `Food` | 12 |
+| Acorns | `Subscription` | 9 |
+| APPLE.COM/BILL | `Subscription` | 9 |
+| GOOGLE *Google One | `Subscription` | 8 |
+| PAYPAL *PROTON | `Subscription` | 8 |
+| agoda.com | `Accommodation` | 7 |
+| Fairweathers Bar & Rest | `Food` | 6 |
+| Foreign exchange rate adjustment fee | `Fees` | 6 |
+| Hotel at Booking.com | `Accommodation` | 6 |
+| New World Blenheim | `Food` | 6 |
+| Mobimatter | `Subscription` | 5 |
+| Fergbaker | `Food` | 4 |
+| KOREA MCDONALD'S DONGSEON | `Food` | 4 |
+| McDonalds 640078 | `Food` | 4 |
+| Trip.com | `Transport` | 4 |
+| 7 HUNGRY 5 | `Food` | 3 |
+| 7-ELEVEN | `Food` | 3 |
+| DELTA DEWATA HO | `Food` | 3 |
+| DODSON STREET BEER GARDEN | `Food` | 3 |
+| ESIM.DOG | `Subscription` | 3 |
+| KOREA MCDONALD'S HAPJEONG | `Food` | 3 |
+| LAUNDRY ONE CO | `Laundry` | 3 |
+| A TWOSOME PLACE DONGSEONG | `Food` | 2 |
+| CAUSEWAYLINK-MLK | `Intercity Transport` | 2 |
+| CITYBUS | `Transport` | 2 |
+| DAISO | `Shopping` | 2 |
+| EASY MART | `Food` | 2 |
+| EVENT CINEMAS BLENHEIM | `Activities` | 2 |
+| FRESHCHOICE QUEENSTOWN | `Food` | 2 |
+| KMART | `Shopping` | 2 |
+| MCDONALD'S SOK 21501 | `Food` | 2 |
+| MCDONALDS BRITOMART | `Food` | 2 |
+| Pak N Save Blenheim | `Food` | 2 |
+| PAYPAL *BUSONLINETI | `Intercity Transport` | 2 |
+| PHO VIET STREET FOOD | `Food` | 2 |
+| TIC BUSINESS | `Food` | 2 |
+| URBANZ LP | `Accommodation` | 2 |
+| 7 ELEVEN MALAYSIA SDN BHD | `Food` | 1 |
+| 7-ELEVEN - TELOK AYER | `Food` | 1 |
+| 7-ELEVEN-THE HSE OF EDEN | `Food` | 1 |
+| 77 CONVIENIENCE STOR | `Food` | 1 |
+| ADI WARUNG | `Food` | 1 |
+| AEON CO-QUEENSBAY MALL | `Food` | 1 |
+| AIRALO | `Subscription` | 1 |
+| AL BACIO | `Food` | 1 |
+| Amazon Marketplace AU | `Shopping` | 1 |
+| ANNUAL MEMBERSHIP FEE | `Fees` | 1 |
+| APT KF 589 DEWI SRI MBL | `Personal Care` | 1 |
+| AUSTRALIANETA | `Fees` | 1 |
+| BAL1112 KORNER BANDARA NG | `Food` | 1 |
+| BENTTO SUSHI & DONBURI | `Food` | 1 |
+| BKG*BOOKING.COM FLIGHT | `Intercity Transport` | 1 |
+| BO MUNDANG PHARMACY | `Personal Care` | 1 |
+| BORACAY GARDEN RESTAURANT | `Food` | 1 |
+| BUDDHA TOOTH RELIC TEMPLE | `Activities` | 1 |
+| BUS/MRT 862355536 | `Transport` | 1 |
+| BWS LIQUOR/CNR BROUGHTON | `Food` | 1 |
+| CANTIK AGRICULTURE LUWAK | `Food` | 1 |
+| Chase Travel | `Accommodation` | 1 |
+| Chemist Warehouse | `Personal Care` | 1 |
+| Chevron | `Transport` | 1 |
+| CHOICE RETAIL | `Food` | 1 |
+| CIRCLE K 541     07912 | `Food` | 1 |
+| CJ OLIVE YOUNG DAEGU DONG | `Personal Care` | 1 |
+| CK MUNDUK CATU | `Food` | 1 |
+| COCO  PINEAPPLE PANTS | `Transport` | 1 |
+| COFFEE CORNER | `Food` | 1 |
+| COLES 0559 | `Food` | 1 |
+| COLES 0671 | `Food` | 1 |
+| COOPERS CATCH KAIKOU | `Food` | 1 |
+| CT GLOBAL GROUP PTY | `Food` | 1 |
+| CYD FORTUNE PTY LTD | `Food` | 1 |
+| Din Tai Fung | `Food` | 1 |
+| DONGGYEONG GYUDON  HAPJEO | `Food` | 1 |
+| E-MART 24  DAEGU  HEAD OF | `Food` | 1 |
+| ECAN BUS INTERCHANGE | `Transport` | 1 |
+| ELEVENLABS.IO | `Subscription` | 1 |
+| EOSEOOA | `Food` | 1 |
+| FAMOUS TEOCHEW CHENDOL | `Food` | 1 |
+| Fergburger | `Food` | 1 |
+| FIORDLAND BAKERY | `Food` | 1 |
+| Fiordland Frontier Supp | `Shopping` | 1 |
+| FREETAXUSA.COM | `Subscription` | 1 |
+| FRESHCHOICE CITY MKT | `Food` | 1 |
+| FRIED BROTHERS MARKET | `Food` | 1 |
+| GeoBlue | `Fees` | 1 |
+| GetYourGuide | `Activities` | 1 |
+| GONG CHA LORNE STREET | `Food` | 1 |
+| GOOGLE *CLOUD 4QSNGW | `Subscription` | 1 |
+| GOOGLE *CLOUD 5PxGRx | `Subscription` | 1 |
+| GOOGLE *CLOUD BVGx8S | `Subscription` | 1 |
+| GOOGLE *CLOUD Fx2S7P | `Subscription` | 1 |
+| GOOGLE *CLOUD PPWDRw | `Subscription` | 1 |
+| GOOGLE *CLOUD QDG3KJ | `Subscription` | 1 |
+| GOOGLE *CLOUD Z2vz3K | `Subscription` | 1 |
+| GOOGLE *CLOUD ZLzC6R | `Subscription` | 1 |
+| GOOGLE *CLOUD ZxW4SV | `Subscription` | 1 |
+| Google CLOUD RXCGTx | `Subscription` | 1 |
+| GUARDIAN BATU BALONG | `Personal Care` | 1 |
+| HABIT SANTA MONICA 213 | `Food` | 1 |
+| HALONGBANMI | `Food` | 1 |
+| HAPJEONG  STAR PHARMACY | `Personal Care` | 1 |
+| Heartbaker Bun Mee | `Food` | 1 |
+| HJs World Square | `Food` | 1 |
+| IN-N-OUT EL SEGUNDO | `Food` | 1 |
+| InterCity | `Intercity Transport` | 1 |
+| Interislander | `Intercity Transport` | 1 |
+| JOOSIKHWESA WINPLLUSMA | `Food` | 1 |
+| KFC CHCH CBD - 622 | `Food` | 1 |
+| KMART 1155 | `Shopping` | 1 |
+| KOKONAT | `Food` | 1 |
+| KOMEDA COFFEE MBL | `Food` | 1 |
+| KOPITIAM @ LAU PA SAT | `Food` | 1 |
+| LE TACH VENDING | `Food` | 1 |
+| LEMON GRASS KITCHEN | `Food` | 1 |
+| LITTLE EATS MBL | `Food` | 1 |
+| Lochmara Lodge Receptio | `Accommodation` | 1 |
+| LS Apollo Bay Bakery P | `Food` | 1 |
+| MAEGAEMZISSIKEOPI MANG | `Food` | 1 |
+| Maki Mono Riccarton | `Food` | 1 |
+| MANNERS NIGHT N DAY | `Food` | 1 |
+| MCDONALD'S (CTP2) | `Food` | 1 |
+| MCDONALD'S HK 271 | `Food` | 1 |
+| MCDONALD'S M5764 OF CA | `Food` | 1 |
+| MCDONALD'S-PIA | `Food` | 1 |
+| McDonalds 1288 | `Food` | 1 |
+| McDonalds 640045 | `Food` | 1 |
+| McDonalds 900302 | `Food` | 1 |
+| MCDONALDS BLENHEIM | `Food` | 1 |
+| MCDONALDS BRIS AIRP | `Food` | 1 |
+| MCDONALDS BUNNY ST | `Food` | 1 |
+| MCDONALDS ELIZABTH S | `Food` | 1 |
+| MCDONALDS PLAZA | `Food` | 1 |
+| MCDONALDS QVB | `Food` | 1 |
+| MCDONALDS SPENCER ST | `Food` | 1 |
+| MCDONALDS TARANAKI ST | `Food` | 1 |
+| MCDONALDS TOWN HALL | `Food` | 1 |
+| MCDONALDS-KL SENT00155 AP | `Food` | 1 |
+| MCDONALDS-MELAKA 00220 AP | `Food` | 1 |
+| MCDONALDS-TERMINA00185 AP | `Food` | 1 |
+| MIDNIGHT ESPRESSO BAR | `Food` | 1 |
+| MINT MOBILE | `Subscription` | 1 |
+| MIXUE-L.KIMBERLEY | `Food` | 1 |
+| MOBIL BLENHEIM | `Transport` | 1 |
+| Mountain Warehouse NRA | `Shopping` | 1 |
+| MPH | `Food` | 1 |
+| MS* SELINACENTRALMELB | `Accommodation` | 1 |
+| MS* SYDNEYCENTRALYHA | `Accommodation` | 1 |
+| MTR - RIDES | `Transport` | 1 |
+| MTR-AIRPORT STATI03000 | `Transport` | 1 |
+| MUDA BY SUKA | `Food` | 1 |
+| MUJI (PLAZA HOLLYWOOD) BR | `Shopping` | 1 |
+| MUSEUM OF NEW ZEALAND TE | `Activities` | 1 |
+| MUSEUM VICTORIA ADMISS | `Activities` | 1 |
+| MYEONGDONG SEOLBING | `Food` | 1 |
+| MYKI STHRNCRSS RS SST | `Transport` | 1 |
+| NEW SAYURI MBL | `Food` | 1 |
+| NEXTGEN68 PTY LTD | `Food` | 1 |
+| NSW TRAINS MEL | `Intercity Transport` | 1 |
+| NZeTA | `Fees` | 1 |
+| OPENCODE | `Subscription` | 1 |
+| PAK N SAVE RICCARTON | `Food` | 1 |
+| PENANG HILL CORPORATION | `Activities` | 1 |
+| PURCHASE INTEREST CHARGE | `Fees` | 1 |
+| RAPID RAIL-AGL TVM | `Transport` | 1 |
+| SANTAMONICA PARKINGVIOL | `Fees` | 1 |
+| SAVE MORE BLENHEIM | `Food` | 1 |
+| Savemart Blenheim | `Shopping` | 1 |
+| Scenic World | `Activities` | 1 |
+| SCHOOL OF UNIFIED HEALING | `Personal Care` | 1 |
+| SERENITY NATURAL SPA HO | `Personal Care` | 1 |
+| Shabu Shabu House | `Food` | 1 |
+| SMP*POMEGRANATE CAFE  0 | `Food` | 1 |
+| Snapper | `Transport` | 1 |
+| SOOKI RICEBOWL RESTO | `Food` | 1 |
+| Spotify | `Subscription` | 1 |
+| Springlands Tavern | `Food` | 1 |
+| SQ *AMERICAN DOUGHNUT KIT | `Food` | 1 |
+| SQ *FISHBOWL FLINDERS LAN | `Food` | 1 |
+| SQ *QUEEN ESTER | `Food` | 1 |
+| Starbucks Cathedral Sq | `Food` | 1 |
+| T LE & Q.T NGUYEN TA A | `Food` | 1 |
+| TARGET T-0199 | `Shopping` | 1 |
+| TFNSW OPAL MACHINE | `Transport` | 1 |
+| TFNSW TRANSPORT SHOP | `Transport` | 1 |
+| THE BURLEIGH | `Food` | 1 |
+| THE WAREHOUSE 173 BLENHIE | `Shopping` | 1 |
+| Thomas's Cafe | `Food` | 1 |
+| TICKETING | `Activities` | 1 |
+| TOOSSEOMPEULLEISEU MYEONG | `Food` | 1 |
+| TRANSACTION FEE | `Fees` | 1 |
+| URBANMART PRIVATE LI | `Food` | 1 |
+| VBROLLS | `Food` | 1 |
+| VIRGIN AU | `Intercity Transport` | 1 |
+| Walker's Doughnuts El | `Food` | 1 |
+| Walmart | `Food` | 1 |
+| WARUNG SIKA | `Food` | 1 |
+| WARUNG SIKA HO | `Food` | 1 |
+| WEIXIN*Chengdu City We | `Activities` | 1 |
+| WEIXIN*Chengdu giant p | `Activities` | 1 |
+| WELLINGTON - SNAPPER | `Transport` | 1 |
+| WELLINGTON CABLE CAR | `Activities` | 1 |
+| WELLINGTON MUSEUM | `Activities` | 1 |
+| WETA UNLEASHED | `Activities` | 1 |
+| Weta Workshop | `Activities` | 1 |
+| WORLDPACKERS | `Subscription` | 1 |
+| WW METRO/61-79 QUAY STREE | `Food` | 1 |
+| XENDIT MEGATIX 10 | `Activities` | 1 |
+| YA KUN KAYA TOAST | `Food` | 1 |
+| YA KUN KAYA TOAST - JE | `Food` | 1 |
+| Yo-Chi George Street | `Food` | 1 |
+| YUEN SUK LIMITED | `Food` | 1 |
