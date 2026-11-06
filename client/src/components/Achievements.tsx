@@ -3,27 +3,6 @@ import { Achievement } from '@/lib/achievements';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-const BADGE_IMAGES: Record<string, string> = {
-  'street-foodie': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-street-foodie-DNocM2Fcp7RVCBAVBiwYPm.webp',
-  'train-hopper': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-train-hopper-Hts4QkYfNa23GWecQXeoir.webp',
-  'budget-master': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-budget-master-Hmpnn4h68u2sXkh3WTvXKT.webp',
-  'accommodation-collector': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-accommodation-collector-MoydeTiPAjMQ5CCnqPVafh.webp',
-  'food-lover': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-food-lover-Q69vQRFKkfNnumoohuQRzE.webp',
-  'long-journey': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-long-journey-Y4NwUbK6XFSnZ2NxxEfVoG.webp',
-  'mixue-enthusiast': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-mixue-enthusiast-ZtbdbGtB3rVg4Zu8xtGxXp.webp',
-  'big-spender': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-big-spender-QEYBS5SvA2wydBcw3GWGWe.webp',
-  'early-bird': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-early-bird-4Uhs87Y8vA5j2mLfMTWhpF.webp',
-  'night-owl': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-night-owl-Ebu2sYUSkENpBqgSbKTBrz.webp',
-  'city-explorer': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-city-explorer-cdiaMyuxv4N9MQbDLfbMeR.webp',
-  'weekend-warrior': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-weekend-warrior-UKVpPydCsPDEanDsA5FymE.webp',
-  'noodle-master': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-noodle-master-BdysyUkp6v5trFncaxaWsV.webp',
-  'cafe-hopper': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-cafe-hopper-UXDdNcfhxUo4aG7aaX2KUG.webp',
-  'spender-supreme': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-spender-supreme-H6bQiuSwoP6j7rDs34WdYz.webp',
-  'frugal-traveler': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-frugal-traveler-8d9HSptFCoyMyCj4uKcBP4.webp',
-  'activity-seeker': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-activity-seeker-KPvqFcjy5CYHuKoBfgog9U.webp',
-  'consistent-spender': 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/badge-consistent-spender-FqwQ5yybCoWiY93YJMojXM.webp',
-};
-
 export function AchievementsCard({ achievements }: { achievements: Achievement[] }) {
   const { ref, visible } = useScrollReveal();
   const [unlockedCount, setUnlockedCount] = useState(0);
@@ -44,11 +23,10 @@ export function AchievementsCard({ achievements }: { achievements: Achievement[]
 
   const getFilteredAchievements = () => {
     if (activeTab === 'all') return achievements;
-    return achievements.filter((a: any) => a.category === activeTab);
+    return achievements.filter((a) => a.category === activeTab);
   };
 
   const filteredAchievements = getFilteredAchievements();
-  const filteredUnlockedCount = filteredAchievements.filter(a => a.unlocked).length;
 
   const toggleFlip = (id: string) => {
     const newFlipped = new Set(flipped);
@@ -74,7 +52,7 @@ export function AchievementsCard({ achievements }: { achievements: Achievement[]
         <div className="w-full bg-white/10 rounded-full h-2">
           <div
             className="bg-gradient-to-r from-yellow-400 to-yellow-500 h-full rounded-full transition-all duration-500"
-            style={{ width: `${(unlockedCount / achievements.length) * 100}%` }}
+            style={{ width: `${achievements.length > 0 ? (unlockedCount / achievements.length) * 100 : 0}%` }}
           />
         </div>
       </div>
@@ -97,8 +75,8 @@ export function AchievementsCard({ achievements }: { achievements: Achievement[]
               </div>
             ) : (
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-                {filteredAchievements.map((achievement: any, idx: number) => {
-                  const badgeImage = BADGE_IMAGES[achievement.id];
+                {filteredAchievements.map((achievement, idx) => {
+                  const badgeImage = achievement.image;
                   return (
                     <div
                       key={achievement.id}

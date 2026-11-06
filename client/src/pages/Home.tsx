@@ -481,7 +481,7 @@ export default function Home() {
             <CityRouteCard route={view.route} />
 
             {/* ── CARD 11.5: Travel Achievements ── */}
-            <AchievementsCard achievements={getAchievements(transactions, stats.summary)} />
+            <AchievementsCard achievements={getAchievements(stats, transactions)} />
 
             {/* ── CARD 12: Weekday Spending ── */}
             <WrappedCard gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">

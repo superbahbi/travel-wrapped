@@ -1,53 +1,142 @@
 import { describe, expect, it } from 'vitest';
+import { computeTrip, parseTransactions } from './csvParser';
 import { getAchievements } from './achievements';
 
-const stats = { grandTotal: 0, dailyAverage: 100, daysTracked: 1 };
+const HEADER =
+  'Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes';
 
-function row(time: string | null) {
-  return {
-    date: '2026-06-08',
-    time,
-    merchant: 'Cafe',
-    amountUSD: -1,
-    category: 'Food',
-    city: 'Chengdu',
-    notes: '',
-  };
+interface RowOptions {
+  date: string;
+  usd: number;
+  merchant?: string;
+  category?: string;
+  city?: string;
+  time?: string;
 }
 
-function unlocked(rows: ReturnType<typeof row>[], id: string) {
-  return getAchievements(rows, stats).find(
-    (achievement) => achievement.id === id,
-  )?.unlocked;
+function row({
+  date,
+  usd,
+  merchant = 'Shop',
+  category = 'Food',
+  city = 'Chengdu',
+  time = '12:00:00',
+}: RowOptions): string {
+  const cny = (usd * 7).toFixed(2);
+  return `${date} ${time},${merchant},${cny},CNY,${usd.toFixed(2)},7.0000,${date},${category},Alipay,${city},China,`;
 }
 
-const mornings = [
-  row('06:30:00'),
-  row('07:00:00'),
-  row('07:59:59'),
-];
+function build(rows: string[]) {
+  const transactions = parseTransactions([HEADER, ...rows].join('\n'));
+  const series = computeTrip(transactions);
+  return getAchievements(series, transactions);
+}
 
-const nights = [
-  row('22:00:00'),
-  row('22:30:00'),
-  row('23:59:59'),
-];
+function unlocked(rows: string[], id: string) {
+  return build(rows).find((achievement) => achievement.id === id)?.unlocked;
+}
 
-describe('time-of-day achievements', () => {
+describe('achievement rule table', () => {
+  it('keeps only the general badges', () => {
+    const achievements = build([]);
+    const ids = achievements.map((achievement) => achievement.id);
+    expect(achievements).toHaveLength(14);
+    expect(ids).not.toContain('mixue-enthusiast');
+    expect(ids).not.toContain('noodle-master');
+    expect(ids).not.toContain('street-foodie');
+    expect(ids).not.toContain('train-hopper');
+  });
+
+  it('carries the badge image with the rule', () => {
+    const cityExplorer = build([]).find(
+      (achievement) => achievement.id === 'city-explorer',
+    );
+    expect(cityExplorer?.image).toContain('badge-city-explorer');
+    expect(build([]).every((achievement) => achievement.image)).toBe(true);
+  });
+
+  it('does not unlock budget badges on an empty trip', () => {
+    expect(unlocked([], 'budget-master')).toBe(false);
+    expect(unlocked([], 'frugal-traveler')).toBe(false);
+  });
+});
+
+describe('Consistent Spender', () => {
+  const days = (count: number) =>
+    Array.from({ length: count }, (_, i) => {
+      const day = String(8 + i).padStart(2, '0');
+      return row({ date: `2026-06-${day}`, usd: -30 });
+    });
+
+  it('unlocks from five days in the $20-40 band', () => {
+    expect(unlocked(days(5), 'consistent-spender')).toBe(true);
+  });
+
+  it('does not unlock from four such days', () => {
+    expect(unlocked(days(4), 'consistent-spender')).toBe(false);
+  });
+});
+
+describe('city badges', () => {
+  const cities = (names: string[]) =>
+    names.map((city, i) =>
+      row({
+        date: `2026-06-${String(8 + i).padStart(2, '0')}`,
+        usd: -10,
+        city,
+      }),
+    );
+
+  const seven = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+  it('counts named cities for City Explorer', () => {
+    expect(unlocked(cities(seven), 'city-explorer')).toBe(true);
+    expect(unlocked(cities(seven.slice(0, 6)), 'city-explorer')).toBe(false);
+  });
+
+  it('does not count the generic China bucket as a city', () => {
+    const withGeneric = [...cities(seven), row({ date: '2026-06-20', usd: -5, city: 'China' })];
+    expect(unlocked(withGeneric, 'city-explorer')).toBe(true);
+    expect(unlocked(cities(['A', 'B', 'C', 'D', 'E', 'China']), 'accommodation-collector')).toBe(false);
+    expect(unlocked(cities(['A', 'B', 'C', 'D', 'E', 'F', 'China']), 'accommodation-collector')).toBe(true);
+  });
+});
+
+describe('Food Lover', () => {
+  it('unlocks at a 30% food share', () => {
+    const rows = [
+      row({ date: '2026-06-08', usd: -30, category: 'Food' }),
+      row({ date: '2026-06-08', usd: -70, category: 'Shopping' }),
+    ];
+    expect(unlocked(rows, 'food-lover')).toBe(true);
+  });
+
+  it('stays locked below 30%', () => {
+    const rows = [
+      row({ date: '2026-06-08', usd: -29, category: 'Food' }),
+      row({ date: '2026-06-08', usd: -71, category: 'Shopping' }),
+    ];
+    expect(unlocked(rows, 'food-lover')).toBe(false);
+  });
+});
+
+describe('time-of-day badges', () => {
+  const at = (time: string) =>
+    row({ date: '2026-06-08', usd: -5, time });
+
   it('unlocks Early Bird from the recorded time', () => {
-    expect(unlocked(mornings, 'early-bird')).toBe(true);
-    expect(unlocked(mornings.slice(0, 2), 'early-bird')).toBe(false);
+    expect(unlocked([at('06:30:00'), at('07:00:00'), at('07:59:59')], 'early-bird')).toBe(true);
+    expect(unlocked([at('06:30:00'), at('07:00:00')], 'early-bird')).toBe(false);
   });
 
   it('unlocks Night Owl from the recorded time', () => {
-    expect(unlocked(nights, 'night-owl')).toBe(true);
-    expect(unlocked(nights.slice(0, 2), 'night-owl')).toBe(false);
+    expect(unlocked([at('22:00:00'), at('22:30:00'), at('23:59:59')], 'night-owl')).toBe(true);
+    expect(unlocked([at('22:00:00'), at('22:30:00')], 'night-owl')).toBe(false);
   });
 
-  it('treats an unknown time as neither early nor late', () => {
-    expect(unlocked([row(null), row(null), row(null)], 'early-bird')).toBe(
-      false,
-    );
-    expect(unlocked([row(null), row(null), row(null)], 'night-owl')).toBe(false);
+  it('treats midnight as unknown', () => {
+    const midnight = [at('00:00:00'), at('00:00:00'), at('00:00:00')];
+    expect(unlocked(midnight, 'early-bird')).toBe(false);
+    expect(unlocked(midnight, 'night-owl')).toBe(false);
   });
 });
