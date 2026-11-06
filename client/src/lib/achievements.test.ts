@@ -78,11 +78,12 @@ describe('Consistent Spender', () => {
 });
 
 describe('city badges', () => {
-  const cities = (names: string[]) =>
+  const cities = (names: string[], category = 'Food') =>
     names.map((city, i) =>
       row({
         date: `2026-06-${String(8 + i).padStart(2, '0')}`,
         usd: -10,
+        category,
         city,
       }),
     );
@@ -97,8 +98,45 @@ describe('city badges', () => {
   it('does not count the generic China bucket as a city', () => {
     const withGeneric = [...cities(seven), row({ date: '2026-06-20', usd: -5, city: 'China' })];
     expect(unlocked(withGeneric, 'city-explorer')).toBe(true);
-    expect(unlocked(cities(['A', 'B', 'C', 'D', 'E', 'China']), 'accommodation-collector')).toBe(false);
-    expect(unlocked(cities(['A', 'B', 'C', 'D', 'E', 'F', 'China']), 'accommodation-collector')).toBe(true);
+    expect(unlocked(cities(['A', 'B', 'C', 'D', 'E', 'China']), 'city-explorer')).toBe(false);
+  });
+});
+
+describe('Accommodation Collector', () => {
+  const stays = (names: string[]) =>
+    names.map((city, i) =>
+      row({
+        date: `2026-06-${String(8 + i).padStart(2, '0')}`,
+        usd: -10,
+        category: 'Accommodation',
+        city,
+      }),
+    );
+
+  const six = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  it('uses accommodation cities, not every spend city', () => {
+    const rows = [
+      ...stays(['A']),
+      ...six.slice(1).map((city, i) =>
+        row({
+          date: `2026-06-${String(14 + i).padStart(2, '0')}`,
+          usd: -10,
+          city,
+        }),
+      ),
+    ];
+    expect(unlocked(rows, 'accommodation-collector')).toBe(false);
+  });
+
+  it('unlocks after stays in six different cities', () => {
+    expect(unlocked(stays(six), 'accommodation-collector')).toBe(true);
+    expect(unlocked(stays(six.slice(0, 5)), 'accommodation-collector')).toBe(false);
+  });
+
+  it('does not count the generic China bucket as a stay', () => {
+    expect(unlocked(stays(['A', 'B', 'C', 'D', 'E', 'China']), 'accommodation-collector')).toBe(false);
+    expect(unlocked(stays([...six, 'China']), 'accommodation-collector')).toBe(true);
   });
 });
 
@@ -117,6 +155,31 @@ describe('Food Lover', () => {
       row({ date: '2026-06-08', usd: -71, category: 'Shopping' }),
     ];
     expect(unlocked(rows, 'food-lover')).toBe(false);
+  });
+});
+
+describe('Cafe Hopper', () => {
+  const cafe = (merchant: string, i: number) =>
+    row({
+      date: `2026-06-${String(8 + i).padStart(2, '0')}`,
+      usd: -5,
+      merchant,
+    });
+
+  it('does not unlock from repeated visits to one cafe', () => {
+    const rows = Array.from({ length: 5 }, (_, i) => cafe('Blue Bottle Coffee', i));
+    expect(unlocked(rows, 'cafe-hopper')).toBe(false);
+  });
+
+  it('unlocks from five distinct cafes', () => {
+    const rows = [
+      'Blue Bottle Coffee',
+      'Cafe Central',
+      'Tea House Five',
+      'Corner Cafe',
+      'Coffee Corner',
+    ].map((merchant, i) => cafe(merchant, i));
+    expect(unlocked(rows, 'cafe-hopper')).toBe(true);
   });
 });
 
