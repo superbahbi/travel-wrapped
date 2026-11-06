@@ -71,6 +71,10 @@ none of these, and only after confirming it in the question batch.
 **Generic city.** `China`, `Unknown`, and an empty city are the trip-wide
 bucket. They are excluded from city stats and counted in `tripWideTotal`.
 
+**Layover.** A row whose `Notes` contains `Layover` is a transit purchase. Its
+city is excluded from city stats and the city route, while the spend still
+counts in totals and categories.
+
 ## Conversion workflow
 
 When a statement is pasted into the conversation:

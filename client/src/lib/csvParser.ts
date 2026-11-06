@@ -149,6 +149,11 @@ const GENERIC_CITIES = new Set(['china', 'unknown', '']);
 export const isGenericCity = (city: string) =>
   GENERIC_CITIES.has((city || '').trim().toLowerCase());
 
+/** A transit purchase: its spend counts, but the city is not a visit. */
+const LAYOVER_PATTERN = /\blayover\b/i;
+export const isLayover = (transaction: Transaction) =>
+  LAYOVER_PATTERN.test(transaction.notes);
+
 // Category color palette — Spotify Wrapped style
 const CATEGORY_COLORS: Record<string, string> = {
   Food: '#FF6B6B',
@@ -399,7 +404,10 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
       Object.entries(catTotals).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
     const cities = Array.from(
       new Set(
-        spend.map((t) => t.city).filter((city) => !isGenericCity(city)),
+        spend
+          .filter((t) => !isLayover(t))
+          .map((t) => t.city)
+          .filter((city) => !isGenericCity(city)),
       ),
     );
     return { date, total, transactions: byDay[date], topCategory, cities };
@@ -426,7 +434,7 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
     { total: number; days: Set<string>; count: number }
   > = {};
   expenses.forEach((t) => {
-    if (isGenericCity(t.city)) return;
+    if (isGenericCity(t.city) || isLayover(t)) return;
     if (!cityTotals[t.city])
       cityTotals[t.city] = { total: 0, days: new Set(), count: 0 };
     cityTotals[t.city].total += Math.abs(t.amountUSD);

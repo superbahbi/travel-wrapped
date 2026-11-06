@@ -295,6 +295,22 @@ describe('spend-only day series', () => {
   });
 });
 
+describe('layover cities', () => {
+  const csv = [
+    TRANSACTION_HEADER,
+    '2026-05-13 09:00:00,Layover Food,-11.36,USD,-11.36,1.0000,2026-05-13,Food,Chase 1388,Brisbane,Australia,Layover Sydney → Bali',
+    '2026-05-13 12:00:00,Bali Food,-10.00,USD,-10.00,1.0000,2026-05-13,Food,Chase 1388,Bali,Indonesia,',
+  ].join('\n');
+  const stats = computeTrip(parseTransactions(csv));
+
+  it('keeps layover spend but excludes the city from stats and the route', () => {
+    expect(stats.summary.grandTotal).toBeCloseTo(21.36, 2);
+    expect(stats.cities.visitedCount).toBe(1);
+    expect(stats.cities.items.map((city) => city.city)).toEqual(['Bali']);
+    expect(stats.days.items[0].cities).toEqual(['Bali']);
+  });
+});
+
 describe('parseAccommodations', () => {
   it('reads the canonical per-night file', () => {
     const entries = parseAccommodations(ACCOMMODATION_FIXTURE);
@@ -376,7 +392,7 @@ describe('seeded dataset', () => {
   it('keeps the seeded totals', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
     expect(stats.summary.daysTracked).toBe(194);
-    expect(stats.cities.visitedCount).toBe(48);
+    expect(stats.cities.visitedCount).toBe(47);
   });
 
   it('keeps the date range', () => {
