@@ -23,9 +23,22 @@ type LoadState = { status: 'idle' } | { status: 'loading' } | LoadOutcome;
 
 const WEEK_ORDER = [...WEEKDAYS.slice(1), WEEKDAYS[0]];
 
+/**
+ * Days of travel on the trip: first day in New Zealand to the last day in South
+ * Korea. This is the trip length the wrapped story reports, separate from
+ * `daysTracked` (days that actually carry a receipt).
+ */
+const DAYS_OF_TRAVEL = 247;
+
 const NO_TRANSACTIONS: Transaction[] = [];
 const NO_ACCOMMODATIONS: AccommodationEntry[] = [];
 const NO_INCOME: IncomeEntry[] = [];
+
+function prettyIncomeSource(source: string): string {
+  if (source === 'WHITEHAVEN WINE COMP') return 'Whitehaven Wine';
+  if (source.startsWith('I.R.D.')) return 'NZ tax refund (IRD)';
+  return source;
+}
 
 export default function Home() {
   const [state, setState] = useState<LoadState>({ status: 'idle' });
@@ -106,7 +119,7 @@ export default function Home() {
               <div className="w-px h-10 bg-white/20" />
               <div className="text-center">
                 <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {stats.summary.daysTracked}
+                  {DAYS_OF_TRAVEL}
                 </div>
                 <div className="text-xs text-white/50 uppercase tracking-wider">Days</div>
               </div>
@@ -170,11 +183,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-white/70 text-lg mb-6">
-                  That's <span className="font-bold text-white">{formatUSD(stats.summary.grandTotal, 0)}</span> spent across {stats.summary.daysTracked} days of travel
+                  That's <span className="font-bold text-white">{formatUSD(stats.summary.grandTotal, 0)}</span> spent across {DAYS_OF_TRAVEL} days of travel
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   <GlassPanel>
-                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{formatUSD(stats.summary.dailyAverage, 0)}</div>
+                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{formatUSD(stats.summary.grandTotal / DAYS_OF_TRAVEL, 0)}</div>
                     <div className="text-xs opacity-70 mt-1">per day</div>
                   </GlassPanel>
                   <GlassPanel>
@@ -200,9 +213,12 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="text-white/70 text-lg mb-6">
-                    from <span className="font-bold text-white">{incomeSummary.payments} Whitehaven Wine payments</span>
+                    from <span className="font-bold text-white">{incomeSummary.payments} payments</span>
+                    {incomeSummary.sources.length > 0 && (
+                      <> — {incomeSummary.sources.map((source) => prettyIncomeSource(source.source)).join(' + ')}</>
+                    )}
                     {stats.summary.grandTotal > 0 && (
-                      <> — that's <span className="font-bold text-white">{((incomeSummary.totalUSD / stats.summary.grandTotal) * 100).toFixed(0)}%</span> of what I spent</>
+                      <> · <span className="font-bold text-white">{((incomeSummary.totalUSD / stats.summary.grandTotal) * 100).toFixed(0)}%</span> of what I spent</>
                     )}
                   </div>
                   <div className="grid grid-cols-3 gap-3">
@@ -224,6 +240,14 @@ export default function Home() {
                       </div>
                       <div className="text-xs opacity-70 mt-1">last paid</div>
                     </GlassPanel>
+                  </div>
+                  <div className="mt-5 space-y-1">
+                    {incomeSummary.sources.map((source) => (
+                      <div key={source.source} className="flex justify-between text-sm py-1.5 border-b border-white/10 last:border-0">
+                        <span className="text-white/80">{prettyIncomeSource(source.source)}</span>
+                        <span className="mono font-bold">{formatUSD(source.totalUSD)}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </WrappedCard>

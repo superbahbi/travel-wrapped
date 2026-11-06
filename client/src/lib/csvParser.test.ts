@@ -667,18 +667,20 @@ describe('seeded dataset', () => {
     ).toBeCloseTo(228.9, 1);
   });
 
-  it('keeps the Whitehaven income file intact', () => {
+  it('keeps the income file intact', () => {
     const incomeCsv = readFileSync(
       new URL('../../public/data/income.csv', import.meta.url),
       'utf8',
     );
     const entries = parseIncome(incomeCsv);
     const summary = summarizeIncome(entries);
-    expect(entries).toHaveLength(7);
-    expect(summary.totalUSD).toBeCloseTo(5680.58, 2);
+    expect(entries).toHaveLength(8);
+    expect(summary.totalUSD).toBeCloseTo(6296.94, 2);
     expect(summary.nativeTotals).toHaveLength(1);
     expect(summary.nativeTotals[0].currency).toBe('NZD');
-    expect(summary.nativeTotals[0].total).toBeCloseTo(9467.65, 2);
+    expect(summary.nativeTotals[0].total).toBeCloseTo(10494.92, 2);
+    expect(summary.sources).toHaveLength(2);
     expect(summary.sources[0].source).toBe('WHITEHAVEN WINE COMP');
+    expect(summary.sources[1].source).toBe('I.R.D. 148-135-460');
   });
 });
