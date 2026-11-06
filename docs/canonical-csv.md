@@ -71,11 +71,20 @@ none of these, and only after confirming it in the question batch.
 **Generic city.** `China`, `Unknown`, and an empty city are the trip-wide
 bucket. They are excluded from city stats and counted in `tripWideTotal`.
 
-**Layover.** A row whose `Notes` contains `Layover` is a transit purchase. Its
-city is excluded from city stats, the city route, and the accommodation-city
-count. Its spend is attributed to `tripWideTotal` — the same bucket as a generic
-city — so every expense lands in exactly one place while still counting in
-`grandTotal` and the category totals.
+**Layover.** A row is a transit purchase when a note names the transit marker
+as its opening word. Split `Notes` on `|`, trim each segment, and compare
+case-insensitively: a segment matches when it starts with `layover` followed by
+whitespace or the end of the segment. The seeded convention is
+`Layover Sydney → Bali`, including as an annotation after the statement text
+(`Chase 1388: MCDONALDS BRIS AIRP | Layover Sydney → Bali`). Matching ignores
+the case of the marker and whitespace around each segment. `no layover`,
+`Layovers`, and `layover-free` do not match, because `layover` is not the
+opening word.
+
+A matching row's city is excluded from city stats, the city route, and the
+accommodation-city count. Its spend is attributed to `tripWideTotal` — the same
+bucket as a generic city — so every expense lands in exactly one place while
+still counting in `grandTotal` and the category totals.
 
 ## Conversion workflow
 
