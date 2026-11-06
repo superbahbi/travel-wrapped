@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   CanonicalCsvError,
   computeTrip,
+  isLayover,
   parseAccommodations,
   parseTransactions,
 } from './csvParser';
@@ -317,6 +318,53 @@ describe('layover cities', () => {
     expect(stats.cities.visitedCount).toBe(1);
     expect(stats.cities.items.map((city) => city.city)).toEqual(['Bali']);
     expect(stats.days.items[0].cities).toEqual(['Bali']);
+    expect(stats.cities.tripWideTotal).toBeCloseTo(11.36, 2);
+  });
+});
+
+describe('layover note matching', () => {
+  it.each([
+    'Layover Sydney → Bali',
+    '  Layover Sydney → Bali  ',
+    'layover sydney → bali',
+    'LAYOVER SYDNEY → BALI',
+    'Layover',
+    'Chase 1388: MCDONALDS BRIS AIRP | Layover Sydney → Bali',
+    'Chase 1388: MCDONALDS BRIS AIRP |layover sydney → bali',
+  ])('treats %j as a layover', (notes) => {
+    expect(isLayover(notes)).toBe(true);
+  });
+
+  it.each([
+    '',
+    'no layover',
+    'Layovers',
+    'layover-free',
+    'Chase 1388: MCDONALDS BRIS AIRP',
+    'arrived after a layover',
+    'Chase 1388: MCDONALDS BRIS AIRP | no layover',
+    'Chase 1388: MCDONALDS BRIS AIRP | Layovers',
+    'Chase 1388: MCDONALDS BRIS AIRP | layover-free',
+  ])('does not treat %j as a layover', (notes) => {
+    expect(isLayover(notes)).toBe(false);
+  });
+});
+
+describe('layover notes only in the opening word', () => {
+  const csv = [
+    TRANSACTION_HEADER,
+    '2026-05-13 09:00:00,Brisbane Food,-11.36,USD,-11.36,1.0000,2026-05-13,Food,Chase 1388,Brisbane,Australia,no layover',
+    '2026-05-13 12:00:00,Bali Food,-10.00,USD,-10.00,1.0000,2026-05-13,Food,Chase 1388,Bali,Indonesia,',
+  ].join('\n');
+  const stats = computeTrip(parseTransactions(csv));
+
+  it('keeps the city when a note merely mentions a layover', () => {
+    expect(stats.summary.grandTotal).toBeCloseTo(21.36, 2);
+    expect(stats.cities.visitedCount).toBe(2);
+    expect(stats.cities.items.map((city) => city.city)).toEqual([
+      'Brisbane',
+      'Bali',
+    ]);
   });
 
   it('keeps a layover purchase in its own category total', () => {
@@ -441,6 +489,17 @@ describe('seeded dataset', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
     expect(stats.summary.daysTracked).toBe(194);
     expect(stats.cities.visitedCount).toBe(47);
+  });
+
+  it('attributes every expense to exactly one city or the trip-wide bucket', () => {
+    const citySum = stats.cities.items.reduce(
+      (sum, city) => sum + city.total,
+      0,
+    );
+    expect(citySum + stats.cities.tripWideTotal).toBeCloseTo(
+      stats.summary.grandTotal,
+      2,
+    );
   });
 
   it('excludes the Brisbane layover city from the seeded city stats', () => {

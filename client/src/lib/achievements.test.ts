@@ -140,24 +140,25 @@ describe('Accommodation Collector', () => {
     expect(unlocked(stays(['A', 'B', 'C', 'D', 'E', 'China']), 'accommodation-collector')).toBe(false);
     expect(unlocked(stays([...six, 'China']), 'accommodation-collector')).toBe(true);
   });
-});
 
-describe('Accommodation Collector and layover cities', () => {
-  const stay = (city: string, i: number, notes = '') =>
-    row({
-      date: `2026-06-${String(8 + i).padStart(2, '0')}`,
+  it('does not count a layover-city stay as a visited city', () => {
+    const fiveStays = stays(six.slice(0, 5));
+    const layoverStay = row({
+      date: '2026-06-13',
       usd: -10,
       category: 'Accommodation',
-      city,
-      notes,
+      city: 'Brisbane',
+      notes: 'Layover Sydney → Bali',
+    });
+    const regularStay = row({
+      date: '2026-06-13',
+      usd: -10,
+      category: 'Accommodation',
+      city: 'Brisbane',
     });
 
-  it('counts a layover-city accommodation row as a stay (current behaviour)', () => {
-    const rows = [
-      ...['A', 'B', 'C', 'D', 'E'].map((city, i) => stay(city, i)),
-      stay('Brisbane', 5, 'Layover Sydney → Bali'),
-    ];
-    expect(unlocked(rows, 'accommodation-collector')).toBe(true);
+    expect(unlocked([...fiveStays, layoverStay], 'accommodation-collector')).toBe(false);
+    expect(unlocked([...fiveStays, regularStay], 'accommodation-collector')).toBe(true);
   });
 });
 
