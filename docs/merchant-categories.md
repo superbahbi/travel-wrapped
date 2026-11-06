@@ -9,16 +9,15 @@ category is listed with each one. This file grows with each paste.
 | Shenzhen Tong | `Transport` | 14 |
 | Fast Food | `Food` | 13 |
 | Mixue Bingcheng | `Food` | 13 |
-| Hellobike (e‑bike) | `Transport` | 9 |
+| Hellobike (e-bike) | `Transport` | 12 |
 | Railway 12306 | `Intercity Transport` / `Transport` | 9 |
+| Meituan (e-bike) | `Transport` | 8 |
 | Guangzhou Metro | `Transport` | 7 |
-| Meituan (e-bike) | `Transport` | 7 |
 | Kunming Metro | `Transport` | 6 |
 | Sishen Liangpin (e-bike) | `Transport` | 4 |
 | Chihutang (rice bowl) | `Food` | 3 |
 | Dali Backpacker Hostel | `Accommodation` | 3 |
-| Guangdong 7‑ELEVEN | `Food` | 3 |
-| Hellobike (e-bike) | `Transport` | 3 |
+| Guangdong 7-ELEVEN | `Food` | 3 |
 | Hongfeng Supermarket | `Food` | 3 |
 | Kuaima Xiansheng | `Food` | 3 |
 | Kunming Passing Clouds Hostel (Nanping Street) | `Accommodation` | 3 |
@@ -99,10 +98,9 @@ category is listed with each one. This file grows with each paste.
 | Lufen Wang Rice Noodles | `Food` | 1 |
 | LxL (food) | `Food` | 1 |
 | Ma Mingxiang | `Food` | 1 |
-| Magical (hotpot – share) | `Food` | 1 |
+| Magical (hotpot - share) | `Food` | 1 |
 | Maji Amo Tibetan Restaurant | `Food` | 1 |
 | Meituan (auto) | `Transport` | 1 |
-| Meituan (e‑bike) | `Transport` | 1 |
 | Meituan (group buy) | `Food` | 1 |
 | Meituan (Young 20 Years) | `Food` | 1 |
 | Meiyijia | `Food` | 1 |
@@ -124,11 +122,11 @@ category is listed with each one. This file grows with each paste.
 | Old Shanghai Wonton | `Food` | 1 |
 | Olly (dinner transfer) | `Food` | 1 |
 | Olly (lunch) | `Food` | 1 |
-| Pencil (game top‑up) | `Subscription` | 1 |
+| Pencil (game top-up) | `Subscription` | 1 |
 | Qiahuo Puzi (snacks) | `Food` | 1 |
 | Qingzhou Xiaocai (porridge) | `Food` | 1 |
 | Qiya Coffee | `Food` | 1 |
-| Quanyi Car Rental (e‑bike) | `Transport` | 1 |
+| Quanyi Car Rental (e-bike) | `Transport` | 1 |
 | Roof Coffee | `Food` | 1 |
 | SEG Plaza (cable) | `Shopping` | 1 |
 | Shanghai Hecheng (Shangri-La) | `Accommodation` | 1 |
