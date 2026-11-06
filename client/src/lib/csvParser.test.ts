@@ -8,6 +8,7 @@ import {
   parseTransactions,
 } from './csvParser';
 import { buildJourneyView } from './journeyView';
+import { CITY_ROUTE, buildCityRoute } from './city';
 
 const TRANSACTION_HEADER =
   'Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes';
@@ -488,7 +489,7 @@ describe('seeded dataset', () => {
   it('keeps the seeded totals', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
     expect(stats.summary.daysTracked).toBe(194);
-    expect(stats.cities.visitedCount).toBe(47);
+    expect(stats.cities.visitedCount).toBe(38);
   });
 
   it('attributes every expense to exactly one city or the trip-wide bucket', () => {
@@ -506,6 +507,39 @@ describe('seeded dataset', () => {
     expect(stats.cities.items.map((city) => city.city)).not.toContain(
       'Brisbane',
     );
+  });
+
+  it('folds every day trip into its base city', () => {
+    const cities = stats.cities.items.map((city) => city.city);
+    expect(cities).not.toContain('Santa Monica');
+    expect(cities).not.toContain('Torrance');
+    expect(cities).not.toContain('El Segundo');
+    expect(cities).not.toContain('Katoomba');
+    expect(cities).not.toContain('Picton');
+    expect(cities).not.toContain('Hangzhou');
+    expect(cities).not.toContain('Apollo Bay');
+    expect(cities).not.toContain('Arrowtown');
+    expect(cities).not.toContain('Fiordland');
+    expect(cities).toEqual(
+      expect.arrayContaining(['Los Angeles', 'Sydney', 'Blenheim', 'Litang']),
+    );
+    expect(cities).toEqual(
+      expect.arrayContaining(['Melbourne', 'Queenstown']),
+    );
+  });
+
+  it('keeps genuinely visited cities that were missing from the list', () => {
+    const cities = stats.cities.items.map((city) => city.city);
+    expect(cities).toEqual(
+      expect.arrayContaining(['Kuala Lumpur', 'Daegu']),
+    );
+  });
+
+  it('renders the travelled route, round trip included', () => {
+    const route = buildCityRoute(
+      stats.days.items.flatMap((day) => day.cities),
+    );
+    expect(route).toEqual([...CITY_ROUTE]);
   });
 
   it('keeps the date range', () => {

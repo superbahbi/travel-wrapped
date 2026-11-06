@@ -2,6 +2,7 @@
 // The canonical schema is documented in docs/canonical-csv.md.
 // ============================================================
 
+import { canonicalCity } from './city';
 import {
   WEEKDAYS,
   daysBetween,
@@ -389,7 +390,7 @@ export function parseTransactions(csv: string): Transaction[] {
       fxDate: requiredDate(fields, columns, row),
       category: requiredText(fields, columns, 'Category', row),
       payment: requiredText(fields, columns, 'Payment', row),
-      city: requiredText(fields, columns, 'City', row),
+      city: canonicalCity(requiredText(fields, columns, 'City', row)),
       country: requiredText(fields, columns, 'Country', row),
       notes: (fields[columns.Notes] ?? '').trim(),
     };
@@ -604,7 +605,7 @@ export function parseAccommodations(csv: string): AccommodationEntry[] {
     return {
       date,
       merchant: requiredText(fields, columns, 'Merchant', row),
-      city: requiredText(fields, columns, 'City', row),
+      city: canonicalCity(requiredText(fields, columns, 'City', row)),
       country: requiredText(fields, columns, 'Country', row),
       amount: requiredPositiveNumber(fields, columns, 'Amount', row),
       currency: requiredCurrency(fields, columns, row),

@@ -71,6 +71,22 @@ none of these, and only after confirming it in the question batch.
 **Generic city.** `China`, `Unknown`, and an empty city are the trip-wide
 bucket. They are excluded from city stats and counted in `tripWideTotal`.
 
+**City grouping.** A day trip or metro-area suburb is recorded under the city
+it was visited from, so it never becomes a separate visit. The ledger may keep
+the bank's place name; the parser folds it through the alias map in
+`client/src/lib/city.ts` before any city stat, achievement, or route is built.
+Current folds: Santa Monica, Torrance, and El Segundo → Los Angeles; Katoomba →
+Sydney; Picton → Blenheim; Apollo Bay → Melbourne; Arrowtown and Fiordland →
+Queenstown. Add a fold only when the place was a day trip from the base city,
+not when it was an overnight stop.
+
+**Route order.** `My Journey` follows the travelled itinerary, not the order
+bank rows first appear. A booking made in advance (a Sydney flight bought from
+Blenheim) must not pull a city earlier. The order lives in
+`client/src/lib/city.ts`; the route is a round trip, so Los Angeles appears at
+both ends. Cities missing from that list are appended in first-seen order
+rather than dropped.
+
 **Layover.** A row is a transit purchase when a note names the transit marker
 as its opening word. Split `Notes` on `|`, trim each segment, and compare
 case-insensitively: a segment matches when it starts with `layover` followed by
