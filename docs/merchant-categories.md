@@ -191,7 +191,7 @@ bank/card fees use the `Fees` category.
 | agoda.com | `Accommodation` | 7 |
 | Fairweathers Bar & Rest | `Food` | 6 |
 | Foreign exchange rate adjustment fee | `Fees` | 6 |
-| Hotel at Booking.com | `Accommodation` | 6 |
+| Hotel at Booking.com | `Accommodation` | 5 |
 | New World Blenheim | `Food` | 6 |
 | Mobimatter | `Subscription` | 5 |
 | Fergbaker | `Food` | 4 |
