@@ -9,6 +9,8 @@
     "preview": "vite preview --host",
     "start": "vite preview --host",
     "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write ."
   },
   "dependencies": {
