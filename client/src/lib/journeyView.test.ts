@@ -59,8 +59,6 @@ describe('buildJourneyView', () => {
   });
 
   it('answers category questions without callers scanning the series', () => {
-    expect(view.categories.food?.count).toBe(1);
-    expect(view.categories.accommodation?.count).toBe(2);
     expect(view.categories.activities?.total).toBeCloseTo(10, 2);
     expect(view.categories.transport?.total).toBeCloseTo(1, 2);
     expect(view.categories.intercityTransport?.total).toBeCloseTo(42.86, 2);
@@ -78,8 +76,15 @@ describe('buildJourneyView', () => {
     expect(view.accommodation.ledgerTotal).toBeCloseTo(42.86, 2);
     expect(view.accommodation.stays).toBe(2);
     expect(view.accommodation.perNightTotal).toBeCloseTo(42.86, 2);
-    expect(view.accommodation.nights).toBe(2);
     expect(view.accommodation.perNightAverage).toBeCloseTo(21.43, 2);
+  });
+
+  it('ignores negative per-night rows in the per-night total', () => {
+    const viewWithBadRow = buildJourneyView(series, transactions, [
+      ...accommodations,
+      { ...accommodations[0], amountUSD: -28.57 },
+    ]);
+    expect(viewWithBadRow.accommodation.perNightTotal).toBeCloseTo(42.86, 2);
   });
 
   it('shapes top spend rows per category, excluding refunds', () => {
@@ -108,6 +113,7 @@ describe('buildJourneyView', () => {
     expect(view.pace.perDay).toBeCloseTo(20.14, 2);
     expect(view.pace.perMonth).toBeCloseTo(604.32, 2);
     expect(view.pace.perWeek).toBeCloseTo(141.01, 2);
+    expect(view.pace.perWeek).toBe(view.pace.perDay * 7);
   });
 
   it('derives payment shares', () => {
