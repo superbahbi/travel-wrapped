@@ -61,6 +61,10 @@ export default function Home() {
   const accommodations = data?.accommodations ?? NO_ACCOMMODATIONS;
   const income = data?.income ?? NO_INCOME;
   const incomeSummary = useMemo(() => summarizeIncome(income), [income]);
+  const taxRefund = useMemo(
+    () => income.find((entry) => entry.source.startsWith('I.R.D.')) ?? null,
+    [income],
+  );
   const view = useMemo(
     () =>
       stats ? buildJourneyView(stats, transactions, accommodations) : null,
@@ -248,6 +252,43 @@ export default function Home() {
                         <span className="mono font-bold">{formatUSD(source.totalUSD)}</span>
                       </div>
                     ))}
+                  </div>
+                </div>
+              </WrappedCard>
+            )}
+
+            {/* ── CARD 1.6: Tax Refund ── */}
+            {taxRefund && (
+              <WrappedCard gradient="linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%)">
+                <div className="p-8 text-white">
+                  <div className="text-sm font-semibold tracking-widest uppercase opacity-70 mb-2">I got back</div>
+                  <div className="flex items-end gap-3 mb-1">
+                    <div className="text-7xl sm:text-8xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
+                      {formatUSD(taxRefund.amountUSD)}
+                    </div>
+                  </div>
+                  <div className="text-white/70 text-lg mb-6">
+                    a NZ tax refund from Inland Revenue on <span className="font-bold text-white">{formatShortDate(taxRefund.date)}</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <GlassPanel>
+                      <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
+                        NZ${taxRefund.amount.toLocaleString('en-NZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      </div>
+                      <div className="text-xs opacity-70 mt-1">in NZD</div>
+                    </GlassPanel>
+                    <GlassPanel>
+                      <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
+                        {incomeSummary.totalUSD > 0 ? `${((taxRefund.amountUSD / incomeSummary.totalUSD) * 100).toFixed(0)}%` : '—'}
+                      </div>
+                      <div className="text-xs opacity-70 mt-1">of my income</div>
+                    </GlassPanel>
+                    <GlassPanel>
+                      <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
+                        {stats.summary.grandTotal > 0 ? `${((taxRefund.amountUSD / stats.summary.grandTotal) * 100).toFixed(0)}%` : '—'}
+                      </div>
+                      <div className="text-xs opacity-70 mt-1">of my spend</div>
+                    </GlassPanel>
                   </div>
                 </div>
               </WrappedCard>
