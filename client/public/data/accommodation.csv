@@ -1,39 +1,39 @@
-"Date","Amount (CNY)","City","Merchant","Notes"
-"2026-06-08",60.10,"Shenzhen","Dengba Hostel","1 night (line 2)"
-"2026-06-09",58.67,"Shenzhen","Dengba Hostel","line 3 (night 1 of 3)"
-"2026-06-10",58.67,"Shenzhen","Dengba Hostel","line 3 (night 2 of 3)"
-"2026-06-11",58.67,"Shenzhen","Dengba Hostel","line 3 (night 3 of 3)"
-"2026-06-12",57.00,"Guangzhou","Eden Hostel","line 49 (night 1 of 2)"
-"2026-06-13",57.00,"Guangzhou","Eden Hostel","line 49 (night 2 of 2)"
-"2026-06-14",42.00,"Guilin","Travel Light Hostel","line 73 (night 1 of 2)"
-"2026-06-15",42.00,"Guilin","Travel Light Hostel","line 73 (night 2 of 2)"
-"2026-06-16",58.00,"Yangshuo","Yangshuo Sudder Street Guesthouse","line 84 (night 1 of 3)"
-"2026-06-17",58.00,"Yangshuo","Yangshuo Sudder Street Guesthouse","line 84 (night 2 of 3)"
-"2026-06-18",58.00,"Yangshuo","Yangshuo Sudder Street Guesthouse","line 84 (night 3 of 3)"
-"2026-06-19",37.00,"Guilin","Travel Light Hostel","line 110 (1 night)"
-"2026-06-20",37.00,"Kunming","Kunming Passing Clouds Hostel (Nanping Street)","line 116 (1 night)"
-"2026-06-21",28.00,"Kunming","Kunming Passing Clouds Hostel (Nanping Street)","line 121 (night 1 of 3)"
-"2026-06-22",28.00,"Kunming","Kunming Passing Clouds Hostel (Nanping Street)","line 121 (night 2 of 3)"
-"2026-06-23",28.00,"Kunming","Kunming Passing Clouds Hostel (Nanping Street)","line 121 (night 3 of 3)"
-"2026-06-24",34.00,"Pu'er","Caicai Boutique Stay Hostel","line 149 (1 night)"
-"2026-06-25",31.00,"Pu'er","Caicai Boutique Stay Hostel","line 162 (night 1 of 2)"
-"2026-06-26",31.00,"Pu'er","Caicai Boutique Stay Hostel","line 162 (night 2 of 2)"
-"2026-06-27",39.00,"Dali","Dali Backpacker Hostel","line 173 (1 night)"
-"2026-06-28",34.00,"Dali","Dali Backpacker Hostel","line 184 (night 1 of 3)"
-"2026-06-29",34.00,"Dali","Dali Backpacker Hostel","line 184 (night 2 of 3)"
-"2026-06-30",34.00,"Dali","Dali Backpacker Hostel","line 184 (night 3 of 3)"
-"2026-07-01",34.00,"Dali","Dali Backpacker Hostel","line 197 (extension)"
-"2026-07-02",25.00,"Lijiang","Zhiyu Youth Hostel (Lijiang Ancient City)","line 203 (1 night)"
-"2026-07-03",25.00,"Lijiang","Zhiyu Youth Hostel (Lijiang Ancient City)","line 208 (night 1 of 2)"
-"2026-07-04",25.00,"Lijiang","Zhiyu Youth Hostel (Lijiang Ancient City)","line 208 (night 2 of 2)"
-"2026-07-05",83.00,"Lijiang","Halfway Guesthouse (Tiger Leaping Gorge)","line 231 (1 night)"
-"2026-07-06",25.00,"Lijiang","Zhiyu Youth Hostel (Lijiang Ancient City)","line 239 (1 night)"
-"2026-07-07",29.00,"Shangri-La","Shanghai Hecheng (Shangri-La)","line 240 (1 night)"
-"2026-07-08",34.00,"Shangri-La","Shanghai Hecheng (Yaju Hostel)","line 252 (1 night)"
-"2026-07-09",35.00,"Shangri-La","Xuanyuan Inn","line 258 (night 1 of 4)"
-"2026-07-10",35.00,"Shangri-La","Xuanyuan Inn","line 258 (night 2 of 4)"
-"2026-07-11",35.00,"Shangri-La","Xuanyuan Inn","line 258 (night 3 of 4)"
-"2026-07-12",35.00,"Shangri-La","Xuanyuan Inn","line 258 (night 4 of 4)"
-"2026-07-13",75.00,"Yading","Wang Erjia Handicraft","line 284 (1 night)"
-"2026-07-14",75.00,"Yading","Wang Erjia Handicraft","line 285 (night 1 of 2)"
-"2026-07-15",75.00,"Yading","Wang Erjia Handicraft","line 285 (night 2 of 2)"
+Date,Merchant,City,Country,Amount,Currency,AmountUSD,FXRate,FXDate,Notes
+2026-06-08,Dengba Hostel,Shenzhen,China,60.10,CNY,8.347222,7.2000,2026-06-08,1 night (line 2)
+2026-06-09,Dengba Hostel,Shenzhen,China,58.67,CNY,8.148611,7.2000,2026-06-09,line 3 (night 1 of 3)
+2026-06-10,Dengba Hostel,Shenzhen,China,58.67,CNY,8.148611,7.2000,2026-06-10,line 3 (night 2 of 3)
+2026-06-11,Dengba Hostel,Shenzhen,China,58.67,CNY,8.148611,7.2000,2026-06-11,line 3 (night 3 of 3)
+2026-06-12,Eden Hostel,Guangzhou,China,57.00,CNY,7.916667,7.2000,2026-06-12,line 49 (night 1 of 2)
+2026-06-13,Eden Hostel,Guangzhou,China,57.00,CNY,7.916667,7.2000,2026-06-13,line 49 (night 2 of 2)
+2026-06-14,Travel Light Hostel,Guilin,China,42.00,CNY,5.833333,7.2000,2026-06-14,line 73 (night 1 of 2)
+2026-06-15,Travel Light Hostel,Guilin,China,42.00,CNY,5.833333,7.2000,2026-06-15,line 73 (night 2 of 2)
+2026-06-16,Yangshuo Sudder Street Guesthouse,Yangshuo,China,58.00,CNY,8.055556,7.2000,2026-06-16,line 84 (night 1 of 3)
+2026-06-17,Yangshuo Sudder Street Guesthouse,Yangshuo,China,58.00,CNY,8.055556,7.2000,2026-06-17,line 84 (night 2 of 3)
+2026-06-18,Yangshuo Sudder Street Guesthouse,Yangshuo,China,58.00,CNY,8.055556,7.2000,2026-06-18,line 84 (night 3 of 3)
+2026-06-19,Travel Light Hostel,Guilin,China,37.00,CNY,5.138889,7.2000,2026-06-19,line 110 (1 night)
+2026-06-20,Kunming Passing Clouds Hostel (Nanping Street),Kunming,China,37.00,CNY,5.138889,7.2000,2026-06-20,line 116 (1 night)
+2026-06-21,Kunming Passing Clouds Hostel (Nanping Street),Kunming,China,28.00,CNY,3.888889,7.2000,2026-06-21,line 121 (night 1 of 3)
+2026-06-22,Kunming Passing Clouds Hostel (Nanping Street),Kunming,China,28.00,CNY,3.888889,7.2000,2026-06-22,line 121 (night 2 of 3)
+2026-06-23,Kunming Passing Clouds Hostel (Nanping Street),Kunming,China,28.00,CNY,3.888889,7.2000,2026-06-23,line 121 (night 3 of 3)
+2026-06-24,Caicai Boutique Stay Hostel,Pu'er,China,34.00,CNY,4.722222,7.2000,2026-06-24,line 149 (1 night)
+2026-06-25,Caicai Boutique Stay Hostel,Pu'er,China,31.00,CNY,4.305556,7.2000,2026-06-25,line 162 (night 1 of 2)
+2026-06-26,Caicai Boutique Stay Hostel,Pu'er,China,31.00,CNY,4.305556,7.2000,2026-06-26,line 162 (night 2 of 2)
+2026-06-27,Dali Backpacker Hostel,Dali,China,39.00,CNY,5.416667,7.2000,2026-06-27,line 173 (1 night)
+2026-06-28,Dali Backpacker Hostel,Dali,China,34.00,CNY,4.722222,7.2000,2026-06-28,line 184 (night 1 of 3)
+2026-06-29,Dali Backpacker Hostel,Dali,China,34.00,CNY,4.722222,7.2000,2026-06-29,line 184 (night 2 of 3)
+2026-06-30,Dali Backpacker Hostel,Dali,China,34.00,CNY,4.722222,7.2000,2026-06-30,line 184 (night 3 of 3)
+2026-07-01,Dali Backpacker Hostel,Dali,China,34.00,CNY,4.722222,7.2000,2026-07-01,line 197 (extension)
+2026-07-02,Zhiyu Youth Hostel (Lijiang Ancient City),Lijiang,China,25.00,CNY,3.472222,7.2000,2026-07-02,line 203 (1 night)
+2026-07-03,Zhiyu Youth Hostel (Lijiang Ancient City),Lijiang,China,25.00,CNY,3.472222,7.2000,2026-07-03,line 208 (night 1 of 2)
+2026-07-04,Zhiyu Youth Hostel (Lijiang Ancient City),Lijiang,China,25.00,CNY,3.472222,7.2000,2026-07-04,line 208 (night 2 of 2)
+2026-07-05,Halfway Guesthouse (Tiger Leaping Gorge),Lijiang,China,83.00,CNY,11.527778,7.2000,2026-07-05,line 231 (1 night)
+2026-07-06,Zhiyu Youth Hostel (Lijiang Ancient City),Lijiang,China,25.00,CNY,3.472222,7.2000,2026-07-06,line 239 (1 night)
+2026-07-07,Shanghai Hecheng (Shangri-La),Shangri-La,China,29.00,CNY,4.027778,7.2000,2026-07-07,line 240 (1 night)
+2026-07-08,Shanghai Hecheng (Yaju Hostel),Shangri-La,China,34.00,CNY,4.722222,7.2000,2026-07-08,line 252 (1 night)
+2026-07-09,Xuanyuan Inn,Shangri-La,China,35.00,CNY,4.861111,7.2000,2026-07-09,line 258 (night 1 of 4)
+2026-07-10,Xuanyuan Inn,Shangri-La,China,35.00,CNY,4.861111,7.2000,2026-07-10,line 258 (night 2 of 4)
+2026-07-11,Xuanyuan Inn,Shangri-La,China,35.00,CNY,4.861111,7.2000,2026-07-11,line 258 (night 3 of 4)
+2026-07-12,Xuanyuan Inn,Shangri-La,China,35.00,CNY,4.861111,7.2000,2026-07-12,line 258 (night 4 of 4)
+2026-07-13,Wang Erjia Handicraft,Yading,China,75.00,CNY,10.416667,7.2000,2026-07-13,line 284 (1 night)
+2026-07-14,Wang Erjia Handicraft,Yading,China,75.00,CNY,10.416667,7.2000,2026-07-14,line 285 (night 1 of 2)
+2026-07-15,Wang Erjia Handicraft,Yading,China,75.00,CNY,10.416667,7.2000,2026-07-15,line 285 (night 2 of 2)

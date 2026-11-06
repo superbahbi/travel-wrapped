@@ -1,5 +1,5 @@
 {
-  "name": "china-travel-wrapped",
+  "name": "travel-wrapped-2026",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -9,6 +9,8 @@
     "preview": "vite preview --host",
     "start": "vite preview --host",
     "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write ."
   },
   "dependencies": {

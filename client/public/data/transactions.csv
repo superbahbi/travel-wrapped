@@ -1,293 +1,293 @@
-#,"Date","Merchant","CNY","USD","Category","Payment","City","Expense Type","Notes"
-1,"2026-06-08 00:00:00","ESIMDOG",-47.18,-6.98,"Shopping","Other","China","Irregular","data eSIM"
-2,"2026-06-08 00:00:00","Dengba Hostel",-60.10,-8.89,"Accommodation","Other","Shenzhen","Core","1 night Jun 8"
-3,"2026-06-08 00:00:00","Dengba Hostel",-176.00,-26.04,"Accommodation","Alipay","Shenzhen","Core","3 nights Jun 9-11"
-4,"2026-06-08 14:44:48","Fast Food",-37.52,-5.55,"Food","Alipay","Shenzhen","Core",""
-5,"2026-06-08 00:00:00","Meiyijia",-11.50,-1.70,"Food","WeChat","Shenzhen","Core",""
-6,"2026-06-08 00:00:00","Shenzhen Metro (Octopus)",-2.00,-0.30,"Transport","Other","Shenzhen","Core",""
-7,"2026-06-09 06:55:09","Little Tadpole",-8.80,-1.30,"Food","Alipay","Shenzhen","Core",""
-8,"2026-06-09 08:26:05","Guangdong 7‑ELEVEN",-12.00,-1.78,"Food","Alipay","Shenzhen","Core",""
-9,"2026-06-12 00:00:00","Railway 12306",-23.49,-3.48,"Intercity Transport","Alipay","Shenzhen","Irregular","SZ→Guangzhou (arrived Jun 12)"
-10,"2026-06-09 11:14:07","Shenzhen Metro Group",-3.00,-0.44,"Transport","Alipay","Shenzhen","Core",""
-11,"2026-06-09 12:52:39","Bai Pin Qian Tiao",-21.32,-3.15,"Food","Alipay","Shenzhen","Core",""
-12,"2026-06-09 13:07:27","Chengxing Trading",-9.00,-1.33,"Shopping","Alipay","Shenzhen","Irregular",""
-13,"2026-06-09 14:24:34","Shenzhen Tong",-2.70,-0.40,"Transport","Alipay","Shenzhen","Core",""
-14,"2026-06-09 16:26:34","Shenzhen Tong",-5.00,-0.74,"Transport","Alipay","Shenzhen","Core",""
-15,"2026-06-09 16:35:15","Kuaima Xiansheng",-4.00,-0.59,"Food","Alipay","Shenzhen","Core",""
-16,"2026-06-09 18:00:58","Dengba (laundry)",-10.00,-1.48,"Laundry","Alipay","Shenzhen","Irregular",""
-17,"2026-06-09 18:57:43","Dengba (laundry)",-8.00,-1.18,"Laundry","Alipay","Shenzhen","Irregular",""
-18,"2026-06-09 20:49:54","Youxiang Membership",-9.90,-1.46,"Subscription","Alipay","Shenzhen","Irregular",""
-19,"2026-06-09 21:35:01","Fast Food",-19.90,-2.94,"Food","Alipay","Shenzhen","Core",""
-20,"2026-06-09 22:15:41","Shenzhen Tong",-2.00,-0.30,"Transport","Alipay","Shenzhen","Core",""
-21,"2026-06-10 11:01:22","Old Shanghai Wonton",-30.32,-4.49,"Food","Alipay","Shenzhen","Core",""
-22,"2026-06-10 11:42:21","Shenzhen Tong",-2.70,-0.40,"Transport","Alipay","Shenzhen","Core",""
-23,"2026-06-10 11:57:28","Shenzhen Maiya Dental",-98.00,-14.50,"Personal Care","Alipay","China","Irregular",""
-24,"2026-06-10 13:09:56","Shenzhen Tong",-2.00,-0.30,"Transport","Alipay","Shenzhen","Core",""
-25,"2026-06-10 14:38:45","Hellobike",-1.80,-0.27,"Transport","Alipay","Shenzhen","Core",""
-26,"2026-06-10 15:00:02","Shenzhen Tong",-3.00,-0.44,"Transport","Alipay","Shenzhen","Core",""
-27,"2026-06-10 15:02:34","Guangdong Lawson",-3.80,-0.56,"Food","Alipay","Shenzhen","Core",""
-28,"2026-06-10 17:31:52","Shenzhen Tong",-5.00,-0.74,"Transport","Alipay","Shenzhen","Core",""
-29,"2026-06-10 19:53:18","Can Can Hao",-24.49,-3.62,"Food","Alipay","Shenzhen","Core",""
-30,"2026-06-10 20:03:42","Kuaima Xiansheng",-2.86,-0.42,"Food","Alipay","Shenzhen","Core",""
-31,"2026-06-11 08:02:34","Changfen Wang",-14.00,-2.07,"Food","Alipay","Shenzhen","Core",""
-32,"2026-06-11 08:14:24","AvecToi Bakery",-15.32,-2.27,"Food","Alipay","Shenzhen","Core",""
-33,"2026-06-11 11:15:40","Shenzhen Tong",-1.70,-0.25,"Transport","Alipay","Shenzhen","Core",""
-34,"2026-06-11 12:17:32","Guangdong 7‑ELEVEN",-6.46,-0.96,"Food","Alipay","Shenzhen","Core",""
-35,"2026-06-11 13:18:32","Fast Food",-24.00,-3.55,"Food","Alipay","Shenzhen","Core",""
-36,"2026-06-11 13:58:07","Shenzhen Tong",-2.00,-0.30,"Transport","Alipay","Shenzhen","Core",""
-37,"2026-06-11 14:39:28","Fast Food",-12.00,-1.78,"Food","Alipay","Shenzhen","Core",""
-38,"2026-06-11 15:45:51","Shenzhen Tong",-2.00,-0.30,"Transport","Alipay","Shenzhen","Core",""
-39,"2026-06-11 16:11:53","Meituan (bike)",-1.80,-0.27,"Transport","Alipay","Shenzhen","Core",""
-40,"2026-06-11 18:02:23","Kuaima Xiansheng",-2.87,-0.42,"Food","Alipay","Shenzhen","Core",""
-41,"2026-06-11 18:05:26","Can Can Hao",-29.12,-4.31,"Food","Alipay","Shenzhen","Core",""
-42,"2026-06-11 18:41:42","Shenzhen Tong",-3.00,-0.44,"Transport","Alipay","Shenzhen","Core",""
-43,"2026-06-11 20:32:04","Shenzhen Tong",-3.00,-0.44,"Transport","Alipay","Shenzhen","Core",""
-44,"2026-06-11 21:48:46","Meituan (auto)",-2.80,-0.41,"Transport","Alipay","Shenzhen","Core","(bike)"
-45,"2026-06-11 00:00:00","SEG Plaza (cable)",-20.00,-2.96,"Shopping","Other","Shenzhen","Irregular",""
-46,"2026-06-12 09:00:20","Shenzhen Tong",-2.00,-0.30,"Transport","Alipay","Shenzhen","Core",""
-47,"2026-06-12 10:12:53","Shenzhen Tong",-4.00,-0.59,"Transport","Alipay","Shenzhen","Core",""
-48,"2026-06-12 10:25:03","Shenzhen Shentie Times",-18.32,-2.71,"Food","Alipay","Shenzhen","Core",""
-49,"2026-06-12 11:38:13","Eden Hostel",-114.00,-16.86,"Accommodation","Alipay","Guangzhou","Core","2 nights Jun 12-13"
-50,"2026-06-12 11:48:16","Eden deposit",-20.00,-2.96,"Accommodation","Alipay","Guangzhou","Irregular","refundable"
-51,"2026-06-12 14:34:07","Guangzhou Metro",-8.00,-1.18,"Transport","Alipay","Guangzhou","Core",""
-52,"2026-06-12 15:30:16","Fast Food",-33.50,-4.96,"Food","Alipay","Guangzhou","Core",""
-53,"2026-06-12 16:56:41","Guangzhou Metro",-4.00,-0.59,"Transport","Alipay","Guangzhou","Core",""
-54,"2026-06-12 17:48:55","Meituan (bike)",-3.50,-0.52,"Transport","Alipay","Guangzhou","Core",""
-55,"2026-06-12 00:00:00","Chinese SIM Card",-100.00,-14.79,"Subscription","Other","China","Irregular",""
-56,"2026-06-12 20:15:04","Guangzhou Metro",-4.00,-0.59,"Transport","Alipay","Guangzhou","Core",""
-57,"2026-06-12 20:19:36","Shenzhen Weiqi",-15.00,-2.22,"Food","Alipay","Guangzhou","Core",""
-58,"2026-06-12 20:25:56","Guangdong 7‑ELEVEN",-4.50,-0.67,"Food","Alipay","Guangzhou","Core",""
-59,"2026-06-14 00:00:00","Railway 12306",-181.00,-26.78,"Intercity Transport","Alipay","Guangzhou","Irregular","Guangzhou → Guilin (arrived Jun 14)"
-60,"2026-06-13 09:26:19","Fast Food",-31.32,-4.63,"Food","Alipay","Guangzhou","Core",""
-61,"2026-06-13 10:16:11","Guangzhou Metro",-4.00,-0.59,"Transport","Alipay","Guangzhou","Core",""
-62,"2026-06-13 11:25:19","Guangzhou Metro",-2.00,-0.30,"Transport","Alipay","Guangzhou","Core",""
-63,"2026-06-13 12:16:54","Meituan (bike)",-2.50,-0.37,"Transport","Alipay","Guangzhou","Core",""
-64,"2026-06-13 12:44:58","Guangzhou Metro",-4.00,-0.59,"Transport","Alipay","Guangzhou","Core",""
-65,"2026-06-13 12:50:36","Shenzhen Weiqi",-22.82,-3.38,"Food","Alipay","Guangzhou","Core",""
-66,"2026-06-13 13:58:01","AEON Guangzhou",-97.70,-14.45,"Shopping","Alipay","Guangzhou","Irregular",""
-67,"2026-06-13 15:03:25","Miniso",-24.90,-3.68,"Shopping","Alipay","Guangzhou","Irregular",""
-68,"2026-06-13 15:21:17","FamilyMart",-6.50,-0.96,"Food","Alipay","Guangzhou","Core",""
-69,"2026-06-13 19:18:14","Shenzhen Weiqi",-22.28,-3.30,"Food","Alipay","Guangzhou","Core",""
-70,"2026-06-14 06:33:33","Fast Food",-26.50,-3.92,"Food","Alipay","Guangzhou","Core",""
-71,"2026-06-14 07:52:22","Guangzhou Metro",-6.00,-0.89,"Transport","Alipay","Guangzhou","Core",""
-72,"2026-06-14 12:16:55","Guilin Public Transport",-1.80,-0.27,"Transport","Alipay","Guilin","Core","bus"
-73,"2026-06-14 13:02:26","Travel Light Hostel",-84.00,-12.43,"Accommodation","Alipay","Guilin","Core","2 nights (Jun14-15, 42/night)"
-74,"2026-06-14 13:20:50","Guilin Rice Noodles",-18.00,-2.66,"Food","Alipay","Guilin","Core",""
-75,"2026-06-14 13:42:12","Yebali (haircut)",-40.00,-5.92,"Personal Care","Alipay","Guilin","Irregular",""
-76,"2026-06-14 14:22:08","LxL (laundry)",-15.00,-2.22,"Laundry","Alipay","Guilin","Irregular",""
-77,"2026-06-14 17:10:17","Ma Mingxiang",-3.00,-0.44,"Food","Alipay","Guilin","Core",""
-78,"2026-06-14 17:32:54","Meituan (e-bike)",-3.00,-0.44,"Transport","Alipay","Guilin","Core",""
-79,"2026-06-14 17:49:51","Meituan (e-bike)",-3.00,-0.44,"Transport","Alipay","Guilin","Core",""
-80,"2026-06-14 18:04:52","Guilin Shuyuan Tourism",-30.00,-4.44,"Activities","Alipay","Guilin","Irregular",""
-81,"2026-06-14 19:23:42","Eden Hostel (refund)",+20.00,+2.96,"Accommodation","Alipay","Guangzhou","Irregular","deposit refund"
-82,"2026-06-14 19:54:22","Meituan (e-bike)",-3.00,-0.44,"Transport","Alipay","Guilin","Core",""
-83,"2026-06-14 21:18:57","Hainan Coconut Qingbuliang",-17.90,-2.65,"Food","Alipay","Guilin","Core","delivery"
-84,"2026-06-15 09:18:10","Yangshuo Sudder Street Guesthouse",-174.00,-25.74,"Accommodation","Alipay","Yangshuo","Core","3 nights (Jun16-18, 58/night)"
-85,"2026-06-15 10:08:12","Lufen Wang Rice Noodles",-7.00,-1.04,"Food","Alipay","Guilin","Core",""
-86,"2026-06-15 10:34:44","Guilin Youhao Duo Supermarket",-4.78,-0.71,"Food","Alipay","Guilin","Core",""
-87,"2026-06-15 14:58:28","Hellobike (e-bike)",-6.00,-0.89,"Transport","Alipay","Guilin","Core",""
-88,"2026-06-15 18:00:26","LxL (food)",-1.00,-0.15,"Food","Alipay","Guilin","Core",""
-89,"2026-06-15 22:25:46","Guilin Xingyijia Supermarket",-6.50,-0.96,"Food","Alipay","Guilin","Core",""
-90,"2026-06-16 09:11:58","Xi'an Snacks",-15.00,-2.22,"Food","Alipay","Yangshuo","Core",""
-91,"2026-06-16 00:00:00","Transport (An)",-50.00,-7.40,"Intercity Transport","Alipay","Yangshuo","Irregular","Guilin → Yangshuo (arrived Jun 16)"
-92,"2026-06-16 14:40:54","Mixue Bingcheng",-4.76,-0.70,"Food","Alipay","Yangshuo","Core",""
-93,"2026-06-16 16:27:50","Haoxianglai Snacks",-10.13,-1.50,"Food","Alipay","Yangshuo","Core",""
-94,"2026-06-16 17:47:32","VPN Service",-4.19,-0.62,"Subscription","Alipay","China","Irregular",""
-95,"2026-06-17 20:03:17","Yangshuo Tuzu Rental",-35.00,-5.18,"Transport","Alipay","Yangshuo","Core","e-bike rental for Jun17"
-96,"2026-06-16 20:51:34","Fumanlou Beer Fish",-66.00,-9.76,"Food","Alipay","Yangshuo","Core",""
-97,"2026-06-16 21:15:08","Yuzi",-12.00,-1.78,"Food","Alipay","Yangshuo","Core",""
-98,"2026-06-18 20:03:17","Yangshuo Tuzu Rental",-35.00,-5.18,"Transport","Alipay","Yangshuo","Core","e-bike rental for Jun18"
-99,"2026-06-17 19:27:57","Weidangjia Beer Fish",-5.00,-0.74,"Food","Alipay","Yangshuo","Core",""
-100,"2026-06-17 18:53:55","Weidangjia Beer Fish",-30.00,-4.44,"Food","Alipay","Yangshuo","Core",""
-101,"2026-06-17 13:07:00","Fast Food",-40.00,-5.92,"Food","Alipay","Yangshuo","Core",""
-102,"2026-06-17 07:45:58","Xiaolian Youcha Baozi",-6.50,-0.96,"Food","Alipay","Yangshuo","Core",""
-103,"2026-06-18 09:24:09","Xiaolian Youcha Baozi",-8.00,-1.18,"Food","Alipay","Yangshuo","Core",""
-104,"2026-06-18 09:59:54","Dongyuan Mixiang Inn (food)",-4.00,-0.59,"Food","Alipay","Yangshuo","Core",""
-105,"2026-06-18 13:45:22","Dongyuan Mixiang Inn (food)",-4.00,-0.59,"Food","Alipay","Yangshuo","Core",""
-106,"2026-06-18 15:29:54","Shenshan Farmhouse",-18.00,-2.66,"Food","Alipay","Yangshuo","Core",""
-107,"2026-06-18 20:03:13","Meituan (Young 20 Years)",-30.40,-4.50,"Food","Alipay","Yangshuo","Core","dinner delivery"
-108,"2026-06-19 00:00:00","Dongyuan Mixiang Inn (transport)",-40.00,-5.92,"Intercity Transport","Alipay","Guilin","Irregular","Yangshuo → Guilin (arrived Jun 19)"
-109,"2026-06-19 10:36:03","Guilin Xingyijia Supermarket",-2.60,-0.38,"Food","Alipay","Guilin","Core","snacks"
-110,"2026-06-19 10:41:11","Travel Light Hostel",-37.00,-5.47,"Accommodation","Alipay","Guilin","Core","night of Jun 19"
-111,"2026-06-19 11:45:03","Wu (restaurant)",-28.00,-4.14,"Food","Alipay","Guilin","Core",""
-112,"2026-06-19 12:22:48","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Guilin","Core",""
-113,"2026-06-19 15:15:30","Walmart (Food)",-32.78,-4.85,"Food","Alipay","Guilin","Core","groceries"
-114,"2026-06-19 19:18:51","LxL (laundry)",-15.00,-2.22,"Laundry","Alipay","Guilin","Irregular",""
-115,"2026-06-20 00:00:00","Railway 12306",-421.79,-62.40,"Intercity Transport","Alipay","Kunming","Irregular","Guilin → Kunming (arrived Jun 20)"
-116,"2026-06-19 21:09:53","Kunming Passing Clouds Hostel (Nanping Street)",-37.00,-5.47,"Accommodation","Alipay","Kunming","Core","night of Jun 20"
-117,"2026-06-19 15:15:30","Walmart (Underwear)",-49.00,-7.25,"Shopping","Alipay","Guilin","Irregular","split from line 113"
-118,"2026-06-20 08:39:28","Meiyijia (Guilin Station)",-37.30,-5.52,"Food","Alipay","Guilin","Core",""
-119,"2026-06-20 08:57:03","Fast Food",-41.30,-6.11,"Food","Alipay","Guilin","Core",""
-120,"2026-06-20 19:11:36","Kunming Metro",-7.00,-1.04,"Transport","Alipay","Kunming","Core",""
-121,"2026-06-21 08:44:27","Kunming Passing Clouds Hostel (Nanping Street)",-84.00,-12.43,"Accommodation","Alipay","Kunming","Core","3 nights (Jun21-23, 28/night)"
-122,"2026-06-21 11:19:02","Nancheng Mosque Food",-8.00,-1.18,"Food","Alipay","Kunming","Core",""
-123,"2026-06-21 11:43:39","Mixue Bingcheng (Wuhua)",-5.40,-0.80,"Food","Alipay","Kunming","Core",""
-124,"2026-06-21 11:57:14","Meituan (e-bike)",-2.50,-0.37,"Transport","Alipay","Kunming","Core",""
-125,"2026-06-21 11:58:56","Yuantong Temple",-6.00,-0.89,"Activities","Alipay","Kunming","Irregular",""
-126,"2026-06-21 13:14:10","Hellobike (e-bike)",-3.00,-0.44,"Transport","Alipay","Kunming","Core",""
-127,"2026-06-21 14:15:20","Decathlon (Kunming)",-179.69,-26.58,"Shopping","Alipay","Kunming","Irregular",""
-128,"2026-06-21 14:32:55","Weixianduo Bakery",-9.30,-1.38,"Food","Alipay","Kunming","Core",""
-129,"2026-06-21 15:37:24","Kunming Metro",-7.00,-1.04,"Transport","Alipay","Kunming","Core",""
-130,"2026-06-21 16:59:25","Kunming Metro",-7.00,-1.04,"Transport","Alipay","Kunming","Core",""
-131,"2026-06-21 18:58:24","Meituan (e-bike)",-2.50,-0.37,"Transport","Alipay","Kunming","Core",""
-132,"2026-06-21 21:30:48","Yunbaobao (restaurant)",-18.00,-2.66,"Food","Alipay","Kunming","Core",""
-133,"2026-06-21 21:41:59","Mixue Bingcheng",-4.00,-0.59,"Food","Alipay","Kunming","Core",""
-134,"2026-06-22 07:36:57","Metro Tangzixiang Station Convenience Store",-18.19,-2.69,"Food","Alipay","Kunming","Core",""
-135,"2026-06-22 08:36:32","Kunming Metro",-7.00,-1.04,"Transport","Alipay","Kunming","Core",""
-136,"2026-06-22 08:37:43","Railway 12306",-18.00,-2.66,"Transport","Alipay","Kunming","Core","local train (Kunming area)"
-137,"2026-06-22 10:39:27","Yunnan Stone Forest Tourism Group",-155.00,-22.93,"Activities","Alipay","Kunming","Irregular",""
-138,"2026-06-22 13:33:12","Yunnan Jiuyize Shilin",-3.00,-0.44,"Food","Alipay","Kunming","Core",""
-139,"2026-06-22 14:43:56","Railway 12306",-18.00,-2.66,"Transport","Alipay","Kunming","Core","local train (Kunming area)"
-140,"2026-06-22 16:41:28","Kunming Metro",-7.00,-1.04,"Transport","Alipay","Kunming","Core",""
-141,"2026-06-22 16:58:16","Meituan (e-bike)",-2.50,-0.37,"Transport","Alipay","Kunming","Core",""
-142,"2026-06-22 17:01:34","Fast Food",-34.00,-5.03,"Food","Alipay","Kunming","Core",""
-143,"2026-06-22 17:42:31","Hellobike (e-bike)",-3.00,-0.44,"Transport","Alipay","Kunming","Core",""
-144,"2026-06-22 18:16:08","Meituan (e-bike)",-3.50,-0.52,"Transport","Alipay","Kunming","Core",""
-145,"2026-06-22 09:39:31","Shilin Bus (A00223D)",-10.00,-1.48,"Transport","WeChat","Kunming","Core",""
-146,"2026-06-22 14:00:07","Shilin Bus (A06089D)",-10.00,-1.48,"Transport","WeChat","Kunming","Core",""
-147,"2026-06-23 17:57:32","Walmart (Kunming)",-29.98,-4.44,"Food","Alipay","Kunming","Core","moved from Jun22"
-148,"2026-06-24 00:00:00","Railway 12306",-163.00,-24.11,"Intercity Transport","Alipay","Pu'er","Irregular","Kunming → Pu'er (arrived Jun 24)"
-149,"2026-06-24 12:47:53","Caicai Boutique Stay Hostel",-34.00,-5.03,"Accommodation","Alipay","Pu'er","Core","moved from Jun22"
-150,"2026-06-23 11:11:46","Yunbaobao (restaurant)",-18.00,-2.66,"Food","Alipay","Kunming","Core",""
-151,"2026-06-23 21:27:49","Mixue Bingcheng",-7.90,-1.17,"Food","Alipay","Kunming","Core",""
-152,"2026-06-23 00:00:00","Kunming Passing Clouds Hostel (Nanping Street)",-28.00,-4.14,"Accommodation","Alipay","Kunming","Core","prepaid from line 121 (night of Jun 23)"
-153,"2026-06-24 09:07:41","Snack Store",-2.50,-0.37,"Food","Alipay","Pu'er","Core",""
-154,"2026-06-24 09:18:35","Metro Convenience Store",-4.50,-0.67,"Food","Alipay","Kunming","Core",""
-155,"2026-06-24 09:29:54","Kunming Metro",-2.00,-0.30,"Transport","Alipay","Kunming","Core",""
-156,"2026-06-24 09:43:06","Kunming Railway Station Service",-13.00,-1.92,"Food","Alipay","Kunming","Core",""
-157,"2026-06-24 13:42:54","Pu'er Bus",-2.00,-0.30,"Transport","Alipay","Pu'er","Core",""
-158,"2026-06-24 13:56:48","Pu'er Bus",-2.00,-0.30,"Transport","Alipay","Pu'er","Core",""
-159,"2026-06-24 15:45:07","Sishen Liangpin (e-bike)",-10.00,-1.48,"Transport","Alipay","Pu'er","Core",""
-160,"2026-06-24 16:44:29","Meituan (group buy)",-46.00,-6.80,"Food","Alipay","Pu'er","Core",""
-161,"2026-06-24 20:34:40","Sishen Liangpin (e-bike)",-3.00,-0.44,"Transport","Alipay","Pu'er","Core",""
-162,"2026-06-24 20:39:00","Caicai Boutique Stay Hostel",-62.00,-9.17,"Accommodation","Alipay","Pu'er","Core","2 nights (Jun25-26, 31/night)"
-163,"2026-06-25 08:53:41","Sishen Liangpin (e-bike)",-28.00,-4.14,"Transport","Alipay","Pu'er","Core",""
-164,"2026-06-25 10:03:59","Walmart (Pu'er)",-28.17,-4.17,"Food","Alipay","Pu'er","Core",""
-165,"2026-06-25 18:40:13","Tastine Chinese Burger",-25.20,-3.73,"Food","Alipay","Pu'er","Core",""
-166,"2026-06-25 20:57:42","Mixue Bingcheng",-6.90,-1.02,"Food","Alipay","Pu'er","Core",""
-167,"2026-06-26 08:29:42","Pencil (game top‑up)",-1.46,-0.22,"Subscription","Alipay","Pu'er","Irregular",""
-168,"2026-06-27 00:00:00","Railway 12306",-292.52,-43.27,"Intercity Transport","Alipay","Dali","Irregular","Pu'er → Dali (arrived Jun 27)"
-169,"2026-06-26 09:36:11","Sishen Liangpin (e-bike)",-28.00,-4.14,"Transport","Alipay","Pu'er","Core",""
-170,"2026-06-26 09:56:39","Qiahuo Puzi (snacks)",-15.90,-2.35,"Food","Alipay","Pu'er","Core",""
-171,"2026-06-26 14:31:49","Meituan (food)",-18.90,-2.80,"Food","Alipay","Pu'er","Core",""
-172,"2026-06-26 20:58:31","Meituan (food)",-21.90,-3.24,"Food","Alipay","Pu'er","Core",""
-173,"2026-06-27 15:49:23","Dali Backpacker Hostel",-39.00,-5.77,"Accommodation","Alipay","Dali","Core","night of Jun 27"
-174,"2026-06-27 07:46:16","Didi (ride)",-8.05,-1.19,"Transport","Alipay","Dali","Core",""
-175,"2026-06-27 07:49:33","Convenience Store",-14.00,-2.07,"Food","Alipay","Dali","Core",""
-176,"2026-06-27 14:39:52","Dali Bus",-3.00,-0.44,"Transport","Alipay","Dali","Core",""
-177,"2026-06-27 15:49:33","Didi (ride)",-7.70,-1.14,"Transport","Alipay","Dali","Core",""
-178,"2026-07-02 00:00:00","Railway 12306",-23.50,-3.48,"Intercity Transport","Alipay","Lijiang","Irregular","Dali → Lijiang (arrived Jul 2)"
-179,"2026-06-27 18:06:38","Dali Guihua Gao (snack)",-12.00,-1.78,"Food","Alipay","Dali","Core",""
-180,"2026-06-27 19:58:20","Xunwei Dali (restaurant)",-63.00,-9.32,"Food","Alipay","Dali","Core",""
-181,"2026-06-27 21:06:05","Mixue Bingcheng",-2.00,-0.30,"Food","Alipay","Dali","Core",""
-182,"2026-06-28 09:37","Quanyi Car Rental (e‑bike)",-50.00,-7.40,"Transport","WeChat","Dali","Core","net cost (deposit removed)"
-183,"2026-06-28","Haizi Hua Kuaiti (food)",-43.00,-6.36,"Food","WeChat","Dali","Core",""
-184,"2026-06-28 09:57:11","Dali Backpacker Hostel",-102.00,-15.09,"Accommodation","Alipay","Dali","Core","3 nights (Jun28-30, 34/night)"
-185,"2026-06-28 11:04:12","Lingxi Henghai (snacks)",-19.10,-2.83,"Food","Alipay","Dali","Core",""
-186,"2026-06-28 11:10:40","Guizhou Po Su Baozi",-4.00,-0.59,"Food","Alipay","Dali","Core",""
-187,"2026-06-28 16:37:36","Meiyijia (raincoat)",-20.00,-2.96,"Shopping","Alipay","Dali","Irregular","raincoat"
-188,"2026-06-28 19:13:34","Asa (restaurant)",-35.00,-5.18,"Food","Alipay","Dali","Core",""
-189,"2026-06-29 12:15:27","Chihutang (rice bowl)",-26.90,-3.98,"Food","Alipay","Dali","Core",""
-190,"2026-06-30 07:55:51","Meiyijia (Dali)",-4.00,-0.59,"Food","Alipay","Dali","Core",""
-191,"2026-06-30 08:10:06","Dianye Shiyun (restaurant)",-5.00,-0.74,"Food","Alipay","Dali","Core",""
-192,"2026-06-30 10:42:12","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Dali","Core",""
-193,"2026-06-30 15:06:13","Olly (lunch)",-68.50,-10.13,"Food","Alipay","Dali","Core",""
-194,"2026-06-30 18:13:03","Tingyuan Book Cafe",-20.00,-2.96,"Food","Alipay","Dali","Core",""
-195,"2026-06-30 19:22:31","Hotpot Convenience Store",-16.00,-2.37,"Food","Alipay","Dali","Core",""
-196,"2026-06-30 20:12:30","Meiyijia (Dali)",-7.00,-1.04,"Food","Alipay","Dali","Core",""
-197,"2026-07-01 21:39:41","Dali Backpacker Hostel",-34.00,-5.03,"Accommodation","Alipay","Dali","Core","extension – night of Jul 1"
-198,"2026-07-01 11:42:35","Shufang Restaurant",-24.00,-3.55,"Food","Alipay","Dali","Core",""
-199,"2026-07-01 11:44:05","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Dali","Core",""
-200,"2026-07-01 15:02:21","Yunnan Lvwu Tong (attraction)",-75.00,-11.09,"Activities","Alipay","Dali","Irregular","sightseeing ticket"
-201,"2026-07-01 20:26:17","Magical (hotpot – share)",-84.50,-12.50,"Food","Alipay","Dali","Core","dinner – shared hotpot"
-202,"2026-07-01 20:55:27","Yunnan Jiahua Food",-12.00,-1.78,"Food","Alipay","Dali","Core",""
-203,"2026-07-02 08:17:32","Zhiyu Youth Hostel (Lijiang Ancient City)",-25.00,-3.70,"Accommodation","Alipay","Lijiang","Core","night of Jul 2"
-204,"2026-07-02 10:46:34","Dali Bus",-3.00,-0.44,"Transport","Alipay","Dali","Core",""
-205,"2026-07-02 11:36:40","Fast Food",-50.00,-7.40,"Food","Alipay","Dali","Core",""
-206,"2026-07-02 16:10:16","Lijiang Bus",-8.00,-1.18,"Transport","Alipay","Lijiang","Core",""
-207,"2026-07-02 18:33:38","Zhiyu Youth Hostel (laundry)",-5.00,-0.74,"Laundry","Alipay","Lijiang","Irregular",""
-208,"2026-07-03 18:37:10","Zhiyu Youth Hostel (Lijiang Ancient City)",-50.00,-7.40,"Accommodation","Alipay","Lijiang","Core","2 nights (Jul 3-4, 25/night)"
-209,"2026-07-02 20:09:43","Tastine Chinese Burger",-25.20,-3.73,"Food","Alipay","Lijiang","Core",""
-210,"2026-07-02 20:49:59","Meiyijia (mosquito repellent)",-27.50,-4.07,"Shopping","Alipay","Lijiang","Irregular","mosquito repellent"
-211,"2026-07-03 08:49:48","Hangzhou Xiaolongbao",-10.00,-1.48,"Food","WeChat","Lijiang","Core",""
-212,"2026-07-03 09:35:01","Likerong Supermarket",-14.00,-2.07,"Shopping","Alipay","Lijiang","Irregular","tissue paper & toothpaste"
-213,"2026-07-03 12:39:47","Zigong Sichuan Restaurant",-28.00,-4.14,"Food","Alipay","Lijiang","Core",""
-214,"2026-07-03 14:06:33","My Mantou (snack)",-6.00,-0.89,"Food","Alipay","Lijiang","Core",""
-215,"2026-07-03 15:24:37","Meituan (e‑bike)",-5.00,-0.74,"Transport","Alipay","Lijiang","Core",""
-216,"2026-07-03 15:39:16","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-217,"2026-07-03 16:13:45","Hellobike (e‑bike)",-4.00,-0.59,"Transport","Alipay","Lijiang","Core",""
-218,"2026-07-03 19:07:28","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-219,"2026-07-03 20:10:59","Chihutang (rice bowl)",-23.80,-3.52,"Food","Alipay","Lijiang","Core",""
-220,"2026-07-03 20:18:33","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-221,"2026-07-04 09:18:05","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-222,"2026-07-05 00:00:00","Lijiang Bus Station",-36.00,-5.33,"Transport","Alipay","Lijiang","Core","bus to Tiger Leaping Gorge (prepaid Jul 4, travel Jul 5)"
-223,"2026-07-04 11:00:14","Zhazha Mixian (restaurant)",-48.00,-7.10,"Food","Alipay","Lijiang","Core",""
-224,"2026-07-04 11:44:17","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Lijiang","Core",""
-225,"2026-07-04 13:45:00","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-226,"2026-07-04 17:46:57","Chihutang (rice bowl)",-25.90,-3.83,"Food","Alipay","Lijiang","Core",""
-227,"2026-07-05 00:00:00","Lan (food)",-27.00,-3.99,"Food","Alipay","Lijiang","Core","prepaid food for Jul 5"
-228,"2026-07-05 07:13:52","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-229,"2026-07-05 09:39:50","Kaixin (food)",-20.00,-2.96,"Food","Alipay","Lijiang","Core",""
-230,"2026-07-05 12:08:50","Naxi Yage Inn (food)",-15.00,-2.22,"Food","Alipay","Lijiang","Core",""
-231,"2026-07-05 17:29:42","Halfway Guesthouse (Tiger Leaping Gorge)",-83.00,-12.28,"Accommodation","Alipay","Lijiang","Core","night of Jul 5"
-232,"2026-07-05 19:30:05","Halfway Restaurant",-60.00,-8.88,"Food","Alipay","Lijiang","Core",""
-233,"2026-07-05 21:52:50","Halfway Vending Machine",-4.00,-0.59,"Food","Alipay","Lijiang","Core",""
-234,"2026-07-05 15:52:56","Tiger Leaping Gorge Mountain Farmstay",-4.00,-0.59,"Food","Alipay","Lijiang","Core",""
-235,"2026-07-06 07:56:59","Tigerbucks Coffee (Halfway)",-30.00,-4.44,"Food","Alipay","Lijiang","Core",""
-236,"2026-07-06 12:33:20","Tina's (shuttle)",-50.00,-7.40,"Transport","Alipay","Lijiang","Core",""
-237,"2026-07-06 12:41:20","Qiya Coffee",-38.00,-5.62,"Food","Alipay","Lijiang","Core",""
-238,"2026-07-06 16:03:44","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-239,"2026-07-06 16:06:40","Zhiyu Youth Hostel (Lijiang Ancient City)",-25.00,-3.70,"Accommodation","Alipay","Lijiang","Core","night of Jul 6"
-240,"2026-07-07 00:00:00","Shanghai Hecheng (Shangri-La)",-29.00,-4.29,"Accommodation","Alipay","Shangri-La","Core","night of Jul 7"
-241,"2026-07-07 00:00:00","Railway 12306",-56.00,-8.28,"Intercity Transport","Alipay","Lijiang","Irregular","Lijiang → Shangri-La"
-242,"2026-07-06 20:41:28","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Lijiang","Core",""
-243,"2026-07-06 22:07:18","Lingxi Henghai (snacks)",-6.90,-1.02,"Food","Alipay","Lijiang","Core",""
-244,"2026-07-06 22:17:57","Hellobike (e‑bike)",-3.00,-0.44,"Transport","Alipay","Lijiang","Core",""
-245,"2026-07-06 00:00:00","Olly (dinner transfer)",-51.50,-7.62,"Food","WeChat","Lijiang","Core","dinner (transfer made Jul 7)"
-246,"2026-07-07 11:37:05","Lijiang Bus",-5.00,-0.74,"Transport","Alipay","Lijiang","Core",""
-247,"2026-07-07 12:17:44","Fast Food",-64.40,-9.53,"Food","Alipay","Lijiang","Core",""
-248,"2026-07-07 14:31:35","Shangri-La Bus",-2.00,-0.30,"Transport","Alipay","Shangri-La","Core",""
-249,"2026-07-07 17:29:41","Huayun Youxian Supermarket",-17.30,-2.56,"Food","Alipay","Shangri-La","Core",""
-250,"2026-07-07 19:57:55","Food vendor (local)",-80.00,-11.83,"Food","Alipay","Shangri-La","Core",""
-251,"2026-07-07 20:19:52","Zhu Zhenzhen",-8.00,-1.18,"Food","Alipay","Shangri-La","Core",""
-252,"2026-07-08 08:41:46","Shanghai Hecheng (Yaju Hostel)",-34.00,-5.03,"Accommodation","Alipay","Shangri-La","Core","night of Jul 8"
-253,"2026-07-08 10:17:04","Shangri-La Bus",-2.00,-0.30,"Transport","Alipay","Shangri-La","Core",""
-254,"2026-07-08 10:55:20","Songzanlin Temple (ticket)",-75.00,-11.09,"Activities","Alipay","Shangri-La","Irregular",""
-255,"2026-07-08 14:33:21","Napa Lake (entrance fee)",-30.00,-4.44,"Activities","Alipay","Shangri-La","Irregular",""
-256,"2026-07-08 18:41:09","Chuandianji Hotpot",-95.00,-14.05,"Food","Alipay","Shangri-La","Core",""
-257,"2026-07-08 14:06:05","Baojiang Tofu & Stone Flower",-62.00,-9.17,"Food","WeChat","Shangri-La","Core",""
-258,"2026-07-09 10:04:57","Xuanyuan Inn",-140.00,-20.71,"Accommodation","Alipay","Shangri-La","Core","4 nights (Jul 9-12, 35/night)"
-259,"2026-07-09 10:15:02","Hongfeng Supermarket",-3.50,-0.52,"Food","Alipay","Shangri-La","Core",""
-260,"2026-07-09 11:08:23","Xiangjian Cultural Tourism",-9.00,-1.33,"Activities","Alipay","Shangri-La","Irregular",""
-261,"2026-07-09 13:43:13","Minzhulamu Tibetan Restaurant",-106.00,-15.68,"Food","Alipay","Shangri-La","Core",""
-262,"2026-07-09 19:22:13","W (dinner)",-31.00,-4.59,"Food","Alipay","Shangri-La","Core",""
-263,"2026-07-09 19:24:39","Meiyijia (Shangri-La)",-4.00,-0.59,"Food","Alipay","Shangri-La","Core",""
-264,"2026-07-10 08:08:35","Hongfeng Supermarket",-20.00,-2.96,"Food","Alipay","Shangri-La","Core",""
-265,"2026-07-10 08:14:44","Muse Weiliang (e-bike)",-50.00,-7.40,"Transport","Alipay","Shangri-La","Core",""
-266,"2026-07-10 16:51:41","Meiyijia (Shangri-La)",-4.00,-0.59,"Food","Alipay","Shangri-La","Core",""
-267,"2026-07-10 20:31:45","Mosheng (dinner)",-47.00,-6.95,"Food","Alipay","Shangri-La","Core",""
-268,"2026-07-10 21:05:22","Mixue Bingcheng",-5.00,-0.74,"Food","WeChat","Shangri-La","Core",""
-269,"2026-07-11 13:04:16","Maji Amo Tibetan Restaurant",-54.00,-7.99,"Food","Alipay","Shangri-La","Core",""
-270,"2026-07-11 13:26:58","Wuding Coffee",-25.00,-3.70,"Food","Alipay","Shangri-La","Core",""
-271,"2026-07-11 18:42:07","Hongfeng Supermarket",-5.00,-0.74,"Food","Alipay","Shangri-La","Core",""
-272,"2026-07-11 19:31:44","W (dinner)",-26.00,-3.85,"Food","Alipay","Shangri-La","Core",""
-273,"2026-07-12 11:16:55","Muzi Muzui Japanese Bakery",-20.00,-2.96,"Food","Alipay","Shangri-La","Core",""
-274,"2026-07-12 11:36:19","Roof Coffee",-25.00,-3.70,"Food","Alipay","Shangri-La","Core",""
-275,"2026-07-12 17:23:51","Fast Food",-40.00,-5.92,"Food","Alipay","Shangri-La","Core",""
-276,"2026-07-12 19:40:53","VPN Service",-6.83,-1.01,"Subscription","Alipay","Shangri-La","Irregular",""
-277,"2026-07-13 00:00:00","Youshipin Supermarket",-41.60,-6.15,"Food","Alipay","Yading","Core","prepaid Jul 12"
-278,"2026-07-13 07:50:00","Diqing Bus",-151.00,-22.34,"Intercity Transport","WeChat","Yading","Irregular","Shangri-La → Yading (prepaid Jul 12)"
-279,"2026-07-13 14:41:40","Yading Online Tourism",-156.00,-23.08,"Activities","WeChat","Yading","Irregular","park entrance ticket"
-280,"2026-07-13 19:29:21","Zeren Zhuoma Local Products",-15.00,-2.22,"Shopping","WeChat","Yading","Irregular","oxygen canister"
-281,"2026-07-13 19:10:20","Qiangge Xian Tang Mixian",-20.00,-2.96,"Food","Alipay","Yading","Core","dinner"
-282,"2026-07-13 19:15:10","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Yading","Core","drink"
-283,"2026-07-16 00:00:00","Xiang (bus)",-130.00,-19.23,"Intercity Transport","Alipay","Litang","Irregular","Yading → Litang (prepaid Jul 13)"
-284,"2026-07-13 14:06:46","Wang Erjia Handicraft",-75.00,-11.09,"Accommodation","Alipay","Yading","Core","night of Jul 13"
-285,"2026-07-13 20:03:49","Wang Erjia Handicraft",-150.00,-22.19,"Accommodation","Alipay","Yading","Core","prepaid for Jul 14 & 15 (2 nights, 75/night)"
-286,"2026-07-14 07:39:26","Hangzhou Xiaolongbao",-30.00,-4.44,"Food","Alipay","Yading","Core","breakfast"
-287,"2026-07-14 07:58:40","Zhong Dao (taxi)",-20.00,-2.96,"Transport","WeChat","Yading","Core","taxi"
-288,"2026-07-14 18:59:58","Zhong Dao (taxi)",-10.00,-1.48,"Transport","WeChat","Yading","Core","taxi"
-289,"2026-07-14 19:03:20","Haoxianglai Snacks",-9.90,-1.46,"Food","Alipay","Yading","Core",""
-290,"2026-07-14 20:26:34","Qiangge Xian Tang Mixian",-20.00,-2.96,"Food","Alipay","Yading","Core","dinner"
-291,"2026-07-14 20:27:42","Mixue Bingcheng",-5.00,-0.74,"Food","Alipay","Yading","Core",""
-292,"2026-07-15 18:14:52","Qingzhou Xiaocai (porridge)",-30.00,-4.44,"Food","Alipay","Yading","Core","dinner"
+Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes
+2026-06-08 00:00:00,ESIMDOG,-47.18,CNY,-6.98,6.7593,2026-06-08,Shopping,Other,China,China,data eSIM
+2026-06-08 00:00:00,Dengba Hostel,-60.10,CNY,-8.89,6.7604,2026-06-08,Accommodation,Other,Shenzhen,China,1 night Jun 8
+2026-06-08 00:00:00,Dengba Hostel,-176.00,CNY,-26.04,6.7588,2026-06-08,Accommodation,Alipay,Shenzhen,China,3 nights Jun 9-11
+2026-06-08 14:44:48,Fast Food,-37.52,CNY,-5.55,6.7604,2026-06-08,Food,Alipay,Shenzhen,China,
+2026-06-08 00:00:00,Meiyijia,-11.50,CNY,-1.70,6.7647,2026-06-08,Food,WeChat,Shenzhen,China,
+2026-06-08 00:00:00,Shenzhen Metro (Octopus),-2.00,CNY,-0.30,6.6667,2026-06-08,Transport,Other,Shenzhen,China,
+2026-06-09 06:55:09,Little Tadpole,-8.80,CNY,-1.30,6.7692,2026-06-09,Food,Alipay,Shenzhen,China,
+2026-06-09 08:26:05,Guangdong 7‑ELEVEN,-12.00,CNY,-1.78,6.7416,2026-06-09,Food,Alipay,Shenzhen,China,
+2026-06-12 00:00:00,Railway 12306,-23.49,CNY,-3.48,6.7500,2026-06-12,Intercity Transport,Alipay,Shenzhen,China,SZ→Guangzhou (arrived Jun 12)
+2026-06-09 11:14:07,Shenzhen Metro Group,-3.00,CNY,-0.44,6.8182,2026-06-09,Transport,Alipay,Shenzhen,China,
+2026-06-09 12:52:39,Bai Pin Qian Tiao,-21.32,CNY,-3.15,6.7683,2026-06-09,Food,Alipay,Shenzhen,China,
+2026-06-09 13:07:27,Chengxing Trading,-9.00,CNY,-1.33,6.7669,2026-06-09,Shopping,Alipay,Shenzhen,China,
+2026-06-09 14:24:34,Shenzhen Tong,-2.70,CNY,-0.40,6.7500,2026-06-09,Transport,Alipay,Shenzhen,China,
+2026-06-09 16:26:34,Shenzhen Tong,-5.00,CNY,-0.74,6.7568,2026-06-09,Transport,Alipay,Shenzhen,China,
+2026-06-09 16:35:15,Kuaima Xiansheng,-4.00,CNY,-0.59,6.7797,2026-06-09,Food,Alipay,Shenzhen,China,
+2026-06-09 18:00:58,Dengba (laundry),-10.00,CNY,-1.48,6.7568,2026-06-09,Laundry,Alipay,Shenzhen,China,
+2026-06-09 18:57:43,Dengba (laundry),-8.00,CNY,-1.18,6.7797,2026-06-09,Laundry,Alipay,Shenzhen,China,
+2026-06-09 20:49:54,Youxiang Membership,-9.90,CNY,-1.46,6.7808,2026-06-09,Subscription,Alipay,Shenzhen,China,
+2026-06-09 21:35:01,Fast Food,-19.90,CNY,-2.94,6.7687,2026-06-09,Food,Alipay,Shenzhen,China,
+2026-06-09 22:15:41,Shenzhen Tong,-2.00,CNY,-0.30,6.6667,2026-06-09,Transport,Alipay,Shenzhen,China,
+2026-06-10 11:01:22,Old Shanghai Wonton,-30.32,CNY,-4.49,6.7528,2026-06-10,Food,Alipay,Shenzhen,China,
+2026-06-10 11:42:21,Shenzhen Tong,-2.70,CNY,-0.40,6.7500,2026-06-10,Transport,Alipay,Shenzhen,China,
+2026-06-10 11:57:28,Shenzhen Maiya Dental,-98.00,CNY,-14.50,6.7586,2026-06-10,Personal Care,Alipay,China,China,
+2026-06-10 13:09:56,Shenzhen Tong,-2.00,CNY,-0.30,6.6667,2026-06-10,Transport,Alipay,Shenzhen,China,
+2026-06-10 14:38:45,Hellobike,-1.80,CNY,-0.27,6.6667,2026-06-10,Transport,Alipay,Shenzhen,China,
+2026-06-10 15:00:02,Shenzhen Tong,-3.00,CNY,-0.44,6.8182,2026-06-10,Transport,Alipay,Shenzhen,China,
+2026-06-10 15:02:34,Guangdong Lawson,-3.80,CNY,-0.56,6.7857,2026-06-10,Food,Alipay,Shenzhen,China,
+2026-06-10 17:31:52,Shenzhen Tong,-5.00,CNY,-0.74,6.7568,2026-06-10,Transport,Alipay,Shenzhen,China,
+2026-06-10 19:53:18,Can Can Hao,-24.49,CNY,-3.62,6.7652,2026-06-10,Food,Alipay,Shenzhen,China,
+2026-06-10 20:03:42,Kuaima Xiansheng,-2.86,CNY,-0.42,6.8095,2026-06-10,Food,Alipay,Shenzhen,China,
+2026-06-11 08:02:34,Changfen Wang,-14.00,CNY,-2.07,6.7633,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 08:14:24,AvecToi Bakery,-15.32,CNY,-2.27,6.7489,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 11:15:40,Shenzhen Tong,-1.70,CNY,-0.25,6.8000,2026-06-11,Transport,Alipay,Shenzhen,China,
+2026-06-11 12:17:32,Guangdong 7‑ELEVEN,-6.46,CNY,-0.96,6.7292,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 13:18:32,Fast Food,-24.00,CNY,-3.55,6.7606,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 13:58:07,Shenzhen Tong,-2.00,CNY,-0.30,6.6667,2026-06-11,Transport,Alipay,Shenzhen,China,
+2026-06-11 14:39:28,Fast Food,-12.00,CNY,-1.78,6.7416,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 15:45:51,Shenzhen Tong,-2.00,CNY,-0.30,6.6667,2026-06-11,Transport,Alipay,Shenzhen,China,
+2026-06-11 16:11:53,Meituan (bike),-1.80,CNY,-0.27,6.6667,2026-06-11,Transport,Alipay,Shenzhen,China,
+2026-06-11 18:02:23,Kuaima Xiansheng,-2.87,CNY,-0.42,6.8333,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 18:05:26,Can Can Hao,-29.12,CNY,-4.31,6.7564,2026-06-11,Food,Alipay,Shenzhen,China,
+2026-06-11 18:41:42,Shenzhen Tong,-3.00,CNY,-0.44,6.8182,2026-06-11,Transport,Alipay,Shenzhen,China,
+2026-06-11 20:32:04,Shenzhen Tong,-3.00,CNY,-0.44,6.8182,2026-06-11,Transport,Alipay,Shenzhen,China,
+2026-06-11 21:48:46,Meituan (auto),-2.80,CNY,-0.41,6.8293,2026-06-11,Transport,Alipay,Shenzhen,China,(bike)
+2026-06-11 00:00:00,SEG Plaza (cable),-20.00,CNY,-2.96,6.7568,2026-06-11,Shopping,Other,Shenzhen,China,
+2026-06-12 09:00:20,Shenzhen Tong,-2.00,CNY,-0.30,6.6667,2026-06-12,Transport,Alipay,Shenzhen,China,
+2026-06-12 10:12:53,Shenzhen Tong,-4.00,CNY,-0.59,6.7797,2026-06-12,Transport,Alipay,Shenzhen,China,
+2026-06-12 10:25:03,Shenzhen Shentie Times,-18.32,CNY,-2.71,6.7601,2026-06-12,Food,Alipay,Shenzhen,China,
+2026-06-12 11:38:13,Eden Hostel,-114.00,CNY,-16.86,6.7616,2026-06-12,Accommodation,Alipay,Guangzhou,China,2 nights Jun 12-13
+2026-06-12 11:48:16,Eden deposit,-20.00,CNY,-2.96,6.7568,2026-06-12,Accommodation,Alipay,Guangzhou,China,refundable
+2026-06-12 14:34:07,Guangzhou Metro,-8.00,CNY,-1.18,6.7797,2026-06-12,Transport,Alipay,Guangzhou,China,
+2026-06-12 15:30:16,Fast Food,-33.50,CNY,-4.96,6.7540,2026-06-12,Food,Alipay,Guangzhou,China,
+2026-06-12 16:56:41,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-12,Transport,Alipay,Guangzhou,China,
+2026-06-12 17:48:55,Meituan (bike),-3.50,CNY,-0.52,6.7308,2026-06-12,Transport,Alipay,Guangzhou,China,
+2026-06-12 00:00:00,Chinese SIM Card,-100.00,CNY,-14.79,6.7613,2026-06-12,Subscription,Other,China,China,
+2026-06-12 20:15:04,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-12,Transport,Alipay,Guangzhou,China,
+2026-06-12 20:19:36,Shenzhen Weiqi,-15.00,CNY,-2.22,6.7568,2026-06-12,Food,Alipay,Guangzhou,China,
+2026-06-12 20:25:56,Guangdong 7‑ELEVEN,-4.50,CNY,-0.67,6.7164,2026-06-12,Food,Alipay,Guangzhou,China,
+2026-06-14 00:00:00,Railway 12306,-181.00,CNY,-26.78,6.7588,2026-06-14,Intercity Transport,Alipay,Guangzhou,China,Guangzhou → Guilin (arrived Jun 14)
+2026-06-13 09:26:19,Fast Food,-31.32,CNY,-4.63,6.7646,2026-06-13,Food,Alipay,Guangzhou,China,
+2026-06-13 10:16:11,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-13,Transport,Alipay,Guangzhou,China,
+2026-06-13 11:25:19,Guangzhou Metro,-2.00,CNY,-0.30,6.6667,2026-06-13,Transport,Alipay,Guangzhou,China,
+2026-06-13 12:16:54,Meituan (bike),-2.50,CNY,-0.37,6.7568,2026-06-13,Transport,Alipay,Guangzhou,China,
+2026-06-13 12:44:58,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-13,Transport,Alipay,Guangzhou,China,
+2026-06-13 12:50:36,Shenzhen Weiqi,-22.82,CNY,-3.38,6.7515,2026-06-13,Food,Alipay,Guangzhou,China,
+2026-06-13 13:58:01,AEON Guangzhou,-97.70,CNY,-14.45,6.7612,2026-06-13,Shopping,Alipay,Guangzhou,China,
+2026-06-13 15:03:25,Miniso,-24.90,CNY,-3.68,6.7663,2026-06-13,Shopping,Alipay,Guangzhou,China,
+2026-06-13 15:21:17,FamilyMart,-6.50,CNY,-0.96,6.7708,2026-06-13,Food,Alipay,Guangzhou,China,
+2026-06-13 19:18:14,Shenzhen Weiqi,-22.28,CNY,-3.30,6.7515,2026-06-13,Food,Alipay,Guangzhou,China,
+2026-06-14 06:33:33,Fast Food,-26.50,CNY,-3.92,6.7602,2026-06-14,Food,Alipay,Guangzhou,China,
+2026-06-14 07:52:22,Guangzhou Metro,-6.00,CNY,-0.89,6.7416,2026-06-14,Transport,Alipay,Guangzhou,China,
+2026-06-14 12:16:55,Guilin Public Transport,-1.80,CNY,-0.27,6.6667,2026-06-14,Transport,Alipay,Guilin,China,bus
+2026-06-14 13:02:26,Travel Light Hostel,-84.00,CNY,-12.43,6.7578,2026-06-14,Accommodation,Alipay,Guilin,China,"2 nights (Jun14-15, 42/night)"
+2026-06-14 13:20:50,Guilin Rice Noodles,-18.00,CNY,-2.66,6.7669,2026-06-14,Food,Alipay,Guilin,China,
+2026-06-14 13:42:12,Yebali (haircut),-40.00,CNY,-5.92,6.7568,2026-06-14,Personal Care,Alipay,Guilin,China,
+2026-06-14 14:22:08,LxL (laundry),-15.00,CNY,-2.22,6.7568,2026-06-14,Laundry,Alipay,Guilin,China,
+2026-06-14 17:10:17,Ma Mingxiang,-3.00,CNY,-0.44,6.8182,2026-06-14,Food,Alipay,Guilin,China,
+2026-06-14 17:32:54,Meituan (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-14,Transport,Alipay,Guilin,China,
+2026-06-14 17:49:51,Meituan (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-14,Transport,Alipay,Guilin,China,
+2026-06-14 18:04:52,Guilin Shuyuan Tourism,-30.00,CNY,-4.44,6.7568,2026-06-14,Activities,Alipay,Guilin,China,
+2026-06-14 19:23:42,Eden Hostel (refund),20.00,CNY,2.96,6.7568,2026-06-14,Accommodation,Alipay,Guangzhou,China,deposit refund
+2026-06-14 19:54:22,Meituan (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-14,Transport,Alipay,Guilin,China,
+2026-06-14 21:18:57,Hainan Coconut Qingbuliang,-17.90,CNY,-2.65,6.7547,2026-06-14,Food,Alipay,Guilin,China,delivery
+2026-06-15 09:18:10,Yangshuo Sudder Street Guesthouse,-174.00,CNY,-25.74,6.7599,2026-06-15,Accommodation,Alipay,Yangshuo,China,"3 nights (Jun16-18, 58/night)"
+2026-06-15 10:08:12,Lufen Wang Rice Noodles,-7.00,CNY,-1.04,6.7308,2026-06-15,Food,Alipay,Guilin,China,
+2026-06-15 10:34:44,Guilin Youhao Duo Supermarket,-4.78,CNY,-0.71,6.7324,2026-06-15,Food,Alipay,Guilin,China,
+2026-06-15 14:58:28,Hellobike (e-bike),-6.00,CNY,-0.89,6.7416,2026-06-15,Transport,Alipay,Guilin,China,
+2026-06-15 18:00:26,LxL (food),-1.00,CNY,-0.15,6.6667,2026-06-15,Food,Alipay,Guilin,China,
+2026-06-15 22:25:46,Guilin Xingyijia Supermarket,-6.50,CNY,-0.96,6.7708,2026-06-15,Food,Alipay,Guilin,China,
+2026-06-16 09:11:58,Xi'an Snacks,-15.00,CNY,-2.22,6.7568,2026-06-16,Food,Alipay,Yangshuo,China,
+2026-06-16 00:00:00,Transport (An),-50.00,CNY,-7.40,6.7568,2026-06-16,Intercity Transport,Alipay,Yangshuo,China,Guilin → Yangshuo (arrived Jun 16)
+2026-06-16 14:40:54,Mixue Bingcheng,-4.76,CNY,-0.70,6.8000,2026-06-16,Food,Alipay,Yangshuo,China,
+2026-06-16 16:27:50,Haoxianglai Snacks,-10.13,CNY,-1.50,6.7533,2026-06-16,Food,Alipay,Yangshuo,China,
+2026-06-16 17:47:32,VPN Service,-4.19,CNY,-0.62,6.7581,2026-06-16,Subscription,Alipay,China,China,
+2026-06-17 20:03:17,Yangshuo Tuzu Rental,-35.00,CNY,-5.18,6.7568,2026-06-17,Transport,Alipay,Yangshuo,China,e-bike rental for Jun17
+2026-06-16 20:51:34,Fumanlou Beer Fish,-66.00,CNY,-9.76,6.7623,2026-06-16,Food,Alipay,Yangshuo,China,
+2026-06-16 21:15:08,Yuzi,-12.00,CNY,-1.78,6.7416,2026-06-16,Food,Alipay,Yangshuo,China,
+2026-06-18 20:03:17,Yangshuo Tuzu Rental,-35.00,CNY,-5.18,6.7568,2026-06-18,Transport,Alipay,Yangshuo,China,e-bike rental for Jun18
+2026-06-17 19:27:57,Weidangjia Beer Fish,-5.00,CNY,-0.74,6.7568,2026-06-17,Food,Alipay,Yangshuo,China,
+2026-06-17 18:53:55,Weidangjia Beer Fish,-30.00,CNY,-4.44,6.7568,2026-06-17,Food,Alipay,Yangshuo,China,
+2026-06-17 13:07:00,Fast Food,-40.00,CNY,-5.92,6.7568,2026-06-17,Food,Alipay,Yangshuo,China,
+2026-06-17 07:45:58,Xiaolian Youcha Baozi,-6.50,CNY,-0.96,6.7708,2026-06-17,Food,Alipay,Yangshuo,China,
+2026-06-18 09:24:09,Xiaolian Youcha Baozi,-8.00,CNY,-1.18,6.7797,2026-06-18,Food,Alipay,Yangshuo,China,
+2026-06-18 09:59:54,Dongyuan Mixiang Inn (food),-4.00,CNY,-0.59,6.7797,2026-06-18,Food,Alipay,Yangshuo,China,
+2026-06-18 13:45:22,Dongyuan Mixiang Inn (food),-4.00,CNY,-0.59,6.7797,2026-06-18,Food,Alipay,Yangshuo,China,
+2026-06-18 15:29:54,Shenshan Farmhouse,-18.00,CNY,-2.66,6.7669,2026-06-18,Food,Alipay,Yangshuo,China,
+2026-06-18 20:03:13,Meituan (Young 20 Years),-30.40,CNY,-4.50,6.7556,2026-06-18,Food,Alipay,Yangshuo,China,dinner delivery
+2026-06-19 00:00:00,Dongyuan Mixiang Inn (transport),-40.00,CNY,-5.92,6.7568,2026-06-19,Intercity Transport,Alipay,Guilin,China,Yangshuo → Guilin (arrived Jun 19)
+2026-06-19 10:36:03,Guilin Xingyijia Supermarket,-2.60,CNY,-0.38,6.8421,2026-06-19,Food,Alipay,Guilin,China,snacks
+2026-06-19 10:41:11,Travel Light Hostel,-37.00,CNY,-5.47,6.7642,2026-06-19,Accommodation,Alipay,Guilin,China,night of Jun 19
+2026-06-19 11:45:03,Wu (restaurant),-28.00,CNY,-4.14,6.7633,2026-06-19,Food,Alipay,Guilin,China,
+2026-06-19 12:22:48,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-06-19,Food,Alipay,Guilin,China,
+2026-06-19 15:15:30,Walmart (Food),-32.78,CNY,-4.85,6.7588,2026-06-19,Food,Alipay,Guilin,China,groceries
+2026-06-19 19:18:51,LxL (laundry),-15.00,CNY,-2.22,6.7568,2026-06-19,Laundry,Alipay,Guilin,China,
+2026-06-20 00:00:00,Railway 12306,-421.79,CNY,-62.40,6.7595,2026-06-20,Intercity Transport,Alipay,Kunming,China,Guilin → Kunming (arrived Jun 20)
+2026-06-19 21:09:53,Kunming Passing Clouds Hostel (Nanping Street),-37.00,CNY,-5.47,6.7642,2026-06-19,Accommodation,Alipay,Kunming,China,night of Jun 20
+2026-06-19 15:15:30,Walmart (Underwear),-49.00,CNY,-7.25,6.7586,2026-06-19,Shopping,Alipay,Guilin,China,split from line 113
+2026-06-20 08:39:28,Meiyijia (Guilin Station),-37.30,CNY,-5.52,6.7572,2026-06-20,Food,Alipay,Guilin,China,
+2026-06-20 08:57:03,Fast Food,-41.30,CNY,-6.11,6.7594,2026-06-20,Food,Alipay,Guilin,China,
+2026-06-20 19:11:36,Kunming Metro,-7.00,CNY,-1.04,6.7308,2026-06-20,Transport,Alipay,Kunming,China,
+2026-06-21 08:44:27,Kunming Passing Clouds Hostel (Nanping Street),-84.00,CNY,-12.43,6.7578,2026-06-21,Accommodation,Alipay,Kunming,China,"3 nights (Jun21-23, 28/night)"
+2026-06-21 11:19:02,Nancheng Mosque Food,-8.00,CNY,-1.18,6.7797,2026-06-21,Food,Alipay,Kunming,China,
+2026-06-21 11:43:39,Mixue Bingcheng (Wuhua),-5.40,CNY,-0.80,6.7500,2026-06-21,Food,Alipay,Kunming,China,
+2026-06-21 11:57:14,Meituan (e-bike),-2.50,CNY,-0.37,6.7568,2026-06-21,Transport,Alipay,Kunming,China,
+2026-06-21 11:58:56,Yuantong Temple,-6.00,CNY,-0.89,6.7416,2026-06-21,Activities,Alipay,Kunming,China,
+2026-06-21 13:14:10,Hellobike (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-21,Transport,Alipay,Kunming,China,
+2026-06-21 14:15:20,Decathlon (Kunming),-179.69,CNY,-26.58,6.7603,2026-06-21,Shopping,Alipay,Kunming,China,
+2026-06-21 14:32:55,Weixianduo Bakery,-9.30,CNY,-1.38,6.7391,2026-06-21,Food,Alipay,Kunming,China,
+2026-06-21 15:37:24,Kunming Metro,-7.00,CNY,-1.04,6.7308,2026-06-21,Transport,Alipay,Kunming,China,
+2026-06-21 16:59:25,Kunming Metro,-7.00,CNY,-1.04,6.7308,2026-06-21,Transport,Alipay,Kunming,China,
+2026-06-21 18:58:24,Meituan (e-bike),-2.50,CNY,-0.37,6.7568,2026-06-21,Transport,Alipay,Kunming,China,
+2026-06-21 21:30:48,Yunbaobao (restaurant),-18.00,CNY,-2.66,6.7669,2026-06-21,Food,Alipay,Kunming,China,
+2026-06-21 21:41:59,Mixue Bingcheng,-4.00,CNY,-0.59,6.7797,2026-06-21,Food,Alipay,Kunming,China,
+2026-06-22 07:36:57,Metro Tangzixiang Station Convenience Store,-18.19,CNY,-2.69,6.7621,2026-06-22,Food,Alipay,Kunming,China,
+2026-06-22 08:36:32,Kunming Metro,-7.00,CNY,-1.04,6.7308,2026-06-22,Transport,Alipay,Kunming,China,
+2026-06-22 08:37:43,Railway 12306,-18.00,CNY,-2.66,6.7669,2026-06-22,Transport,Alipay,Kunming,China,local train (Kunming area)
+2026-06-22 10:39:27,Yunnan Stone Forest Tourism Group,-155.00,CNY,-22.93,6.7597,2026-06-22,Activities,Alipay,Kunming,China,
+2026-06-22 13:33:12,Yunnan Jiuyize Shilin,-3.00,CNY,-0.44,6.8182,2026-06-22,Food,Alipay,Kunming,China,
+2026-06-22 14:43:56,Railway 12306,-18.00,CNY,-2.66,6.7669,2026-06-22,Transport,Alipay,Kunming,China,local train (Kunming area)
+2026-06-22 16:41:28,Kunming Metro,-7.00,CNY,-1.04,6.7308,2026-06-22,Transport,Alipay,Kunming,China,
+2026-06-22 16:58:16,Meituan (e-bike),-2.50,CNY,-0.37,6.7568,2026-06-22,Transport,Alipay,Kunming,China,
+2026-06-22 17:01:34,Fast Food,-34.00,CNY,-5.03,6.7594,2026-06-22,Food,Alipay,Kunming,China,
+2026-06-22 17:42:31,Hellobike (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-22,Transport,Alipay,Kunming,China,
+2026-06-22 18:16:08,Meituan (e-bike),-3.50,CNY,-0.52,6.7308,2026-06-22,Transport,Alipay,Kunming,China,
+2026-06-22 09:39:31,Shilin Bus (A00223D),-10.00,CNY,-1.48,6.7568,2026-06-22,Transport,WeChat,Kunming,China,
+2026-06-22 14:00:07,Shilin Bus (A06089D),-10.00,CNY,-1.48,6.7568,2026-06-22,Transport,WeChat,Kunming,China,
+2026-06-23 17:57:32,Walmart (Kunming),-29.98,CNY,-4.44,6.7523,2026-06-23,Food,Alipay,Kunming,China,moved from Jun22
+2026-06-24 00:00:00,Railway 12306,-163.00,CNY,-24.11,6.7607,2026-06-24,Intercity Transport,Alipay,Pu'er,China,Kunming → Pu'er (arrived Jun 24)
+2026-06-24 12:47:53,Caicai Boutique Stay Hostel,-34.00,CNY,-5.03,6.7594,2026-06-24,Accommodation,Alipay,Pu'er,China,moved from Jun22
+2026-06-23 11:11:46,Yunbaobao (restaurant),-18.00,CNY,-2.66,6.7669,2026-06-23,Food,Alipay,Kunming,China,
+2026-06-23 21:27:49,Mixue Bingcheng,-7.90,CNY,-1.17,6.7521,2026-06-23,Food,Alipay,Kunming,China,
+2026-06-23 00:00:00,Kunming Passing Clouds Hostel (Nanping Street),-28.00,CNY,-4.14,6.7633,2026-06-23,Accommodation,Alipay,Kunming,China,prepaid from line 121 (night of Jun 23)
+2026-06-24 09:07:41,Snack Store,-2.50,CNY,-0.37,6.7568,2026-06-24,Food,Alipay,Pu'er,China,
+2026-06-24 09:18:35,Metro Convenience Store,-4.50,CNY,-0.67,6.7164,2026-06-24,Food,Alipay,Kunming,China,
+2026-06-24 09:29:54,Kunming Metro,-2.00,CNY,-0.30,6.6667,2026-06-24,Transport,Alipay,Kunming,China,
+2026-06-24 09:43:06,Kunming Railway Station Service,-13.00,CNY,-1.92,6.7708,2026-06-24,Food,Alipay,Kunming,China,
+2026-06-24 13:42:54,Pu'er Bus,-2.00,CNY,-0.30,6.6667,2026-06-24,Transport,Alipay,Pu'er,China,
+2026-06-24 13:56:48,Pu'er Bus,-2.00,CNY,-0.30,6.6667,2026-06-24,Transport,Alipay,Pu'er,China,
+2026-06-24 15:45:07,Sishen Liangpin (e-bike),-10.00,CNY,-1.48,6.7568,2026-06-24,Transport,Alipay,Pu'er,China,
+2026-06-24 16:44:29,Meituan (group buy),-46.00,CNY,-6.80,6.7647,2026-06-24,Food,Alipay,Pu'er,China,
+2026-06-24 20:34:40,Sishen Liangpin (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-24,Transport,Alipay,Pu'er,China,
+2026-06-24 20:39:00,Caicai Boutique Stay Hostel,-62.00,CNY,-9.17,6.7612,2026-06-24,Accommodation,Alipay,Pu'er,China,"2 nights (Jun25-26, 31/night)"
+2026-06-25 08:53:41,Sishen Liangpin (e-bike),-28.00,CNY,-4.14,6.7633,2026-06-25,Transport,Alipay,Pu'er,China,
+2026-06-25 10:03:59,Walmart (Pu'er),-28.17,CNY,-4.17,6.7554,2026-06-25,Food,Alipay,Pu'er,China,
+2026-06-25 18:40:13,Tastine Chinese Burger,-25.20,CNY,-3.73,6.7560,2026-06-25,Food,Alipay,Pu'er,China,
+2026-06-25 20:57:42,Mixue Bingcheng,-6.90,CNY,-1.02,6.7647,2026-06-25,Food,Alipay,Pu'er,China,
+2026-06-26 08:29:42,Pencil (game top‑up),-1.46,CNY,-0.22,6.6364,2026-06-26,Subscription,Alipay,Pu'er,China,
+2026-06-27 00:00:00,Railway 12306,-292.52,CNY,-43.27,6.7603,2026-06-27,Intercity Transport,Alipay,Dali,China,Pu'er → Dali (arrived Jun 27)
+2026-06-26 09:36:11,Sishen Liangpin (e-bike),-28.00,CNY,-4.14,6.7633,2026-06-26,Transport,Alipay,Pu'er,China,
+2026-06-26 09:56:39,Qiahuo Puzi (snacks),-15.90,CNY,-2.35,6.7660,2026-06-26,Food,Alipay,Pu'er,China,
+2026-06-26 14:31:49,Meituan (food),-18.90,CNY,-2.80,6.7500,2026-06-26,Food,Alipay,Pu'er,China,
+2026-06-26 20:58:31,Meituan (food),-21.90,CNY,-3.24,6.7593,2026-06-26,Food,Alipay,Pu'er,China,
+2026-06-27 15:49:23,Dali Backpacker Hostel,-39.00,CNY,-5.77,6.7591,2026-06-27,Accommodation,Alipay,Dali,China,night of Jun 27
+2026-06-27 07:46:16,Didi (ride),-8.05,CNY,-1.19,6.7647,2026-06-27,Transport,Alipay,Dali,China,
+2026-06-27 07:49:33,Convenience Store,-14.00,CNY,-2.07,6.7633,2026-06-27,Food,Alipay,Dali,China,
+2026-06-27 14:39:52,Dali Bus,-3.00,CNY,-0.44,6.8182,2026-06-27,Transport,Alipay,Dali,China,
+2026-06-27 15:49:33,Didi (ride),-7.70,CNY,-1.14,6.7544,2026-06-27,Transport,Alipay,Dali,China,
+2026-07-02 00:00:00,Railway 12306,-23.50,CNY,-3.48,6.7529,2026-07-02,Intercity Transport,Alipay,Lijiang,China,Dali → Lijiang (arrived Jul 2)
+2026-06-27 18:06:38,Dali Guihua Gao (snack),-12.00,CNY,-1.78,6.7416,2026-06-27,Food,Alipay,Dali,China,
+2026-06-27 19:58:20,Xunwei Dali (restaurant),-63.00,CNY,-9.32,6.7597,2026-06-27,Food,Alipay,Dali,China,
+2026-06-27 21:06:05,Mixue Bingcheng,-2.00,CNY,-0.30,6.6667,2026-06-27,Food,Alipay,Dali,China,
+2026-06-28 09:37:00,Quanyi Car Rental (e‑bike),-50.00,CNY,-7.40,6.7568,2026-06-28,Transport,WeChat,Dali,China,net cost (deposit removed)
+2026-06-28 00:00:00,Haizi Hua Kuaiti (food),-43.00,CNY,-6.36,6.7610,2026-06-28,Food,WeChat,Dali,China,
+2026-06-28 09:57:11,Dali Backpacker Hostel,-102.00,CNY,-15.09,6.7594,2026-06-28,Accommodation,Alipay,Dali,China,"3 nights (Jun28-30, 34/night)"
+2026-06-28 11:04:12,Lingxi Henghai (snacks),-19.10,CNY,-2.83,6.7491,2026-06-28,Food,Alipay,Dali,China,
+2026-06-28 11:10:40,Guizhou Po Su Baozi,-4.00,CNY,-0.59,6.7797,2026-06-28,Food,Alipay,Dali,China,
+2026-06-28 16:37:36,Meiyijia (raincoat),-20.00,CNY,-2.96,6.7568,2026-06-28,Shopping,Alipay,Dali,China,raincoat
+2026-06-28 19:13:34,Asa (restaurant),-35.00,CNY,-5.18,6.7568,2026-06-28,Food,Alipay,Dali,China,
+2026-06-29 12:15:27,Chihutang (rice bowl),-26.90,CNY,-3.98,6.7588,2026-06-29,Food,Alipay,Dali,China,
+2026-06-30 07:55:51,Meiyijia (Dali),-4.00,CNY,-0.59,6.7797,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 08:10:06,Dianye Shiyun (restaurant),-5.00,CNY,-0.74,6.7568,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 10:42:12,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 15:06:13,Olly (lunch),-68.50,CNY,-10.13,6.7621,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 18:13:03,Tingyuan Book Cafe,-20.00,CNY,-2.96,6.7568,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 19:22:31,Hotpot Convenience Store,-16.00,CNY,-2.37,6.7511,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 20:12:30,Meiyijia (Dali),-7.00,CNY,-1.04,6.7308,2026-06-30,Food,Alipay,Dali,China,
+2026-07-01 21:39:41,Dali Backpacker Hostel,-34.00,CNY,-5.03,6.7594,2026-07-01,Accommodation,Alipay,Dali,China,extension – night of Jul 1
+2026-07-01 11:42:35,Shufang Restaurant,-24.00,CNY,-3.55,6.7606,2026-07-01,Food,Alipay,Dali,China,
+2026-07-01 11:44:05,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-01,Food,Alipay,Dali,China,
+2026-07-01 15:02:21,Yunnan Lvwu Tong (attraction),-75.00,CNY,-11.09,6.7628,2026-07-01,Activities,Alipay,Dali,China,sightseeing ticket
+2026-07-01 20:26:17,Magical (hotpot – share),-84.50,CNY,-12.50,6.7600,2026-07-01,Food,Alipay,Dali,China,dinner – shared hotpot
+2026-07-01 20:55:27,Yunnan Jiahua Food,-12.00,CNY,-1.78,6.7416,2026-07-01,Food,Alipay,Dali,China,
+2026-07-02 08:17:32,Zhiyu Youth Hostel (Lijiang Ancient City),-25.00,CNY,-3.70,6.7568,2026-07-02,Accommodation,Alipay,Lijiang,China,night of Jul 2
+2026-07-02 10:46:34,Dali Bus,-3.00,CNY,-0.44,6.8182,2026-07-02,Transport,Alipay,Dali,China,
+2026-07-02 11:36:40,Fast Food,-50.00,CNY,-7.40,6.7568,2026-07-02,Food,Alipay,Dali,China,
+2026-07-02 16:10:16,Lijiang Bus,-8.00,CNY,-1.18,6.7797,2026-07-02,Transport,Alipay,Lijiang,China,
+2026-07-02 18:33:38,Zhiyu Youth Hostel (laundry),-5.00,CNY,-0.74,6.7568,2026-07-02,Laundry,Alipay,Lijiang,China,
+2026-07-03 18:37:10,Zhiyu Youth Hostel (Lijiang Ancient City),-50.00,CNY,-7.40,6.7568,2026-07-03,Accommodation,Alipay,Lijiang,China,"2 nights (Jul 3-4, 25/night)"
+2026-07-02 20:09:43,Tastine Chinese Burger,-25.20,CNY,-3.73,6.7560,2026-07-02,Food,Alipay,Lijiang,China,
+2026-07-02 20:49:59,Meiyijia (mosquito repellent),-27.50,CNY,-4.07,6.7568,2026-07-02,Shopping,Alipay,Lijiang,China,mosquito repellent
+2026-07-03 08:49:48,Hangzhou Xiaolongbao,-10.00,CNY,-1.48,6.7568,2026-07-03,Food,WeChat,Lijiang,China,
+2026-07-03 09:35:01,Likerong Supermarket,-14.00,CNY,-2.07,6.7633,2026-07-03,Shopping,Alipay,Lijiang,China,tissue paper & toothpaste
+2026-07-03 12:39:47,Zigong Sichuan Restaurant,-28.00,CNY,-4.14,6.7633,2026-07-03,Food,Alipay,Lijiang,China,
+2026-07-03 14:06:33,My Mantou (snack),-6.00,CNY,-0.89,6.7416,2026-07-03,Food,Alipay,Lijiang,China,
+2026-07-03 15:24:37,Meituan (e‑bike),-5.00,CNY,-0.74,6.7568,2026-07-03,Transport,Alipay,Lijiang,China,
+2026-07-03 15:39:16,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-03,Transport,Alipay,Lijiang,China,
+2026-07-03 16:13:45,Hellobike (e‑bike),-4.00,CNY,-0.59,6.7797,2026-07-03,Transport,Alipay,Lijiang,China,
+2026-07-03 19:07:28,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-03,Transport,Alipay,Lijiang,China,
+2026-07-03 20:10:59,Chihutang (rice bowl),-23.80,CNY,-3.52,6.7614,2026-07-03,Food,Alipay,Lijiang,China,
+2026-07-03 20:18:33,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-03,Transport,Alipay,Lijiang,China,
+2026-07-04 09:18:05,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-04,Transport,Alipay,Lijiang,China,
+2026-07-05 00:00:00,Lijiang Bus Station,-36.00,CNY,-5.33,6.7542,2026-07-05,Transport,Alipay,Lijiang,China,"bus to Tiger Leaping Gorge (prepaid Jul 4, travel Jul 5)"
+2026-07-04 11:00:14,Zhazha Mixian (restaurant),-48.00,CNY,-7.10,6.7606,2026-07-04,Food,Alipay,Lijiang,China,
+2026-07-04 11:44:17,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-04,Food,Alipay,Lijiang,China,
+2026-07-04 13:45:00,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-04,Transport,Alipay,Lijiang,China,
+2026-07-04 17:46:57,Chihutang (rice bowl),-25.90,CNY,-3.83,6.7624,2026-07-04,Food,Alipay,Lijiang,China,
+2026-07-05 00:00:00,Lan (food),-27.00,CNY,-3.99,6.7669,2026-07-05,Food,Alipay,Lijiang,China,prepaid food for Jul 5
+2026-07-05 07:13:52,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-05,Transport,Alipay,Lijiang,China,
+2026-07-05 09:39:50,Kaixin (food),-20.00,CNY,-2.96,6.7568,2026-07-05,Food,Alipay,Lijiang,China,
+2026-07-05 12:08:50,Naxi Yage Inn (food),-15.00,CNY,-2.22,6.7568,2026-07-05,Food,Alipay,Lijiang,China,
+2026-07-05 17:29:42,Halfway Guesthouse (Tiger Leaping Gorge),-83.00,CNY,-12.28,6.7590,2026-07-05,Accommodation,Alipay,Lijiang,China,night of Jul 5
+2026-07-05 19:30:05,Halfway Restaurant,-60.00,CNY,-8.88,6.7568,2026-07-05,Food,Alipay,Lijiang,China,
+2026-07-05 21:52:50,Halfway Vending Machine,-4.00,CNY,-0.59,6.7797,2026-07-05,Food,Alipay,Lijiang,China,
+2026-07-05 15:52:56,Tiger Leaping Gorge Mountain Farmstay,-4.00,CNY,-0.59,6.7797,2026-07-05,Food,Alipay,Lijiang,China,
+2026-07-06 07:56:59,Tigerbucks Coffee (Halfway),-30.00,CNY,-4.44,6.7568,2026-07-06,Food,Alipay,Lijiang,China,
+2026-07-06 12:33:20,Tina's (shuttle),-50.00,CNY,-7.40,6.7568,2026-07-06,Transport,Alipay,Lijiang,China,
+2026-07-06 12:41:20,Qiya Coffee,-38.00,CNY,-5.62,6.7616,2026-07-06,Food,Alipay,Lijiang,China,
+2026-07-06 16:03:44,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-06,Transport,Alipay,Lijiang,China,
+2026-07-06 16:06:40,Zhiyu Youth Hostel (Lijiang Ancient City),-25.00,CNY,-3.70,6.7568,2026-07-06,Accommodation,Alipay,Lijiang,China,night of Jul 6
+2026-07-07 00:00:00,Shanghai Hecheng (Shangri-La),-29.00,CNY,-4.29,6.7599,2026-07-07,Accommodation,Alipay,Shangri-La,China,night of Jul 7
+2026-07-07 00:00:00,Railway 12306,-56.00,CNY,-8.28,6.7633,2026-07-07,Intercity Transport,Alipay,Lijiang,China,Lijiang → Shangri-La
+2026-07-06 20:41:28,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-06,Food,Alipay,Lijiang,China,
+2026-07-06 22:07:18,Lingxi Henghai (snacks),-6.90,CNY,-1.02,6.7647,2026-07-06,Food,Alipay,Lijiang,China,
+2026-07-06 22:17:57,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-06,Transport,Alipay,Lijiang,China,
+2026-07-06 00:00:00,Olly (dinner transfer),-51.50,CNY,-7.62,6.7585,2026-07-06,Food,WeChat,Lijiang,China,dinner (transfer made Jul 7)
+2026-07-07 11:37:05,Lijiang Bus,-5.00,CNY,-0.74,6.7568,2026-07-07,Transport,Alipay,Lijiang,China,
+2026-07-07 12:17:44,Fast Food,-64.40,CNY,-9.53,6.7576,2026-07-07,Food,Alipay,Lijiang,China,
+2026-07-07 14:31:35,Shangri-La Bus,-2.00,CNY,-0.30,6.6667,2026-07-07,Transport,Alipay,Shangri-La,China,
+2026-07-07 17:29:41,Huayun Youxian Supermarket,-17.30,CNY,-2.56,6.7578,2026-07-07,Food,Alipay,Shangri-La,China,
+2026-07-07 19:57:55,Food vendor (local),-80.00,CNY,-11.83,6.7625,2026-07-07,Food,Alipay,Shangri-La,China,
+2026-07-07 20:19:52,Zhu Zhenzhen,-8.00,CNY,-1.18,6.7797,2026-07-07,Food,Alipay,Shangri-La,China,
+2026-07-08 08:41:46,Shanghai Hecheng (Yaju Hostel),-34.00,CNY,-5.03,6.7594,2026-07-08,Accommodation,Alipay,Shangri-La,China,night of Jul 8
+2026-07-08 10:17:04,Shangri-La Bus,-2.00,CNY,-0.30,6.6667,2026-07-08,Transport,Alipay,Shangri-La,China,
+2026-07-08 10:55:20,Songzanlin Temple (ticket),-75.00,CNY,-11.09,6.7628,2026-07-08,Activities,Alipay,Shangri-La,China,
+2026-07-08 14:33:21,Napa Lake (entrance fee),-30.00,CNY,-4.44,6.7568,2026-07-08,Activities,Alipay,Shangri-La,China,
+2026-07-08 18:41:09,Chuandianji Hotpot,-95.00,CNY,-14.05,6.7616,2026-07-08,Food,Alipay,Shangri-La,China,
+2026-07-08 14:06:05,Baojiang Tofu & Stone Flower,-62.00,CNY,-9.17,6.7612,2026-07-08,Food,WeChat,Shangri-La,China,
+2026-07-09 10:04:57,Xuanyuan Inn,-140.00,CNY,-20.71,6.7600,2026-07-09,Accommodation,Alipay,Shangri-La,China,"4 nights (Jul 9-12, 35/night)"
+2026-07-09 10:15:02,Hongfeng Supermarket,-3.50,CNY,-0.52,6.7308,2026-07-09,Food,Alipay,Shangri-La,China,
+2026-07-09 11:08:23,Xiangjian Cultural Tourism,-9.00,CNY,-1.33,6.7669,2026-07-09,Activities,Alipay,Shangri-La,China,
+2026-07-09 13:43:13,Minzhulamu Tibetan Restaurant,-106.00,CNY,-15.68,6.7602,2026-07-09,Food,Alipay,Shangri-La,China,
+2026-07-09 19:22:13,W (dinner),-31.00,CNY,-4.59,6.7538,2026-07-09,Food,Alipay,Shangri-La,China,
+2026-07-09 19:24:39,Meiyijia (Shangri-La),-4.00,CNY,-0.59,6.7797,2026-07-09,Food,Alipay,Shangri-La,China,
+2026-07-10 08:08:35,Hongfeng Supermarket,-20.00,CNY,-2.96,6.7568,2026-07-10,Food,Alipay,Shangri-La,China,
+2026-07-10 08:14:44,Muse Weiliang (e-bike),-50.00,CNY,-7.40,6.7568,2026-07-10,Transport,Alipay,Shangri-La,China,
+2026-07-10 16:51:41,Meiyijia (Shangri-La),-4.00,CNY,-0.59,6.7797,2026-07-10,Food,Alipay,Shangri-La,China,
+2026-07-10 20:31:45,Mosheng (dinner),-47.00,CNY,-6.95,6.7626,2026-07-10,Food,Alipay,Shangri-La,China,
+2026-07-10 21:05:22,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-10,Food,WeChat,Shangri-La,China,
+2026-07-11 13:04:16,Maji Amo Tibetan Restaurant,-54.00,CNY,-7.99,6.7584,2026-07-11,Food,Alipay,Shangri-La,China,
+2026-07-11 13:26:58,Wuding Coffee,-25.00,CNY,-3.70,6.7568,2026-07-11,Food,Alipay,Shangri-La,China,
+2026-07-11 18:42:07,Hongfeng Supermarket,-5.00,CNY,-0.74,6.7568,2026-07-11,Food,Alipay,Shangri-La,China,
+2026-07-11 19:31:44,W (dinner),-26.00,CNY,-3.85,6.7532,2026-07-11,Food,Alipay,Shangri-La,China,
+2026-07-12 11:16:55,Muzi Muzui Japanese Bakery,-20.00,CNY,-2.96,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
+2026-07-12 11:36:19,Roof Coffee,-25.00,CNY,-3.70,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
+2026-07-12 17:23:51,Fast Food,-40.00,CNY,-5.92,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
+2026-07-12 19:40:53,VPN Service,-6.83,CNY,-1.01,6.7624,2026-07-12,Subscription,Alipay,Shangri-La,China,
+2026-07-13 00:00:00,Youshipin Supermarket,-41.60,CNY,-6.15,6.7642,2026-07-13,Food,Alipay,Yading,China,prepaid Jul 12
+2026-07-13 07:50:00,Diqing Bus,-151.00,CNY,-22.34,6.7592,2026-07-13,Intercity Transport,WeChat,Yading,China,Shangri-La → Yading (prepaid Jul 12)
+2026-07-13 14:41:40,Yading Online Tourism,-156.00,CNY,-23.08,6.7591,2026-07-13,Activities,WeChat,Yading,China,park entrance ticket
+2026-07-13 19:29:21,Zeren Zhuoma Local Products,-15.00,CNY,-2.22,6.7568,2026-07-13,Shopping,WeChat,Yading,China,oxygen canister
+2026-07-13 19:10:20,Qiangge Xian Tang Mixian,-20.00,CNY,-2.96,6.7568,2026-07-13,Food,Alipay,Yading,China,dinner
+2026-07-13 19:15:10,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-13,Food,Alipay,Yading,China,drink
+2026-07-16 00:00:00,Xiang (bus),-130.00,CNY,-19.23,6.7603,2026-07-16,Intercity Transport,Alipay,Litang,China,Yading → Litang (prepaid Jul 13)
+2026-07-13 14:06:46,Wang Erjia Handicraft,-75.00,CNY,-11.09,6.7628,2026-07-13,Accommodation,Alipay,Yading,China,night of Jul 13
+2026-07-13 20:03:49,Wang Erjia Handicraft,-150.00,CNY,-22.19,6.7598,2026-07-13,Accommodation,Alipay,Yading,China,"prepaid for Jul 14 & 15 (2 nights, 75/night)"
+2026-07-14 07:39:26,Hangzhou Xiaolongbao,-30.00,CNY,-4.44,6.7568,2026-07-14,Food,Alipay,Yading,China,breakfast
+2026-07-14 07:58:40,Zhong Dao (taxi),-20.00,CNY,-2.96,6.7568,2026-07-14,Transport,WeChat,Yading,China,taxi
+2026-07-14 18:59:58,Zhong Dao (taxi),-10.00,CNY,-1.48,6.7568,2026-07-14,Transport,WeChat,Yading,China,taxi
+2026-07-14 19:03:20,Haoxianglai Snacks,-9.90,CNY,-1.46,6.7808,2026-07-14,Food,Alipay,Yading,China,
+2026-07-14 20:26:34,Qiangge Xian Tang Mixian,-20.00,CNY,-2.96,6.7568,2026-07-14,Food,Alipay,Yading,China,dinner
+2026-07-14 20:27:42,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-14,Food,Alipay,Yading,China,
+2026-07-15 18:14:52,Qingzhou Xiaocai (porridge),-30.00,CNY,-4.44,6.7568,2026-07-15,Food,Alipay,Yading,China,dinner
