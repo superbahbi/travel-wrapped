@@ -5,9 +5,9 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-02-19 00:00:00,Mobimatter,-3.49,USD,-3.49,1.000000,2026-02-19,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
 2026-02-20 00:00:00,GeoBlue,-219.22,USD,-219.22,1.000000,2026-02-20,Fees,Chase 3557,Unknown,United States,Chase 3557: GEOBLUE 855-4816647 PA                       02/19
 2026-02-23 00:00:00,APPLE.COM/BILL,-19.99,USD,-19.99,1.000000,2026-02-23,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
-2026-02-23 00:00:00,BKG*BOOKING.COM FLIGHT,-122.25,USD,-122.25,1.000000,2026-02-23,Intercity Transport,Chase 1388,Wellington,New Zealand,Chase 1388: BKG*BOOKING.COM FLIGHT
+2026-02-23 00:00:00,BKG*BOOKING.COM FLIGHT,-122.25,USD,-122.25,1.000000,2026-02-23,Intercity Transport,Chase 1388,Auckland,New Zealand,Chase 1388: BKG*BOOKING.COM FLIGHT
 2026-02-23 00:00:00,Chevron,-4.09,USD,-4.09,1.000000,2026-02-23,Transport,Chase 3557,Los Angeles,United States,Chase 3557: CHEVRON 0090944 LOS ANGELES CA               02/22
-2026-02-23 00:00:00,Foreign exchange rate adjustment fee,-1.69,USD,-1.69,1.000000,2026-02-23,Fees,Chase 3557,Wellington,New Zealand,Chase 3557: FOREIGN EXCHANGE RATE ADJUSTMENT FEE         02/23INTERCITY
+2026-02-23 00:00:00,Foreign exchange rate adjustment fee,-1.69,USD,-1.69,1.000000,2026-02-23,Fees,Chase 3557,Auckland,New Zealand,Chase 3557: FOREIGN EXCHANGE RATE ADJUSTMENT FEE         02/23INTERCITY
 2026-02-23 00:00:00,InterCity,-94.50,NZD,-56.59,1.669906,2026-02-23,Intercity Transport,Chase 3557,Auckland,New Zealand,Chase 3557: INTERCITYWEB AUCKLAND                        02/23 NZ Dollar  94.50 X 0.5988360 (EXCHG RTE)
 2026-02-23 00:00:00,Mobimatter,-9.99,USD,-9.99,1.000000,2026-02-23,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
 2026-02-23 00:00:00,NZeTA,-117.00,NZD,-70.06,1.669997,2026-02-23,Fees,Chase 3557,Wellington,New Zealand,Chase 3557: NZETA WELLINGTON                             02/23 NZ Dollar  117.00 X 0.5988034 (EXCHG RTE)
@@ -204,7 +204,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-13 00:00:00,BAL1112 KORNER BANDARA NG,-0.83,USD,-0.83,1.000000,2026-05-13,Food,Chase 1388,Bali,Indonesia,Chase 1388: BAL1112 KORNER BANDARA NG
 2026-05-13 00:00:00,COCO  PINEAPPLE PANTS,-8.25,USD,-8.25,1.000000,2026-05-13,Transport,Chase 1388,Bali,Indonesia,Chase 1388: COCO  PINEAPPLE PANTS
 2026-05-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-05-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
-2026-05-13 00:00:00,MCDONALDS BRIS AIRP,-11.36,USD,-11.36,1.000000,2026-05-13,Food,Chase 1388,Brisbane,Australia,Chase 1388: MCDONALDS BRIS AIRP
+2026-05-13 00:00:00,MCDONALDS BRIS AIRP,-11.36,USD,-11.36,1.000000,2026-05-13,Food,Chase 1388,Unknown,Australia,Chase 1388: MCDONALDS BRIS AIRP
 2026-05-14 00:00:00,7 HUNGRY 5,-0.46,USD,-0.46,1.000000,2026-05-14,Food,Chase 1388,Bali,Indonesia,Chase 1388: 7 HUNGRY 5
 2026-05-14 00:00:00,AL BACIO,-2.00,USD,-2.00,1.000000,2026-05-14,Food,Chase 1388,Bali,Indonesia,Chase 1388: AL BACIO
 2026-05-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-05-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     QKVTD9          WEB ID: 9000142694

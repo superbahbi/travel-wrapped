@@ -376,7 +376,7 @@ describe('seeded dataset', () => {
   it('keeps the seeded totals', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
     expect(stats.summary.daysTracked).toBe(194);
-    expect(stats.cities.visitedCount).toBe(48);
+    expect(stats.cities.visitedCount).toBe(47);
   });
 
   it('keeps the date range', () => {
