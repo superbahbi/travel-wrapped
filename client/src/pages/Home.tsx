@@ -1,5 +1,5 @@
 // ============================================================
-// China Travel Wrapped — Main Page
+// 2026 Travel Wrapped — Main Page
 // Style: Gradient Feast (Spotify Wrapped × Chinese Travel)
 // Dark canvas, vivid gradient cards, animated stats
 // ============================================================
@@ -14,10 +14,9 @@ import { AchievementsCard } from '@/components/Achievements';
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
-import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap, Award, DollarSign, ArrowRight } from 'lucide-react';
+import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap, Award, DollarSign, ArrowRight, Globe2 } from 'lucide-react';
 
 const HERO_BG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/hero-bg-ZsqqDYb5LYENCn3sc2jL3g.webp';
-const LOGO = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/logo-yuan-6cy4BnEm6t85zTyUz2wrCC.webp';
 
 // CSV URLs - using local data folder for better reliability
 const TRANSACTIONS_CSV_URL = '/data/transactions.csv';
@@ -100,8 +99,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: 'rgba(13, 13, 15, 0.8)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={LOGO} alt="Yuan" className="w-6 h-6 rounded-full" />
-            <span className="text-sm font-semibold text-white/60">China Wrapped</span>
+            <Globe2 className="w-5 h-5 text-white/60" />
+            <span className="text-sm font-semibold text-white/60">Travel Wrapped</span>
           </div>
 
         </div>
@@ -119,9 +118,11 @@ export default function Home() {
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(13,13,15,0.3) 0%, rgba(13,13,15,0.7) 70%, rgba(13,13,15,1) 100%)' }} />
 
         <div className="relative z-10 flex flex-col items-center gap-4 px-4">
-          <img src={LOGO} alt="Yuan logo" className="w-16 h-16 rounded-full" />
+          <div className="w-16 h-16 rounded-full border border-white/20 bg-white/5 flex items-center justify-center">
+            <Globe2 className="w-8 h-8 text-white/80" />
+          </div>
           <div className="text-white/60 text-xs font-semibold tracking-[0.25em] uppercase font-mono">
-            China Overland · 2026
+            2026 · A Year of Travel
           </div>
           <h1 className="text-white font-bold leading-none" style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(3rem, 10vw, 7rem)', letterSpacing: '-0.03em' }}>
             Travel<br />
@@ -130,7 +131,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-white/60 text-base max-w-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            A China trip, in numbers — every yuan tracked, every city counted.
+            A year of travel, in numbers — every currency tracked, every city counted.
           </p>
 
           {stats && (
@@ -630,9 +631,8 @@ export default function Home() {
 
             {/* ── Footer ── */}
             <div className="text-center py-8 text-white/30 text-sm">
-              <div className="text-2xl mb-2">元</div>
-              <div>China Overland · {stats.summary.dateRange.start} → {stats.summary.dateRange.end}</div>
-              <div className="text-xs mt-1 text-white/20">Drop a new transactions.csv to update</div>
+              <div className="text-2xl mb-2">✈</div>
+              <div>2026 Travel · {stats.summary.dateRange.start} → {stats.summary.dateRange.end}</div>
             </div>
           </>
         )}
@@ -746,7 +746,7 @@ function DailyLogCard({ days }: { days: DayStats[] }) {
     >
       <div className="p-6 pb-4">
         <div className="text-sm font-semibold tracking-widest uppercase text-white/50 mb-1">Daily Log</div>
-        <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>Every day, every yuan</div>
+        <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>Every day, every purchase</div>
       </div>
       <div className="divide-y divide-white/5 max-h-[600px] overflow-y-auto">
         {days.slice().reverse().map((day) => (
