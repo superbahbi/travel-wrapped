@@ -565,12 +565,12 @@ describe('seeded dataset', () => {
   const stats = computeTrip(transactions);
 
   it('parses every row', () => {
-    expect(transactions).toHaveLength(921);
-    expect(stats.summary.transactionCount).toBe(920);
+    expect(transactions).toHaveLength(920);
+    expect(stats.summary.transactionCount).toBe(919);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.summary.grandTotal).toBeCloseTo(8484.35, 2);
+    expect(stats.summary.grandTotal).toBeCloseTo(8382.9, 2);
     expect(stats.summary.daysTracked).toBe(169);
     expect(stats.cities.visitedCount).toBe(38);
   });
@@ -633,7 +633,7 @@ describe('seeded dataset', () => {
     expect(stats.categories.top?.category).toBe('Food');
     expect(stats.categories.top?.total).toBeCloseTo(2400.19, 2);
     expect(stats.categories.top?.count).toBe(469);
-    expect(stats.categories.accommodationTotal).toBeCloseTo(1823.58, 2);
+    expect(stats.categories.accommodationTotal).toBeCloseTo(1722.13, 2);
     expect(stats.categories.transportTotal).toBeCloseTo(2339.52, 2);
   });
 

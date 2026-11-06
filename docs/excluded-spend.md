@@ -50,6 +50,16 @@ Removed in `551ace4` as recurring home-life costs rather than trip spend
 | GOOGLE *CLOUD ZxW4SV | `Subscription` | 1 | $5.00 |
 | GOOGLE *CLOUD (9 other lines) | `Subscription` | 9 | $0.95 |
 
+## Duplicates
+
+| Date | Merchant | Category | AmountUSD |
+| --- | --- | --- | ---: |
+| 2026-05-09 | Hotel at Booking.com | `Accommodation` | $101.45 |
+
+The ledger held the same Sydney Booking.com charge twice on 2026-05-09. One row
+was removed; the other stays. The same-day repeats at Fairweathers Bar and
+Meituan are genuine separate purchases and were kept.
+
 ## Totals
 
 | | AmountUSD |
@@ -57,4 +67,5 @@ Removed in `551ace4` as recurring home-life costs rather than trip spend
 | Merged 2026 ledger | $9,351.21 |
 | Outside the trip window | −$337.66 |
 | Home subscriptions and bank charges | −$529.20 |
-| **Wrapped trip spend** | **$8,484.35** |
+| Duplicate charge | −$101.45 |
+| **Wrapped trip spend** | **$8,382.90** |
