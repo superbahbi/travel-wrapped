@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
   CanonicalCsvError,
-  computeTripStats,
+  computeTrip,
   parseAccommodations,
   parseTransactions,
 } from './csvParser';
@@ -15,7 +15,7 @@ const TRANSACTION_FIXTURE = [
   '2026-06-08 09:30:00,"Cafe, Central",-28.00,CNY,-4.00,7.0000,2026-06-08,Food,Alipay,Chengdu,China,breakfast',
   '2026-06-08 21:30:00,Metro,-7.00,CNY,-1.00,7.0000,2026-06-08,Transport,WeChat,Chengdu,China,',
   '2026-06-09 12:00:00,Hostel,-200.00,CNY,-28.57,7.0000,2026-06-09,Accommodation,Other,Lijiang,China,2 nights',
-  '2026-06-09 12:00:00,Refund,20.00,CNY,2.86,7.0000,2026-06-09,Accommodation,Other,Lijiang,China,refund',
+  '2026-06-09 12:00:00,Refund,20.00,CNY,2.86,7.0000,2026-06-09,Shopping,Other,Lijiang,China,refund',
   '2026-06-10 18:00:00,Train 12306,-300.00,CNY,-42.86,7.0000,2026-06-10,Intercity Transport,Alipay,China,China,',
 ].join('\n');
 
@@ -93,77 +93,88 @@ describe('canonical schema validation', () => {
   });
 });
 
-describe('computeTripStats', () => {
-  const stats = computeTripStats(parseTransactions(TRANSACTION_FIXTURE));
+describe('computeTrip', () => {
+  const stats = computeTrip(parseTransactions(TRANSACTION_FIXTURE));
 
   it('counts only negative rows as spend', () => {
-    expect(stats.transactionCount).toBe(4);
-    expect(stats.grandTotal).toBeCloseTo(76.43, 2);
+    expect(stats.summary.transactionCount).toBe(4);
+    expect(stats.summary.grandTotal).toBeCloseTo(76.43, 2);
   });
 
   it('excludes refunds from day totals', () => {
-    const refundDay = stats.dayStats.find((day) => day.date === '2026-06-09');
+    const refundDay = stats.days.items.find((day) => day.date === '2026-06-09');
     expect(refundDay?.total).toBeCloseTo(28.57, 2);
   });
 
+  it("excludes refunds from a day's top category", () => {
+    const refundDay = stats.days.items.find((day) => day.date === '2026-06-09');
+    expect(refundDay?.topCategory).toBe('Accommodation');
+  });
+
+  it('does not mutate the city series when picking the most visited', () => {
+    const totals = stats.cities.items.map((city) => city.total);
+    expect(totals).toEqual([...totals].sort((a, b) => b - a));
+    expect(stats.cities.mostVisited?.city).toBe('Lijiang');
+  });
+
   it('records the date range and tracked days', () => {
-    expect(stats.daysTracked).toBe(3);
-    expect(stats.dateRange).toEqual({ start: '2026-06-08', end: '2026-06-10' });
+    expect(stats.summary.daysTracked).toBe(3);
+    expect(stats.summary.dateRange).toEqual({ start: '2026-06-08', end: '2026-06-10' });
   });
 
   it('derives the longest consecutive-day streak', () => {
-    expect(stats.longestStreak).toBe(3);
+    expect(stats.summary.longestStreak).toBe(3);
   });
 
   it('sorts category stats by total, descending', () => {
-    const totals = stats.categoryStats.map((category) => category.total);
+    const totals = stats.categories.items.map((category) => category.total);
     expect(totals).toEqual([...totals].sort((a, b) => b - a));
-    expect(stats.topCategory?.category).toBe('Intercity Transport');
+    expect(stats.categories.top?.category).toBe('Intercity Transport');
   });
 
   it('excludes transport from the top merchant', () => {
-    expect(stats.topMerchant?.name).toBe('Cafe, Central');
+    expect(stats.summary.topMerchant?.name).toBe('Cafe, Central');
   });
 
   it('excludes generic cities from city stats', () => {
-    expect(stats.citiesVisited).toBe(2);
-    expect(stats.cityStats.map((city) => city.city)).toEqual([
+    expect(stats.cities.visitedCount).toBe(2);
+    expect(stats.cities.items.map((city) => city.city)).toEqual([
       'Lijiang',
       'Chengdu',
     ]);
   });
 
   it('sorts city stats by total, descending, after picking the most visited', () => {
-    expect(stats.mostVisitedCity?.city).toBe('Lijiang');
-    expect(stats.cityStats[0].city).toBe('Lijiang');
+    expect(stats.cities.mostVisited?.city).toBe('Lijiang');
+    expect(stats.cities.items[0].city).toBe('Lijiang');
   });
 
   it('rolls trip-wide spend into its own total', () => {
-    expect(stats.tripWideTotal).toBeCloseTo(42.86, 2);
+    expect(stats.cities.tripWideTotal).toBeCloseTo(42.86, 2);
   });
 
   it('rolls both transport categories into transportTotal', () => {
-    expect(stats.transportTotal).toBeCloseTo(43.86, 2);
+    expect(stats.categories.transportTotal).toBeCloseTo(43.86, 2);
   });
 
   it('buckets day totals into weekdays', () => {
-    expect(stats.weekdaySpend.Mon).toBeCloseTo(5, 2);
-    expect(stats.weekdaySpend.Tue).toBeCloseTo(28.57, 2);
-    expect(stats.weekdaySpend.Wed).toBeCloseTo(42.86, 2);
+    expect(stats.days.weekdaySpend.Mon).toBeCloseTo(5, 2);
+    expect(stats.days.weekdaySpend.Tue).toBeCloseTo(28.57, 2);
+    expect(stats.days.weekdaySpend.Wed).toBeCloseTo(42.86, 2);
   });
 
   it('groups payment totals by method', () => {
-    expect(stats.paymentMethods.Alipay).toBeCloseTo(46.86, 2);
-    expect(stats.paymentMethods.WeChat).toBeCloseTo(1, 2);
+    expect(stats.summary.paymentMethods.Alipay).toBeCloseTo(46.86, 2);
+    expect(stats.summary.paymentMethods.WeChat).toBeCloseTo(1, 2);
   });
 
   it('picks the biggest purchase by absolute USD', () => {
-    expect(stats.biggestPurchase?.merchant).toBe('Train 12306');
+    expect(stats.summary.biggestPurchase?.merchant).toBe('Train 12306');
   });
 
   it('picks the most and least expensive days', () => {
-    expect(stats.mostExpensiveDay?.date).toBe('2026-06-10');
-    expect(stats.cheapestDay?.date).toBe('2026-06-08');
+    expect(stats.days.mostExpensive?.date).toBe('2026-06-10');
+    expect(stats.days.cheapest?.date).toBe('2026-06-08');
   });
 });
 
@@ -190,43 +201,43 @@ describe('seeded dataset', () => {
     'utf8',
   );
   const transactions = parseTransactions(csv);
-  const stats = computeTripStats(transactions);
+  const stats = computeTrip(transactions);
 
   it('parses every row', () => {
     expect(transactions).toHaveLength(292);
-    expect(stats.transactionCount).toBe(291);
+    expect(stats.summary.transactionCount).toBe(291);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.grandTotal).toBeCloseTo(1234.48, 2);
-    expect(stats.daysTracked).toBe(39);
-    expect(stats.citiesVisited).toBe(11);
+    expect(stats.summary.grandTotal).toBeCloseTo(1234.48, 2);
+    expect(stats.summary.daysTracked).toBe(39);
+    expect(stats.cities.visitedCount).toBe(11);
   });
 
   it('keeps the date range', () => {
-    expect(stats.dateRange).toEqual({ start: '2026-06-08', end: '2026-07-16' });
+    expect(stats.summary.dateRange).toEqual({ start: '2026-06-08', end: '2026-07-16' });
   });
 
   it('keeps the category breakdown', () => {
-    expect(stats.topCategory?.category).toBe('Food');
-    expect(stats.topCategory?.total).toBeCloseTo(460.95, 2);
-    expect(stats.topCategory?.count).toBe(144);
-    expect(stats.accommodationTotal).toBeCloseTo(250.91, 2);
-    expect(stats.transportTotal).toBeCloseTo(322.42, 2);
+    expect(stats.categories.top?.category).toBe('Food');
+    expect(stats.categories.top?.total).toBeCloseTo(460.95, 2);
+    expect(stats.categories.top?.count).toBe(144);
+    expect(stats.categories.accommodationTotal).toBeCloseTo(250.91, 2);
+    expect(stats.categories.transportTotal).toBeCloseTo(322.42, 2);
   });
 
   it('keeps the merchant and purchase highlights', () => {
-    expect(stats.topMerchant?.name).toBe('Fast Food');
-    expect(stats.topMerchant?.count).toBe(13);
-    expect(stats.biggestPurchase?.merchant).toBe('Railway 12306');
-    expect(Math.abs(stats.biggestPurchase?.amountUSD ?? 0)).toBeCloseTo(62.4, 2);
+    expect(stats.summary.topMerchant?.name).toBe('Fast Food');
+    expect(stats.summary.topMerchant?.count).toBe(13);
+    expect(stats.summary.biggestPurchase?.merchant).toBe('Railway 12306');
+    expect(Math.abs(stats.summary.biggestPurchase?.amountUSD ?? 0)).toBeCloseTo(62.4, 2);
   });
 
   it('keeps the day highlights', () => {
-    expect(stats.mostExpensiveDay?.date).toBe('2026-07-13');
-    expect(stats.mostExpensiveDay?.total).toBeCloseTo(90.77, 2);
-    expect(stats.cheapestDay?.date).toBe('2026-06-29');
-    expect(stats.cheapestDay?.total).toBeCloseTo(3.98, 2);
+    expect(stats.days.mostExpensive?.date).toBe('2026-07-13');
+    expect(stats.days.mostExpensive?.total).toBeCloseTo(90.77, 2);
+    expect(stats.days.cheapest?.date).toBe('2026-06-29');
+    expect(stats.days.cheapest?.total).toBeCloseTo(3.98, 2);
   });
 
   it('keeps the per-night accommodations file intact', () => {

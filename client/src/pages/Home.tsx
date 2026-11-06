@@ -4,7 +4,7 @@
 // Dark canvas, vivid gradient cards, animated stats
 // ============================================================
 import { useState, useEffect, useCallback } from 'react';
-import { parseTransactions, computeTripStats, TripStats, formatDate, formatDateFull, getCategoryColor, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
+import { parseTransactions, computeTrip, TripSeries, Transaction, formatDate, formatDateFull, getCategoryColor, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
 import { getAchievements } from '@/lib/achievements';
 import { WrappedCard, CategoryPill, ProgressBar, GlassPanel } from '@/components/WrappedCard';
 import { AchievementsCard } from '@/components/Achievements';
@@ -20,7 +20,8 @@ const LOGO = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDX
 const TRANSACTIONS_CSV_URL = '/data/transactions.csv';
 
 export default function Home() {
-  const [stats, setStats] = useState<TripStats | null>(null);
+  const [stats, setStats] = useState<TripSeries | null>(null);
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [accommodations, setAccommodations] = useState<AccommodationEntry[]>([]);
   const [loadStatus, setLoadStatus] = useState<'idle' | 'loaded' | 'error'>('idle');
   const [autoLoaded, setAutoLoaded] = useState(false);
@@ -44,8 +45,9 @@ export default function Home() {
       setLoadStatus('error');
       return;
     }
-    const computed = computeTripStats(txns);
+    const computed = computeTrip(txns);
     console.log('Computed stats:', computed);
+    setTransactions(txns);
     setStats(computed);
     setLoadStatus('loaded');
   }, []);
@@ -137,21 +139,21 @@ export default function Home() {
             <div className="flex items-center gap-6 mt-4">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  ${stats.grandTotal.toFixed(0)}
+                  ${stats.summary.grandTotal.toFixed(0)}
                 </div>
                 <div className="text-xs text-white/50 uppercase tracking-wider">Total Spent</div>
               </div>
               <div className="w-px h-10 bg-white/20" />
               <div className="text-center">
                 <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {stats.daysTracked}
+                  {stats.summary.daysTracked}
                 </div>
                 <div className="text-xs text-white/50 uppercase tracking-wider">Days</div>
               </div>
               <div className="w-px h-10 bg-white/20" />
               <div className="text-center">
                 <div className="text-3xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {stats.citiesVisited}
+                  {stats.cities.visitedCount}
                 </div>
                 <div className="text-xs text-white/50 uppercase tracking-wider">Cities</div>
               </div>
@@ -180,23 +182,23 @@ export default function Home() {
                 <div className="text-sm font-semibold tracking-widest uppercase opacity-70 mb-2">I've spent</div>
                 <div className="flex items-end gap-3 mb-1">
                   <div className="text-7xl sm:text-8xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
-                    {formatCurrency(stats.grandTotal)}
+                    {formatCurrency(stats.summary.grandTotal)}
                   </div>
                 </div>
                 <div className="text-white/70 text-lg mb-6">
-                  That's <span className="font-bold text-white">${stats.grandTotal.toFixed(0)}</span> spent across {stats.daysTracked} days of travel
+                  That's <span className="font-bold text-white">${stats.summary.grandTotal.toFixed(0)}</span> spent across {stats.summary.daysTracked} days of travel
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                   <GlassPanel>
-                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>${stats.dailyAverage.toFixed(0)}</div>
+                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>${stats.summary.dailyAverage.toFixed(0)}</div>
                     <div className="text-xs opacity-70 mt-1">per day</div>
                   </GlassPanel>
                   <GlassPanel>
-                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{stats.transactionCount}</div>
+                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{stats.summary.transactionCount}</div>
                     <div className="text-xs opacity-70 mt-1">transactions</div>
                   </GlassPanel>
                   <GlassPanel>
-                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{currency === 'usd' ? '$' : '¥'}{stats.avgTransactionSize.toFixed(0)}</div>
+                    <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{currency === 'usd' ? '$' : '¥'}{stats.summary.avgTransactionSize.toFixed(0)}</div>
                     <div className="text-xs opacity-70 mt-1">avg per txn</div>
                   </GlassPanel>
                 </div>
@@ -211,13 +213,13 @@ export default function Home() {
                   <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Daily Burn Rate</div>
                 </div>
                 <div className="text-3xl font-bold mb-1" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {currency === 'usd' ? '$' : '¥'}{stats.mostExpensiveDay?.total.toFixed(0)} peak
+                  {currency === 'usd' ? '$' : '¥'}{stats.days.mostExpensive?.total.toFixed(0)} peak
                 </div>
                 <div className="text-white/50 text-sm mb-6">
-                  on {formatDate(stats.mostExpensiveDay?.date || '')} · my biggest spending day
+                  on {formatDate(stats.days.mostExpensive?.date || '')} · my biggest spending day
                 </div>
                 <ResponsiveContainer width="100%" height={200}>
-                  <AreaChart data={stats.dayStats.map(d => ({ date: formatDate(d.date), total: d.total, city: d.cities[0] || 'Trip' }))}>
+                  <AreaChart data={stats.days.items.map(d => ({ date: formatDate(d.date), total: d.total, city: d.cities[0] || 'Trip' }))}>
                     <defs>
                       <linearGradient id="burnGrad" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#FF6B6B" stopOpacity={0.4} />
@@ -234,23 +236,23 @@ export default function Home() {
                   </AreaChart>
                 </ResponsiveContainer>
                 <div className="flex items-center justify-between mt-4 text-sm">
-                  <span className="text-white/50">Lightest day: <span className="text-white font-semibold">{currency === 'usd' ? '$' : '¥'}{stats.cheapestDay?.total.toFixed(2)}</span> on {formatDate(stats.cheapestDay?.date || '')}</span>
+                  <span className="text-white/50">Lightest day: <span className="text-white font-semibold">{currency === 'usd' ? '$' : '¥'}{stats.days.cheapest?.total.toFixed(2)}</span> on {formatDate(stats.days.cheapest?.date || '')}</span>
                 </div>
               </div>
             </WrappedCard>
 
             {/* ── CARD 3: Top Category ── */}
-            <WrappedCard gradient={`linear-gradient(135deg, ${getCategoryColor(stats.topCategory?.category || 'Food')}cc 0%, ${getCategoryColor(stats.topCategory?.category || 'Food')}44 100%)`}>
+            <WrappedCard gradient={`linear-gradient(135deg, ${getCategoryColor(stats.categories.top?.category || 'Food')}cc 0%, ${getCategoryColor(stats.categories.top?.category || 'Food')}44 100%)`}>
               <div className="p-8 text-white">
                 <div className="text-sm font-semibold tracking-widest uppercase opacity-70 mb-2">My #1 spend</div>
                 <div className="text-6xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {stats.topCategory?.category}
+                  {stats.categories.top?.category}
                 </div>
                 <div className="text-white/70 text-lg mb-6">
-                  <span className="font-bold text-white">{currency === 'usd' ? '$' : '¥'}{stats.topCategory?.total.toFixed(0)}</span> — {stats.topCategory?.percentage.toFixed(0)}% of my total budget
+                  <span className="font-bold text-white">{currency === 'usd' ? '$' : '¥'}{stats.categories.top?.total.toFixed(0)}</span> — {stats.categories.top?.percentage.toFixed(0)}% of my total budget
                 </div>
                 <div className="space-y-3">
-                  {stats.categoryStats.slice(0, 6).map((cat) => (
+                  {stats.categories.items.slice(0, 6).map((cat) => (
                     <div key={cat.category}>
                       <div className="flex justify-between text-sm mb-1">
                         <span className="font-medium">{cat.category}</span>
@@ -279,7 +281,7 @@ export default function Home() {
                   <div className="flex-shrink-0">
                     <PieChart width={180} height={180}>
                       <Pie
-                        data={stats.categoryStats}
+                        data={stats.categories.items}
                         cx={90}
                         cy={90}
                         innerRadius={55}
@@ -288,7 +290,7 @@ export default function Home() {
                         strokeWidth={2}
                         stroke="#0d0d0f"
                       >
-                        {stats.categoryStats.map((cat) => (
+                        {stats.categories.items.map((cat) => (
                           <Cell key={cat.category} fill={cat.color} />
                         ))}
                       </Pie>
@@ -299,7 +301,7 @@ export default function Home() {
                     </PieChart>
                   </div>
                   <div className="flex-1 space-y-2">
-                    {stats.categoryStats.map((cat) => (
+                    {stats.categories.items.map((cat) => (
                       <div key={cat.category} className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
                           <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: cat.color }} />
@@ -321,11 +323,11 @@ export default function Home() {
                   <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Cities Conquered</div>
                 </div>
                 <div className="text-7xl font-bold mb-6" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {stats.citiesVisited}
+                  {stats.cities.visitedCount}
                 </div>
                 <div className="space-y-3">
-                  {stats.cityStats.map((city, i) => {
-                    const maxTotal = stats.cityStats[0]?.total || 1;
+                  {stats.cities.items.map((city, i) => {
+                    const maxTotal = stats.cities.items[0]?.total || 1;
                     return (
                       <div key={city.city} className="flex items-center gap-3">
                         <div className="text-sm font-bold w-5 text-white/50">{i + 1}</div>
@@ -357,22 +359,22 @@ export default function Home() {
                   <div className="text-sm font-semibold tracking-widest uppercase opacity-70">I ate well</div>
                 </div>
                 <div className="text-7xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {currency === 'usd' ? '$' : '¥'}{stats.foodTotal.toFixed(0)}
+                  {currency === 'usd' ? '$' : '¥'}{stats.categories.foodTotal.toFixed(0)}
                 </div>
                 <div className="text-white/70 text-lg mb-6">
-                  spent on food — that's <span className="font-bold text-white">{currency === 'usd' ? '$' : '¥'}{(stats.foodTotal / stats.daysTracked).toFixed(2)}/day</span> on average
+                  spent on food — that's <span className="font-bold text-white">{currency === 'usd' ? '$' : '¥'}{(stats.categories.foodTotal / stats.summary.daysTracked).toFixed(2)}/day</span> on average
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <GlassPanel>
                     <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
-                      {stats.categoryStats.find(c => c.category === 'Food')?.count || 0}
+                      {stats.categories.items.find(c => c.category === 'Food')?.count || 0}
                     </div>
                     <div className="text-xs opacity-70 mt-1">meals logged</div>
                   </GlassPanel>
                   <GlassPanel>
                     <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
-                      {currency === 'usd' ? '$' : '¥'}{stats.categoryStats.find(c => c.category === 'Food')
-                        ? (stats.foodTotal / (stats.categoryStats.find(c => c.category === 'Food')?.count || 1)).toFixed(1)
+                      {currency === 'usd' ? '$' : '¥'}{stats.categories.items.find(c => c.category === 'Food')
+                        ? (stats.categories.foodTotal / (stats.categories.items.find(c => c.category === 'Food')?.count || 1)).toFixed(1)
                         : '0'}
                     </div>
                     <div className="text-xs opacity-70 mt-1">avg per meal</div>
@@ -389,13 +391,13 @@ export default function Home() {
                   <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Beds & Hostels</div>
                 </div>
                 <div className="text-7xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {currency === 'usd' ? '$' : '¥'}{stats.accommodationTotal.toFixed(0)}
+                  {currency === 'usd' ? '$' : '¥'}{stats.categories.accommodationTotal.toFixed(0)}
                 </div>
                 <div className="text-white/70 text-lg mb-6">
-                  on accommodation · <span className="font-bold text-white">{stats.categoryStats.find(c => c.category === 'Accommodation')?.count || 0} stays</span>
+                  on accommodation · <span className="font-bold text-white">{stats.categories.items.find(c => c.category === 'Accommodation')?.count || 0} stays</span>
                 </div>
                 <div className="space-y-2">
-                  {stats.transactions
+                  {transactions
                     .filter(t => t.category === 'Accommodation' && t.amountUSD < 0)
                     .sort((a, b) => Math.abs(b.amountUSD) - Math.abs(a.amountUSD))
                     .slice(0, 5)
@@ -420,7 +422,7 @@ export default function Home() {
                   <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Getting Around</div>
                 </div>
                 <div className="text-7xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                  {currency === 'usd' ? '$' : '¥'}{stats.transportTotal.toFixed(0)}
+                  {currency === 'usd' ? '$' : '¥'}{stats.categories.transportTotal.toFixed(0)}
                 </div>
                 <div className="text-white/70 text-lg mb-6">
                   on transport — trains, metros, bikes
@@ -428,13 +430,13 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-3">
                   <GlassPanel>
                     <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
-                      {currency === 'usd' ? '$' : '¥'}{(stats.categoryStats.find(c => c.category === 'Intercity Transport')?.total || 0).toFixed(0)}
+                      {currency === 'usd' ? '$' : '¥'}{(stats.categories.items.find(c => c.category === 'Intercity Transport')?.total || 0).toFixed(0)}
                     </div>
                     <div className="text-xs opacity-70 mt-1">intercity trains</div>
                   </GlassPanel>
                   <GlassPanel>
                     <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
-                      {currency === 'usd' ? '$' : '¥'}{(stats.categoryStats.find(c => c.category === 'Transport')?.total || 0).toFixed(0)}
+                      {currency === 'usd' ? '$' : '¥'}{(stats.categories.items.find(c => c.category === 'Transport')?.total || 0).toFixed(0)}
                     </div>
                     <div className="text-xs opacity-70 mt-1">local transport</div>
                   </GlassPanel>
@@ -443,7 +445,7 @@ export default function Home() {
             </WrappedCard>
 
             {/* ── CARD 9: Biggest Purchase ── */}
-            {stats.biggestPurchase && (
+            {stats.summary.biggestPurchase && (
               <WrappedCard gradient="linear-gradient(135deg, #f7971e 0%, #ffd200 100%)">
                 <div className="p-8 text-white">
                   <div className="flex items-center gap-2 mb-2">
@@ -451,22 +453,22 @@ export default function Home() {
                     <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Biggest splurge</div>
                   </div>
                   <div className="text-7xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif', color: '#1a1a1a' }}>
-                    {currency === 'usd' ? '$' : '¥'}{Math.abs(stats.biggestPurchase.amountUSD).toFixed(0)}
+                    {currency === 'usd' ? '$' : '¥'}{Math.abs(stats.summary.biggestPurchase.amountUSD).toFixed(0)}
                   </div>
                   <div className="text-black/60 text-lg mb-4">
-                    <span className="font-bold text-black">{stats.biggestPurchase.merchant}</span>
+                    <span className="font-bold text-black">{stats.summary.biggestPurchase.merchant}</span>
                   </div>
                   <div className="flex gap-2 flex-wrap">
-                    <CategoryPill label={stats.biggestPurchase.category} color="#1a1a1a" />
-                    <CategoryPill label={stats.biggestPurchase.city} color="#1a1a1a" />
-                    <CategoryPill label={formatDate(stats.biggestPurchase.date)} color="#1a1a1a" />
+                    <CategoryPill label={stats.summary.biggestPurchase.category} color="#1a1a1a" />
+                    <CategoryPill label={stats.summary.biggestPurchase.city} color="#1a1a1a" />
+                    <CategoryPill label={formatDate(stats.summary.biggestPurchase.date)} color="#1a1a1a" />
                   </div>
                 </div>
               </WrappedCard>
             )}
 
             {/* ── CARD 10: Top Merchant ── */}
-            {stats.topMerchant && (
+            {stats.summary.topMerchant && (
               <WrappedCard gradient="linear-gradient(135deg, #f953c6 0%, #b91d73 100%)">
                 <div className="p-8 text-white">
                   <div className="flex items-center gap-2 mb-2">
@@ -474,10 +476,10 @@ export default function Home() {
                     <div className="text-sm font-semibold tracking-widest uppercase opacity-70">My go-to spot</div>
                   </div>
                   <div className="text-5xl font-bold mb-2 leading-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-                    {stats.topMerchant.name}
+                    {stats.summary.topMerchant.name}
                   </div>
                   <div className="text-white/70 text-lg mb-6">
-                    I went back <span className="font-bold text-white">{stats.topMerchant.count} times</span> — spending {currency === 'usd' ? '$' : '¥'}{stats.topMerchant.total.toFixed(2)} total
+                    I went back <span className="font-bold text-white">{stats.summary.topMerchant.count} times</span> — spending {currency === 'usd' ? '$' : '¥'}{stats.summary.topMerchant.total.toFixed(2)} total
                   </div>
                 </div>
               </WrappedCard>
@@ -487,7 +489,7 @@ export default function Home() {
             <CityRouteCard stats={stats} />
 
             {/* ── CARD 11.5: Travel Achievements ── */}
-            <AchievementsCard achievements={getAchievements(stats.transactions, stats)} />
+            <AchievementsCard achievements={getAchievements(transactions, stats.summary)} />
 
             {/* ── CARD 12: Weekday Spending ── */}
             <WrappedCard gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">
@@ -498,7 +500,7 @@ export default function Home() {
                 </div>
                 <div className="text-white/70 text-sm mb-6">Which days cost you the most?</div>
                 <ResponsiveContainer width="100%" height={160}>
-                  <BarChart data={['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d => ({ day: d, total: stats.weekdaySpend[d] || 0 }))}>
+                  <BarChart data={['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d => ({ day: d, total: stats.days.weekdaySpend[d] || 0 }))}>
                     <XAxis dataKey="day" tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 11 }} axisLine={false} tickLine={false} />
                     <YAxis hide />
                     <Tooltip
@@ -516,7 +518,7 @@ export default function Home() {
             </WrappedCard>
 
             {/* ── CARD 12: Activities ── */}
-            {stats.categoryStats.find(c => c.category === 'Activities') && (
+            {stats.categories.items.find(c => c.category === 'Activities') && (
               <WrappedCard gradient="linear-gradient(135deg, #f953c6 0%, #8360c3 100%)">
                 <div className="p-8 text-white">
                   <div className="flex items-center gap-2 mb-2">
@@ -524,13 +526,13 @@ export default function Home() {
                     <div className="text-sm font-semibold tracking-widest uppercase opacity-70">Adventures</div>
                   </div>
                   <div className="text-7xl font-bold mb-2" style={{ fontFamily: 'Syne, sans-serif' }}>
-                    {currency === 'usd' ? '$' : '¥'}{(stats.categoryStats.find(c => c.category === 'Activities')?.total || 0).toFixed(0)}
+                    {currency === 'usd' ? '$' : '¥'}{(stats.categories.items.find(c => c.category === 'Activities')?.total || 0).toFixed(0)}
                   </div>
                   <div className="text-white/70 text-lg mb-6">
-                    on activities · <span className="font-bold text-white">{stats.categoryStats.find(c => c.category === 'Activities')?.count || 0} experiences</span>
+                    on activities · <span className="font-bold text-white">{stats.categories.items.find(c => c.category === 'Activities')?.count || 0} experiences</span>
                   </div>
                   <div className="space-y-2">
-                    {stats.transactions
+                    {transactions
                       .filter(t => t.category === 'Activities' && t.amountUSD < 0)
                       .sort((a, b) => Math.abs(b.amountUSD) - Math.abs(a.amountUSD))
                       .slice(0, 5)
@@ -556,14 +558,14 @@ export default function Home() {
               <HighlightMiniCard
                 gradient="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
                 label="Streak"
-                value={`${stats.longestStreak} days`}
+                value={`${stats.summary.longestStreak} days`}
                 sub="consecutive spending"
                 delay={0}
               />
               <HighlightMiniCard
                 gradient="linear-gradient(135deg, #f7971e 0%, #ffd200 100%)"
                 label="Trip-wide"
-                value={`${currency === 'usd' ? '$' : '¥'}${stats.tripWideTotal.toFixed(0)}`}
+                value={`${currency === 'usd' ? '$' : '¥'}${stats.cities.tripWideTotal.toFixed(0)}`}
                 sub="SIM, VPN, rail"
                 delay={100}
                 dark
@@ -571,15 +573,15 @@ export default function Home() {
               <HighlightMiniCard
                 gradient="linear-gradient(135deg, #8360c3 0%, #2ebf91 100%)"
                 label="Cheapest Day"
-                value={`${currency === 'usd' ? '$' : '¥'}${stats.cheapestDay?.total.toFixed(2)}`}
-                sub={formatDate(stats.cheapestDay?.date || '')}
+                value={`${currency === 'usd' ? '$' : '¥'}${stats.days.cheapest?.total.toFixed(2)}`}
+                sub={formatDate(stats.days.cheapest?.date || '')}
                 delay={200}
               />
               <HighlightMiniCard
                 gradient="linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%)"
                 label="Most Active"
-                value={stats.mostVisitedCity?.city || '—'}
-                sub={`${stats.mostVisitedCity?.days} days`}
+                value={stats.cities.mostVisited?.city || '—'}
+                sub={`${stats.cities.mostVisited?.days} days`}
                 delay={300}
               />
             </div>
@@ -589,11 +591,11 @@ export default function Home() {
               <div className="p-8 text-white">
                 <div className="text-sm font-semibold tracking-widest uppercase opacity-70 mb-6">How I Paid</div>
                 <div className="space-y-3">
-                  {Object.entries(stats.paymentMethods)
+                  {Object.entries(stats.summary.paymentMethods)
                     .sort((a, b) => b[1] - a[1])
                     .slice(0, 6)
                     .map(([method, amount]) => {
-                      const pct = (amount / stats.grandTotal) * 100;
+                      const pct = (amount / stats.summary.grandTotal) * 100;
                       return (
                         <div key={method}>
                           <div className="flex justify-between text-sm mb-1">
@@ -647,7 +649,7 @@ export default function Home() {
             {/* ── Footer ── */}
             <div className="text-center py-8 text-white/30 text-sm">
               <div className="text-2xl mb-2">元</div>
-              <div>China Overland · {stats.dateRange.start} → {stats.dateRange.end}</div>
+              <div>China Overland · {stats.summary.dateRange.start} → {stats.summary.dateRange.end}</div>
               <div className="text-xs mt-1 text-white/20">Drop a new transactions.csv to update</div>
             </div>
           </>
@@ -676,18 +678,18 @@ function HighlightMiniCard({ gradient, label, value, sub, delay = 0, dark = fals
 }
 
 // Pace tracker card — shows spending velocity over time
-function PaceTrackerCard({ stats }: { stats: TripStats }) {
+function PaceTrackerCard({ stats }: { stats: TripSeries }) {
   const { ref, visible } = useScrollReveal();
   // Running total by day
   let running = 0;
-  const runningData = stats.dayStats.map(d => {
+  const runningData = stats.days.items.map(d => {
     running += d.total;
     return { date: formatDate(d.date), running, daily: d.total };
   });
 
   // Projected total if pace continues
-  const avgPerDay = stats.dailyAverage;
-  const daysElapsed = stats.daysTracked;
+  const avgPerDay = stats.summary.dailyAverage;
+  const daysElapsed = stats.summary.daysTracked;
   const projectedMonthly = avgPerDay * 30;
 
   return (
@@ -726,11 +728,11 @@ function PaceTrackerCard({ stats }: { stats: TripStats }) {
           <div className="text-xs text-white/50">days tracked</div>
         </div>
         <div className="glass rounded-xl p-3 text-center">
-          <div className="text-lg font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>${stats.grandTotal.toFixed(0)}</div>
+          <div className="text-lg font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>${stats.summary.grandTotal.toFixed(0)}</div>
           <div className="text-xs text-white/50">total so far</div>
         </div>
         <div className="glass rounded-xl p-3 text-center">
-          <div className="text-lg font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>${(stats.grandTotal / daysElapsed * 7).toFixed(0)}</div>
+          <div className="text-lg font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>${(stats.summary.grandTotal / daysElapsed * 7).toFixed(0)}</div>
           <div className="text-xs text-white/50">weekly rate</div>
         </div>
       </div>
@@ -739,12 +741,12 @@ function PaceTrackerCard({ stats }: { stats: TripStats }) {
 }
 
 // City route timeline card
-function CityRouteCard({ stats }: { stats: TripStats }) {
+function CityRouteCard({ stats }: { stats: TripSeries }) {
   const { ref, visible } = useScrollReveal();
   
   // Get chronological city order from dayStats
   const cityOrder: string[] = [];
-  stats.dayStats.forEach(day => {
+  stats.days.items.forEach(day => {
     if (day.cities.length > 0 && !cityOrder.includes(day.cities[0])) {
       cityOrder.push(day.cities[0]);
     }
@@ -769,7 +771,7 @@ function CityRouteCard({ stats }: { stats: TripStats }) {
 }
 
 // Daily log expandable card
-function DailyLogCard({ stats, currency }: { stats: TripStats; currency: 'cny' | 'usd' }) {
+function DailyLogCard({ stats, currency }: { stats: TripSeries; currency: 'cny' | 'usd' }) {
   const { ref, visible } = useScrollReveal();
   const [expanded, setExpanded] = useState<string | null>(null);
 
@@ -784,7 +786,7 @@ function DailyLogCard({ stats, currency }: { stats: TripStats; currency: 'cny' |
         <div className="text-2xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>Every day, every yuan</div>
       </div>
       <div className="divide-y divide-white/5 max-h-[600px] overflow-y-auto">
-        {stats.dayStats.slice().reverse().map((day) => (
+        {stats.days.items.slice().reverse().map((day) => (
           <div key={day.date}>
             <button
               className="w-full flex items-center justify-between px-6 py-4 hover:bg-white/5 transition-colors text-left group"

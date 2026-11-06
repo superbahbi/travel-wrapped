@@ -43,31 +43,47 @@ export interface CategoryStats {
   color: string;
 }
 
-export interface TripStats {
+export interface TripSummary {
   grandTotal: number;
-  daysTracked: number;
   transactionCount: number;
+  daysTracked: number;
   dailyAverage: number;
-  citiesVisited: number;
-  biggestPurchase: Transaction | null;
-  cheapestDay: DayStats | null;
-  mostExpensiveDay: DayStats | null;
-  topMerchant: { name: string; count: number; total: number } | null;
-  topCategory: CategoryStats | null;
-  accommodationTotal: number;
-  foodTotal: number;
-  transportTotal: number;
-  tripWideTotal: number;
   avgTransactionSize: number;
-  longestStreak: number;
   dateRange: { start: string; end: string };
-  weekdaySpend: Record<string, number>;
+  longestStreak: number;
+  biggestPurchase: Transaction | null;
+  topMerchant: { name: string; count: number; total: number } | null;
   paymentMethods: Record<string, number>;
-  mostVisitedCity: CityStats | null;
-  cityStats: CityStats[];
-  categoryStats: CategoryStats[];
-  dayStats: DayStats[];
-  transactions: Transaction[];
+}
+
+export interface DaySeries {
+  items: DayStats[];
+  mostExpensive: DayStats | null;
+  cheapest: DayStats | null;
+  weekdaySpend: Record<string, number>;
+}
+
+export interface CitySeries {
+  items: CityStats[];
+  visitedCount: number;
+  mostVisited: CityStats | null;
+  tripWideTotal: number;
+}
+
+export interface CategorySeries {
+  items: CategoryStats[];
+  top: CategoryStats | null;
+  foodTotal: number;
+  accommodationTotal: number;
+  transportTotal: number;
+}
+
+/** Four narrow series behind one compute call. */
+export interface TripSeries {
+  summary: TripSummary;
+  days: DaySeries;
+  cities: CitySeries;
+  categories: CategorySeries;
 }
 
 export interface AccommodationEntry {
@@ -317,7 +333,7 @@ export function parseTransactions(csv: string): Transaction[] {
   });
 }
 
-export function computeTripStats(transactions: Transaction[]): TripStats {
+export function computeTrip(transactions: Transaction[]): TripSeries {
   const expenses = transactions.filter((t) => t.amountUSD < 0);
   const grandTotal = expenses.reduce((s, t) => s + Math.abs(t.amountUSD), 0);
 
@@ -330,23 +346,22 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
   const days = Object.keys(byDay).sort();
   const daysTracked = days.length;
 
-  const dayStats: DayStats[] = days.map((date) => {
-    const txns = byDay[date];
-    const total = txns
-      .filter((t) => t.amountUSD < 0)
-      .reduce((s, t) => s + Math.abs(t.amountUSD), 0);
+  const dayItems: DayStats[] = days.map((date) => {
+    const spend = byDay[date].filter((t) => t.amountUSD < 0);
+    const total = spend.reduce((s, t) => s + Math.abs(t.amountUSD), 0);
     const catTotals: Record<string, number> = {};
-    txns.forEach((t) => {
+    spend.forEach((t) => {
       catTotals[t.category] =
         (catTotals[t.category] || 0) + Math.abs(t.amountUSD);
     });
     const topCategory =
       Object.entries(catTotals).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
-    const citiesSet = new Set(
-      txns.map((t) => t.city).filter((c) => !isGenericCity(c)),
+    const cities = Array.from(
+      new Set(
+        spend.map((t) => t.city).filter((city) => !isGenericCity(city)),
+      ),
     );
-    const cities = Array.from(citiesSet);
-    return { date, total, transactions: txns, topCategory, cities };
+    return { date, total, transactions: byDay[date], topCategory, cities };
   });
 
   const catTotals: Record<string, { total: number; count: number }> = {};
@@ -355,7 +370,7 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
     catTotals[t.category].total += Math.abs(t.amountUSD);
     catTotals[t.category].count += 1;
   });
-  const categoryStats: CategoryStats[] = Object.entries(catTotals)
+  const categoryItems: CategoryStats[] = Object.entries(catTotals)
     .sort((a, b) => b[1].total - a[1].total)
     .map(([category, { total, count }]) => ({
       category,
@@ -365,8 +380,10 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
       color: getCategoryColor(category),
     }));
 
-  const cityTotals: Record<string, { total: number; days: Set<string>; count: number }> =
-    {};
+  const cityTotals: Record<
+    string,
+    { total: number; days: Set<string>; count: number }
+  > = {};
   expenses.forEach((t) => {
     if (isGenericCity(t.city)) return;
     if (!cityTotals[t.city])
@@ -375,7 +392,7 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
     cityTotals[t.city].days.add(t.date);
     cityTotals[t.city].count += 1;
   });
-  const cityStats: CityStats[] = Object.entries(cityTotals)
+  const cityItems: CityStats[] = Object.entries(cityTotals)
     .sort((a, b) => b[1].total - a[1].total)
     .map(([city, { total, days: cityDays, count }]) => ({
       city,
@@ -391,14 +408,14 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
     null,
   );
 
-  const mostExpensiveDay = dayStats.reduce<DayStats | null>(
-    (max, d) => (!max || d.total > max.total ? d : max),
+  const mostExpensive = dayItems.reduce<DayStats | null>(
+    (max, day) => (!max || day.total > max.total ? day : max),
     null,
   );
-  const cheapestDay = dayStats
-    .filter((d) => d.total > 0)
+  const cheapest = dayItems
+    .filter((day) => day.total > 0)
     .reduce<DayStats | null>(
-      (min, d) => (!min || d.total < min.total ? d : min),
+      (min, day) => (!min || day.total < min.total ? day : min),
       null,
     );
 
@@ -429,13 +446,13 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
 
   const weekdayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const weekdaySpend: Record<string, number> = {};
-  weekdayNames.forEach((d) => {
-    weekdaySpend[d] = 0;
+  weekdayNames.forEach((day) => {
+    weekdaySpend[day] = 0;
   });
-  dayStats.forEach((d) => {
-    const dt = new Date(d.date + 'T00:00:00');
-    if (!isNaN(dt.getTime())) {
-      weekdaySpend[weekdayNames[dt.getDay()]] += d.total;
+  dayItems.forEach((day) => {
+    const date = new Date(day.date + 'T00:00:00');
+    if (!isNaN(date.getTime())) {
+      weekdaySpend[weekdayNames[date.getDay()]] += day.total;
     }
   });
 
@@ -445,8 +462,8 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
       (paymentMethods[t.payment] || 0) + Math.abs(t.amountUSD);
   });
 
-  let longestStreak = 0,
-    currentStreak = 0;
+  let longestStreak = 0;
+  let currentStreak = 0;
   for (let i = 0; i < days.length; i++) {
     if (i === 0) {
       currentStreak = 1;
@@ -464,35 +481,47 @@ export function computeTripStats(transactions: Transaction[]): TripStats {
   }
   longestStreak = Math.max(longestStreak, currentStreak);
 
+  const mostVisited = cityItems.reduce<CityStats | null>(
+    (best, city) => (!best || city.days > best.days ? city : best),
+    null,
+  );
+
   return {
-    grandTotal,
-    daysTracked,
-    transactionCount: expenses.length,
-    dailyAverage: daysTracked > 0 ? grandTotal / daysTracked : 0,
-    citiesVisited: cityStats.length,
-    biggestPurchase,
-    cheapestDay,
-    mostExpensiveDay,
-    topMerchant,
-    topCategory: categoryStats[0] || null,
-    accommodationTotal,
-    foodTotal,
-    transportTotal,
-    tripWideTotal,
-    avgTransactionSize:
-      expenses.length > 0 ? grandTotal / expenses.length : 0,
-    longestStreak,
-    dateRange: {
-      start: days[0] || '',
-      end: days[days.length - 1] || '',
+    summary: {
+      grandTotal,
+      transactionCount: expenses.length,
+      daysTracked,
+      dailyAverage: daysTracked > 0 ? grandTotal / daysTracked : 0,
+      avgTransactionSize:
+        expenses.length > 0 ? grandTotal / expenses.length : 0,
+      dateRange: {
+        start: days[0] || '',
+        end: days[days.length - 1] || '',
+      },
+      longestStreak,
+      biggestPurchase,
+      topMerchant,
+      paymentMethods,
     },
-    weekdaySpend,
-    paymentMethods,
-    mostVisitedCity: cityStats.sort((a, b) => b.days - a.days)[0] || null,
-    cityStats: cityStats.sort((a, b) => b.total - a.total),
-    categoryStats,
-    dayStats,
-    transactions,
+    days: {
+      items: dayItems,
+      mostExpensive,
+      cheapest,
+      weekdaySpend,
+    },
+    cities: {
+      items: cityItems,
+      visitedCount: cityItems.length,
+      mostVisited,
+      tripWideTotal,
+    },
+    categories: {
+      items: categoryItems,
+      top: categoryItems[0] || null,
+      foodTotal,
+      accommodationTotal,
+      transportTotal,
+    },
   };
 }
 
