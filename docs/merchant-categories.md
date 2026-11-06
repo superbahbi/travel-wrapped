@@ -395,3 +395,82 @@ bank/card fees use the `Fees` category.
 | YA KUN KAYA TOAST - JE | `Food` | 1 |
 | Yo-Chi George Street | `Food` | 1 |
 | YUEN SUK LIMITED | `Food` | 1 |
+
+## Wise / Revolut 2026 import
+
+Resolved from the 2026 Wise transaction history and Revolut account statement.
+Card purchases only; Wise transfers, balance interest, currency conversions,
+refunds, cash withdrawals, and the Revolut deposit are excluded. Wise card fees
+are included in each row's `AmountUSD`.
+
+| Merchant | Category | Rows |
+| --- | --- | ---: |
+| Meituan - Alipay | `Food` | 12 |
+| Grab | `Transport` | 10 |
+| Railways - Alipay | `Transport` | 10 |
+| GoPay | `Transport` | 9 |
+| Chongqing City - Alipay | `Transport` | 7 |
+| Suzhou Metro - Alipay | `Transport` | 7 |
+| Chengdu Transp - Alipay | `Transport` | 6 |
+| Weixin China Railway N | `Intercity Transport` | 6 |
+| Weixin Scan Qr Code Fo | `Shopping` | 6 |
+| Shanghai Publi - Alipay | `Transport` | 5 |
+| Shanghai Public - Alipay | `Transport` | 5 |
+| Weixin Ctrip. Com | `Transport` | 5 |
+| Chengduhaotema - Alipay | `Food` | 4 |
+| McDonald's | `Food` | 4 |
+| Jingdezhengongg - Alipay | `Transport` | 3 |
+| Lao Xiang Ji - Alipay | `Food` | 3 |
+| Pinewood Lodge | `Accommodation` | 3 |
+| Changshashigui - Alipay | `Transport` | 2 |
+| Chengduhaotemai - Alipay | `Food` | 2 |
+| CLAUDE | `Subscription` | 2 |
+| Fergbaker | `Food` | 2 |
+| FreshChoice | `Food` | 2 |
+| Gojek | `Transport` | 2 |
+| Govagency - Alipay | `Fees` | 2 |
+| Korail / 한국철도공사 | `Intercity Transport` | 2 |
+| Qrcode4144 - Alipay | `Shopping` | 2 |
+| Queenstown Post Shop | `Shopping` | 2 |
+| Rees Health Hub | `Personal Care` | 2 |
+| Shanghaihuigang - Alipay | `Food` | 2 |
+| Weixin China Railway | `Intercity Transport` | 2 |
+| Weixin Taobao Platform | `Shopping` | 2 |
+| Weixin Zhiyou Tianxi | `Accommodation` | 2 |
+| Yanchengshihua - Alipay | `Transport` | 2 |
+| 7 Eleven Store - Alipay | `Food` | 1 |
+| Arrowtown Bakery | `Food` | 1 |
+| Businessservic - Alipay | `Fees` | 1 |
+| Chongqingcheng - Alipay | `Transport` | 1 |
+| Chongqingxingho - Alipay | `Food` | 1 |
+| FamilyMart | `Food` | 1 |
+| Grab | `Food` | 1 |
+| HK Express | `Intercity Transport` | 1 |
+| Hong Qi Store - Alipay | `Food` | 1 |
+| Jetstar Airways | `Intercity Transport` | 1 |
+| Korail Ticket | `Intercity Transport` | 1 |
+| Lawson - Alipay | `Food` | 1 |
+| MEITUAN | `Food` | 1 |
+| Mr Rice - Alipay | `Food` | 1 |
+| Nomads | `Accommodation` | 1 |
+| Qrcode0103 - Alipay | `Shopping` | 1 |
+| Qrcode3041 - Alipay | `Shopping` | 1 |
+| Qrcode5110 - Alipay | `Shopping` | 1 |
+| Queenstown isite | `Activities` | 1 |
+| Shanghaihuigan - Alipay | `Food` | 1 |
+| Shanghaizhenjin - Alipay | `Food` | 1 |
+| Smz the Coffee Hatch 02 | `Food` | 1 |
+| Vanguard - Alipay | `Food` | 1 |
+| Walmart | `Food` | 1 |
+| Weixin Baodaolai Qung | `Food` | 1 |
+| Weixin Bosu Youth Host | `Accommodation` | 1 |
+| Weixin Chabaidao | `Food` | 1 |
+| Weixin Litang Yunshang | `Food` | 1 |
+| Weixin Shandong Liansh | `Food` | 1 |
+| Weixin Shanghai Junh | `Shopping` | 1 |
+| Weixin Taoyangli Sceni | `Activities` | 1 |
+| Weixin Wanzhuan Orderi | `Shopping` | 1 |
+| Weixin Weihai Weidon | `Intercity Transport` | 1 |
+| Weixin Yihe Hotel | `Accommodation` | 1 |
+| Wilkinsons Pharmacy | `Personal Care` | 1 |
+| Woolworths Metro | `Food` | 1 |

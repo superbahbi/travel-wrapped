@@ -29,6 +29,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-02-26 00:00:00,MIDNIGHT ESPRESSO BAR,-7.76,USD,-7.76,1.000000,2026-02-26,Food,Chase 1388,Unknown,New Zealand,Chase 1388: MIDNIGHT ESPRESSO BAR
 2026-02-26 00:00:00,MUSEUM OF NEW ZEALAND TE,-21.01,USD,-21.01,1.000000,2026-02-26,Activities,Chase 1388,Wellington,New Zealand,Chase 1388: MUSEUM OF NEW ZEALAND TE
 2026-02-26 00:00:00,McDonalds 640045,-2.09,USD,-2.09,1.000000,2026-02-26,Food,Chase 1388,Unknown,New Zealand,Chase 1388: McDonalds 640045
+2026-02-26 00:00:00,Nomads,-16.60,USD,-16.60,1.000000,2026-02-26,Accommodation,Revolut card,Wellington,New Zealand,Revolut: Nomads
 2026-02-26 00:00:00,PHO VIET STREET FOOD,-8.35,USD,-8.35,1.000000,2026-02-26,Food,Chase 1388,Unknown,New Zealand,Chase 1388: PHO VIET STREET FOOD
 2026-02-26 00:00:00,WELLINGTON - SNAPPER,-11.95,USD,-11.95,1.000000,2026-02-26,Transport,Chase 1388,Wellington,New Zealand,Chase 1388: WELLINGTON - SNAPPER
 2026-02-26 00:00:00,WELLINGTON CABLE CAR,-7.28,USD,-7.28,1.000000,2026-02-26,Activities,Chase 1388,Wellington,New Zealand,Chase 1388: WELLINGTON CABLE CAR
@@ -121,21 +122,42 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-04-21 00:00:00,URBANZ LP,-23.71,USD,-23.71,1.000000,2026-04-21,Accommodation,Chase 1388,Christchurch,New Zealand,Chase 1388: URBANZ LP
 2026-04-22 00:00:00,FRESHCHOICE CITY MKT,-8.44,USD,-8.44,1.000000,2026-04-22,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: FRESHCHOICE CITY MKT
 2026-04-22 00:00:00,FRESHCHOICE QUEENSTOWN,-25.78,USD,-25.78,1.000000,2026-04-22,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: FRESHCHOICE QUEENSTOWN
+2026-04-22 00:00:00,McDonald's,-14.50,NZD,-8.70,1.666667,2026-04-22,Food,Wise card,Queenstown,New Zealand,Wise: McDonald's | Eating out | source 14.50 NZD + fee 0.00
+2026-04-22 00:00:00,Pinewood Lodge,-85.00,NZD,-51.00,1.666667,2026-04-22,Accommodation,Wise card,Queenstown,New Zealand,Wise: Pinewood Lodge | Trips | source 85.00 NZD + fee 0.00
+2026-04-22 00:00:00,Queenstown isite,-25.50,NZD,-15.30,1.666667,2026-04-22,Activities,Wise card,Queenstown,New Zealand,Wise: Queenstown isite | Trips | source 25.50 NZD + fee 0.00
+2026-04-22 00:00:00,Rees Health Hub,-5.00,NZD,-3.00,1.666667,2026-04-22,Personal Care,Wise card,Queenstown,New Zealand,Wise: Rees Health Hub | Shopping | source 5.00 NZD + fee 0.00
 2026-04-22 00:00:00,Starbucks Cathedral Sq,-5.37,USD,-5.37,1.000000,2026-04-22,Food,Chase 1388,Unknown,New Zealand,Chase 1388: Starbucks Cathedral Sq
 2026-04-23 00:00:00,Fergbaker,-5.14,USD,-5.14,1.000000,2026-04-23,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: Fergbaker
+2026-04-23 00:00:00,FreshChoice,-32.19,NZD,-19.31,1.666667,2026-04-23,Food,Wise card,Queenstown,New Zealand,Wise: FreshChoice | Groceries | source 32.19 NZD + fee 0.00
+2026-04-23 00:00:00,Pinewood Lodge,-42.50,NZD,-25.50,1.666667,2026-04-23,Accommodation,Wise card,Queenstown,New Zealand,Wise: Pinewood Lodge | Trips | source 42.50 NZD + fee 0.00
 2026-04-24 00:00:00,FIORDLAND BAKERY,-3.59,USD,-3.59,1.000000,2026-04-24,Food,Chase 1388,Fiordland,New Zealand,Chase 1388: FIORDLAND BAKERY
 2026-04-24 00:00:00,Fiordland Frontier Supp,-8.95,USD,-8.95,1.000000,2026-04-24,Shopping,Chase 1388,Fiordland,New Zealand,Chase 1388: Fiordland Frontier Supp
 2026-04-25 00:00:00,Chemist Warehouse,-6.47,USD,-6.47,1.000000,2026-04-25,Personal Care,Chase 1388,Unknown,New Zealand,Chase 1388: Chemist Warehouse
+2026-04-25 00:00:00,Pinewood Lodge,-500.00,NZD,-300.00,1.666667,2026-04-25,Accommodation,Wise card,Queenstown,New Zealand,Wise: Pinewood Lodge | Trips | source 500.00 NZD + fee 0.00
+2026-04-26 00:00:00,Arrowtown Bakery,-7.65,NZD,-4.59,1.666667,2026-04-26,Food,Wise card,Arrowtown,New Zealand,Wise: Arrowtown Bakery | Groceries | source 7.65 NZD + fee 0.00
+2026-04-26 00:00:00,McDonald's,-14.00,NZD,-8.40,1.666667,2026-04-26,Food,Wise card,Queenstown,New Zealand,Wise: McDonald's | Eating out | source 14.00 NZD + fee 0.00
 2026-04-27 00:00:00,Fergburger,-13.15,USD,-13.15,1.000000,2026-04-27,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: Fergburger
+2026-04-27 00:00:00,FreshChoice,-51.69,NZD,-31.01,1.666667,2026-04-27,Food,Wise card,Queenstown,New Zealand,Wise: FreshChoice | Groceries | source 51.69 NZD + fee 0.00
 2026-04-29 00:00:00,Fergbaker,-5.38,USD,-5.38,1.000000,2026-04-29,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: Fergbaker
 2026-04-29 00:00:00,Fergbaker,-3.57,USD,-3.57,1.000000,2026-04-29,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: Fergbaker
+2026-04-29 00:00:00,Queenstown Post Shop,-1.82,NZD,-1.09,1.666667,2026-04-29,Shopping,Wise card,Queenstown,New Zealand,Wise: Queenstown Post Shop | Bills | source 1.82 NZD + fee 0.00
+2026-04-29 00:00:00,Queenstown Post Shop,-20.50,NZD,-12.30,1.666667,2026-04-29,Shopping,Wise card,Queenstown,New Zealand,Wise: Queenstown Post Shop | Bills | source 20.50 NZD + fee 0.00
+2026-04-29 00:00:00,Rees Health Hub,-1.20,NZD,-0.72,1.666667,2026-04-29,Personal Care,Wise card,Queenstown,New Zealand,Wise: Rees Health Hub | Shopping | source 1.20 NZD + fee 0.00
+2026-04-29 00:00:00,Smz the Coffee Hatch 02,-6.50,NZD,-3.90,1.666667,2026-04-29,Food,Wise card,Queenstown,New Zealand,Wise: Smz the Coffee Hatch 02 | Eating out | source 6.50 NZD + fee 0.00
+2026-04-29 00:00:00,Wilkinsons Pharmacy,-9.14,NZD,-5.48,1.666667,2026-04-29,Personal Care,Wise card,Queenstown,New Zealand,Wise: Wilkinsons Pharmacy | Personal care | source 9.14 NZD + fee 0.00
+2026-04-30 00:00:00,McDonald's,-11.00,NZD,-6.60,1.666667,2026-04-30,Food,Wise card,Queenstown,New Zealand,Wise: McDonald's | Eating out | source 11.00 NZD + fee 0.00
 2026-05-01 00:00:00,FRESHCHOICE QUEENSTOWN,-8.45,USD,-8.45,1.000000,2026-05-01,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: FRESHCHOICE QUEENSTOWN
 2026-05-01 00:00:00,Fergbaker,-5.37,USD,-5.37,1.000000,2026-05-01,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: Fergbaker
+2026-05-01 00:00:00,Fergbaker,-9.08,NZD,-5.45,1.666667,2026-05-01,Food,Wise card,Queenstown,New Zealand,Wise: Fergbaker | Groceries | source 9.08 NZD + fee 0.00
 2026-05-01 00:00:00,GOOGLE *CLOUD Z2vz3K,-0.11,USD,-0.11,1.000000,2026-05-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD Z2vz3K
 2026-05-02 00:00:00,AUSTRALIANETA,-14.46,USD,-14.46,1.000000,2026-05-02,Fees,Chase 1388,Sydney,Australia,Chase 1388: AUSTRALIANETA
+2026-05-02 00:00:00,Fergbaker,-9.08,NZD,-5.45,1.666667,2026-05-02,Food,Wise card,Queenstown,New Zealand,Wise: Fergbaker | Groceries | source 9.08 NZD + fee 0.00
 2026-05-02 00:00:00,GetYourGuide,-56.90,USD,-56.90,1.000000,2026-05-02,Activities,Chase 1388,Unknown,Australia,Chase 1388: GetYourGuide
 2026-05-02 00:00:00,Hotel at Booking.com,-25.28,USD,-25.28,1.000000,2026-05-02,Accommodation,Chase 1388,Unknown,Australia,Chase 1388: Hotel at Booking.com
+2026-05-02 00:00:00,Jetstar Airways,-170.00,NZD,-102.00,1.666667,2026-05-02,Intercity Transport,Wise card,Unknown,New Zealand,Wise: Jetstar Airways | Trips | source 170.00 NZD + fee 0.00
 2026-05-03 00:00:00,Hotel at Booking.com,-50.31,USD,-50.31,1.000000,2026-05-03,Accommodation,Chase 1388,Unknown,Australia,Chase 1388: Hotel at Booking.com
+2026-05-03 00:00:00,McDonald's,-17.25,AUD,-12.67,1.361914,2026-05-03,Food,Wise card,Sydney,Australia,Wise: McDonald's | Eating out | source 21.06 NZD + fee 0.05
+2026-05-03 00:00:00,Woolworths Metro,-15.80,AUD,-11.60,1.362304,2026-05-03,Food,Wise card,Sydney,Australia,Wise: Woolworths Metro | Groceries | source 19.29 NZD + fee 0.04
 2026-05-04 00:00:00,LS Apollo Bay Bakery P,-15.45,USD,-15.45,1.000000,2026-05-04,Food,Chase 1388,Unknown,Australia,Chase 1388: LS Apollo Bay Bakery P
 2026-05-04 00:00:00,MCDONALDS TOWN HALL,-10.77,USD,-10.77,1.000000,2026-05-04,Food,Chase 1388,Unknown,Australia,Chase 1388: MCDONALDS TOWN HALL
 2026-05-05 00:00:00,Heartbaker Bun Mee,-12.37,USD,-12.37,1.000000,2026-05-05,Food,Chase 1388,Unknown,Australia,Chase 1388: Heartbaker Bun Mee
@@ -187,27 +209,43 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-14 00:00:00,AL BACIO,-2.00,USD,-2.00,1.000000,2026-05-14,Food,Chase 1388,Unknown,Indonesia,Chase 1388: AL BACIO
 2026-05-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-05-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     QKVTD9          WEB ID: 9000142694
 2026-05-14 00:00:00,GUARDIAN BATU BALONG,-1.06,USD,-1.06,1.000000,2026-05-14,Personal Care,Chase 1388,Bali,Indonesia,Chase 1388: GUARDIAN BATU BALONG
+2026-05-14 00:00:00,GoPay,-21000.00,IDR,-1.21,17355.371901,2026-05-14,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 1.20 USD + fee 0.01
+2026-05-14 00:00:00,GoPay,-10000.00,IDR,-0.58,17241.379310,2026-05-14,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 0.57 USD + fee 0.01
+2026-05-14 00:00:00,GoPay,-17500.00,IDR,-1.01,17326.732673,2026-05-14,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 1.00 USD + fee 0.01
 2026-05-14 00:00:00,WARUNG SIKA,-3.24,USD,-3.24,1.000000,2026-05-14,Food,Chase 1388,Unknown,Indonesia,Chase 1388: WARUNG SIKA
 2026-05-15 00:00:00,7 HUNGRY 5,-1.20,USD,-1.20,1.000000,2026-05-15,Food,Chase 1388,Unknown,Indonesia,Chase 1388: 7 HUNGRY 5
 2026-05-15 00:00:00,7 HUNGRY 5,-2.17,USD,-2.17,1.000000,2026-05-15,Food,Chase 1388,Unknown,Indonesia,Chase 1388: 7 HUNGRY 5
+2026-05-15 00:00:00,GoPay,-10000.00,IDR,-0.58,17241.379310,2026-05-15,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 0.57 USD + fee 0.01
+2026-05-15 00:00:00,GoPay,-48000.00,IDR,-2.74,17518.248175,2026-05-15,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 2.73 USD + fee 0.01
+2026-05-15 00:00:00,Gojek,-44000.00,IDR,-2.51,17529.880478,2026-05-15,Transport,Wise card,Bali,Indonesia,Wise: Gojek | Transport | source 2.50 USD + fee 0.01
+2026-05-15 00:00:00,Gojek,-10000.00,IDR,-0.58,17241.379310,2026-05-15,Transport,Wise card,Bali,Indonesia,Wise: Gojek | Transport | source 0.57 USD + fee 0.01
 2026-05-15 00:00:00,MUDA BY SUKA,-7.07,USD,-7.07,1.000000,2026-05-15,Food,Chase 1388,Unknown,Indonesia,Chase 1388: MUDA BY SUKA
 2026-05-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-05-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-05-15 00:00:00,WARUNG SIKA HO,-3.53,USD,-3.53,1.000000,2026-05-15,Food,Chase 1388,Unknown,Indonesia,Chase 1388: WARUNG SIKA HO
 2026-05-16 00:00:00,CK MUNDUK CATU,-1.60,USD,-1.60,1.000000,2026-05-16,Food,Chase 1388,Unknown,Indonesia,Chase 1388: CK MUNDUK CATU
+2026-05-17 00:00:00,GoPay,-39000.00,IDR,-2.23,17488.789238,2026-05-17,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 2.22 USD + fee 0.01
+2026-05-17 00:00:00,Grab,-15500.00,IDR,-0.89,17415.730337,2026-05-17,Transport,Wise card,Bali,Indonesia,Wise: Grab | Transport | source 0.88 USD + fee 0.01
+2026-05-17 00:00:00,Grab,-5000.00,IDR,-0.29,17241.379310,2026-05-17,Transport,Wise card,Bali,Indonesia,Wise: Grab | Transport | source 0.28 USD + fee 0.01
+2026-05-17 00:00:00,Grab,-16500.00,IDR,-0.95,17368.421053,2026-05-17,Transport,Wise card,Bali,Indonesia,Wise: Grab | Transport | source 0.94 USD + fee 0.01
 2026-05-17 00:00:00,KOKONAT,-2.86,USD,-2.86,1.000000,2026-05-17,Food,Chase 1388,Unknown,Indonesia,Chase 1388: KOKONAT
 2026-05-17 00:00:00,XENDIT MEGATIX 10,-7.81,USD,-7.81,1.000000,2026-05-17,Activities,Chase 1388,Bali,Indonesia,Chase 1388: XENDIT MEGATIX 10
 2026-05-18 00:00:00,ADI WARUNG,-3.15,USD,-3.15,1.000000,2026-05-18,Food,Chase 1388,Unknown,Indonesia,Chase 1388: ADI WARUNG
 2026-05-18 00:00:00,DELTA DEWATA HO,-8.89,USD,-8.89,1.000000,2026-05-18,Food,Chase 1388,Bali,Indonesia,Chase 1388: DELTA DEWATA HO
+2026-05-18 00:00:00,Grab,-15500.00,IDR,-0.89,17415.730337,2026-05-18,Transport,Wise card,Bali,Indonesia,Wise: Grab | Transport | source 0.88 USD + fee 0.01
 2026-05-18 00:00:00,Hotel at Booking.com,-6.78,USD,-6.78,1.000000,2026-05-18,Accommodation,Chase 1388,Unknown,Indonesia,Chase 1388: Hotel at Booking.com
 2026-05-19 00:00:00,DELTA DEWATA HO,-2.23,USD,-2.23,1.000000,2026-05-19,Food,Chase 1388,Bali,Indonesia,Chase 1388: DELTA DEWATA HO
 2026-05-19 00:00:00,NEW SAYURI MBL,-10.25,USD,-10.25,1.000000,2026-05-19,Food,Chase 1388,Unknown,Indonesia,Chase 1388: NEW SAYURI MBL
 2026-05-19 00:00:00,TICKETING,-3.97,USD,-3.97,1.000000,2026-05-19,Activities,Chase 1388,Unknown,Indonesia,Chase 1388: TICKETING
+2026-05-20 00:00:00,GoPay,-44420.00,IDR,-2.52,17626.984127,2026-05-20,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 2.51 USD + fee 0.01
 2026-05-20 00:00:00,SCHOOL OF UNIFIED HEALING,-6.82,USD,-6.82,1.000000,2026-05-20,Personal Care,Chase 1388,Bali,Indonesia,Chase 1388: SCHOOL OF UNIFIED HEALING
 2026-05-20 00:00:00,SERENITY NATURAL SPA HO,-7.35,USD,-7.35,1.000000,2026-05-20,Personal Care,Chase 1388,Bali,Indonesia,Chase 1388: SERENITY NATURAL SPA HO
 2026-05-21 00:00:00,CANTIK AGRICULTURE LUWAK,-11.66,USD,-11.66,1.000000,2026-05-21,Food,Chase 1388,Bali,Indonesia,Chase 1388: CANTIK AGRICULTURE LUWAK
 2026-05-21 00:00:00,DELTA DEWATA HO,-2.09,USD,-2.09,1.000000,2026-05-21,Food,Chase 1388,Bali,Indonesia,Chase 1388: DELTA DEWATA HO
+2026-05-21 00:00:00,GoPay,-5000.00,IDR,-0.29,17241.379310,2026-05-21,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 0.28 USD + fee 0.01
+2026-05-21 00:00:00,GoPay,-39100.00,IDR,-2.22,17612.612613,2026-05-21,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 2.21 USD + fee 0.01
 2026-05-22 00:00:00,SOOKI RICEBOWL RESTO,-3.81,USD,-3.81,1.000000,2026-05-22,Food,Chase 1388,Unknown,Indonesia,Chase 1388: SOOKI RICEBOWL RESTO
 2026-05-22 00:00:00,agoda.com,-5.10,USD,-5.10,1.000000,2026-05-22,Accommodation,Chase 1388,Unknown,Indonesia,Chase 1388: agoda.com
+2026-05-24 00:00:00,Grab,-77300.00,IDR,-4.38,17648.401826,2026-05-24,Transport,Wise card,Bali,Indonesia,Wise: Grab | Transport | source 4.37 USD + fee 0.01
 2026-05-25 00:00:00,MCDONALD'S SOK 21501,-4.38,USD,-4.38,1.000000,2026-05-25,Food,Chase 1388,Unknown,Indonesia,Chase 1388: MCDONALD'S SOK 21501
 2026-05-26 00:00:00,APT KF 589 DEWI SRI MBL,-6.22,USD,-6.22,1.000000,2026-05-26,Personal Care,Chase 1388,Bali,Indonesia,Chase 1388: APT KF 589 DEWI SRI MBL
 2026-05-26 00:00:00,KOMEDA COFFEE MBL,-3.18,USD,-3.18,1.000000,2026-05-26,Food,Chase 1388,Unknown,Indonesia,Chase 1388: KOMEDA COFFEE MBL
@@ -226,10 +264,13 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-29 00:00:00,MCDONALDS-TERMINA00185 AP,-4.65,USD,-4.65,1.000000,2026-05-29,Food,Chase 1388,Unknown,Malaysia,Chase 1388: MCDONALDS-TERMINA00185 AP
 2026-05-29 00:00:00,PAYPAL *BUSONLINETI,-5.53,USD,-5.53,1.000000,2026-05-29,Intercity Transport,Chase 1388,Johor Bahru,Malaysia,Chase 1388: PAYPAL *BUSONLINETI
 2026-05-30 00:00:00,CAUSEWAYLINK-MLK,-0.38,USD,-0.38,1.000000,2026-05-30,Intercity Transport,Chase 1388,Johor Bahru,Malaysia,Chase 1388: CAUSEWAYLINK-MLK
+2026-05-30 00:00:00,HK Express,-681.00,MYR,-172.36,3.951033,2026-05-30,Intercity Transport,Wise card,Unknown,Malaysia,Wise: HK Express | Trips | source 171.79 USD + fee 0.57
 2026-05-30 00:00:00,MCDONALDS-MELAKA 00220 AP,-5.29,USD,-5.29,1.000000,2026-05-30,Food,Chase 1388,Unknown,Malaysia,Chase 1388: MCDONALDS-MELAKA 00220 AP
 2026-05-30 00:00:00,PAYPAL *BUSONLINETI,-15.31,USD,-15.31,1.000000,2026-05-30,Intercity Transport,Chase 1388,Johor Bahru,Malaysia,Chase 1388: PAYPAL *BUSONLINETI
 2026-05-30 00:00:00,RAPID RAIL-AGL TVM,-0.73,USD,-0.73,1.000000,2026-05-30,Transport,Chase 1388,Kuala Lumpur,Malaysia,Chase 1388: RAPID RAIL-AGL TVM
 2026-05-31 00:00:00,CAUSEWAYLINK-MLK,-0.28,USD,-0.28,1.000000,2026-05-31,Intercity Transport,Chase 1388,Johor Bahru,Malaysia,Chase 1388: CAUSEWAYLINK-MLK
+2026-05-31 00:00:00,Grab,-2.00,MYR,-0.51,3.921569,2026-05-31,Transport,Wise card,Kuala Lumpur,Malaysia,Wise: Grab | Transport | source 0.50 USD + fee 0.01
+2026-05-31 00:00:00,Grab,-12.36,MYR,-3.13,3.948882,2026-05-31,Transport,Wise card,Kuala Lumpur,Malaysia,Wise: Grab | Transport | source 3.12 USD + fee 0.01
 2026-05-31 00:00:00,MCDONALDS-KL SENT00155 AP,-3.79,USD,-3.79,1.000000,2026-05-31,Food,Chase 1388,Unknown,Malaysia,Chase 1388: MCDONALDS-KL SENT00155 AP
 2026-05-31 00:00:00,TIC BUSINESS,-1.01,USD,-1.01,1.000000,2026-05-31,Food,Chase 1388,Penang,Malaysia,Chase 1388: TIC BUSINESS
 2026-06-01 00:00:00,7 ELEVEN MALAYSIA SDN BHD,-0.68,USD,-0.68,1.000000,2026-06-01,Food,Chase 1388,Penang,Malaysia,Chase 1388: 7 ELEVEN MALAYSIA SDN BHD
@@ -239,6 +280,10 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-04 00:00:00,AEON CO-QUEENSBAY MALL,-2.22,USD,-2.22,1.000000,2026-06-04,Food,Chase 1388,Penang,Malaysia,Chase 1388: AEON CO-QUEENSBAY MALL
 2026-06-05 00:00:00,ESIM.DOG,-6.98,USD,-6.98,1.000000,2026-06-05,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: ESIM.DOG
 2026-06-05 00:00:00,FAMOUS TEOCHEW CHENDOL,-1.38,USD,-1.38,1.000000,2026-06-05,Food,Chase 1388,Penang,Malaysia,Chase 1388: FAMOUS TEOCHEW CHENDOL
+2026-06-05 00:00:00,Grab,-22.66,MYR,-5.64,4.017730,2026-06-05,Transport,Wise card,Penang,Malaysia,Wise: Grab | Transport | source 5.63 USD + fee 0.01
+2026-06-05 00:00:00,Grab,-22.25,MYR,-5.52,4.030797,2026-06-05,Food,Wise card,Penang,Malaysia,Wise: Grab | Groceries | source 5.51 USD + fee 0.01
+2026-06-05 00:00:00,Grab,-15.45,MYR,-3.84,4.023438,2026-06-05,Transport,Wise card,Penang,Malaysia,Wise: Grab | Transport | source 3.83 USD + fee 0.01
+2026-06-05 00:00:00,Grab,-5.15,MYR,-1.29,3.992248,2026-06-05,Transport,Wise card,Penang,Malaysia,Wise: Grab | Transport | source 1.28 USD + fee 0.01
 2026-06-05 00:00:00,MCDONALD'S-PIA,-2.63,USD,-2.63,1.000000,2026-06-05,Food,Chase 1388,Penang,Malaysia,Chase 1388: MCDONALD'S-PIA
 2026-06-05 00:00:00,MIXUE-L.KIMBERLEY,-1.00,USD,-1.00,1.000000,2026-06-05,Food,Chase 1388,Penang,Malaysia,Chase 1388: MIXUE-L.KIMBERLEY
 2026-06-05 00:00:00,PENANG HILL CORPORATION,-10.02,USD,-10.02,1.000000,2026-06-05,Activities,Chase 1388,Penang,Malaysia,Chase 1388: PENANG HILL CORPORATION
@@ -553,17 +598,141 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-07-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-07-15 18:14:52,Qingzhou Xiaocai (porridge),-30.00,CNY,-4.44,6.7568,2026-07-15,Food,Alipay,Yading,China,dinner
 2026-07-16 00:00:00,Xiang (bus),-130.00,CNY,-19.23,6.7603,2026-07-16,Intercity Transport,Alipay,Litang,China,Yading → Litang (prepaid Jul 13)
+2026-07-19 00:00:00,Weixin Litang Yunshang,-22.00,CNY,-3.26,6.748466,2026-07-19,Food,Wise card,Chengdu,China,Wise: Weixin Litang Yunshang | Eating out | source 3.25 USD + fee 0.01
+2026-07-19 00:00:00,Weixin Scan Qr Code Fo,-30.00,CNY,-4.44,6.756757,2026-07-19,Shopping,Wise card,Chengdu,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 4.43 USD + fee 0.01
+2026-07-19 00:00:00,Weixin Scan Qr Code Fo,-245.00,CNY,-36.27,6.754894,2026-07-19,Shopping,Wise card,Chengdu,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 36.16 USD + fee 0.11
+2026-07-19 00:00:00,Weixin Wanzhuan Orderi,-17.00,CNY,-2.52,6.746032,2026-07-19,Shopping,Wise card,Chengdu,China,Wise: Weixin Wanzhuan Orderi | Shopping | source 2.51 USD + fee 0.01
+2026-07-20 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-20,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
+2026-07-20 00:00:00,FamilyMart,-3.50,CNY,-0.53,6.603774,2026-07-20,Food,Wise card,Chengdu,China,Wise: FamilyMart | Groceries | source 0.52 USD + fee 0.01
+2026-07-20 00:00:00,Weixin Yihe Hotel,-30.00,CNY,-4.44,6.756757,2026-07-20,Accommodation,Wise card,Chengdu,China,Wise: Weixin Yihe Hotel | Shopping | source 4.43 USD + fee 0.01
+2026-07-21 00:00:00,Chengduhaotema - Alipay,-7.40,CNY,-1.10,6.727273,2026-07-21,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 1.09 USD + fee 0.01
+2026-07-21 00:00:00,Chengduhaotema - Alipay,-3.60,CNY,-0.54,6.666667,2026-07-21,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 0.53 USD + fee 0.01
+2026-07-21 00:00:00,Weixin Taobao Platform,-139.00,CNY,-20.61,6.744299,2026-07-21,Shopping,Wise card,Chengdu,China,Wise: Weixin Taobao Platform | Shopping | source 20.55 USD + fee 0.06
+2026-07-22 00:00:00,Vanguard - Alipay,-21.80,CNY,-3.23,6.749226,2026-07-22,Food,Wise card,Chengdu,China,Wise: Vanguard - Alipay | Groceries | source 3.22 USD + fee 0.01
+2026-07-22 00:00:00,Weixin Baodaolai Qung,-28.00,CNY,-4.14,6.763285,2026-07-22,Food,Wise card,Chengdu,China,Wise: Weixin Baodaolai Qung | Eating out | source 4.13 USD + fee 0.01
+2026-07-23 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-23,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
+2026-07-23 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-23,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
+2026-07-23 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-23,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
+2026-07-23 00:00:00,Chengduhaotemai - Alipay,-2.90,CNY,-0.44,6.590909,2026-07-23,Food,Wise card,Chengdu,China,Wise: Chengduhaotemai - Alipay | Groceries | source 0.43 USD + fee 0.01
 2026-07-23 00:00:00,WEIXIN*Chengdu City We,-8.86,USD,-8.86,1.000000,2026-07-23,Activities,Chase 1388,Chengdu,China,Chase 1388: WEIXIN*Chengdu City We
 2026-07-23 00:00:00,WEIXIN*Chengdu giant p,-8.12,USD,-8.12,1.000000,2026-07-23,Activities,Chase 1388,Chengdu,China,Chase 1388: WEIXIN*Chengdu giant p
+2026-07-24 00:00:00,Chengduhaotemai - Alipay,-3.60,CNY,-0.54,6.666667,2026-07-24,Food,Wise card,Chengdu,China,Wise: Chengduhaotemai - Alipay | Groceries | source 0.53 USD + fee 0.01
+2026-07-24 00:00:00,Hong Qi Store - Alipay,-3.50,CNY,-0.53,6.603774,2026-07-24,Food,Wise card,Chengdu,China,Wise: Hong Qi Store - Alipay | Groceries | source 0.52 USD + fee 0.01
+2026-07-25 00:00:00,Chengduhaotema - Alipay,-2.90,CNY,-0.44,6.590909,2026-07-25,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 0.43 USD + fee 0.01
+2026-07-25 00:00:00,Meituan - Alipay,-2.79,CNY,-0.42,6.642857,2026-07-25,Food,Wise card,Chengdu,China,Wise: Meituan - Alipay | Shopping | source 0.41 USD + fee 0.01
+2026-07-25 00:00:00,Qrcode3041 - Alipay,-11.71,CNY,-1.74,6.729885,2026-07-25,Shopping,Wise card,Chengdu,China,Wise: Qrcode3041 - Alipay | Shopping | source 1.73 USD + fee 0.01
+2026-07-26 00:00:00,Chengduhaotema - Alipay,-39.50,CNY,-5.85,6.752137,2026-07-26,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 5.83 USD + fee 0.02
+2026-07-27 00:00:00,Chengdu Transp - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-27,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.74 USD + fee 0.01
+2026-07-27 00:00:00,Chengdu Transp - Alipay,-4.00,CNY,-0.60,6.666667,2026-07-27,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.59 USD + fee 0.01
+2026-07-27 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-27,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
+2026-07-29 00:00:00,Businessservic - Alipay,-30.00,CNY,-4.44,6.756757,2026-07-29,Fees,Wise card,Chongqing,China,Wise: Businessservic - Alipay | Bills | source 4.43 USD + fee 0.01
+2026-07-29 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
+2026-07-29 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
+2026-07-29 00:00:00,Weixin Ctrip. Com,-10.00,CNY,-1.49,6.711409,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Weixin Ctrip. Com | Trips | source 1.48 USD + fee 0.01
+2026-07-29 00:00:00,Weixin Ctrip. Com,-90.00,CNY,-13.33,6.751688,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Weixin Ctrip. Com | Trips | source 13.29 USD + fee 0.04
+2026-07-29 00:00:00,Weixin Zhiyou Tianxi,-288.00,CNY,-42.68,6.747891,2026-07-29,Accommodation,Wise card,Chongqing,China,Wise: Weixin Zhiyou Tianxi | Bills | source 42.54 USD + fee 0.14
+2026-07-29 00:00:00,Weixin Zhiyou Tianxi,-239.00,CNY,-35.42,6.747600,2026-07-29,Accommodation,Wise card,Chongqing,China,Wise: Weixin Zhiyou Tianxi | Bills | source 35.31 USD + fee 0.11
+2026-07-30 00:00:00,Chongqing City - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-07-30 00:00:00,Chongqing City - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-07-30 00:00:00,Chongqing City - Alipay,-3.00,CNY,-0.45,6.666667,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-07-30 00:00:00,Chongqingcheng - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqingcheng - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-07-30 00:00:00,Qrcode0103 - Alipay,-4.00,CNY,-0.60,6.666667,2026-07-30,Shopping,Wise card,Chongqing,China,Wise: Qrcode0103 - Alipay | Shopping | source 0.59 USD + fee 0.01
+2026-07-30 00:00:00,Weixin China Railway N,-382.00,CNY,-56.73,6.733651,2026-07-30,Intercity Transport,Wise card,Chongqing,China,Wise: Weixin China Railway N | Transport | source 56.55 USD + fee 0.18
+2026-07-31 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-31,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
+2026-08-01 00:00:00,Changshashigui - Alipay,-1.80,CNY,-0.27,6.756757,2026-08-01,Transport,Wise card,Changsha,China,Wise: Changshashigui - Alipay | Transport | source 1.80 CNY + fee 0.00
 2026-08-01 00:00:00,GOOGLE *CLOUD PPWDRw,-0.10,USD,-0.10,1.000000,2026-08-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD PPWDRw
+2026-08-01 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-01,Food,Wise card,Changsha,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
+2026-08-01 00:00:00,Weixin China Railway N,-296.00,CNY,-43.81,6.756757,2026-08-01,Intercity Transport,Wise card,Changsha,China,Wise: Weixin China Railway N | Transport | source 296.00 CNY + fee 0.00
+2026-08-02 00:00:00,Changshashigui - Alipay,-3.60,CNY,-0.53,6.756757,2026-08-02,Transport,Wise card,Changsha,China,Wise: Changshashigui - Alipay | Transport | source 3.60 CNY + fee 0.00
+2026-08-02 00:00:00,Jingdezhengongg - Alipay,-2.00,CNY,-0.30,6.756757,2026-08-02,Transport,Wise card,Jingdezhen,China,Wise: Jingdezhengongg - Alipay | Transport | source 2.00 CNY + fee 0.00
+2026-08-02 00:00:00,Weixin Scan Qr Code Fo,-15.00,CNY,-2.22,6.756757,2026-08-02,Shopping,Wise card,Jingdezhen,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 15.00 CNY + fee 0.00
+2026-08-03 00:00:00,Jingdezhengongg - Alipay,-2.00,CNY,-0.30,6.756757,2026-08-03,Transport,Wise card,Jingdezhen,China,Wise: Jingdezhengongg - Alipay | Transport | source 2.00 CNY + fee 0.00
+2026-08-03 00:00:00,Meituan - Alipay,-4.50,CNY,-0.67,6.756757,2026-08-03,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 4.50 CNY + fee 0.00
+2026-08-03 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-03,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
+2026-08-03 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-03,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
+2026-08-03 00:00:00,Qrcode5110 - Alipay,-2.00,CNY,-0.30,6.756757,2026-08-03,Shopping,Wise card,Shanghai,China,Wise: Qrcode5110 - Alipay | Shopping | source 2.00 CNY + fee 0.00
+2026-08-04 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-04,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
+2026-08-04 00:00:00,Meituan - Alipay,-4.50,CNY,-0.67,6.756757,2026-08-04,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 4.50 CNY + fee 0.00
+2026-08-04 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-04,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
+2026-08-04 00:00:00,Weixin Shanghai Junh,-228.75,CNY,-33.85,6.756757,2026-08-04,Shopping,Wise card,Shanghai,China,Wise: Weixin Shanghai Junh | Shopping | source 228.75 CNY + fee 0.00
+2026-08-05 00:00:00,MEITUAN,-23.30,CNY,-3.45,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: MEITUAN | Shopping | source 23.30 CNY + fee 0.00
+2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
+2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
+2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
+2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
+2026-08-05 00:00:00,Qrcode4144 - Alipay,-3.00,CNY,-0.44,6.756757,2026-08-05,Shopping,Wise card,Shanghai,China,Wise: Qrcode4144 - Alipay | Shopping | source 3.00 CNY + fee 0.00
+2026-08-06 00:00:00,Qrcode4144 - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-06,Shopping,Wise card,Shanghai,China,Wise: Qrcode4144 - Alipay | Shopping | source 0.44 USD + fee 0.01
+2026-08-06 00:00:00,Weixin China Railway,-106.20,CNY,-15.79,6.725776,2026-08-06,Intercity Transport,Wise card,Shanghai,China,Wise: Weixin China Railway | Transport | source 15.74 USD + fee 0.05
+2026-08-06 00:00:00,Weixin China Railway,-165.80,CNY,-24.54,6.756757,2026-08-06,Intercity Transport,Wise card,Shanghai,China,Wise: Weixin China Railway | Transport | source 165.80 CNY + fee 0.00
+2026-08-06 00:00:00,Weixin Taoyangli Sceni,-53.00,CNY,-7.84,6.756757,2026-08-06,Activities,Wise card,Shanghai,China,Wise: Weixin Taoyangli Sceni | Shopping | source 53.00 CNY + fee 0.00
+2026-08-07 00:00:00,Chongqingxingho - Alipay,-36.00,CNY,-5.34,6.741573,2026-08-07,Food,Wise card,Chongqing,China,Wise: Chongqingxingho - Alipay | Eating out | source 5.33 USD + fee 0.01
+2026-08-07 00:00:00,Jingdezhengongg - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-07,Transport,Wise card,Jingdezhen,China,Wise: Jingdezhengongg - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-07 00:00:00,Shanghai Publi - Alipay,-4.00,CNY,-0.60,6.666667,2026-08-07,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.59 USD + fee 0.01
+2026-08-08 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-08 00:00:00,Shanghai Public - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-08 00:00:00,Shanghai Public - Alipay,-1.00,CNY,-0.16,6.250000,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.15 USD + fee 0.01
+2026-08-08 00:00:00,Shanghai Public - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-08 00:00:00,Walmart,-74.48,CNY,-11.08,6.722022,2026-08-08,Food,Wise card,Unknown,China,Wise: Walmart | Groceries | source 11.04 USD + fee 0.04
+2026-08-08 00:00:00,Weixin Taobao Platform,-119.50,CNY,-17.78,6.721035,2026-08-08,Shopping,Wise card,Shanghai,China,Wise: Weixin Taobao Platform | Shopping | source 17.72 USD + fee 0.06
 2026-08-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-08-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
+2026-08-09 00:00:00,Mr Rice - Alipay,-36.00,CNY,-5.35,6.728972,2026-08-09,Food,Wise card,Shanghai,China,Wise: Mr Rice - Alipay | Eating out | source 5.34 USD + fee 0.01
+2026-08-09 00:00:00,Shanghaihuigang - Alipay,-19.40,CNY,-2.89,6.712803,2026-08-09,Food,Wise card,Shanghai,China,Wise: Shanghaihuigang - Alipay | Groceries | source 2.88 USD + fee 0.01
+2026-08-10 00:00:00,Govagency - Alipay,-26.08,CNY,-3.88,6.721649,2026-08-10,Fees,Wise card,Shanghai,China,Wise: Govagency - Alipay | General | source 3.87 USD + fee 0.01
+2026-08-10 00:00:00,Govagency - Alipay,-26.24,CNY,-3.90,6.728205,2026-08-10,Fees,Wise card,Shanghai,China,Wise: Govagency - Alipay | General | source 3.89 USD + fee 0.01
+2026-08-10 00:00:00,Shanghaihuigang - Alipay,-3.50,CNY,-0.53,6.603774,2026-08-10,Food,Wise card,Shanghai,China,Wise: Shanghaihuigang - Alipay | Groceries | source 0.52 USD + fee 0.01
+2026-08-11 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-11 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-11 00:00:00,Shanghai Public - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-11 00:00:00,Shanghai Public - Alipay,-4.00,CNY,-0.60,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.59 USD + fee 0.01
+2026-08-11 00:00:00,Shanghaihuigan - Alipay,-3.90,CNY,-0.59,6.610169,2026-08-11,Food,Wise card,Shanghai,China,Wise: Shanghaihuigan - Alipay | Groceries | source 0.58 USD + fee 0.01
+2026-08-11 00:00:00,Shanghaizhenjin - Alipay,-19.00,CNY,-2.83,6.713781,2026-08-11,Food,Wise card,Shanghai,China,Wise: Shanghaizhenjin - Alipay | Groceries | source 2.82 USD + fee 0.01
+2026-08-12 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-12 00:00:00,Suzhou Metro - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-12 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-12 00:00:00,Suzhou Metro - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-12 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-12 00:00:00,Suzhou Metro - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.44 USD + fee 0.01
+2026-08-12 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-12 00:00:00,Weixin Bosu Youth Host,-50.00,CNY,-7.43,6.729475,2026-08-12,Accommodation,Wise card,Suzhou,China,Wise: Weixin Bosu Youth Host | Trips | source 7.41 USD + fee 0.02
 2026-08-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-08-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
+2026-08-13 00:00:00,Lao Xiang Ji - Alipay,-28.00,CNY,-4.16,6.730769,2026-08-13,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.15 USD + fee 0.01
+2026-08-14 00:00:00,7 Eleven Store - Alipay,-3.50,CNY,-0.53,6.603774,2026-08-14,Food,Wise card,Suzhou,China,Wise: 7 Eleven Store - Alipay | Shopping | source 0.52 USD + fee 0.01
 2026-08-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-08-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     23CFS9          WEB ID: 9000142694
+2026-08-14 00:00:00,Lao Xiang Ji - Alipay,-28.00,CNY,-4.16,6.730769,2026-08-14,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.15 USD + fee 0.01
+2026-08-14 00:00:00,Lao Xiang Ji - Alipay,-29.00,CNY,-4.31,6.728538,2026-08-14,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.30 USD + fee 0.01
+2026-08-14 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-14,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-14 00:00:00,Weixin China Railway N,-171.00,CNY,-25.45,6.719057,2026-08-14,Intercity Transport,Wise card,Suzhou,China,Wise: Weixin China Railway N | Transport | source 25.36 USD + fee 0.09
+2026-08-14 00:00:00,Weixin China Railway N,-205.00,CNY,-30.50,6.721311,2026-08-14,Intercity Transport,Wise card,Suzhou,China,Wise: Weixin China Railway N | Transport | source 30.40 USD + fee 0.10
+2026-08-14 00:00:00,Weixin Ctrip. Com,-58.00,CNY,-8.63,6.720742,2026-08-14,Transport,Wise card,Suzhou,China,Wise: Weixin Ctrip. Com | Trips | source 8.60 USD + fee 0.03
+2026-08-14 00:00:00,Weixin Weihai Weidon,-570.00,CNY,-84.81,6.720906,2026-08-14,Intercity Transport,Wise card,Weihai,China,Wise: Weixin Weihai Weidon | Transport | source 84.54 USD + fee 0.27
 2026-08-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-08-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
+2026-08-15 00:00:00,Weixin Scan Qr Code Fo,-1.60,CNY,-0.25,6.400000,2026-08-15,Shopping,Wise card,Yancheng,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 0.24 USD + fee 0.01
+2026-08-15 00:00:00,Weixin Scan Qr Code Fo,-6.00,CNY,-0.89,6.756757,2026-08-15,Shopping,Wise card,Yancheng,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 6.00 CNY + fee 0.00
+2026-08-16 00:00:00,Lawson - Alipay,-16.70,CNY,-2.47,6.756757,2026-08-16,Food,Wise card,Yancheng,China,Wise: Lawson - Alipay | Groceries | source 16.70 CNY + fee 0.00
+2026-08-16 00:00:00,Yanchengshihua - Alipay,-1.00,CNY,-0.15,6.756757,2026-08-16,Transport,Wise card,Yancheng,China,Wise: Yanchengshihua - Alipay | Transport | source 1.00 CNY + fee 0.00
+2026-08-16 00:00:00,Yanchengshihua - Alipay,-1.00,CNY,-0.15,6.756757,2026-08-16,Transport,Wise card,Yancheng,China,Wise: Yanchengshihua - Alipay | Transport | source 1.00 CNY + fee 0.00
 2026-08-17 00:00:00,Chase Travel,-311.98,USD,-311.98,1.000000,2026-08-17,Accommodation,Chase 3557,Unknown,United States,Chase 3557: CL *Chase Travel TRIPCHRG.COM VA             08/15
+2026-08-17 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-17,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-17 00:00:00,Weixin China Railway N,-67.70,CNY,-10.08,6.716270,2026-08-17,Intercity Transport,Wise card,Unknown,China,Wise: Weixin China Railway N | Transport | source 10.04 USD + fee 0.04
+2026-08-17 00:00:00,Weixin China Railway N,-31.30,CNY,-4.63,6.756757,2026-08-17,Intercity Transport,Wise card,Unknown,China,Wise: Weixin China Railway N | Transport | source 31.30 CNY + fee 0.00
+2026-08-17 00:00:00,Weixin Ctrip. Com,-211.78,CNY,-31.52,6.718909,2026-08-17,Transport,Wise card,Unknown,China,Wise: Weixin Ctrip. Com | Trips | source 31.42 USD + fee 0.10
+2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-18 00:00:00,Weixin Chabaidao,-13.00,CNY,-1.94,6.701031,2026-08-18,Food,Wise card,Unknown,China,Wise: Weixin Chabaidao | Eating out | source 1.93 USD + fee 0.01
+2026-08-18 00:00:00,Weixin Ctrip. Com,-177.92,CNY,-26.48,6.719033,2026-08-18,Transport,Wise card,Unknown,China,Wise: Weixin Ctrip. Com | Trips | source 26.39 USD + fee 0.09
+2026-08-19 00:00:00,Railways - Alipay,-3.00,CNY,-0.46,6.521739,2026-08-19,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.45 USD + fee 0.01
+2026-08-19 00:00:00,Railways - Alipay,-3.00,CNY,-0.46,6.521739,2026-08-19,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.45 USD + fee 0.01
+2026-08-20 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-20,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-21 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-21,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-21 00:00:00,agoda.com,-10.80,USD,-10.80,1.000000,2026-08-21,Accommodation,Chase 1388,Unknown,South Korea,Chase 1388: agoda.com
+2026-08-23 00:00:00,Weixin Scan Qr Code Fo,-110.00,CNY,-16.42,6.699147,2026-08-23,Shopping,Wise card,Weihai,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 16.37 USD + fee 0.05
+2026-08-23 00:00:00,Weixin Shandong Liansh,-43.30,CNY,-6.46,6.702786,2026-08-23,Food,Wise card,Weihai,China,Wise: Weixin Shandong Liansh | Eating out | source 6.44 USD + fee 0.02
 2026-08-26 00:00:00,KOREA MCDONALD'S HAPJEONG,-6.97,USD,-6.97,1.000000,2026-08-26,Food,Chase 1388,Seoul,South Korea,Chase 1388: KOREA MCDONALD'S HAPJEONG
 2026-08-26 00:00:00,Trip.com,-98.53,USD,-98.53,1.000000,2026-08-26,Transport,Chase 1388,Unknown,South Korea,Chase 1388: Trip.com
+2026-08-27 00:00:00,Korail Ticket,-21500.00,KRW,-15.66,1372.924649,2026-08-27,Intercity Transport,Wise card,Seoul,South Korea,Wise: Korail Ticket | Bills | source 15.57 USD + fee 0.09
 2026-08-28 00:00:00,MYEONGDONG SEOLBING,-7.92,USD,-7.92,1.000000,2026-08-28,Food,Chase 1388,Seoul,South Korea,Chase 1388: MYEONGDONG SEOLBING
 2026-08-28 00:00:00,TOOSSEOMPEULLEISEU MYEONG,-5.16,USD,-5.16,1.000000,2026-08-28,Food,Chase 1388,Seoul,South Korea,Chase 1388: TOOSSEOMPEULLEISEU MYEONG
 2026-08-29 00:00:00,DAISO,-30.28,USD,-30.28,1.000000,2026-08-29,Shopping,Chase 1388,Unknown,South Korea,Chase 1388: DAISO
@@ -582,6 +751,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-09-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-09-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-09-17 00:00:00,ELEVENLABS.IO,-5.00,USD,-5.00,1.000000,2026-09-17,Subscription,Chase 1388,Unknown,United States,Chase 1388: ELEVENLABS.IO
 2026-10-01 00:00:00,Google CLOUD RXCGTx,-0.09,USD,-0.09,1.000000,2026-10-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: Google CLOUD RXCGTx
+2026-10-01 00:00:00,Korail / 한국철도공사,-10200.00,KRW,-7.55,1350.993377,2026-10-01,Intercity Transport,Wise card,Seoul,South Korea,Wise: Korail / 한국철도공사 | Transport | source 7.51 USD + fee 0.04
 2026-10-01 00:00:00,agoda.com,-16.53,USD,-16.53,1.000000,2026-10-01,Accommodation,Chase 1388,Unknown,South Korea,Chase 1388: agoda.com
 2026-10-04 00:00:00,Trip.com,-5.53,USD,-5.53,1.000000,2026-10-04,Transport,Chase 1388,Unknown,South Korea,Chase 1388: Trip.com
 2026-10-04 00:00:00,WORLDPACKERS,-59.00,USD,-59.00,1.000000,2026-10-04,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: WORLDPACKERS
@@ -598,6 +768,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-10-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-10-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     N9GC1B          WEB ID: 9000142694
 2026-10-20 00:00:00,Mobimatter,-4.99,USD,-4.99,1.000000,2026-10-20,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
 2026-10-20 00:00:00,agoda.com,-21.48,USD,-21.48,1.000000,2026-10-20,Accommodation,Chase 1388,Unknown,South Korea,Chase 1388: agoda.com
+2026-10-23 00:00:00,Korail / 한국철도공사,-20900.00,KRW,-15.86,1317.780580,2026-10-23,Intercity Transport,Wise card,Seoul,South Korea,Wise: Korail / 한국철도공사 | Transport | source 15.77 USD + fee 0.09
 2026-10-23 00:00:00,Trip.com,-26.07,USD,-26.07,1.000000,2026-10-23,Transport,Chase 1388,Unknown,South Korea,Chase 1388: Trip.com
 2026-10-25 00:00:00,KOREA MCDONALD'S DONGSEON,-8.33,USD,-8.33,1.000000,2026-10-25,Food,Chase 1388,Seoul,South Korea,Chase 1388: KOREA MCDONALD'S DONGSEON
 2026-10-26 00:00:00,7-ELEVEN,-1.97,USD,-1.97,1.000000,2026-10-26,Food,Chase 1388,Unknown,South Korea,Chase 1388: 7-ELEVEN
@@ -608,6 +779,8 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-10-28 00:00:00,MAEGAEMZISSIKEOPI MANG,-3.71,USD,-3.71,1.000000,2026-10-28,Food,Chase 1388,Unknown,South Korea,Chase 1388: MAEGAEMZISSIKEOPI MANG
 2026-10-29 00:00:00,IN-N-OUT EL SEGUNDO,-13.23,USD,-13.23,1.000000,2026-10-29,Food,Chase 1388,El Segundo,United States,Chase 1388: IN-N-OUT EL SEGUNDO
 2026-10-29 00:00:00,TARGET T-0199,-34.14,USD,-34.14,1.000000,2026-10-29,Shopping,Chase 1388,Unknown,United States,Chase 1388: TARGET T-0199
+2026-10-30 00:00:00,CLAUDE,-5.00,USD,-5.00,1.000000,2026-10-30,Subscription,Revolut card,Unknown,United States,Revolut: CLAUDE
+2026-10-30 00:00:00,CLAUDE,-5.00,USD,-5.00,1.000000,2026-10-30,Subscription,Revolut card,Unknown,United States,Revolut: CLAUDE
 2026-10-30 00:00:00,GOOGLE *CLOUD ZxW4SV,-5.00,USD,-5.00,1.000000,2026-10-30,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD ZxW4SV
 2026-10-30 00:00:00,HABIT SANTA MONICA 213,-15.60,USD,-15.60,1.000000,2026-10-30,Food,Chase 1388,Santa Monica,United States,Chase 1388: HABIT SANTA MONICA 213
 2026-11-01 00:00:00,GOOGLE *CLOUD Fx2S7P,-0.10,USD,-0.10,1.000000,2026-11-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD Fx2S7P

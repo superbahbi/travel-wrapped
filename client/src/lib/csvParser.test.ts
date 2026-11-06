@@ -369,14 +369,14 @@ describe('seeded dataset', () => {
   const stats = computeTrip(transactions);
 
   it('parses every row', () => {
-    expect(transactions).toHaveLength(616);
-    expect(stats.summary.transactionCount).toBe(615);
+    expect(transactions).toHaveLength(789);
+    expect(stats.summary.transactionCount).toBe(788);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.summary.grandTotal).toBeCloseTo(6331.46, 2);
-    expect(stats.summary.daysTracked).toBe(158);
-    expect(stats.cities.visitedCount).toBe(35);
+    expect(stats.summary.grandTotal).toBeCloseTo(7975.53, 2);
+    expect(stats.summary.daysTracked).toBe(188);
+    expect(stats.cities.visitedCount).toBe(43);
   });
 
   it('keeps the date range', () => {
@@ -385,10 +385,10 @@ describe('seeded dataset', () => {
 
   it('keeps the category breakdown', () => {
     expect(stats.categories.top?.category).toBe('Food');
-    expect(stats.categories.top?.total).toBeCloseTo(1945.74, 2);
-    expect(stats.categories.top?.count).toBe(310);
-    expect(stats.categories.accommodationTotal).toBeCloseTo(1119.91, 2);
-    expect(stats.categories.transportTotal).toBeCloseTo(1270.36, 2);
+    expect(stats.categories.top?.total).toBeCloseTo(2151.17, 2);
+    expect(stats.categories.top?.count).toBe(360);
+    expect(stats.categories.accommodationTotal).toBeCloseTo(1602.98, 2);
+    expect(stats.categories.transportTotal).toBeCloseTo(2019.2, 2);
   });
 
   it('keeps the merchant and purchase highlights', () => {
@@ -401,8 +401,8 @@ describe('seeded dataset', () => {
   it('keeps the day highlights', () => {
     expect(stats.days.mostExpensive?.date).toBe('2026-05-05');
     expect(stats.days.mostExpensive?.total).toBeCloseTo(443.12, 2);
-    expect(stats.days.cheapest?.date).toBe('2026-08-01');
-    expect(stats.days.cheapest?.total).toBeCloseTo(0.1, 2);
+    expect(stats.days.cheapest?.date).toBe('2026-04-01');
+    expect(stats.days.cheapest?.total).toBeCloseTo(0.11, 2);
   });
 
   it('keeps the per-night accommodations file intact', () => {
