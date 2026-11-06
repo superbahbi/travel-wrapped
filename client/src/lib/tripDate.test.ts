@@ -4,8 +4,8 @@ import {
   formatFullDate,
   formatShortDate,
   hourOfTime,
+  isCalendarDate,
   weekdayIndex,
-  weekdayName,
 } from './tripDate';
 
 describe('date formatting', () => {
@@ -32,14 +32,27 @@ describe('date formatting', () => {
 describe('weekdays', () => {
   it('derives a weekday from the calendar date', () => {
     expect(weekdayIndex('2026-06-08')).toBe(1);
-    expect(weekdayName('2026-06-08')).toBe('Mon');
     expect(weekdayIndex('2026-06-13')).toBe(6);
-    expect(weekdayName('2026-06-13')).toBe('Sat');
   });
 
-  it('returns null or a dash for invalid input', () => {
+  it('returns null for invalid input', () => {
     expect(weekdayIndex('nope')).toBeNull();
-    expect(weekdayName('')).toBe('—');
+  });
+});
+
+describe('isCalendarDate', () => {
+  it('accepts real calendar dates, with or without a time', () => {
+    expect(isCalendarDate('2026-06-08')).toBe(true);
+    expect(isCalendarDate('2024-02-29')).toBe(true);
+    expect(isCalendarDate('2026-06-08 21:30:00')).toBe(true);
+  });
+
+  it('rejects impossible calendar dates', () => {
+    expect(isCalendarDate('2026-02-30')).toBe(false);
+    expect(isCalendarDate('2026-13-01')).toBe(false);
+    expect(isCalendarDate('not-a-date')).toBe(false);
+    expect(isCalendarDate('')).toBe(false);
+    expect(isCalendarDate(null)).toBe(false);
   });
 });
 
