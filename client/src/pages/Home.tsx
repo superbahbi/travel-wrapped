@@ -7,7 +7,7 @@ import { useMemo, useState, useEffect, useCallback } from 'react';
 import { computeTrip, Transaction, DayStats, getCategoryColor, AccommodationEntry } from '@/lib/csvParser';
 import { loadTrip, LoadOutcome } from '@/lib/loadTrip';
 import { buildJourneyView, JourneyView } from '@/lib/journeyView';
-import { formatFullDate, formatShortDate } from '@/lib/tripDate';
+import { formatFullDate, formatShortDate, WEEKDAYS } from '@/lib/tripDate';
 import { formatUSD } from '@/lib/money';
 import { getAchievements } from '@/lib/achievements';
 import { WrappedCard, CategoryPill, ProgressBar, GlassPanel } from '@/components/WrappedCard';
@@ -20,6 +20,8 @@ import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap,
 const HERO_BG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/hero-bg-ZsqqDYb5LYENCn3sc2jL3g.webp';
 
 type LoadState = { status: 'idle' } | { status: 'loading' } | LoadOutcome;
+
+const WEEK_ORDER = [...WEEKDAYS.slice(1), WEEKDAYS[0]];
 
 const NO_TRANSACTIONS: Transaction[] = [];
 const NO_ACCOMMODATIONS: AccommodationEntry[] = [];
@@ -51,7 +53,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen" style={{ background: '#0d0d0f' }}>
-      {/* Sticky Header with Currency Toggle */}
+      {/* Sticky header */}
       <header className="sticky top-0 z-50 backdrop-blur-md" style={{ background: 'rgba(13, 13, 15, 0.8)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="container max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -473,7 +475,7 @@ export default function Home() {
                 </div>
                 <div className="text-white/70 text-sm mb-6">Which days cost you the most?</div>
                 <ResponsiveContainer width="100%" height={160}>
-                  <BarChart data={['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d => ({ day: d, total: stats.days.weekdaySpend[d] || 0 }))}>
+                  <BarChart data={WEEK_ORDER.map(d => ({ day: d, total: stats.days.weekdaySpend[d] || 0 }))}>
                     <XAxis dataKey="day" tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 11 }} axisLine={false} tickLine={false} />
                     <YAxis hide />
                     <Tooltip
@@ -481,7 +483,7 @@ export default function Home() {
                       formatter={(v: number) => [`${formatUSD(v, 2)}`, 'Total']}
                     />
                     <Bar dataKey="total" radius={[6, 6, 0, 0]}>
-                      {['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map((d, i) => (
+                      {WEEK_ORDER.map((d, i) => (
                         <Cell key={d} fill={`hsl(${i * 51}, 80%, 65%)`} />
                       ))}
                     </Bar>
@@ -618,7 +620,7 @@ export default function Home() {
             {/* ── Footer ── */}
             <div className="text-center py-8 text-white/30 text-sm">
               <div className="text-2xl mb-2">✈</div>
-              <div>2026 Travel · {stats.summary.dateRange.start} → {stats.summary.dateRange.end}</div>
+              <div>2026 Travel · {formatShortDate(stats.summary.dateRange.start)} → {formatShortDate(stats.summary.dateRange.end)}</div>
             </div>
           </>
         )}
