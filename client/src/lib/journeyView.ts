@@ -28,8 +28,6 @@ export interface PaymentShare {
 export interface JourneyView {
   topCategories: CategoryStats[];
   categories: {
-    food: CategoryStats | null;
-    accommodation: CategoryStats | null;
     activities: CategoryStats | null;
     transport: CategoryStats | null;
     intercityTransport: CategoryStats | null;
@@ -46,7 +44,6 @@ export interface JourneyView {
     stays: number;
     perNightTotal: number;
     perNightAverage: number;
-    nights: number;
   };
   topSpend: {
     accommodation: SpendRow[];
@@ -103,8 +100,10 @@ export function buildJourneyView(
   const foodTotal = food?.total ?? 0;
   const meals = food?.count ?? 0;
 
+  // Defense in depth for the per-night total: only positive rows count, so a
+  // malformed negative row can never shrink it. The parser also rejects those.
   const perNightTotal = accommodations.reduce(
-    (sum, entry) => sum + entry.amountUSD,
+    (sum, entry) => (entry.amountUSD > 0 ? sum + entry.amountUSD : sum),
     0,
   );
   const nights = accommodations.length;
@@ -134,8 +133,6 @@ export function buildJourneyView(
   return {
     topCategories: categoryItems.slice(0, 6),
     categories: {
-      food,
-      accommodation,
       activities: findCategory(categoryItems, 'Activities'),
       transport: findCategory(categoryItems, 'Transport'),
       intercityTransport: findCategory(categoryItems, 'Intercity Transport'),
@@ -152,7 +149,6 @@ export function buildJourneyView(
       stays: accommodation?.count ?? 0,
       perNightTotal,
       perNightAverage: nights > 0 ? perNightTotal / nights : 0,
-      nights,
     },
     topSpend: {
       accommodation: spendRows(transactions, 'Accommodation'),
@@ -162,8 +158,7 @@ export function buildJourneyView(
     pace: {
       perDay: series.summary.dailyAverage,
       perMonth: series.summary.dailyAverage * 30,
-      perWeek:
-        daysTracked > 0 ? (series.summary.grandTotal / daysTracked) * 7 : 0,
+      perWeek: series.summary.dailyAverage * 7,
       daysTracked,
       grandTotal,
       running: runningPoints,
