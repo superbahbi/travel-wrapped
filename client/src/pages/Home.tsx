@@ -28,7 +28,7 @@ const WEEK_ORDER = [...WEEKDAYS.slice(1), WEEKDAYS[0]];
  * Korea. This is the trip length the wrapped story reports, separate from
  * `daysTracked` (days that actually carry a receipt).
  */
-const DAYS_OF_TRAVEL = 247;
+const DAYS_OF_TRAVEL = 248;
 
 const NO_TRANSACTIONS: Transaction[] = [];
 const NO_ACCOMMODATIONS: AccommodationEntry[] = [];
