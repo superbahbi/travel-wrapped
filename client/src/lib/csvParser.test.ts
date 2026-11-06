@@ -7,6 +7,7 @@ import {
   parseAccommodations,
   parseTransactions,
 } from './csvParser';
+import { buildJourneyView } from './journeyView';
 
 const TRANSACTION_HEADER =
   'Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes';
@@ -304,8 +305,16 @@ describe('layover cities', () => {
   ].join('\n');
   const stats = computeTrip(parseTransactions(csv));
 
-  it('keeps layover spend but excludes the city from stats and the route', () => {
+  it('keeps layover spend in totals and categories while excluding the city from stats', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(21.36, 2);
+    expect(stats.days.items[0].total).toBeCloseTo(21.36, 2);
+
+    const food = stats.categories.items.find(
+      (category) => category.category === 'Food',
+    );
+    expect(food?.total).toBeCloseTo(21.36, 2);
+    expect(food?.count).toBe(2);
+
     expect(stats.cities.visitedCount).toBe(1);
     expect(stats.cities.items.map((city) => city.city)).toEqual(['Bali']);
     expect(stats.days.items[0].cities).toEqual(['Bali']);
@@ -356,6 +365,45 @@ describe('layover notes only in the opening word', () => {
       'Brisbane',
       'Bali',
     ]);
+  });
+
+  it('keeps a layover purchase in its own category total', () => {
+    const categorizedCsv = [
+      TRANSACTION_HEADER,
+      '2026-05-13 09:00:00,Brisbane Airport Shop,-11.36,USD,-11.36,1.0000,2026-05-13,Shopping,Chase 1388,Brisbane,Australia,Layover Sydney → Bali',
+      '2026-05-13 12:00:00,Bali Food,-10.00,USD,-10.00,1.0000,2026-05-13,Food,Chase 1388,Bali,Indonesia,',
+    ].join('\n');
+    const categorized = computeTrip(parseTransactions(categorizedCsv));
+    const shopping = categorized.categories.items.find(
+      (category) => category.category === 'Shopping',
+    );
+
+    expect(shopping?.total).toBeCloseTo(11.36, 2);
+    expect(shopping?.count).toBe(1);
+  });
+
+  it('drops a layover-only day from the route without an empty entry', () => {
+    const layoverOnlyCsv = [
+      TRANSACTION_HEADER,
+      '2026-05-13 09:00:00,Layover Food,-11.36,USD,-11.36,1.0000,2026-05-13,Food,Chase 1388,Brisbane,Australia,Layover Sydney → Bali',
+      '2026-05-14 12:00:00,Bali Food,-10.00,USD,-10.00,1.0000,2026-05-14,Food,Chase 1388,Bali,Indonesia,',
+    ].join('\n');
+    const layoverOnlyTransactions = parseTransactions(layoverOnlyCsv);
+    const layoverOnlyStats = computeTrip(layoverOnlyTransactions);
+    const layoverDay = layoverOnlyStats.days.items.find(
+      (day) => day.date === '2026-05-13',
+    );
+
+    expect(layoverDay?.cities).toEqual([]);
+
+    const view = buildJourneyView(layoverOnlyStats, layoverOnlyTransactions, []);
+    expect(view.route.cityOrder).toEqual(['Bali']);
+    expect(view.route.cityOrder).not.toContain('Brisbane');
+    expect(
+      view.route.cityOrder.every(
+        (city) => typeof city === 'string' && city.trim().length > 0,
+      ),
+    ).toBe(true);
   });
 });
 
@@ -451,6 +499,12 @@ describe('seeded dataset', () => {
     expect(citySum + stats.cities.tripWideTotal).toBeCloseTo(
       stats.summary.grandTotal,
       2,
+    );
+  });
+
+  it('excludes the Brisbane layover city from the seeded city stats', () => {
+    expect(stats.cities.items.map((city) => city.city)).not.toContain(
+      'Brisbane',
     );
   });
 
