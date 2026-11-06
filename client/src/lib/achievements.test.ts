@@ -12,6 +12,7 @@ interface RowOptions {
   category?: string;
   city?: string;
   time?: string;
+  notes?: string;
 }
 
 function row({
@@ -21,9 +22,10 @@ function row({
   category = 'Food',
   city = 'Chengdu',
   time = '12:00:00',
+  notes = '',
 }: RowOptions): string {
   const cny = (usd * 7).toFixed(2);
-  return `${date} ${time},${merchant},${cny},CNY,${usd.toFixed(2)},7.0000,${date},${category},Alipay,${city},China,`;
+  return `${date} ${time},${merchant},${cny},CNY,${usd.toFixed(2)},7.0000,${date},${category},Alipay,${city},China,${notes}`;
 }
 
 function build(rows: string[]) {
@@ -137,6 +139,26 @@ describe('Accommodation Collector', () => {
   it('does not count the generic China bucket as a stay', () => {
     expect(unlocked(stays(['A', 'B', 'C', 'D', 'E', 'China']), 'accommodation-collector')).toBe(false);
     expect(unlocked(stays([...six, 'China']), 'accommodation-collector')).toBe(true);
+  });
+
+  it('does not count a layover-city stay as a visited city', () => {
+    const fiveStays = stays(six.slice(0, 5));
+    const layoverStay = row({
+      date: '2026-06-13',
+      usd: -10,
+      category: 'Accommodation',
+      city: 'Brisbane',
+      notes: 'Layover Sydney → Bali',
+    });
+    const regularStay = row({
+      date: '2026-06-13',
+      usd: -10,
+      category: 'Accommodation',
+      city: 'Brisbane',
+    });
+
+    expect(unlocked([...fiveStays, layoverStay], 'accommodation-collector')).toBe(false);
+    expect(unlocked([...fiveStays, regularStay], 'accommodation-collector')).toBe(true);
   });
 });
 

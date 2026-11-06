@@ -308,6 +308,7 @@ describe('layover cities', () => {
     expect(stats.cities.visitedCount).toBe(1);
     expect(stats.cities.items.map((city) => city.city)).toEqual(['Bali']);
     expect(stats.days.items[0].cities).toEqual(['Bali']);
+    expect(stats.cities.tripWideTotal).toBeCloseTo(11.36, 2);
   });
 });
 
@@ -393,6 +394,17 @@ describe('seeded dataset', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
     expect(stats.summary.daysTracked).toBe(194);
     expect(stats.cities.visitedCount).toBe(47);
+  });
+
+  it('attributes every expense to exactly one city or the trip-wide bucket', () => {
+    const citySum = stats.cities.items.reduce(
+      (sum, city) => sum + city.total,
+      0,
+    );
+    expect(citySum + stats.cities.tripWideTotal).toBeCloseTo(
+      stats.summary.grandTotal,
+      2,
+    );
   });
 
   it('keeps the date range', () => {
