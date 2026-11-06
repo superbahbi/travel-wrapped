@@ -474,3 +474,153 @@ are included in each row's `AmountUSD`.
 | Weixin Yihe Hotel | `Accommodation` | 1 |
 | Wilkinsons Pharmacy | `Personal Care` | 1 |
 | Woolworths Metro | `Food` | 1 |
+
+## Alipay / WeChat 2026 import
+
+Resolved from the 2026 Alipay transaction export and WeChat Pay bill.
+Only purchases not already represented in the ledger are included; refunds,
+income, neutral transactions, person transfers, zero-amount coupons, and the
+June 8–July 16 rows already covered by the China-trip ledger are excluded.
+CNY amounts are converted at 6.756757 CNY/USD.
+
+| Merchant | Category | Rows |
+| --- | --- | ---: |
+| 麦当劳 | `Food` | 10 |
+| China Railway 12306 | `Intercity Transport` | 9 |
+| 大米先生（大米先生四川群光店） | `Food` | 8 |
+| 蜜雪冰城 | `Food` | 6 |
+| 较场口得意世界第三餐厅 | `Food` | 4 |
+| Ctrip - Jingdezhenknapsackyouthhostel | `Accommodation` | 3 |
+| Ctrip - OnTheWayHostel | `Accommodation` | 3 |
+| 大米先生（大米先生渝中区得意世界第二餐厅） | `Food` | 3 |
+| 蜜雪冰城913739店 | `Food` | 3 |
+| Ctrip - DayinInternationalYouthHostelTianzifangXin | `Accommodation` | 2 |
+| Ctrip - HuayuHotelChongqingJiefangbeiAreaHongYaDon | `Accommodation` | 2 |
+| Ctrip - POSUHostelSuzhou | `Accommodation` | 2 |
+| HelloBike | `Transport` | 2 |
+| luckincoffee | `Food` | 2 |
+| 中铁网络 | `Intercity Transport` | 2 |
+| 姑苏区蜜羽星光饮品店 | `Food` | 2 |
+| 成都好特卖科技有限公司 | `Food` | 2 |
+| 景德镇陶欣餐饮管理有限公司公和第一圃 | `Food` | 2 |
+| 海乐生活 | `Shopping` | 2 |
+| 理塘未名酒店管理有限责任公司 | `Accommodation` | 2 |
+| 糖叙糖水铺（景德镇陶阳里店） | `Food` | 2 |
+| 蜜雪冰城932809店 | `Food` | 2 |
+| 蜜雪冰城937536店1 | `Food` | 2 |
+| 重庆甜心青旅酒店 | `Laundry` | 2 |
+| 麦当劳(日月光店) | `Food` | 2 |
+| ****森 | `Food` | 1 |
+| **全 | `Shopping` | 1 |
+| *香 | `Shopping` | 1 |
+| 1点点(亭湖农民街店) | `Food` | 1 |
+| 1点点（上街里MALL容匯城店） | `Food` | 1 |
+| 7-ELEVEn(锦绣大厦店) | `Food` | 1 |
+| Amap Ride | `Transport` | 1 |
+| Azrael cat | `Shopping` | 1 |
+| CGV青岛万象城 | `Activities` | 1 |
+| CHAGEE霸王茶姬 | `Food` | 1 |
+| CoCo都可(盐城农民街) | `Food` | 1 |
+| Ctrip - CaoyeZiyouHostelJingdezhenPeopleSquareTaoy | `Accommodation` | 1 |
+| Ctrip - DaliBackpackerHostel | `Accommodation` | 1 |
+| Ctrip - DuoyuanYouthHostelShanghaiBund | `Accommodation` | 1 |
+| Ctrip - JimoHostelChangshaWuYiSquare | `Accommodation` | 1 |
+| Ctrip - LiTangXingyeInternationalYouthHostel | `Accommodation` | 1 |
+| Ctrip - ShangriLaYuqingTravel | `Accommodation` | 1 |
+| Ctrip - SouthKorea5GeSIMChatGPTAvailableDayPassTot | `Subscription` | 1 |
+| Ctrip - SweetHeartYouthHostel | `Accommodation` | 1 |
+| Didi | `Transport` | 1 |
+| joesaito | `Shopping` | 1 |
+| Meituan - 屈臣氏（成都锦江区上东大街店）-美团App-26072111200700001306 | `Personal Care` | 1 |
+| Meituan - 必来客·汉堡炸鸡（理塘店）-2607181120070000130566999258 | `Food` | 1 |
+| Meituan - 必来客·汉堡炸鸡（理塘店）-2607181120070000130576154582 | `Food` | 1 |
+| ⑨乔宇.伴山洋房店 | `Personal Care` | 1 |
+| 一颗西瓜? | `Food` | 1 |
+| 万尼**店 | `Shopping` | 1 |
+| 三分之一 | `Shopping` | 1 |
+| 上善若水 | `Shopping` | 1 |
+| 上海喜创于茶餐饮管理有限公司 | `Food` | 1 |
+| 东莞市祥晟安装工程有限公司 | `Shopping` | 1 |
+| 个人李劲松 | `Shopping` | 1 |
+| 中国旅行小助手 | `Fees` | 1 |
+| 中山路176号店 | `Food` | 1 |
+| 丽江交通运输集团有限公司丽江汽车客运站 | `Intercity Transport` | 1 |
+| 书亦烧仙草连锁76715548店 | `Food` | 1 |
+| 亭湖区大洋街道李美玲食品店 | `Food` | 1 |
+| 付信通智能系统 | `Laundry` | 1 |
+| 众多非一便利超市. | `Food` | 1 |
+| 全意&租车 | `Transport` | 1 |
+| 兰 | `Shopping` | 1 |
+| 南浦大桥沃尔玛 | `Food` | 1 |
+| 南门头店 | `Shopping` | 1 |
+| 双喜麻辣烫 | `Food` | 1 |
+| 四婶凉品 | `Food` | 1 |
+| 塔斯汀中国汉堡(南门口店) | `Food` | 1 |
+| 大疆无人机桂林王城店 | `Shopping` | 1 |
+| 大米先生（南门口分店） | `Food` | 1 |
+| 奈雪的茶(青岛万象城) | `Food` | 1 |
+| 好特卖 | `Food` | 1 |
+| 姜海洋 | `Shopping` | 1 |
+| 季茉酒店管理有限公司 | `Accommodation` | 1 |
+| 家家悦集团股份有限公司 | `Food` | 1 |
+| 广东联通 | `Subscription` | 1 |
+| 张小鸣 | `Food` | 1 |
+| 张静 | `Shopping` | 1 |
+| 成都嘉佳启航商贸有限公司 | `Shopping` | 1 |
+| 成都慧启穗科技有限公司 | `Fees` | 1 |
+| 李正芬 | `Fees` | 1 |
+| 杭州小笼包子 | `Food` | 1 |
+| 柠檬7（火炬八街店） | `Food` | 1 |
+| 桂林红岭分店 | `Food` | 1 |
+| 槐序十七 | `Activities` | 1 |
+| 沃尔玛购物广场昆明大观店 | `Food` | 1 |
+| 沪上美滋源 | `Food` | 1 |
+| 泉膳中国 | `Food` | 1 |
+| 淘宝平台商户 | `Shopping` | 1 |
+| 渝中区月天便利店 | `Food` | 1 |
+| 渝中区荣学餐饮店 | `Food` | 1 |
+| 熊喵来了火锅（悦喜客来店） | `Food` | 1 |
+| 牛约堡 | `Food` | 1 |
+| 珠山区陈新明百货店 | `Shopping` | 1 |
+| 理塘爱零食便利店幸福西路店 | `Food` | 1 |
+| 知鱼青年旅舍 | `Accommodation` | 1 |
+| 老乡鸡（苏州观前街店） | `Food` | 1 |
+| 肯德基 | `Food` | 1 |
+| 肯德基(海兴餐厅) | `Food` | 1 |
+| 肯德基(瓷都餐厅) | `Food` | 1 |
+| 肯德基(长沙南门口店) | `Food` | 1 |
+| 肯德基（九集小镇店） | `Food` | 1 |
+| 苏州察院场地铁站二店 | `Food` | 1 |
+| 苏州轨道交通运营有限公司 | `Intercity Transport` | 1 |
+| 苏州金拱门食品有限公司 | `Food` | 1 |
+| 茉莉奶白（盐城建军路金鹰店） | `Food` | 1 |
+| 蜜雪冰城61900867店 | `Food` | 1 |
+| 蜜雪冰城903703店 | `Food` | 1 |
+| 蜜雪冰城906488店 | `Food` | 1 |
+| 蜜雪冰城914509店1 | `Food` | 1 |
+| 蜜雪冰城914931店 | `Food` | 1 |
+| 蜜雪冰城916982店 | `Food` | 1 |
+| 蜜雪冰城919554店 | `Food` | 1 |
+| 蜜雪冰城935703店 | `Food` | 1 |
+| 蜜雪冰城945543店 | `Food` | 1 |
+| 蜜雪冰城946734店002 | `Food` | 1 |
+| 蜜雪冰城947377店 | `Food` | 1 |
+| 蜜雪冰城952852店 | `Food` | 1 |
+| 远行客国际青年旅舍 | `Accommodation` | 1 |
+| 迪庆交运 | `Shopping` | 1 |
+| 邮局巷老火锅 | `Food` | 1 |
+| 邮电局 | `Shopping` | 1 |
+| 重庆城市通卡支付有限责任公司 | `Transport` | 1 |
+| 长沙市天心区若鸣饮品店 | `Food` | 1 |
+| 阳朔县途途租赁经营部 | `Transport` | 1 |
+| 青岛地铁运营有限公司 | `Transport` | 1 |
+| 青岛悦喜客来中山购物有限公司 | `Shopping` | 1 |
+| 青树梅农家园 | `Shopping` | 1 |
+| 香格里拉市优十品鲜生超市(个体工商户) | `Food` | 1 |
+| 麦当劳(壹购广场餐厅 餐厅) | `Food` | 1 |
+| 麦当劳(聚龙湖金鹰店) | `Food` | 1 |
+| 麦当劳(高铁长沙南站餐厅) | `Food` | 1 |
+| 麦当劳上海黄浦复兴SOHO广场餐厅 | `Food` | 1 |
+| 麦当劳成都东站出发夹层(A26二楼)餐厅 | `Food` | 1 |
+| 麦当劳景德镇古镇天御餐厅 | `Food` | 1 |
+| 麦当劳苏州察院场站餐厅 | `Food` | 1 |

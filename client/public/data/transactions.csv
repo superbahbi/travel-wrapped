@@ -302,10 +302,12 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-08 00:00:00,ESIMDOG,-47.18,CNY,-6.98,6.7593,2026-06-08,Shopping,Other,China,China,data eSIM
 2026-06-08 00:00:00,Meiyijia,-11.50,CNY,-1.70,6.7647,2026-06-08,Food,WeChat,Shenzhen,China,
 2026-06-08 00:00:00,Shenzhen Metro (Octopus),-2.00,CNY,-0.30,6.6667,2026-06-08,Transport,Other,Shenzhen,China,
+2026-06-08 13:48:42,中国旅行小助手,-1.00,CNY,-0.15,6.756757,2026-06-08,Fees,Alipay,Unknown,China,Alipay: 商业服务 | 中国旅行小助手 | TestChinaPay Tier1 | Visa(3381)
 2026-06-08 14:44:48,Fast Food,-37.52,CNY,-5.55,6.7604,2026-06-08,Food,Alipay,Shenzhen,China,
 2026-06-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-06-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-06-09 06:55:09,Little Tadpole,-8.80,CNY,-1.30,6.7692,2026-06-09,Food,Alipay,Shenzhen,China,
 2026-06-09 08:26:05,Guangdong 7‑ELEVEN,-12.00,CNY,-1.78,6.7416,2026-06-09,Food,Alipay,Shenzhen,China,
+2026-06-09 09:05:16,China Railway 12306,-23.49,CNY,-3.48,6.756757,2026-06-09,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)&支付立减优惠
 2026-06-09 11:14:07,Shenzhen Metro Group,-3.00,CNY,-0.44,6.8182,2026-06-09,Transport,Alipay,Shenzhen,China,
 2026-06-09 12:52:39,Bai Pin Qian Tiao,-21.32,CNY,-3.15,6.7683,2026-06-09,Food,Alipay,Shenzhen,China,
 2026-06-09 13:07:27,Chengxing Trading,-9.00,CNY,-1.33,6.7669,2026-06-09,Shopping,Alipay,Shenzhen,China,
@@ -356,6 +358,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-12 20:15:04,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-12,Transport,Alipay,Guangzhou,China,
 2026-06-12 20:19:36,Shenzhen Weiqi,-15.00,CNY,-2.22,6.7568,2026-06-12,Food,Alipay,Guangzhou,China,
 2026-06-12 20:25:56,Guangdong 7‑ELEVEN,-4.50,CNY,-0.67,6.7164,2026-06-12,Food,Alipay,Guangzhou,China,
+2026-06-12 20:54:18,China Railway 12306,-181.00,CNY,-26.79,6.756757,2026-06-12,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
 2026-06-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-06-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-06-13 09:26:19,Fast Food,-31.32,CNY,-4.63,6.7646,2026-06-13,Food,Alipay,Guangzhou,China,
 2026-06-13 10:16:11,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-13,Transport,Alipay,Guangzhou,China,
@@ -387,6 +390,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-15 09:18:10,Yangshuo Sudder Street Guesthouse,-174.00,CNY,-25.74,6.7599,2026-06-15,Accommodation,Alipay,Yangshuo,China,"3 nights (Jun16-18, 58/night)"
 2026-06-15 10:08:12,Lufen Wang Rice Noodles,-7.00,CNY,-1.04,6.7308,2026-06-15,Food,Alipay,Guilin,China,
 2026-06-15 10:34:44,Guilin Youhao Duo Supermarket,-4.78,CNY,-0.71,6.7324,2026-06-15,Food,Alipay,Guilin,China,
+2026-06-15 11:44:41,大疆无人机桂林王城店,-2057.94,CNY,-304.58,6.756757,2026-06-15,Shopping,Alipay,Guilin,China,Alipay: 数码电器 | 大疆无人机桂林王城店 | 收钱码收款 | Visa(3381)
 2026-06-15 14:58:28,Hellobike (e-bike),-6.00,CNY,-0.89,6.7416,2026-06-15,Transport,Alipay,Guilin,China,
 2026-06-15 18:00:26,LxL (food),-1.00,CNY,-0.15,6.6667,2026-06-15,Food,Alipay,Guilin,China,
 2026-06-15 22:25:46,Guilin Xingyijia Supermarket,-6.50,CNY,-0.96,6.7708,2026-06-15,Food,Alipay,Guilin,China,
@@ -395,6 +399,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-16 14:40:54,Mixue Bingcheng,-4.76,CNY,-0.70,6.8000,2026-06-16,Food,Alipay,Yangshuo,China,
 2026-06-16 16:27:50,Haoxianglai Snacks,-10.13,CNY,-1.50,6.7533,2026-06-16,Food,Alipay,Yangshuo,China,
 2026-06-16 17:47:32,VPN Service,-4.19,CNY,-0.62,6.7581,2026-06-16,Subscription,Alipay,China,China,
+2026-06-16 20:11:39,阳朔县途途租赁经营部,-35.00,CNY,-5.18,6.756757,2026-06-16,Transport,Alipay,Yangshuo,China,Alipay: 日用百货 | 阳朔县途途租赁经营部 | 阳朔县途途租赁经营部 | Visa(3381)
 2026-06-16 20:51:34,Fumanlou Beer Fish,-66.00,CNY,-9.76,6.7623,2026-06-16,Food,Alipay,Yangshuo,China,
 2026-06-16 21:15:08,Yuzi,-12.00,CNY,-1.78,6.7416,2026-06-16,Food,Alipay,Yangshuo,China,
 2026-06-17 07:45:58,Xiaolian Youcha Baozi,-6.50,CNY,-0.96,6.7708,2026-06-17,Food,Alipay,Yangshuo,China,
@@ -415,7 +420,9 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-19 12:22:48,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-06-19,Food,Alipay,Guilin,China,
 2026-06-19 15:15:30,Walmart (Food),-32.78,CNY,-4.85,6.7588,2026-06-19,Food,Alipay,Guilin,China,groceries
 2026-06-19 15:15:30,Walmart (Underwear),-49.00,CNY,-7.25,6.7586,2026-06-19,Shopping,Alipay,Guilin,China,split from line 113
+2026-06-19 15:15:30,桂林红岭分店,-81.78,CNY,-12.10,6.756757,2026-06-19,Food,Alipay,Guilin,China,Alipay: 日用百货 | 桂林红岭分店 | 沃尔玛购物广场桂林红岭分店 | Visa(7828)
 2026-06-19 19:18:51,LxL (laundry),-15.00,CNY,-2.22,6.7568,2026-06-19,Laundry,Alipay,Guilin,China,
+2026-06-19 20:04:32,China Railway 12306,-421.79,CNY,-62.42,6.756757,2026-06-19,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
 2026-06-19 21:09:53,Kunming Passing Clouds Hostel (Nanping Street),-37.00,CNY,-5.47,6.7642,2026-06-19,Accommodation,Alipay,Kunming,China,night of Jun 20
 2026-06-20 00:00:00,Railway 12306,-421.79,CNY,-62.40,6.7595,2026-06-20,Intercity Transport,Alipay,Kunming,China,Guilin → Kunming (arrived Jun 20)
 2026-06-20 08:39:28,Meiyijia (Guilin Station),-37.30,CNY,-5.52,6.7572,2026-06-20,Food,Alipay,Guilin,China,
@@ -446,8 +453,10 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-22 16:58:16,Meituan (e-bike),-2.50,CNY,-0.37,6.7568,2026-06-22,Transport,Alipay,Kunming,China,
 2026-06-22 17:01:34,Fast Food,-34.00,CNY,-5.03,6.7594,2026-06-22,Food,Alipay,Kunming,China,
 2026-06-22 17:42:31,Hellobike (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-22,Transport,Alipay,Kunming,China,
+2026-06-22 17:57:32,沃尔玛购物广场昆明大观店,-29.98,CNY,-4.44,6.756757,2026-06-22,Food,Alipay,Kunming,China,Alipay: 日用百货 | 沃尔玛购物广场昆明大观店 | 沃尔玛购物广场昆明大观店 | Visa(7828)
 2026-06-22 18:16:08,Meituan (e-bike),-3.50,CNY,-0.52,6.7308,2026-06-22,Transport,Alipay,Kunming,China,
 2026-06-23 00:00:00,Kunming Passing Clouds Hostel (Nanping Street),-28.00,CNY,-4.14,6.7633,2026-06-23,Accommodation,Alipay,Kunming,China,prepaid from line 121 (night of Jun 23)
+2026-06-23 10:35:36,China Railway 12306,-163.00,CNY,-24.12,6.756757,2026-06-23,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
 2026-06-23 11:11:46,Yunbaobao (restaurant),-18.00,CNY,-2.66,6.7669,2026-06-23,Food,Alipay,Kunming,China,
 2026-06-23 17:57:32,Walmart (Kunming),-29.98,CNY,-4.44,6.7523,2026-06-23,Food,Alipay,Kunming,China,moved from Jun22
 2026-06-23 21:27:49,Mixue Bingcheng,-7.90,CNY,-1.17,6.7521,2026-06-23,Food,Alipay,Kunming,China,
@@ -460,7 +469,9 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-24 13:42:54,Pu'er Bus,-2.00,CNY,-0.30,6.6667,2026-06-24,Transport,Alipay,Pu'er,China,
 2026-06-24 13:56:48,Pu'er Bus,-2.00,CNY,-0.30,6.6667,2026-06-24,Transport,Alipay,Pu'er,China,
 2026-06-24 15:45:07,Sishen Liangpin (e-bike),-10.00,CNY,-1.48,6.7568,2026-06-24,Transport,Alipay,Pu'er,China,
+2026-06-24 15:45:49,四婶凉品,-200.00,CNY,-29.60,6.756757,2026-06-24,Food,Alipay,Unknown,China,Alipay: 生活服务 | 四婶凉品 | 经营码交易 | Visa(3381)
 2026-06-24 16:44:29,Meituan (group buy),-46.00,CNY,-6.80,6.7647,2026-06-24,Food,Alipay,Pu'er,China,
+2026-06-24 18:36:43,Azrael cat,-6.00,CNY,-0.89,6.756757,2026-06-24,Shopping,WeChat,Lijiang,China,WeChat: 扫二维码付款 | Azrael cat | 收款方备注:二维码收款 | VISA(7828)
 2026-06-24 20:34:40,Sishen Liangpin (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-24,Transport,Alipay,Pu'er,China,
 2026-06-24 20:39:00,Caicai Boutique Stay Hostel,-62.00,CNY,-9.17,6.7612,2026-06-24,Accommodation,Alipay,Pu'er,China,"2 nights (Jun25-26, 31/night)"
 2026-06-25 08:53:41,Sishen Liangpin (e-bike),-28.00,CNY,-4.14,6.7633,2026-06-25,Transport,Alipay,Pu'er,China,
@@ -468,9 +479,13 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-25 18:40:13,Tastine Chinese Burger,-25.20,CNY,-3.73,6.7560,2026-06-25,Food,Alipay,Pu'er,China,
 2026-06-25 20:57:42,Mixue Bingcheng,-6.90,CNY,-1.02,6.7647,2026-06-25,Food,Alipay,Pu'er,China,
 2026-06-26 08:29:42,Pencil (game top‑up),-1.46,CNY,-0.22,6.6364,2026-06-26,Subscription,Alipay,Pu'er,China,
+2026-06-26 09:33:38,China Railway 12306,-292.52,CNY,-43.29,6.756757,2026-06-26,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
 2026-06-26 09:36:11,Sishen Liangpin (e-bike),-28.00,CNY,-4.14,6.7633,2026-06-26,Transport,Alipay,Pu'er,China,
 2026-06-26 09:56:39,Qiahuo Puzi (snacks),-15.90,CNY,-2.35,6.7660,2026-06-26,Food,Alipay,Pu'er,China,
+2026-06-26 11:44:31,张静,-6.00,CNY,-0.89,6.756757,2026-06-26,Shopping,WeChat,Lijiang,China,WeChat: 扫二维码付款 | 张静 | 收款方备注:二维码收款 | VISA(7828)
+2026-06-26 13:01:07,青树梅农家园,-10.00,CNY,-1.48,6.756757,2026-06-26,Shopping,WeChat,Lijiang,China,WeChat: 扫二维码付款 | 青树梅农家园 | 收款方备注:二维码收款 | VISA(7828)
 2026-06-26 14:31:49,Meituan (food),-18.90,CNY,-2.80,6.7500,2026-06-26,Food,Alipay,Pu'er,China,
+2026-06-26 15:49:23,Ctrip - DaliBackpackerHostel,-39.00,CNY,-5.77,6.756757,2026-06-26,Accommodation,Alipay,Dali,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | DaliBackpackerHostel | Visa(3381)
 2026-06-26 20:58:31,Meituan (food),-21.90,CNY,-3.24,6.7593,2026-06-26,Food,Alipay,Pu'er,China,
 2026-06-27 00:00:00,Railway 12306,-292.52,CNY,-43.27,6.7603,2026-06-27,Intercity Transport,Alipay,Dali,China,Pu'er → Dali (arrived Jun 27)
 2026-06-27 07:46:16,Didi (ride),-8.05,CNY,-1.19,6.7647,2026-06-27,Transport,Alipay,Dali,China,
@@ -478,11 +493,13 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-27 14:39:52,Dali Bus,-3.00,CNY,-0.44,6.8182,2026-06-27,Transport,Alipay,Dali,China,
 2026-06-27 15:49:23,Dali Backpacker Hostel,-39.00,CNY,-5.77,6.7591,2026-06-27,Accommodation,Alipay,Dali,China,night of Jun 27
 2026-06-27 15:49:33,Didi (ride),-7.70,CNY,-1.14,6.7544,2026-06-27,Transport,Alipay,Dali,China,
+2026-06-27 16:59:07,China Railway 12306,-23.50,CNY,-3.48,6.756757,2026-06-27,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
 2026-06-27 18:06:38,Dali Guihua Gao (snack),-12.00,CNY,-1.78,6.7416,2026-06-27,Food,Alipay,Dali,China,
 2026-06-27 19:58:20,Xunwei Dali (restaurant),-63.00,CNY,-9.32,6.7597,2026-06-27,Food,Alipay,Dali,China,
 2026-06-27 21:06:05,Mixue Bingcheng,-2.00,CNY,-0.30,6.6667,2026-06-27,Food,Alipay,Dali,China,
 2026-06-28 00:00:00,Haizi Hua Kuaiti (food),-43.00,CNY,-6.36,6.7610,2026-06-28,Food,WeChat,Dali,China,
 2026-06-28 09:37:00,Quanyi Car Rental (e‑bike),-50.00,CNY,-7.40,6.7568,2026-06-28,Transport,WeChat,Dali,China,net cost (deposit removed)
+2026-06-28 09:37:38,全意&租车,-350.00,CNY,-51.80,6.756757,2026-06-28,Transport,WeChat,Lijiang,China,WeChat: 扫二维码付款 | 全意&租车 | 收款方备注:二维码收款 | VISA(7828)
 2026-06-28 09:57:11,Dali Backpacker Hostel,-102.00,CNY,-15.09,6.7594,2026-06-28,Accommodation,Alipay,Dali,China,"3 nights (Jun28-30, 34/night)"
 2026-06-28 11:04:12,Lingxi Henghai (snacks),-19.10,CNY,-2.83,6.7491,2026-06-28,Food,Alipay,Dali,China,
 2026-06-28 11:10:40,Guizhou Po Su Baozi,-4.00,CNY,-0.59,6.7797,2026-06-28,Food,Alipay,Dali,China,
@@ -496,6 +513,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-30 18:13:03,Tingyuan Book Cafe,-20.00,CNY,-2.96,6.7568,2026-06-30,Food,Alipay,Dali,China,
 2026-06-30 19:22:31,Hotpot Convenience Store,-16.00,CNY,-2.37,6.7511,2026-06-30,Food,Alipay,Dali,China,
 2026-06-30 20:12:30,Meiyijia (Dali),-7.00,CNY,-1.04,6.7308,2026-06-30,Food,Alipay,Dali,China,
+2026-06-30 21:39:41,远行客国际青年旅舍,-34.00,CNY,-5.03,6.756757,2026-06-30,Accommodation,Alipay,Unknown,China,Alipay: 酒店旅游 | 远行客国际青年旅舍 | 收钱码收款 | Visa(3381)
 2026-07-01 00:00:00,GOOGLE *CLOUD QDG3KJ,-0.11,USD,-0.11,1.000000,2026-07-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD QDG3KJ
 2026-07-01 11:42:35,Shufang Restaurant,-24.00,CNY,-3.55,6.7606,2026-07-01,Food,Alipay,Dali,China,
 2026-07-01 11:44:05,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-01,Food,Alipay,Dali,China,
@@ -509,6 +527,7 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-02 11:36:40,Fast Food,-50.00,CNY,-7.40,6.7568,2026-07-02,Food,Alipay,Dali,China,
 2026-07-02 16:10:16,Lijiang Bus,-8.00,CNY,-1.18,6.7797,2026-07-02,Transport,Alipay,Lijiang,China,
 2026-07-02 18:33:38,Zhiyu Youth Hostel (laundry),-5.00,CNY,-0.74,6.7568,2026-07-02,Laundry,Alipay,Lijiang,China,
+2026-07-02 18:37:10,知鱼青年旅舍,-50.00,CNY,-7.40,6.756757,2026-07-02,Accommodation,Alipay,Unknown,China,Alipay: 酒店旅游 | 知鱼青年旅舍 | 收钱码收款 | 账户余额
 2026-07-02 20:09:43,Tastine Chinese Burger,-25.20,CNY,-3.73,6.7560,2026-07-02,Food,Alipay,Lijiang,China,
 2026-07-02 20:49:59,Meiyijia (mosquito repellent),-27.50,CNY,-4.07,6.7568,2026-07-02,Shopping,Alipay,Lijiang,China,mosquito repellent
 2026-07-03 08:49:48,Hangzhou Xiaolongbao,-10.00,CNY,-1.48,6.7568,2026-07-03,Food,WeChat,Lijiang,China,
@@ -523,10 +542,12 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-03 20:10:59,Chihutang (rice bowl),-23.80,CNY,-3.52,6.7614,2026-07-03,Food,Alipay,Lijiang,China,
 2026-07-03 20:18:33,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-03,Transport,Alipay,Lijiang,China,
 2026-07-04 09:18:05,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-04,Transport,Alipay,Lijiang,China,
+2026-07-04 09:22:28,丽江交通运输集团有限公司丽江汽车客运站,-36.00,CNY,-5.33,6.756757,2026-07-04,Intercity Transport,Alipay,Lijiang,China,Alipay: 交通出行 | 丽江交通运输集团有限公司丽江汽车客运站 | 丽江交通运输集团有限公司丽江汽车客运站-消费 | Visa(3381)
 2026-07-04 11:00:14,Zhazha Mixian (restaurant),-48.00,CNY,-7.10,6.7606,2026-07-04,Food,Alipay,Lijiang,China,
 2026-07-04 11:44:17,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-04,Food,Alipay,Lijiang,China,
 2026-07-04 13:45:00,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-04,Transport,Alipay,Lijiang,China,
 2026-07-04 17:46:57,Chihutang (rice bowl),-25.90,CNY,-3.83,6.7624,2026-07-04,Food,Alipay,Lijiang,China,
+2026-07-04 18:30:13,兰,-27.00,CNY,-4.00,6.756757,2026-07-04,Shopping,Alipay,Unknown,China,Alipay: 日用百货 | 兰 | 收钱码收款 | Visa(3381)
 2026-07-05 00:00:00,Lan (food),-27.00,CNY,-3.99,6.7669,2026-07-05,Food,Alipay,Lijiang,China,prepaid food for Jul 5
 2026-07-05 00:00:00,Lijiang Bus Station,-36.00,CNY,-5.33,6.7542,2026-07-05,Transport,Alipay,Lijiang,China,"bus to Tiger Leaping Gorge (prepaid Jul 4, travel Jul 5)"
 2026-07-05 07:13:52,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-05,Transport,Alipay,Lijiang,China,
@@ -542,11 +563,14 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-06 12:41:20,Qiya Coffee,-38.00,CNY,-5.62,6.7616,2026-07-06,Food,Alipay,Lijiang,China,
 2026-07-06 16:03:44,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-06,Transport,Alipay,Lijiang,China,
 2026-07-06 16:06:40,Zhiyu Youth Hostel (Lijiang Ancient City),-25.00,CNY,-3.70,6.7568,2026-07-06,Accommodation,Alipay,Lijiang,China,night of Jul 6
+2026-07-06 16:44:39,Ctrip - ShangriLaYuqingTravel,-29.00,CNY,-4.29,6.756757,2026-07-06,Accommodation,Alipay,Shangri-La,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | ShangriLaYuqingTravel | Visa(3381)
+2026-07-06 16:50:06,China Railway 12306,-56.00,CNY,-8.29,6.756757,2026-07-06,Intercity Transport,Alipay,Unknown,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
 2026-07-06 20:41:28,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-06,Food,Alipay,Lijiang,China,
 2026-07-06 22:07:18,Lingxi Henghai (snacks),-6.90,CNY,-1.02,6.7647,2026-07-06,Food,Alipay,Lijiang,China,
 2026-07-06 22:17:57,Hellobike (e‑bike),-3.00,CNY,-0.44,6.8182,2026-07-06,Transport,Alipay,Lijiang,China,
 2026-07-07 00:00:00,Railway 12306,-56.00,CNY,-8.28,6.7633,2026-07-07,Intercity Transport,Alipay,Lijiang,China,Lijiang → Shangri-La
 2026-07-07 00:00:00,Shanghai Hecheng (Shangri-La),-29.00,CNY,-4.29,6.7599,2026-07-07,Accommodation,Alipay,Shangri-La,China,night of Jul 7
+2026-07-07 09:35:47,姜海洋,-100.00,CNY,-14.80,6.756757,2026-07-07,Shopping,WeChat,Lijiang,China,WeChat: 扫二维码付款 | 姜海洋 | 收款方备注:二维码收款 | VISA(7828)
 2026-07-07 11:37:05,Lijiang Bus,-5.00,CNY,-0.74,6.7568,2026-07-07,Transport,Alipay,Lijiang,China,
 2026-07-07 12:17:44,Fast Food,-64.40,CNY,-9.53,6.7576,2026-07-07,Food,Alipay,Lijiang,China,
 2026-07-07 14:31:35,Shangri-La Bus,-2.00,CNY,-0.30,6.6667,2026-07-07,Transport,Alipay,Shangri-La,China,
@@ -577,14 +601,17 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-11 19:31:44,W (dinner),-26.00,CNY,-3.85,6.7532,2026-07-11,Food,Alipay,Shangri-La,China,
 2026-07-12 11:16:55,Muzi Muzui Japanese Bakery,-20.00,CNY,-2.96,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
 2026-07-12 11:36:19,Roof Coffee,-25.00,CNY,-3.70,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
+2026-07-12 13:17:04,迪庆交运,-151.00,CNY,-22.35,6.756757,2026-07-12,Shopping,WeChat,Shangri-La,China,WeChat: 商户消费 | 迪庆交运 | DQJY20260712131636065130香格里拉古城东门-亚丁2026-07-1307:50 | VISA(3381)
 2026-07-12 17:23:51,Fast Food,-40.00,CNY,-5.92,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
 2026-07-12 19:40:53,VPN Service,-6.83,CNY,-1.01,6.7624,2026-07-12,Subscription,Alipay,Shangri-La,China,
+2026-07-12 20:30:06,香格里拉市优十品鲜生超市(个体工商户),-41.60,CNY,-6.16,6.756757,2026-07-12,Food,Alipay,Shangri-La,China,Alipay: 日用百货 | 香格里拉市优十品鲜生超市(个体工商户) | 二维码支付 | Visa(3381)
 2026-07-13 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-07-13,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     B5CGN9          WEB ID: 9000142694
 2026-07-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-07-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-07-13 00:00:00,Youshipin Supermarket,-41.60,CNY,-6.15,6.7642,2026-07-13,Food,Alipay,Yading,China,prepaid Jul 12
 2026-07-13 07:50:00,Diqing Bus,-151.00,CNY,-22.34,6.7592,2026-07-13,Intercity Transport,WeChat,Yading,China,Shangri-La → Yading (prepaid Jul 12)
 2026-07-13 14:06:46,Wang Erjia Handicraft,-75.00,CNY,-11.09,6.7628,2026-07-13,Accommodation,Alipay,Yading,China,night of Jul 13
 2026-07-13 14:41:40,Yading Online Tourism,-156.00,CNY,-23.08,6.7591,2026-07-13,Activities,WeChat,Yading,China,park entrance ticket
+2026-07-13 16:57:18,*香,-130.00,CNY,-19.24,6.756757,2026-07-13,Shopping,Alipay,Unknown,China,Alipay: 生活服务 | *香 | 收钱码收款 | Visa(3381)
 2026-07-13 19:10:20,Qiangge Xian Tang Mixian,-20.00,CNY,-2.96,6.7568,2026-07-13,Food,Alipay,Yading,China,dinner
 2026-07-13 19:15:10,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-13,Food,Alipay,Yading,China,drink
 2026-07-13 19:29:21,Zeren Zhuoma Local Products,-15.00,CNY,-2.22,6.7568,2026-07-13,Shopping,WeChat,Yading,China,oxygen canister
@@ -597,34 +624,88 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-14 20:27:42,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-14,Food,Alipay,Yading,China,
 2026-07-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-07-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-07-15 18:14:52,Qingzhou Xiaocai (porridge),-30.00,CNY,-4.44,6.7568,2026-07-15,Food,Alipay,Yading,China,dinner
+2026-07-15 22:05:53,Ctrip - LiTangXingyeInternationalYouthHostel,-48.00,CNY,-7.10,6.756757,2026-07-15,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | LiTangXingyeInternationalYouthHostel | Visa(3381)
 2026-07-16 00:00:00,Xiang (bus),-130.00,CNY,-19.23,6.7603,2026-07-16,Intercity Transport,Alipay,Litang,China,Yading → Litang (prepaid Jul 13)
+2026-07-16 08:01:00,杭州小笼包子,-15.00,CNY,-2.22,6.756757,2026-07-16,Food,Alipay,Hangzhou,China,Alipay: 餐饮美食 | 杭州小笼包子 | 收钱码收款 | Visa(3381)
+2026-07-16 21:02:11,理塘未名酒店管理有限责任公司,-80.00,CNY,-11.84,6.756757,2026-07-16,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 理塘未名酒店管理有限责任公司 | 理塘未名酒店管理有限责任公司 | Visa(3381)
+2026-07-17 09:09:07,**全,-9.00,CNY,-1.33,6.756757,2026-07-17,Shopping,Alipay,Litang,China,Alipay: 其他 | **全 | 收钱码收款 | Visa(3381)
+2026-07-17 21:46:44,一颗西瓜?,-30.00,CNY,-4.44,6.756757,2026-07-17,Food,Alipay,Litang,China,Alipay: 餐饮美食 | 一颗西瓜? | 收钱码收款 | Visa(3381)
+2026-07-18 12:34:36,Meituan - 必来客·汉堡炸鸡（理塘店）-2607181120070000130566999258,-43.80,CNY,-6.48,6.756757,2026-07-18,Food,Alipay,Litang,China,Alipay: 餐饮美食 | 美团 | 必来客·汉堡炸鸡（理塘店）-26071811200700001305669992580331 | Visa(3381)
+2026-07-18 20:01:36,Meituan - 必来客·汉堡炸鸡（理塘店）-2607181120070000130576154582,-21.90,CNY,-3.24,6.756757,2026-07-18,Food,Alipay,Litang,China,Alipay: 餐饮美食 | 美团 | 必来客·汉堡炸鸡（理塘店）-26071811200700001305761545822331 | Visa(3381)
 2026-07-19 00:00:00,Weixin Litang Yunshang,-22.00,CNY,-3.26,6.748466,2026-07-19,Food,Wise card,Chengdu,China,Wise: Weixin Litang Yunshang | Eating out | source 3.25 USD + fee 0.01
 2026-07-19 00:00:00,Weixin Scan Qr Code Fo,-30.00,CNY,-4.44,6.756757,2026-07-19,Shopping,Wise card,Chengdu,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 4.43 USD + fee 0.01
 2026-07-19 00:00:00,Weixin Scan Qr Code Fo,-245.00,CNY,-36.27,6.754894,2026-07-19,Shopping,Wise card,Chengdu,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 36.16 USD + fee 0.11
 2026-07-19 00:00:00,Weixin Wanzhuan Orderi,-17.00,CNY,-2.52,6.746032,2026-07-19,Shopping,Wise card,Chengdu,China,Wise: Weixin Wanzhuan Orderi | Shopping | source 2.51 USD + fee 0.01
+2026-07-19 08:06:51,理塘未名酒店管理有限责任公司,-40.00,CNY,-5.92,6.756757,2026-07-19,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 理塘未名酒店管理有限责任公司 | 理塘未名酒店管理有限责任公司 | Visa(3381)
+2026-07-19 12:36:36,蜜雪冰城916982店,-7.00,CNY,-1.04,6.756757,2026-07-19,Food,Alipay,Litang,China,Alipay: 餐饮美食 | 蜜雪冰城916982店 | 蜜雪冰城916982店 | Visa(3381)
+2026-07-19 14:29:27,Ctrip - OnTheWayHostel,-38.00,CNY,-5.62,6.756757,2026-07-19,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | OnTheWayHostel | Visa(3381)
+2026-07-19 19:49:58,理塘爱零食便利店幸福西路店,-17.60,CNY,-2.60,6.756757,2026-07-19,Food,Alipay,Litang,China,Alipay: 餐饮美食 | 理塘爱零食便利店幸福西路店 | 爱零食-四川甘孜州理塘幸福西路店 | Visa(3381)
 2026-07-20 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-20,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
 2026-07-20 00:00:00,FamilyMart,-3.50,CNY,-0.53,6.603774,2026-07-20,Food,Wise card,Chengdu,China,Wise: FamilyMart | Groceries | source 0.52 USD + fee 0.01
 2026-07-20 00:00:00,Weixin Yihe Hotel,-30.00,CNY,-4.44,6.756757,2026-07-20,Accommodation,Wise card,Chengdu,China,Wise: Weixin Yihe Hotel | Shopping | source 4.43 USD + fee 0.01
+2026-07-20 19:28:30,麦当劳(壹购广场餐厅 餐厅),-33.50,CNY,-4.96,6.756757,2026-07-20,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 麦当劳(壹购广场餐厅 餐厅) | 成都菜鸟餐饮有限公司 | Visa(3381)
 2026-07-21 00:00:00,Chengduhaotema - Alipay,-7.40,CNY,-1.10,6.727273,2026-07-21,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 1.09 USD + fee 0.01
 2026-07-21 00:00:00,Chengduhaotema - Alipay,-3.60,CNY,-0.54,6.666667,2026-07-21,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 0.53 USD + fee 0.01
 2026-07-21 00:00:00,Weixin Taobao Platform,-139.00,CNY,-20.61,6.744299,2026-07-21,Shopping,Wise card,Chengdu,China,Wise: Weixin Taobao Platform | Shopping | source 20.55 USD + fee 0.06
+2026-07-21 09:59:53,Ctrip - OnTheWayHostel,-164.00,CNY,-24.27,6.756757,2026-07-21,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | OnTheWayHostel | Visa(3381)
+2026-07-21 11:34:03,大米先生（大米先生四川群光店）,-23.33,CNY,-3.45,6.756757,2026-07-21,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
+2026-07-21 13:59:20,Meituan - 屈臣氏（成都锦江区上东大街店）-美团App-26072111200700001306,-55.30,CNY,-8.18,6.756757,2026-07-21,Personal Care,Alipay,Chengdu,China,Alipay: 文化休闲 | 美团 | 屈臣氏（成都锦江区上东大街店）-美团App-26072111200700001306219631046331 | Visa(3381)
+2026-07-21 19:47:56,大米先生（大米先生四川群光店）,-7.48,CNY,-1.11,6.756757,2026-07-21,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
+2026-07-21 21:56:50,万尼**店,-49.00,CNY,-7.25,6.756757,2026-07-21,Shopping,Alipay,Chengdu,China,Alipay: 服饰装扮 | 万尼**店 | 真如界僧服新品免绑腿僧裤透气薄款水洗棉修行打坐和尚男女收口裤 | Visa(3381)
 2026-07-22 00:00:00,Vanguard - Alipay,-21.80,CNY,-3.23,6.749226,2026-07-22,Food,Wise card,Chengdu,China,Wise: Vanguard - Alipay | Groceries | source 3.22 USD + fee 0.01
 2026-07-22 00:00:00,Weixin Baodaolai Qung,-28.00,CNY,-4.14,6.763285,2026-07-22,Food,Wise card,Chengdu,China,Wise: Weixin Baodaolai Qung | Eating out | source 4.13 USD + fee 0.01
+2026-07-22 08:04:01,三分之一,-8.00,CNY,-1.18,6.756757,2026-07-22,Shopping,Alipay,Chengdu,China,Alipay: 日用百货 | 三分之一 | 收钱码收款 | Visa(3381)
+2026-07-22 11:57:54,大米先生（大米先生四川群光店）,-26.67,CNY,-3.95,6.756757,2026-07-22,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
+2026-07-22 19:33:09,成都好特卖科技有限公司,-3.60,CNY,-0.53,6.756757,2026-07-22,Food,Alipay,Chengdu,China,Alipay: 日用百货 | 成都好特卖科技有限公司 | 四川成都锦江群光广场2-条码支付 | Visa(3381)
+2026-07-22 21:41:53,成都好特卖科技有限公司,-6.70,CNY,-0.99,6.756757,2026-07-22,Food,Alipay,Chengdu,China,Alipay: 日用百货 | 成都好特卖科技有限公司 | 四川成都锦江群光广场2-条码支付 | Visa(3381)
 2026-07-23 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-23,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
 2026-07-23 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-23,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
 2026-07-23 00:00:00,Chengdu Transp - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-23,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.30 USD + fee 0.01
 2026-07-23 00:00:00,Chengduhaotemai - Alipay,-2.90,CNY,-0.44,6.590909,2026-07-23,Food,Wise card,Chengdu,China,Wise: Chengduhaotemai - Alipay | Groceries | source 0.43 USD + fee 0.01
 2026-07-23 00:00:00,WEIXIN*Chengdu City We,-8.86,USD,-8.86,1.000000,2026-07-23,Activities,Chase 1388,Chengdu,China,Chase 1388: WEIXIN*Chengdu City We
 2026-07-23 00:00:00,WEIXIN*Chengdu giant p,-8.12,USD,-8.12,1.000000,2026-07-23,Activities,Chase 1388,Chengdu,China,Chase 1388: WEIXIN*Chengdu giant p
+2026-07-23 08:37:44,luckincoffee,-11.90,CNY,-1.76,6.756757,2026-07-23,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | luckincoffee | 订单付款 | Visa(3381)
+2026-07-23 11:44:51,泉膳中国,-30.50,CNY,-4.51,6.756757,2026-07-23,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 泉膳中国 | 【堂食】_成都群光广场店_241153_2568 | Visa(3381)
+2026-07-23 15:20:10,蜜雪冰城906488店,-6.00,CNY,-0.89,6.756757,2026-07-23,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 蜜雪冰城906488店 | 蜜雪冰城906488店 | Visa(3381)
+2026-07-23 19:47:00,大米先生（大米先生四川群光店）,-24.52,CNY,-3.63,6.756757,2026-07-23,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
+2026-07-23 22:22:13,蜜雪冰城937536店1,-2.00,CNY,-0.30,6.756757,2026-07-23,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 蜜雪冰城937536店1 | 蜜雪冰城937536店 | Visa(3381)
 2026-07-24 00:00:00,Chengduhaotemai - Alipay,-3.60,CNY,-0.54,6.666667,2026-07-24,Food,Wise card,Chengdu,China,Wise: Chengduhaotemai - Alipay | Groceries | source 0.53 USD + fee 0.01
 2026-07-24 00:00:00,Hong Qi Store - Alipay,-3.50,CNY,-0.53,6.603774,2026-07-24,Food,Wise card,Chengdu,China,Wise: Hong Qi Store - Alipay | Groceries | source 0.52 USD + fee 0.01
+2026-07-24 13:11:33,大米先生（大米先生四川群光店）,-30.84,CNY,-4.56,6.756757,2026-07-24,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
+2026-07-24 19:35:10,个人李劲松,-3.50,CNY,-0.52,6.756757,2026-07-24,Shopping,Alipay,Chengdu,China,Alipay: 日用百货 | 个人李劲松 | 个人李劲松 | Visa(3381)
 2026-07-25 00:00:00,Chengduhaotema - Alipay,-2.90,CNY,-0.44,6.590909,2026-07-25,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 0.43 USD + fee 0.01
 2026-07-25 00:00:00,Meituan - Alipay,-2.79,CNY,-0.42,6.642857,2026-07-25,Food,Wise card,Chengdu,China,Wise: Meituan - Alipay | Shopping | source 0.41 USD + fee 0.01
 2026-07-25 00:00:00,Qrcode3041 - Alipay,-11.71,CNY,-1.74,6.729885,2026-07-25,Shopping,Wise card,Chengdu,China,Wise: Qrcode3041 - Alipay | Shopping | source 1.73 USD + fee 0.01
+2026-07-25 08:01:16,Ctrip - OnTheWayHostel,-84.00,CNY,-12.43,6.756757,2026-07-25,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | OnTheWayHostel | Visa(3381)
+2026-07-25 08:53:07,luckincoffee,-10.90,CNY,-1.61,6.756757,2026-07-25,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | luckincoffee | 订单付款 | Visa(3381)
+2026-07-25 10:54:32,李正芬,-100.00,CNY,-14.80,6.756757,2026-07-25,Fees,Alipay,Chengdu,China,Alipay: 商业服务 | 李正芬 | 收钱码收款 | Visa(3381)
+2026-07-25 11:13:53,大米先生（大米先生四川群光店）,-24.76,CNY,-3.66,6.756757,2026-07-25,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
+2026-07-25 13:53:39,joesaito,-60.00,CNY,-8.88,6.756757,2026-07-25,Shopping,WeChat,Chengdu,China,WeChat: 扫二维码付款 | joesaito | 收款方备注:二维码收款 | 零钱
+2026-07-25 14:38:31,蜜雪冰城937536店1,-7.00,CNY,-1.04,6.756757,2026-07-25,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 蜜雪冰城937536店1 | 蜜雪冰城937536店 | Visa(3381)
+2026-07-25 18:51:08,大米先生（大米先生四川群光店）,-23.81,CNY,-3.52,6.756757,2026-07-25,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
 2026-07-26 00:00:00,Chengduhaotema - Alipay,-39.50,CNY,-5.85,6.752137,2026-07-26,Food,Wise card,Chengdu,China,Wise: Chengduhaotema - Alipay | Groceries | source 5.83 USD + fee 0.02
+2026-07-26 18:04:49,大米先生（大米先生四川群光店）,-22.14,CNY,-3.28,6.756757,2026-07-26,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 大米先生（大米先生四川群光店） | 【称重】_大米先生四川群光店_311115_01080723 | Visa(3381)
 2026-07-27 00:00:00,Chengdu Transp - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-27,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.74 USD + fee 0.01
 2026-07-27 00:00:00,Chengdu Transp - Alipay,-4.00,CNY,-0.60,6.666667,2026-07-27,Transport,Wise card,Chengdu,China,Wise: Chengdu Transp - Alipay | Bills | source 0.59 USD + fee 0.01
 2026-07-27 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-27,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
+2026-07-27 09:56:14,China Railway 12306,-158.00,CNY,-23.38,6.756757,2026-07-27,Intercity Transport,Alipay,Chongqing,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
+2026-07-27 10:44:09,麦当劳成都东站出发夹层(A26二楼)餐厅,-41.50,CNY,-6.14,6.756757,2026-07-27,Food,Alipay,Chengdu,China,Alipay: 餐饮美食 | 麦当劳成都东站出发夹层(A26二楼)餐厅 | 四川金拱门食品有限公司 | Visa(3381)
+2026-07-27 11:14:42,Ctrip - SweetHeartYouthHostel,-48.00,CNY,-7.10,6.756757,2026-07-27,Accommodation,Alipay,Chongqing,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | SweetHeartYouthHostel | Visa(3381)
+2026-07-27 16:32:59,重庆甜心青旅酒店,-1.00,CNY,-0.15,6.756757,2026-07-27,Laundry,Alipay,Chongqing,China,Alipay: 生活服务 | 重庆甜心青旅酒店 | 货道12_洗衣液 | Visa(3381)
+2026-07-27 16:33:23,重庆甜心青旅酒店,-1.00,CNY,-0.15,6.756757,2026-07-27,Laundry,Alipay,Chongqing,China,Alipay: 生活服务 | 重庆甜心青旅酒店 | 货道12_洗衣液 | Visa(3381)
+2026-07-27 16:49:19,海乐生活,-6.00,CNY,-0.89,6.756757,2026-07-27,Shopping,Alipay,Chongqing,China,Alipay: 数码电器 | 海乐生活 | 海乐生活 | Visa(3381)
+2026-07-27 17:48:26,海乐生活,-6.00,CNY,-0.89,6.756757,2026-07-27,Shopping,Alipay,Chongqing,China,Alipay: 数码电器 | 海乐生活 | 海乐生活 | Visa(3381)
+2026-07-27 20:59:13,邮局巷老火锅,-76.00,CNY,-11.25,6.756757,2026-07-27,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 邮局巷老火锅 | 美团收银909700215272624304 | Visa(3381)
+2026-07-27 21:14:44,蜜雪冰城914509店1,-4.00,CNY,-0.59,6.756757,2026-07-27,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 蜜雪冰城914509店1 | 蜜雪冰城914509店 | Visa(3381)
+2026-07-27 22:06:39,槐序十七,-58.00,CNY,-8.58,6.756757,2026-07-27,Activities,Alipay,Chongqing,China,Alipay: 教育培训 | 槐序十七 | 收钱码收款 | Visa(3381)
+2026-07-27 22:46:32,渝中区荣学餐饮店,-2.00,CNY,-0.30,6.756757,2026-07-27,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 渝中区荣学餐饮店 | 蜜雪冰城930262店 | Visa(3381)
+2026-07-27 23:23:08,渝中区月天便利店,-4.00,CNY,-0.59,6.756757,2026-07-27,Food,Alipay,Chongqing,China,Alipay: 日用百货 | 渝中区月天便利店 | 渝中区月天便利店 | Visa(3381)
+2026-07-28 11:03:14,Ctrip - HuayuHotelChongqingJiefangbeiAreaHongYaDon,-42.00,CNY,-6.22,6.756757,2026-07-28,Accommodation,Alipay,Chongqing,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | HuayuHotelChongqingJiefangbeiAreaHongYaDong | Visa(3381)
+2026-07-28 11:46:55,大米先生（大米先生渝中区得意世界第二餐厅）,-16.66,CNY,-2.47,6.756757,2026-07-28,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 大米先生（大米先生渝中区得意世界第二餐厅） | 【称重】_大米先生渝中区得意世界第二餐厅_124651_01070782 | Visa(3381)
+2026-07-28 13:29:48,蜜雪冰城913739店,-8.00,CNY,-1.18,6.756757,2026-07-28,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 蜜雪冰城913739店 | 蜜雪冰城913739店 | Visa(3381)
+2026-07-28 17:02:32,广东联通,-14.20,CNY,-2.10,6.756757,2026-07-28,Subscription,WeChat,Unknown,China,WeChat: 商户消费 | 广东联通 | 为131****6047交费14.20元 | 零钱
+2026-07-28 18:01:11,Ctrip - HuayuHotelChongqingJiefangbeiAreaHongYaDon,-84.00,CNY,-12.43,6.756757,2026-07-28,Accommodation,Alipay,Chongqing,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | HuayuHotelChongqingJiefangbeiAreaHongYaDong | Visa(3381)
+2026-07-28 19:45:04,大米先生（大米先生渝中区得意世界第二餐厅）,-17.25,CNY,-2.55,6.756757,2026-07-28,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 大米先生（大米先生渝中区得意世界第二餐厅） | 【称重】_大米先生渝中区得意世界第二餐厅_124651_01070782 | Visa(3381)
 2026-07-29 00:00:00,Businessservic - Alipay,-30.00,CNY,-4.44,6.756757,2026-07-29,Fees,Wise card,Chongqing,China,Wise: Businessservic - Alipay | Bills | source 4.43 USD + fee 0.01
 2026-07-29 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
 2026-07-29 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
@@ -632,60 +713,120 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-29 00:00:00,Weixin Ctrip. Com,-90.00,CNY,-13.33,6.751688,2026-07-29,Transport,Wise card,Chongqing,China,Wise: Weixin Ctrip. Com | Trips | source 13.29 USD + fee 0.04
 2026-07-29 00:00:00,Weixin Zhiyou Tianxi,-288.00,CNY,-42.68,6.747891,2026-07-29,Accommodation,Wise card,Chongqing,China,Wise: Weixin Zhiyou Tianxi | Bills | source 42.54 USD + fee 0.14
 2026-07-29 00:00:00,Weixin Zhiyou Tianxi,-239.00,CNY,-35.42,6.747600,2026-07-29,Accommodation,Wise card,Chongqing,China,Wise: Weixin Zhiyou Tianxi | Bills | source 35.31 USD + fee 0.11
+2026-07-29 11:39:07,较场口得意世界第三餐厅,-24.76,CNY,-3.66,6.756757,2026-07-29,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 较场口得意世界第三餐厅 | 【称重】_渝中区较场口得意世界第三餐厅_292650_01071701 | Visa(3381)
+2026-07-29 15:24:28,蜜雪冰城913739店,-8.00,CNY,-1.18,6.756757,2026-07-29,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 蜜雪冰城913739店 | 蜜雪冰城913739店 | Visa(3381)
+2026-07-29 19:16:36,较场口得意世界第三餐厅,-15.70,CNY,-2.32,6.756757,2026-07-29,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 较场口得意世界第三餐厅 | 【称重】_渝中区较场口得意世界第三餐厅_292650_01071701 | Visa(3381)
 2026-07-30 00:00:00,Chongqing City - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-07-30 00:00:00,Chongqing City - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-07-30 00:00:00,Chongqing City - Alipay,-3.00,CNY,-0.45,6.666667,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-07-30 00:00:00,Chongqingcheng - Alipay,-2.00,CNY,-0.31,6.451613,2026-07-30,Transport,Wise card,Chongqing,China,Wise: Chongqingcheng - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-07-30 00:00:00,Qrcode0103 - Alipay,-4.00,CNY,-0.60,6.666667,2026-07-30,Shopping,Wise card,Chongqing,China,Wise: Qrcode0103 - Alipay | Shopping | source 0.59 USD + fee 0.01
 2026-07-30 00:00:00,Weixin China Railway N,-382.00,CNY,-56.73,6.733651,2026-07-30,Intercity Transport,Wise card,Chongqing,China,Wise: Weixin China Railway N | Transport | source 56.55 USD + fee 0.18
+2026-07-30 10:24:49,Amap Ride,-8.49,CNY,-1.26,6.756757,2026-07-30,Transport,Alipay,Chongqing,China,Alipay: 交通出行 | 高德打车 | AmapRide | Visa(3381)
+2026-07-30 10:57:43,较场口得意世界第三餐厅,-19.16,CNY,-2.84,6.756757,2026-07-30,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 较场口得意世界第三餐厅 | 【称重】_渝中区较场口得意世界第三餐厅_292650_01071701 | Visa(3381)
+2026-07-30 12:29:24,蜜雪冰城913739店,-8.00,CNY,-1.18,6.756757,2026-07-30,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 蜜雪冰城913739店 | 蜜雪冰城913739店 | Visa(3381)
+2026-07-30 19:29:32,大米先生（大米先生渝中区得意世界第二餐厅）,-17.61,CNY,-2.61,6.756757,2026-07-30,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 大米先生（大米先生渝中区得意世界第二餐厅） | 【称重】_大米先生渝中区得意世界第二餐厅_124651_01070782 | Visa(3381)
+2026-07-30 19:42:32,Ctrip - JimoHostelChangshaWuYiSquare,-31.00,CNY,-4.59,6.756757,2026-07-30,Accommodation,Alipay,Changsha,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | JimoHostelChangshaWuYiSquare | Visa(3381)
+2026-07-30 20:41:40,重庆城市通卡支付有限责任公司,-2.00,CNY,-0.30,6.756757,2026-07-30,Transport,Alipay,Chongqing,China,Alipay: 交通出行 | 重庆城市通卡支付有限责任公司 | 重庆轨道交通-乘车(较场口2026-07-30 20:31:53-临江门2026-07-30 20:41:36) | Visa(7828)
 2026-07-31 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-31,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
+2026-07-31 11:04:07,较场口得意世界第三餐厅,-25.72,CNY,-3.81,6.756757,2026-07-31,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 较场口得意世界第三餐厅 | 【称重】_渝中区较场口得意世界第三餐厅_292650_01071701 | Visa(3381)
 2026-08-01 00:00:00,Changshashigui - Alipay,-1.80,CNY,-0.27,6.756757,2026-08-01,Transport,Wise card,Changsha,China,Wise: Changshashigui - Alipay | Transport | source 1.80 CNY + fee 0.00
 2026-08-01 00:00:00,GOOGLE *CLOUD PPWDRw,-0.10,USD,-0.10,1.000000,2026-08-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD PPWDRw
 2026-08-01 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-01,Food,Wise card,Changsha,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
 2026-08-01 00:00:00,Weixin China Railway N,-296.00,CNY,-43.81,6.756757,2026-08-01,Intercity Transport,Wise card,Changsha,China,Wise: Weixin China Railway N | Transport | source 296.00 CNY + fee 0.00
+2026-08-01 10:11:10,季茉酒店管理有限公司,-35.00,CNY,-5.18,6.756757,2026-08-01,Accommodation,Alipay,Changsha,China,Alipay: 日用百货 | 季茉酒店管理有限公司 | 收钱码收款 | Visa(3381)
+2026-08-01 11:45:13,大米先生（南门口分店）,-23.21,CNY,-3.44,6.756757,2026-08-01,Food,Alipay,Changsha,China,Alipay: 餐饮美食 | 大米先生（南门口分店） | 【称重】_南门口分店_124523_01120157 | Visa(3381)
+2026-08-01 13:05:13,HelloBike,-5.50,CNY,-0.81,6.756757,2026-08-01,Transport,Alipay,Changsha,China,Alipay: 交通出行 | 哈啰出行 | 哈啰助力车骑行 | Visa(3381)
+2026-08-01 14:08:14,好特卖,-30.30,CNY,-4.48,6.756757,2026-08-01,Food,Alipay,Changsha,China,Alipay: 日用百货 | 好特卖 | 湖南长沙天心悦方IDMALL-条码支付 | Visa(3381)
+2026-08-01 18:19:08,7-ELEVEn(锦绣大厦店),-2.00,CNY,-0.30,6.756757,2026-08-01,Food,Alipay,Changsha,China,Alipay: 日用百货 | 7-ELEVEn(锦绣大厦店) | 7-ELEVEn湖南锦绣大厦店REDEMPTION | Visa(3381)
+2026-08-01 20:08:46,塔斯汀中国汉堡(南门口店),-19.90,CNY,-2.95,6.756757,2026-08-01,Food,Alipay,Changsha,China,Alipay: 餐饮美食 | 塔斯汀中国汉堡(南门口店) | 消费：长沙市南门口店 | Visa(3381)
+2026-08-01 20:19:45,肯德基(长沙南门口店),-21.50,CNY,-3.18,6.756757,2026-08-01,Food,Alipay,Changsha,China,Alipay: 餐饮美食 | 肯德基(长沙南门口店) | KFC_PRE_PLUSAF10012658778407721308589 | Visa(3381)
+2026-08-01 20:44:20,长沙市天心区若鸣饮品店,-8.00,CNY,-1.18,6.756757,2026-08-01,Food,Alipay,Changsha,China,Alipay: 餐饮美食 | 长沙市天心区若鸣饮品店 | 蜜雪冰城940396店 | Visa(3381)
 2026-08-02 00:00:00,Changshashigui - Alipay,-3.60,CNY,-0.53,6.756757,2026-08-02,Transport,Wise card,Changsha,China,Wise: Changshashigui - Alipay | Transport | source 3.60 CNY + fee 0.00
 2026-08-02 00:00:00,Jingdezhengongg - Alipay,-2.00,CNY,-0.30,6.756757,2026-08-02,Transport,Wise card,Jingdezhen,China,Wise: Jingdezhengongg - Alipay | Transport | source 2.00 CNY + fee 0.00
 2026-08-02 00:00:00,Weixin Scan Qr Code Fo,-15.00,CNY,-2.22,6.756757,2026-08-02,Shopping,Wise card,Jingdezhen,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 15.00 CNY + fee 0.00
+2026-08-02 09:48:26,麦当劳(高铁长沙南站餐厅),-44.50,CNY,-6.59,6.756757,2026-08-02,Food,Alipay,Changsha,China,Alipay: 餐饮美食 | 麦当劳(高铁长沙南站餐厅) | 湖南金拱门食品有限公司 | Visa(3381)
+2026-08-02 11:41:10,Ctrip - CaoyeZiyouHostelJingdezhenPeopleSquareTaoy,-38.00,CNY,-5.62,6.756757,2026-08-02,Accommodation,Alipay,Jingdezhen,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | CaoyeZiyouHostelJingdezhenPeopleSquareTaoyangliScenicArea | Visa(3381)
 2026-08-03 00:00:00,Jingdezhengongg - Alipay,-2.00,CNY,-0.30,6.756757,2026-08-03,Transport,Wise card,Jingdezhen,China,Wise: Jingdezhengongg - Alipay | Transport | source 2.00 CNY + fee 0.00
 2026-08-03 00:00:00,Meituan - Alipay,-4.50,CNY,-0.67,6.756757,2026-08-03,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 4.50 CNY + fee 0.00
 2026-08-03 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-03,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
 2026-08-03 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-03,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
 2026-08-03 00:00:00,Qrcode5110 - Alipay,-2.00,CNY,-0.30,6.756757,2026-08-03,Shopping,Wise card,Shanghai,China,Wise: Qrcode5110 - Alipay | Shopping | source 2.00 CNY + fee 0.00
+2026-08-03 07:19:35,Didi,-9.92,CNY,-1.47,6.756757,2026-08-03,Transport,Alipay,Jingdezhen,China,Alipay: 交通出行 | 滴滴出行 | 滴滴快车打车-徐师傅-08月02日行程 | Visa(3381)&代扣随机抽立减
+2026-08-03 09:26:45,Ctrip - Jingdezhenknapsackyouthhostel,-32.00,CNY,-4.74,6.756757,2026-08-03,Accommodation,Alipay,Jingdezhen,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | Jingdezhenknapsackyouthhostel | Visa(3381)
+2026-08-03 10:22:00,付信通智能系统,-4.00,CNY,-0.59,6.756757,2026-08-03,Laundry,Alipay,Jingdezhen,China,Alipay: 日用百货 | 付信通智能系统 | 66580_4元大件洗_8137 | Visa(3381)
+2026-08-03 10:27:04,Ctrip - Jingdezhenknapsackyouthhostel,-68.00,CNY,-10.06,6.756757,2026-08-03,Accommodation,Alipay,Jingdezhen,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | Jingdezhenknapsackyouthhostel | Visa(3381)
+2026-08-03 10:40:17,麦当劳,-60.50,CNY,-8.95,6.756757,2026-08-03,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 麦当劳 | 江西海印餐饮管理有限公司 | Visa(3381)
+2026-08-03 13:23:48,蜜雪冰城952852店,-8.00,CNY,-1.18,6.756757,2026-08-03,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 蜜雪冰城952852店 | 蜜雪冰城952852店 | Visa(3381)
+2026-08-03 14:53:13,珠山区陈新明百货店,-3.50,CNY,-0.52,6.756757,2026-08-03,Shopping,Alipay,Jingdezhen,China,Alipay: 日用百货 | 珠山区陈新明百货店 | 珠山区陈新明百货店 | Visa(3381)
+2026-08-03 19:11:50,景德镇陶欣餐饮管理有限公司公和第一圃,-10.00,CNY,-1.48,6.756757,2026-08-03,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 景德镇陶欣餐饮管理有限公司公和第一圃 | 景德镇陶欣餐饮管理有限公司公和第一圃 | Visa(3381)
+2026-08-03 19:17:08,南门头店,-3.60,CNY,-0.53,6.756757,2026-08-03,Shopping,Alipay,Jingdezhen,China,Alipay: 日用百货 | 南门头店 | - | Visa(3381)
 2026-08-04 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-04,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
 2026-08-04 00:00:00,Meituan - Alipay,-4.50,CNY,-0.67,6.756757,2026-08-04,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 4.50 CNY + fee 0.00
 2026-08-04 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-04,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
 2026-08-04 00:00:00,Weixin Shanghai Junh,-228.75,CNY,-33.85,6.756757,2026-08-04,Shopping,Wise card,Shanghai,China,Wise: Weixin Shanghai Junh | Shopping | source 228.75 CNY + fee 0.00
+2026-08-04 11:25:39,麦当劳景德镇古镇天御餐厅,-38.00,CNY,-5.62,6.756757,2026-08-04,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 麦当劳景德镇古镇天御餐厅 | 江西海印餐饮管理有限公司 | Visa(3381)
+2026-08-04 19:04:43,肯德基（九集小镇店）,-21.90,CNY,-3.24,6.756757,2026-08-04,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 肯德基（九集小镇店） | KFC_PRE_PLUSAF10012659851142530670760 | Visa(3381)
+2026-08-04 20:25:29,蜜雪冰城932809店,-8.00,CNY,-1.18,6.756757,2026-08-04,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 蜜雪冰城932809店 | 蜜雪冰城932809店 | Visa(3381)
 2026-08-05 00:00:00,MEITUAN,-23.30,CNY,-3.45,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: MEITUAN | Shopping | source 23.30 CNY + fee 0.00
 2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
 2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
 2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
 2026-08-05 00:00:00,Meituan - Alipay,-2.50,CNY,-0.37,6.756757,2026-08-05,Food,Wise card,Shanghai,China,Wise: Meituan - Alipay | Shopping | source 2.50 CNY + fee 0.00
 2026-08-05 00:00:00,Qrcode4144 - Alipay,-3.00,CNY,-0.44,6.756757,2026-08-05,Shopping,Wise card,Shanghai,China,Wise: Qrcode4144 - Alipay | Shopping | source 3.00 CNY + fee 0.00
+2026-08-05 14:41:29,⑨乔宇.伴山洋房店,-68.00,CNY,-10.06,6.756757,2026-08-05,Personal Care,Alipay,Jingdezhen,China,Alipay: 美容美发 | ⑨乔宇.伴山洋房店 | ⑨乔宇.伴山洋房店-35360488 | Visa(3381)
+2026-08-05 14:55:43,蜜雪冰城903703店,-9.00,CNY,-1.33,6.756757,2026-08-05,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 蜜雪冰城903703店 | 蜜雪冰城903703店 | Visa(3381)
+2026-08-05 18:14:52,糖叙糖水铺（景德镇陶阳里店）,-27.00,CNY,-4.00,6.756757,2026-08-05,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 糖叙糖水铺（景德镇陶阳里店） | 美团/大众点评点餐订单-08054881943262928372195 | Visa(3381)
 2026-08-06 00:00:00,Qrcode4144 - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-06,Shopping,Wise card,Shanghai,China,Wise: Qrcode4144 - Alipay | Shopping | source 0.44 USD + fee 0.01
 2026-08-06 00:00:00,Weixin China Railway,-106.20,CNY,-15.79,6.725776,2026-08-06,Intercity Transport,Wise card,Shanghai,China,Wise: Weixin China Railway | Transport | source 15.74 USD + fee 0.05
 2026-08-06 00:00:00,Weixin China Railway,-165.80,CNY,-24.54,6.756757,2026-08-06,Intercity Transport,Wise card,Shanghai,China,Wise: Weixin China Railway | Transport | source 165.80 CNY + fee 0.00
 2026-08-06 00:00:00,Weixin Taoyangli Sceni,-53.00,CNY,-7.84,6.756757,2026-08-06,Activities,Wise card,Shanghai,China,Wise: Weixin Taoyangli Sceni | Shopping | source 53.00 CNY + fee 0.00
+2026-08-06 00:23:57,Ctrip - Jingdezhenknapsackyouthhostel,-37.00,CNY,-5.48,6.756757,2026-08-06,Accommodation,Alipay,Jingdezhen,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | Jingdezhenknapsackyouthhostel | Visa(3381)
+2026-08-06 10:34:05,糖叙糖水铺（景德镇陶阳里店）,-29.00,CNY,-4.29,6.756757,2026-08-06,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 糖叙糖水铺（景德镇陶阳里店） | 美团/大众点评点餐订单-08064881943286895753699 | Visa(3381)
+2026-08-06 10:54:35,蜜雪冰城932809店,-5.00,CNY,-0.74,6.756757,2026-08-06,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 蜜雪冰城932809店 | 蜜雪冰城932809店 | Visa(3381)
+2026-08-06 12:47:38,中铁网络,-272.00,CNY,-40.26,6.756757,2026-08-06,Intercity Transport,WeChat,Unknown,China,WeChat: 商户消费 | 中铁网络 | 12306消费 | VISA(7828)
+2026-08-06 12:59:21,Ctrip - DuoyuanYouthHostelShanghaiBund,-71.00,CNY,-10.51,6.756757,2026-08-06,Accommodation,Alipay,Shanghai,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | DuoyuanYouthHostelShanghaiBund | Visa(3381)
+2026-08-06 18:12:44,景德镇陶欣餐饮管理有限公司公和第一圃,-5.00,CNY,-0.74,6.756757,2026-08-06,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 景德镇陶欣餐饮管理有限公司公和第一圃 | 景德镇陶欣餐饮管理有限公司公和第一圃 | Visa(3381)
+2026-08-06 19:19:18,肯德基(瓷都餐厅),-23.90,CNY,-3.54,6.756757,2026-08-06,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 肯德基(瓷都餐厅) | KFC_PRE_PLUSAF10012660580112909832356 | Visa(3381)
 2026-08-07 00:00:00,Chongqingxingho - Alipay,-36.00,CNY,-5.34,6.741573,2026-08-07,Food,Wise card,Chongqing,China,Wise: Chongqingxingho - Alipay | Eating out | source 5.33 USD + fee 0.01
 2026-08-07 00:00:00,Jingdezhengongg - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-07,Transport,Wise card,Jingdezhen,China,Wise: Jingdezhengongg - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-07 00:00:00,Shanghai Publi - Alipay,-4.00,CNY,-0.60,6.666667,2026-08-07,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.59 USD + fee 0.01
+2026-08-07 09:59:33,张小鸣,-19.00,CNY,-2.81,6.756757,2026-08-07,Food,Alipay,Jingdezhen,China,Alipay: 商业服务 | 张小鸣 | 德克士 - 景德镇北站德克士 | Visa(3381)
+2026-08-07 10:02:47,众多非一便利超市.,-7.00,CNY,-1.04,6.756757,2026-08-07,Food,Alipay,Jingdezhen,China,Alipay: 日用百货 | 众多非一便利超市. | 信州区众多非一超市(众多非一景德镇高铁站店) | Visa(3381)
+2026-08-07 17:25:23,蜜雪冰城,-9.00,CNY,-1.33,6.756757,2026-08-07,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 蜜雪冰城 | 蜜雪冰城929489店 | Visa(3381)
+2026-08-07 19:54:45,蜜雪冰城61900867店,-6.00,CNY,-0.89,6.756757,2026-08-07,Food,Alipay,Jingdezhen,China,Alipay: 餐饮美食 | 蜜雪冰城61900867店 | 蜜雪冰城61900867店 | Visa(3381)
 2026-08-08 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-08 00:00:00,Shanghai Public - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-08 00:00:00,Shanghai Public - Alipay,-1.00,CNY,-0.16,6.250000,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.15 USD + fee 0.01
 2026-08-08 00:00:00,Shanghai Public - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-08,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-08 00:00:00,Walmart,-74.48,CNY,-11.08,6.722022,2026-08-08,Food,Wise card,Unknown,China,Wise: Walmart | Groceries | source 11.04 USD + fee 0.04
 2026-08-08 00:00:00,Weixin Taobao Platform,-119.50,CNY,-17.78,6.721035,2026-08-08,Shopping,Wise card,Shanghai,China,Wise: Weixin Taobao Platform | Shopping | source 17.72 USD + fee 0.06
+2026-08-08 01:22:29,Ctrip - DayinInternationalYouthHostelTianzifangXin,-87.00,CNY,-12.88,6.756757,2026-08-08,Accommodation,Alipay,Shanghai,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | DayinInternationalYouthHostelTianzifangXintiandi | Visa(3381)
+2026-08-08 09:01:15,HelloBike,-8.50,CNY,-1.26,6.756757,2026-08-08,Transport,Alipay,Shanghai,China,Alipay: 交通出行 | 哈啰出行 | 哈啰骑行卡券 | Visa(3381)
+2026-08-08 11:33:27,南浦大桥沃尔玛,-23.00,CNY,-3.40,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 日用百货 | 南浦大桥沃尔玛 | 【堂食】_南浦大桥沃尔玛_240820_2283 | Visa(3381)
+2026-08-08 13:39:33,上海喜创于茶餐饮管理有限公司,-19.00,CNY,-2.81,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 上海喜创于茶餐饮管理有限公司 | 喜茶订单支付 | Visa(3381)
+2026-08-08 17:11:31,蜜雪冰城,-9.00,CNY,-1.33,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城 | 蜜雪冰城914165店 | Visa(3381)
+2026-08-08 17:27:17,沪上美滋源,-31.93,CNY,-4.73,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 沪上美滋源 | 美团收银909700215733651016 | Visa(3381)
+2026-08-08 18:23:42,蜜雪冰城,-6.00,CNY,-0.89,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城 | 蜜雪冰城914165店 | Visa(3381)
+2026-08-08 22:04:16,Ctrip - DayinInternationalYouthHostelTianzifangXin,-93.64,CNY,-13.86,6.756757,2026-08-08,Accommodation,Alipay,Shanghai,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | DayinInternationalYouthHostelTianzifangXintiandi | Visa(3381)
 2026-08-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-08-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-08-09 00:00:00,Mr Rice - Alipay,-36.00,CNY,-5.35,6.728972,2026-08-09,Food,Wise card,Shanghai,China,Wise: Mr Rice - Alipay | Eating out | source 5.34 USD + fee 0.01
 2026-08-09 00:00:00,Shanghaihuigang - Alipay,-19.40,CNY,-2.89,6.712803,2026-08-09,Food,Wise card,Shanghai,China,Wise: Shanghaihuigang - Alipay | Groceries | source 2.88 USD + fee 0.01
+2026-08-09 07:55:49,淘宝平台商户,-119.50,CNY,-17.69,6.756757,2026-08-09,Shopping,WeChat,Unknown,China,WeChat: 商户消费 | 淘宝平台商户 | 商户单号11070600726080968796868081543 | VISA(7828)
+2026-08-09 09:08:04,麦当劳(日月光店),-28.40,CNY,-4.20,6.756757,2026-08-09,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 麦当劳(日月光店) | 上海金拱门食品有限公司 | Visa(3381)
 2026-08-10 00:00:00,Govagency - Alipay,-26.08,CNY,-3.88,6.721649,2026-08-10,Fees,Wise card,Shanghai,China,Wise: Govagency - Alipay | General | source 3.87 USD + fee 0.01
 2026-08-10 00:00:00,Govagency - Alipay,-26.24,CNY,-3.90,6.728205,2026-08-10,Fees,Wise card,Shanghai,China,Wise: Govagency - Alipay | General | source 3.89 USD + fee 0.01
 2026-08-10 00:00:00,Shanghaihuigang - Alipay,-3.50,CNY,-0.53,6.603774,2026-08-10,Food,Wise card,Shanghai,China,Wise: Shanghaihuigang - Alipay | Groceries | source 0.52 USD + fee 0.01
+2026-08-10 12:02:44,蜜雪冰城947377店,-9.00,CNY,-1.33,6.756757,2026-08-10,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城947377店 | 蜜雪冰城947377店 | Visa(3381)
 2026-08-11 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-11 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-11 00:00:00,Shanghai Public - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-11 00:00:00,Shanghai Public - Alipay,-4.00,CNY,-0.60,6.666667,2026-08-11,Transport,Wise card,Shanghai,China,Wise: Shanghai Public - Alipay | Transport | source 0.59 USD + fee 0.01
 2026-08-11 00:00:00,Shanghaihuigan - Alipay,-3.90,CNY,-0.59,6.610169,2026-08-11,Food,Wise card,Shanghai,China,Wise: Shanghaihuigan - Alipay | Groceries | source 0.58 USD + fee 0.01
 2026-08-11 00:00:00,Shanghaizhenjin - Alipay,-19.00,CNY,-2.83,6.713781,2026-08-11,Food,Wise card,Shanghai,China,Wise: Shanghaizhenjin - Alipay | Groceries | source 2.82 USD + fee 0.01
+2026-08-11 16:55:25,麦当劳上海黄浦复兴SOHO广场餐厅,-13.90,CNY,-2.06,6.756757,2026-08-11,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 麦当劳上海黄浦复兴SOHO广场餐厅 | 上海金拱门食品有限公司 | Visa(3381)
+2026-08-11 20:39:49,China Railway 12306,-14.50,CNY,-2.15,6.756757,2026-08-11,Intercity Transport,Alipay,Shanghai,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
+2026-08-11 20:45:26,Ctrip - POSUHostelSuzhou,-45.00,CNY,-6.66,6.756757,2026-08-11,Accommodation,Alipay,Suzhou,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | POSUHostelSuzhou | Visa(3381)
 2026-08-12 00:00:00,Shanghai Publi - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Shanghai,China,Wise: Shanghai Publi - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-12 00:00:00,Suzhou Metro - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-12 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
@@ -694,8 +835,18 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-12 00:00:00,Suzhou Metro - Alipay,-3.00,CNY,-0.45,6.666667,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.44 USD + fee 0.01
 2026-08-12 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-12,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-12 00:00:00,Weixin Bosu Youth Host,-50.00,CNY,-7.43,6.729475,2026-08-12,Accommodation,Wise card,Suzhou,China,Wise: Weixin Bosu Youth Host | Trips | source 7.41 USD + fee 0.02
+2026-08-12 09:40:41,麦当劳(日月光店),-18.00,CNY,-2.66,6.756757,2026-08-12,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 麦当劳(日月光店) | 上海金拱门食品有限公司 | Visa(3381)
+2026-08-12 12:10:22,成都慧启穗科技有限公司,-5.69,CNY,-0.84,6.756757,2026-08-12,Fees,Alipay,Chengdu,China,Alipay: 其他 | 成都慧启穗科技有限公司 | 技术服务费 | Visa(3381)
+2026-08-12 12:54:29,麦当劳苏州察院场站餐厅,-27.80,CNY,-4.11,6.756757,2026-08-12,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 麦当劳苏州察院场站餐厅 | 苏州金拱门食品有限公司 | Visa(3381)
+2026-08-12 13:20:26,蜜雪冰城935703店,-5.00,CNY,-0.74,6.756757,2026-08-12,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城935703店 | 蜜雪冰城935703店 | Visa(3381)
+2026-08-12 15:23:09,蜜雪冰城914931店,-9.00,CNY,-1.33,6.756757,2026-08-12,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城914931店 | 蜜雪冰城914931店 | Visa(3381)
+2026-08-12 15:41:12,苏州金拱门食品有限公司,-13.90,CNY,-2.06,6.756757,2026-08-12,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 苏州金拱门食品有限公司 | 苏州金拱门食品有限公司 | Visa(3381)
 2026-08-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-08-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-08-13 00:00:00,Lao Xiang Ji - Alipay,-28.00,CNY,-4.16,6.730769,2026-08-13,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.15 USD + fee 0.01
+2026-08-13 08:13:19,Ctrip - POSUHostelSuzhou,-173.00,CNY,-25.60,6.756757,2026-08-13,Accommodation,Alipay,Suzhou,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | POSUHostelSuzhou | Visa(3381)
+2026-08-13 11:41:38,老乡鸡（苏州观前街店）,-37.00,CNY,-5.48,6.756757,2026-08-13,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 老乡鸡（苏州观前街店） | 江苏老乡鸡 | Visa(3381)
+2026-08-13 11:56:30,姑苏区蜜羽星光饮品店,-8.00,CNY,-1.18,6.756757,2026-08-13,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 姑苏区蜜羽星光饮品店 | 蜜雪冰城914582店 | Visa(3381)
+2026-08-13 18:38:34,蜜雪冰城945543店,-6.00,CNY,-0.89,6.756757,2026-08-13,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 蜜雪冰城945543店 | 蜜雪冰城945543店 | Visa(3381)
 2026-08-14 00:00:00,7 Eleven Store - Alipay,-3.50,CNY,-0.53,6.603774,2026-08-14,Food,Wise card,Suzhou,China,Wise: 7 Eleven Store - Alipay | Shopping | source 0.52 USD + fee 0.01
 2026-08-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-08-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     23CFS9          WEB ID: 9000142694
 2026-08-14 00:00:00,Lao Xiang Ji - Alipay,-28.00,CNY,-4.16,6.730769,2026-08-14,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.15 USD + fee 0.01
@@ -705,17 +856,32 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-14 00:00:00,Weixin China Railway N,-205.00,CNY,-30.50,6.721311,2026-08-14,Intercity Transport,Wise card,Suzhou,China,Wise: Weixin China Railway N | Transport | source 30.40 USD + fee 0.10
 2026-08-14 00:00:00,Weixin Ctrip. Com,-58.00,CNY,-8.63,6.720742,2026-08-14,Transport,Wise card,Suzhou,China,Wise: Weixin Ctrip. Com | Trips | source 8.60 USD + fee 0.03
 2026-08-14 00:00:00,Weixin Weihai Weidon,-570.00,CNY,-84.81,6.720906,2026-08-14,Intercity Transport,Wise card,Weihai,China,Wise: Weixin Weihai Weidon | Transport | source 84.54 USD + fee 0.27
+2026-08-14 12:07:15,姑苏区蜜羽星光饮品店,-8.00,CNY,-1.18,6.756757,2026-08-14,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 姑苏区蜜羽星光饮品店 | 蜜雪冰城914582店 | Visa(3381)
+2026-08-14 18:07:39,CHAGEE霸王茶姬,-20.00,CNY,-2.96,6.756757,2026-08-14,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | CHAGEE霸王茶姬 | CHAGEE霸王茶姬（江苏苏州观前街旗舰店） | Visa(3381)
 2026-08-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-08-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-08-15 00:00:00,Weixin Scan Qr Code Fo,-1.60,CNY,-0.25,6.400000,2026-08-15,Shopping,Wise card,Yancheng,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 0.24 USD + fee 0.01
 2026-08-15 00:00:00,Weixin Scan Qr Code Fo,-6.00,CNY,-0.89,6.756757,2026-08-15,Shopping,Wise card,Yancheng,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 6.00 CNY + fee 0.00
+2026-08-15 07:44:10,苏州察院场地铁站二店,-3.50,CNY,-0.52,6.756757,2026-08-15,Food,Alipay,Suzhou,China,Alipay: 日用百货 | 苏州察院场地铁站二店 | 苏州察院场地铁站二店当面付商品交易:26081500950007 | Visa(7828)
+2026-08-15 07:55:05,苏州轨道交通运营有限公司,-2.00,CNY,-0.30,6.756757,2026-08-15,Intercity Transport,Alipay,Suzhou,China,Alipay: 交通出行 | 苏州轨道交通运营有限公司 | 地铁-察院场-2026-08-15 07:45:41-苏州火车站-2026-08-15 07:54:57 | Visa(7828)
+2026-08-15 14:36:12,亭湖区大洋街道李美玲食品店,-11.00,CNY,-1.63,6.756757,2026-08-15,Food,Alipay,Yancheng,China,Alipay: 餐饮美食 | 亭湖区大洋街道李美玲食品店 | 蜜雪冰城911226店 | Visa(3381)
+2026-08-15 16:24:55,邮电局,-10.00,CNY,-1.48,6.756757,2026-08-15,Shopping,Alipay,Yancheng,China,Alipay: 服饰装扮 | 邮电局 | 邮电局 | Visa(3381)
+2026-08-15 17:07:39,茉莉奶白（盐城建军路金鹰店）,-16.00,CNY,-2.37,6.756757,2026-08-15,Food,Alipay,Yancheng,China,Alipay: 餐饮美食 | 茉莉奶白（盐城建军路金鹰店） | 【堂食】_盐城建军路金鹰店_224170_NBYCJM5504 | Visa(3381)
+2026-08-15 19:34:40,****森,-3.50,CNY,-0.52,6.756757,2026-08-15,Food,Alipay,Yancheng,China,Alipay: 餐饮美食 | ****森 | 收钱码收款 | Visa(3381)
+2026-08-15 19:49:10,1点点(亭湖农民街店),-27.00,CNY,-4.00,6.756757,2026-08-15,Food,Alipay,Yancheng,China,Alipay: 餐饮美食 | 1点点(亭湖农民街店) | 10180180 | Visa(3381)
+2026-08-15 20:00:38,上善若水,-7.60,CNY,-1.12,6.756757,2026-08-15,Shopping,WeChat,Yancheng,China,WeChat: 扫二维码付款 | 上善若水 | 收款方备注:二维码收款 | VISA(7828)
 2026-08-16 00:00:00,Lawson - Alipay,-16.70,CNY,-2.47,6.756757,2026-08-16,Food,Wise card,Yancheng,China,Wise: Lawson - Alipay | Groceries | source 16.70 CNY + fee 0.00
 2026-08-16 00:00:00,Yanchengshihua - Alipay,-1.00,CNY,-0.15,6.756757,2026-08-16,Transport,Wise card,Yancheng,China,Wise: Yanchengshihua - Alipay | Transport | source 1.00 CNY + fee 0.00
 2026-08-16 00:00:00,Yanchengshihua - Alipay,-1.00,CNY,-0.15,6.756757,2026-08-16,Transport,Wise card,Yancheng,China,Wise: Yanchengshihua - Alipay | Transport | source 1.00 CNY + fee 0.00
+2026-08-16 10:15:15,CoCo都可(盐城农民街),-23.80,CNY,-3.52,6.756757,2026-08-16,Food,Alipay,Yancheng,China,Alipay: 餐饮美食 | CoCo都可(盐城农民街) | CoCo都可-CoCo都可(盐城农民街店)-终端CN0505280 | Visa(3381)
+2026-08-16 17:56:53,麦当劳(聚龙湖金鹰店),-7.50,CNY,-1.11,6.756757,2026-08-16,Food,Alipay,Yancheng,China,Alipay: 餐饮美食 | 麦当劳(聚龙湖金鹰店) | 盐城市好必来餐饮管理中心聚龙湖金鹰餐厅 | Visa(3381)
 2026-08-17 00:00:00,Chase Travel,-311.98,USD,-311.98,1.000000,2026-08-17,Accommodation,Chase 3557,Unknown,United States,Chase 3557: CL *Chase Travel TRIPCHRG.COM VA             08/15
 2026-08-17 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-17,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-17 00:00:00,Weixin China Railway N,-67.70,CNY,-10.08,6.716270,2026-08-17,Intercity Transport,Wise card,Unknown,China,Wise: Weixin China Railway N | Transport | source 10.04 USD + fee 0.04
 2026-08-17 00:00:00,Weixin China Railway N,-31.30,CNY,-4.63,6.756757,2026-08-17,Intercity Transport,Wise card,Unknown,China,Wise: Weixin China Railway N | Transport | source 31.30 CNY + fee 0.00
 2026-08-17 00:00:00,Weixin Ctrip. Com,-211.78,CNY,-31.52,6.718909,2026-08-17,Transport,Wise card,Unknown,China,Wise: Weixin Ctrip. Com | Trips | source 31.42 USD + fee 0.10
+2026-08-17 09:15:47,中铁网络,-99.00,CNY,-14.65,6.756757,2026-08-17,Intercity Transport,WeChat,Unknown,China,WeChat: 商户消费 | 中铁网络 | 12306消费 | VISA(7828)
+2026-08-17 11:32:21,双喜麻辣烫,-46.00,CNY,-6.81,6.756757,2026-08-17,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 双喜麻辣烫 | 双喜麻辣烫 | Visa(3381)
+2026-08-17 21:15:51,麦当劳,-48.40,CNY,-7.16,6.756757,2026-08-17,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
 2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
@@ -723,13 +889,42 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-18 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-18,Transport,Wise card,Unknown,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-18 00:00:00,Weixin Chabaidao,-13.00,CNY,-1.94,6.701031,2026-08-18,Food,Wise card,Unknown,China,Wise: Weixin Chabaidao | Eating out | source 1.93 USD + fee 0.01
 2026-08-18 00:00:00,Weixin Ctrip. Com,-177.92,CNY,-26.48,6.719033,2026-08-18,Transport,Wise card,Unknown,China,Wise: Weixin Ctrip. Com | Trips | source 26.39 USD + fee 0.09
+2026-08-18 10:23:47,青岛悦喜客来中山购物有限公司,-5.00,CNY,-0.74,6.756757,2026-08-18,Shopping,Alipay,Qingdao,China,Alipay: 日用百货 | 青岛悦喜客来中山购物有限公司 | 青岛悦喜客来中山购物有限公司 | Visa(3381)
+2026-08-18 10:31:20,麦当劳,-13.90,CNY,-2.06,6.756757,2026-08-18,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
+2026-08-18 18:30:23,麦当劳,-27.80,CNY,-4.11,6.756757,2026-08-18,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
 2026-08-19 00:00:00,Railways - Alipay,-3.00,CNY,-0.46,6.521739,2026-08-19,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.45 USD + fee 0.01
 2026-08-19 00:00:00,Railways - Alipay,-3.00,CNY,-0.46,6.521739,2026-08-19,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.45 USD + fee 0.01
+2026-08-19 12:29:17,麦当劳,-26.80,CNY,-3.97,6.756757,2026-08-19,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
+2026-08-19 13:31:42,奈雪的茶(青岛万象城),-19.00,CNY,-2.81,6.756757,2026-08-19,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 奈雪的茶(青岛万象城) | 青岛万象城店 | Visa(3381)
+2026-08-19 13:58:33,CGV青岛万象城,-70.00,CNY,-10.36,6.756757,2026-08-19,Activities,Alipay,Qingdao,China,Alipay: 文化休闲 | CGV青岛万象城 | CGV 青岛万象城 | Visa(3381)
+2026-08-19 19:46:51,麦当劳,-27.80,CNY,-4.11,6.756757,2026-08-19,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
 2026-08-20 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-20,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
+2026-08-20 10:23:34,1点点（上街里MALL容匯城店）,-15.00,CNY,-2.22,6.756757,2026-08-20,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 1点点（上街里MALL容匯城店） | 10220003Q1 | Visa(3381)
+2026-08-20 12:50:35,麦当劳,-28.80,CNY,-4.26,6.756757,2026-08-20,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
+2026-08-20 15:50:21,麦当劳,-13.90,CNY,-2.06,6.756757,2026-08-20,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
+2026-08-20 19:01:15,蜜雪冰城919554店,-8.00,CNY,-1.18,6.756757,2026-08-20,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 蜜雪冰城919554店 | 蜜雪冰城919554店 | Visa(3381)
+2026-08-20 19:25:45,中山路176号店,-3.20,CNY,-0.47,6.756757,2026-08-20,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 中山路176号店 | 7-ELEVEn中山路176号店REDEMPTION | Visa(3381)
 2026-08-21 00:00:00,Railways - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-21,Transport,Wise card,Weihai,China,Wise: Railways - Alipay | Transport | source 0.30 USD + fee 0.01
 2026-08-21 00:00:00,agoda.com,-10.80,USD,-10.80,1.000000,2026-08-21,Accommodation,Chase 1388,Unknown,South Korea,Chase 1388: agoda.com
+2026-08-21 12:08:28,蜜雪冰城,-6.00,CNY,-0.89,6.756757,2026-08-21,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 蜜雪冰城 | 蜜雪冰城908126店 | Visa(3381)
+2026-08-21 14:09:48,熊喵来了火锅（悦喜客来店）,-51.70,CNY,-7.65,6.756757,2026-08-21,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 熊喵来了火锅（悦喜客来店） | 美团收银909700216220771065 | Visa(3381)
+2026-08-21 17:32:43,麦当劳,-27.80,CNY,-4.11,6.756757,2026-08-21,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
+2026-08-21 18:21:27,蜜雪冰城,-7.20,CNY,-1.07,6.756757,2026-08-21,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 蜜雪冰城 | 蜜雪冰城908126店 | Visa(3381)
+2026-08-22 06:52:54,青岛地铁运营有限公司,-2.00,CNY,-0.30,6.756757,2026-08-22,Transport,Alipay,Qingdao,China,Alipay: 交通出行 | 青岛地铁运营有限公司 | 青岛地铁-乘车(中山路2026-08-22 06:46:23--青岛站2026-08-22 06:52:51) | Visa(7828)
+2026-08-22 12:22:09,肯德基(海兴餐厅),-29.90,CNY,-4.43,6.756757,2026-08-22,Food,Alipay,Qingdao,China,Alipay: 餐饮美食 | 肯德基(海兴餐厅) | KFC_PRE_PLUSAF10012666269979794911321 | Visa(3381)
 2026-08-23 00:00:00,Weixin Scan Qr Code Fo,-110.00,CNY,-16.42,6.699147,2026-08-23,Shopping,Wise card,Weihai,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 16.37 USD + fee 0.05
 2026-08-23 00:00:00,Weixin Shandong Liansh,-43.30,CNY,-6.46,6.702786,2026-08-23,Food,Wise card,Weihai,China,Wise: Weixin Shandong Liansh | Eating out | source 6.44 USD + fee 0.02
+2026-08-23 12:21:25,牛约堡,-41.00,CNY,-6.07,6.756757,2026-08-23,Food,Alipay,Weihai,China,Alipay: 餐饮美食 | 牛约堡 | 美团/大众点评点餐订单-08235008045057826621403 | Visa(3381)
+2026-08-23 17:34:08,柠檬7（火炬八街店）,-10.40,CNY,-1.54,6.756757,2026-08-23,Food,Alipay,Weihai,China,Alipay: 餐饮美食 | 柠檬7（火炬八街店） | 【堂食】_柠檬7（火炬八街店）_247968 | Visa(3381)
+2026-08-24 12:23:28,麦当劳,-38.70,CNY,-5.73,6.756757,2026-08-24,Food,Alipay,Weihai,China,Alipay: 餐饮美食 | 麦当劳 | 山东联升餐厅食品有限公司 | Visa(3381)
+2026-08-24 14:33:10,书亦烧仙草连锁76715548店,-12.00,CNY,-1.78,6.756757,2026-08-24,Food,Alipay,Weihai,China,Alipay: 餐饮美食 | 书亦烧仙草连锁76715548店 | 威海万达广场店-202608241433080007919371207 | Visa(3381)
+2026-08-24 14:40:17,东莞市祥晟安装工程有限公司,-3.57,CNY,-0.53,6.756757,2026-08-24,Shopping,Alipay,Weihai,China,Alipay: 商业服务 | 东莞市祥晟安装工程有限公司 | 商品购买3.57元 | Visa(3381)
+2026-08-24 16:27:31,蜜雪冰城946734店002,-5.40,CNY,-0.80,6.756757,2026-08-24,Food,Alipay,Weihai,China,Alipay: 餐饮美食 | 蜜雪冰城946734店002 | 蜜雪冰城946734店 | Visa(3381)
+2026-08-24 19:49:51,成都嘉佳启航商贸有限公司,-2.80,CNY,-0.41,6.756757,2026-08-24,Shopping,Alipay,Chengdu,China,Alipay: 其他 | 成都嘉佳启航商贸有限公司 | 技术服务费 | Visa(3381)
+2026-08-25 10:08:32,肯德基,-21.90,CNY,-3.24,6.756757,2026-08-25,Food,WeChat,Weihai,China,WeChat: 商户消费 | 肯德基 | KFC_PRE_PLUSWX10012667325853611225166 | 零钱
+2026-08-25 11:34:42,家家悦集团股份有限公司,-28.00,CNY,-4.14,6.756757,2026-08-25,Food,Alipay,Weihai,China,Alipay: 日用百货 | 家家悦集团股份有限公司 | 家家悦集团股份有限公司 | Visa(3381)
+2026-08-25 11:39:16,蜜雪冰城,-7.20,CNY,-1.07,6.756757,2026-08-25,Food,WeChat,Weihai,China,WeChat: 商户消费 | 蜜雪冰城 | 蜜雪冰城922353店 | 零钱
+2026-08-25 19:42:57,Ctrip - SouthKorea5GeSIMChatGPTAvailableDayPassTot,-17.84,CNY,-2.64,6.756757,2026-08-25,Subscription,Alipay,Unknown,South Korea,Alipay: 酒店旅游 | 上海携程国际旅行社有限公司 | SouthKorea5GeSIMChatGPTAvailableDayPassTotalDataPackage24HourBil | Visa(3381)
 2026-08-26 00:00:00,KOREA MCDONALD'S HAPJEONG,-6.97,USD,-6.97,1.000000,2026-08-26,Food,Chase 1388,Seoul,South Korea,Chase 1388: KOREA MCDONALD'S HAPJEONG
 2026-08-26 00:00:00,Trip.com,-98.53,USD,-98.53,1.000000,2026-08-26,Transport,Chase 1388,Unknown,South Korea,Chase 1388: Trip.com
 2026-08-27 00:00:00,Korail Ticket,-21500.00,KRW,-15.66,1372.924649,2026-08-27,Intercity Transport,Wise card,Seoul,South Korea,Wise: Korail Ticket | Bills | source 15.57 USD + fee 0.09

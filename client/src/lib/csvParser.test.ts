@@ -369,14 +369,14 @@ describe('seeded dataset', () => {
   const stats = computeTrip(transactions);
 
   it('parses every row', () => {
-    expect(transactions).toHaveLength(789);
-    expect(stats.summary.transactionCount).toBe(788);
+    expect(transactions).toHaveLength(984);
+    expect(stats.summary.transactionCount).toBe(983);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.summary.grandTotal).toBeCloseTo(7975.53, 2);
-    expect(stats.summary.daysTracked).toBe(188);
-    expect(stats.cities.visitedCount).toBe(43);
+    expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
+    expect(stats.summary.daysTracked).toBe(194);
+    expect(stats.cities.visitedCount).toBe(45);
   });
 
   it('keeps the date range', () => {
@@ -385,10 +385,10 @@ describe('seeded dataset', () => {
 
   it('keeps the category breakdown', () => {
     expect(stats.categories.top?.category).toBe('Food');
-    expect(stats.categories.top?.total).toBeCloseTo(2151.17, 2);
-    expect(stats.categories.top?.count).toBe(360);
-    expect(stats.categories.accommodationTotal).toBeCloseTo(1602.98, 2);
-    expect(stats.categories.transportTotal).toBeCloseTo(2019.2, 2);
+    expect(stats.categories.top?.total).toBeCloseTo(2515.14, 2);
+    expect(stats.categories.top?.count).toBe(475);
+    expect(stats.categories.accommodationTotal).toBeCloseTo(1823.58, 2);
+    expect(stats.categories.transportTotal).toBeCloseTo(2339.52, 2);
   });
 
   it('keeps the merchant and purchase highlights', () => {
