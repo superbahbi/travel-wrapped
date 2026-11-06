@@ -1,10 +1,11 @@
 // ============================================================
 // 2026 Travel Wrapped — Main Page
-// Style: Gradient Feast (Spotify Wrapped × Chinese Travel)
+// Style: Gradient Feast (Spotify Wrapped × Travel)
 // Dark canvas, vivid gradient cards, animated stats
 // ============================================================
 import { useMemo, useState, useEffect, useCallback } from 'react';
-import { parseTransactions, computeTrip, TripSeries, Transaction, DayStats, getCategoryColor, parseAccommodations, AccommodationEntry } from '@/lib/csvParser';
+import { computeTrip, Transaction, DayStats, getCategoryColor, AccommodationEntry } from '@/lib/csvParser';
+import { loadTrip, LoadOutcome } from '@/lib/loadTrip';
 import { buildJourneyView, JourneyView } from '@/lib/journeyView';
 import { formatFullDate, formatShortDate } from '@/lib/tripDate';
 import { formatUSD } from '@/lib/money';
@@ -14,79 +15,34 @@ import { AchievementsCard } from '@/components/Achievements';
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar } from 'recharts';
-import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap, Award, DollarSign, ArrowRight, Globe2 } from 'lucide-react';
+import { MapPin, TrendingUp, Utensils, Hotel, Train, ShoppingBag, Calendar, Zap, Award, DollarSign, ArrowRight, Globe2, RefreshCw } from 'lucide-react';
 
 const HERO_BG = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663789310444/gPqDA8oDXYARxj2G8GPSGZ/hero-bg-ZsqqDYb5LYENCn3sc2jL3g.webp';
 
-// CSV URLs - using local data folder for better reliability
-const TRANSACTIONS_CSV_URL = '/data/transactions.csv';
+type LoadState = { status: 'idle' } | { status: 'loading' } | LoadOutcome;
+
+const NO_TRANSACTIONS: Transaction[] = [];
+const NO_ACCOMMODATIONS: AccommodationEntry[] = [];
 
 export default function Home() {
-  const [stats, setStats] = useState<TripSeries | null>(null);
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [accommodations, setAccommodations] = useState<AccommodationEntry[]>([]);
-  const [loadStatus, setLoadStatus] = useState<'idle' | 'loaded' | 'error'>('idle');
-  const [autoLoaded, setAutoLoaded] = useState(false);
-  const processCSV = useCallback((text: string) => {
-    console.log('Processing CSV, text length:', text.length);
-    const txns = parseTransactions(text);
-    console.log('Parsed transactions:', txns.length);
-    if (txns.length === 0) {
-      console.error('No transactions parsed!');
-      setLoadStatus('error');
-      return;
-    }
-    const computed = computeTrip(txns);
-    console.log('Computed stats:', computed);
-    setTransactions(txns);
-    setStats(computed);
-    setLoadStatus('loaded');
+  const [state, setState] = useState<LoadState>({ status: 'idle' });
+
+  const load = useCallback(async () => {
+    setState({ status: 'loading' });
+    setState(await loadTrip(fetch));
   }, []);
 
-  // Auto-load from GitHub repo
-  const refreshFromGitHub = useCallback(() => {
-    setLoadStatus('idle');
-    const url = TRANSACTIONS_CSV_URL + '?t=' + Date.now();
-    console.log('Fetching CSV from:', url);
-    fetch(url)
-      .then(r => {
-        console.log('CSV fetch response:', r.status, r.ok);
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.text();
-      })
-      .then(text => {
-        console.log('CSV loaded, size:', text.length);
-        if (!text || text.trim().length === 0) throw new Error('Empty CSV');
-        processCSV(text);
-      })
-      .catch(err => {
-        console.error('Failed to load CSV:', err);
-        setLoadStatus('idle');
-      });
-  }, [processCSV]);
-
   useEffect(() => {
-    if (autoLoaded) return;
-    setAutoLoaded(true);
-    refreshFromGitHub();
-  }, [autoLoaded, refreshFromGitHub]);
+    load();
+  }, [load]);
 
-  // Load accommodations from local data folder
-  useEffect(() => {
-    fetch('/data/accommodation.csv?t=' + Date.now())
-      .then(r => {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.text();
-      })
-      .then(text => {
-        if (text && text.trim().length > 0) {
-          const accom = parseAccommodations(text);
-          setAccommodations(accom);
-        }
-      })
-      .catch(err => console.log('Accommodation CSV not found:', err));
-  }, []);
-
+  const data = state.status === 'loaded' ? state.data : null;
+  const stats = useMemo(
+    () => (data ? computeTrip(data.transactions) : null),
+    [data],
+  );
+  const transactions = data?.transactions ?? NO_TRANSACTIONS;
+  const accommodations = data?.accommodations ?? NO_ACCOMMODATIONS;
   const view = useMemo(
     () =>
       stats ? buildJourneyView(stats, transactions, accommodations) : null,
@@ -166,10 +122,34 @@ export default function Home() {
 
 
 
-        {!stats && loadStatus === 'idle' && (
+        {(state.status === 'idle' || state.status === 'loading') && (
           <div className="text-center py-20 text-white/30">
             <DollarSign className="w-12 h-12 mx-auto mb-4 opacity-30" />
             <p className="text-lg">Loading travel data...</p>
+          </div>
+        )}
+
+        {state.status === 'empty' && (
+          <div className="text-center py-20 text-white/40">
+            <p className="text-lg mb-2">No transactions yet</p>
+            <p className="text-sm">
+              The ledger is empty. Add a statement and rebuild the dataset.
+            </p>
+          </div>
+        )}
+
+        {state.status === 'error' && (
+          <div className="text-center py-20">
+            <p className="text-lg text-white/70 mb-2">
+              Couldn't load the travel data
+            </p>
+            <p className="text-sm text-red-400 mb-6">{state.message}</p>
+            <button
+              onClick={load}
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+            >
+              <RefreshCw className="w-4 h-4" /> Retry
+            </button>
           </div>
         )}
 
@@ -627,6 +607,12 @@ export default function Home() {
                   </div>
                 </div>
               </WrappedCard>
+            )}
+
+            {state.status === 'loaded' && state.warnings.length > 0 && (
+              <p className="text-center text-xs text-white/30">
+                {state.warnings.join(' · ')}
+              </p>
             )}
 
             {/* ── Footer ── */}
