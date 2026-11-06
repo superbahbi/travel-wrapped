@@ -69,7 +69,7 @@ describe('buildJourneyView', () => {
     expect(view.food.total).toBeCloseTo(4, 2);
     expect(view.food.meals).toBe(1);
     expect(view.food.perMeal).toBeCloseTo(4, 2);
-    expect(view.food.perDay).toBeCloseTo(0.8, 2);
+    expect(view.food.perDay).toBeCloseTo(1, 2);
   });
 
   it('keeps ledger and per-night accommodation separate', () => {
@@ -103,16 +103,16 @@ describe('buildJourneyView', () => {
 
   it('accumulates the running total', () => {
     expect(view.pace.running.map((point) => point.running)).toEqual([
-      5, 43.57, 86.43, 100.72, 100.72,
+      5, 43.57, 86.43, 100.72,
     ]);
     expect(view.pace.running[3].daily).toBeCloseTo(14.29, 2);
   });
 
   it('derives pace figures', () => {
-    expect(view.pace.daysTracked).toBe(5);
-    expect(view.pace.perDay).toBeCloseTo(20.14, 2);
-    expect(view.pace.perMonth).toBeCloseTo(604.32, 2);
-    expect(view.pace.perWeek).toBeCloseTo(141.01, 2);
+    expect(view.pace.daysTracked).toBe(4);
+    expect(view.pace.perDay).toBeCloseTo(25.18, 2);
+    expect(view.pace.perMonth).toBeCloseTo(755.4, 2);
+    expect(view.pace.perWeek).toBeCloseTo(176.26, 2);
     expect(view.pace.perWeek).toBe(view.pace.perDay * 7);
   });
 

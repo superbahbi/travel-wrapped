@@ -91,6 +91,93 @@ describe('canonical schema validation', () => {
     const csv = TRANSACTION_FIXTURE.replace(',2026-06-08,Food', ',06/08,Food');
     expect(() => parseTransactions(csv)).toThrow(/FXDate must be/);
   });
+
+  it('rejects an impossible calendar date and names the row', () => {
+    const csv = TRANSACTION_FIXTURE.replace(
+      '2026-06-08 09:30:00',
+      '2026-02-30 09:30:00',
+    );
+    expect(() => parseTransactions(csv)).toThrow(
+      /Row 2: Date is not a real calendar date/,
+    );
+  });
+
+  it('rejects an impossible month', () => {
+    const csv = TRANSACTION_FIXTURE.replace(
+      '2026-06-08 09:30:00',
+      '2026-13-01 09:30:00',
+    );
+    expect(() => parseTransactions(csv)).toThrow(
+      /Row 2: Date is not a real calendar date/,
+    );
+  });
+
+  it('rejects an impossible time', () => {
+    const csv = TRANSACTION_FIXTURE.replace(
+      '2026-06-08 09:30:00',
+      '2026-06-08 25:00:00',
+    );
+    expect(() => parseTransactions(csv)).toThrow(
+      /Row 2: Date time must be a real time of day/,
+    );
+  });
+
+  it('rejects impossible minutes and seconds', () => {
+    const csv = TRANSACTION_FIXTURE.replace(
+      '2026-06-08 09:30:00',
+      '2026-06-08 09:99:99',
+    );
+    expect(() => parseTransactions(csv)).toThrow(
+      /Row 2: Date time must be a real time of day/,
+    );
+  });
+
+  it('rejects a zero or negative FXRate', () => {
+    const zero = TRANSACTION_FIXTURE.replace(
+      ',7.0000,2026-06-08,Food',
+      ',0,2026-06-08,Food',
+    );
+    expect(() => parseTransactions(zero)).toThrow(
+      /Row 2: FXRate must be greater than zero/,
+    );
+
+    const negative = TRANSACTION_FIXTURE.replace(
+      ',7.0000,2026-06-08,Food',
+      ',-7.0000,2026-06-08,Food',
+    );
+    expect(() => parseTransactions(negative)).toThrow(
+      /Row 2: FXRate must be greater than zero/,
+    );
+  });
+
+  it('rejects rows where Amount and AmountUSD have opposite signs', () => {
+    const positiveNative = TRANSACTION_FIXTURE.replace(
+      ',-28.00,CNY,-4.00,',
+      ',28.00,CNY,-4.00,',
+    );
+    expect(() => parseTransactions(positiveNative)).toThrow(
+      /Row 2: Amount and AmountUSD must have the same sign/,
+    );
+
+    const negativeBase = TRANSACTION_FIXTURE.replace(
+      ',-28.00,CNY,-4.00,',
+      ',-28.00,CNY,4.00,',
+    );
+    expect(() => parseTransactions(negativeBase)).toThrow(
+      /Row 2: Amount and AmountUSD must have the same sign/,
+    );
+  });
+
+  it('reports the original line number when blank lines precede a bad row', () => {
+    const csv = [
+      TRANSACTION_HEADER,
+      '',
+      '2026-06-08 09:30:00,Bad Row,abc,CNY,-4.00,7.0000,2026-06-08,Food,Alipay,Chengdu,China,',
+    ].join('\n');
+    expect(() => parseTransactions(csv)).toThrow(
+      /Row 3: Amount must be a number/,
+    );
+  });
 });
 
 describe('computeTrip', () => {
@@ -178,6 +265,36 @@ describe('computeTrip', () => {
   });
 });
 
+describe('spend-only day series', () => {
+  const csv = [
+    TRANSACTION_HEADER,
+    '2026-06-08 09:30:00,Shop,-10.00,CNY,-2.00,7.0000,2026-06-08,Shopping,Cash,Chengdu,China,',
+    '2026-06-10 09:30:00,Refund,10.00,CNY,2.00,7.0000,2026-06-10,Shopping,Cash,Chengdu,China,refund',
+  ].join('\n');
+  const stats = computeTrip(parseTransactions(csv));
+
+  it('omits a refund-only date from days, daysTracked, dateRange, and the streak', () => {
+    expect(stats.days.items.map((day) => day.date)).toEqual(['2026-06-08']);
+    expect(stats.summary.daysTracked).toBe(1);
+    expect(stats.summary.dateRange).toEqual({
+      start: '2026-06-08',
+      end: '2026-06-08',
+    });
+    expect(stats.summary.longestStreak).toBe(1);
+  });
+
+  it('keeps refund rows out of day transactions and spend totals', () => {
+    const [day] = stats.days.items;
+    expect(day.transactions).toHaveLength(1);
+    expect(day.transactions.every((transaction) => transaction.amountUSD < 0)).toBe(
+      true,
+    );
+    expect(day.total).toBeCloseTo(2, 2);
+    expect(stats.summary.grandTotal).toBeCloseTo(2, 2);
+    expect(stats.summary.transactionCount).toBe(1);
+  });
+});
+
 describe('parseAccommodations', () => {
   it('reads the canonical per-night file', () => {
     const entries = parseAccommodations(ACCOMMODATION_FIXTURE);
@@ -187,6 +304,54 @@ describe('parseAccommodations', () => {
     expect(entries[0].amountUSD).toBeCloseTo(8.347222, 4);
     expect(entries[0].currency).toBe('CNY');
     expect(entries[0].country).toBe('China');
+  });
+});
+
+describe('parseAccommodations validation', () => {
+  it('rejects a zero or negative FXRate', () => {
+    const zero = ACCOMMODATION_FIXTURE.replace(',7.2000,', ',0,');
+    expect(() => parseAccommodations(zero)).toThrow(
+      /Row 2: FXRate must be greater than zero/,
+    );
+
+    const negative = ACCOMMODATION_FIXTURE.replace(',7.2000,', ',-7.2000,');
+    expect(() => parseAccommodations(negative)).toThrow(
+      /Row 2: FXRate must be greater than zero/,
+    );
+  });
+
+  it('rejects a negative or zero native Amount', () => {
+    const negative = ACCOMMODATION_FIXTURE.replace(',60.10,CNY,', ',-60.10,CNY,');
+    expect(() => parseAccommodations(negative)).toThrow(
+      /Row 2: Amount must be greater than zero/,
+    );
+
+    const zero = ACCOMMODATION_FIXTURE.replace(',60.10,CNY,', ',0,CNY,');
+    expect(() => parseAccommodations(zero)).toThrow(
+      /Row 2: Amount must be greater than zero/,
+    );
+  });
+
+  it('rejects a negative or zero AmountUSD', () => {
+    const negative = ACCOMMODATION_FIXTURE.replace(',8.347222,', ',-8.347222,');
+    expect(() => parseAccommodations(negative)).toThrow(
+      /Row 2: AmountUSD must be greater than zero/,
+    );
+
+    const zero = ACCOMMODATION_FIXTURE.replace(',8.347222,', ',0,');
+    expect(() => parseAccommodations(zero)).toThrow(
+      /Row 2: AmountUSD must be greater than zero/,
+    );
+  });
+
+  it('rejects an impossible calendar date', () => {
+    const csv = ACCOMMODATION_FIXTURE.replace(
+      '2026-06-08,Dengba',
+      '2026-02-30,Dengba',
+    );
+    expect(() => parseAccommodations(csv)).toThrow(
+      /Row 2: Date is not a real calendar date/,
+    );
   });
 });
 

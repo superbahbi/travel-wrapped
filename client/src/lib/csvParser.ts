@@ -2,7 +2,12 @@
 // The canonical schema is documented in docs/canonical-csv.md.
 // ============================================================
 
-import { WEEKDAYS, daysBetween, weekdayIndex } from './tripDate';
+import {
+  WEEKDAYS,
+  daysBetween,
+  isCalendarDate,
+  weekdayIndex,
+} from './tripDate';
 
 export interface Transaction {
   id: number;
@@ -145,7 +150,7 @@ export const isGenericCity = (city: string) =>
   GENERIC_CITIES.has((city || '').trim().toLowerCase());
 
 // Category color palette — Spotify Wrapped style
-export const CATEGORY_COLORS: Record<string, string> = {
+const CATEGORY_COLORS: Record<string, string> = {
   Food: '#FF6B6B',
   Accommodation: '#8360c3',
   Transport: '#2193b0',
@@ -157,26 +162,6 @@ export const CATEGORY_COLORS: Record<string, string> = {
 
 export function getCategoryColor(category: string): string {
   return CATEGORY_COLORS[category] || '#9D84B7';
-}
-
-export function getCityGradient(city: string): string {
-  const gradients: Record<string, string> = {
-    Shanghai: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    Beijing: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-    Chengdu: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    "Xi'an": 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-    Hangzhou: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    Guilin: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
-    Yangshuo: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-    Nanjing: 'linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%)',
-    Suzhou: 'linear-gradient(135deg, #2e2e78 0%, #662d8c 100%)',
-    Wuhan: 'linear-gradient(135deg, #ffa751 0%, #ffe259 100%)',
-    Chongqing: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)',
-    Kunming: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    Lijiang: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
-    Dali: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-  };
-  return gradients[city] || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
 }
 
 function parseCSVLine(line: string): string[] {
@@ -203,11 +188,17 @@ function parseCSVLine(line: string): string[] {
   return result;
 }
 
-function splitLines(csv: string): string[] {
+interface CsvLine {
+  text: string;
+  lineNumber: number;
+}
+
+function splitLines(csv: string): CsvLine[] {
   return csv
     .replace(/\r\n/g, '\n')
     .split('\n')
-    .filter((line) => line.trim().length > 0);
+    .map((text, index) => ({ text, lineNumber: index + 1 }))
+    .filter((line) => line.text.trim().length > 0);
 }
 
 function readColumns(
@@ -255,6 +246,22 @@ function requiredNumber(
   return value;
 }
 
+function requiredPositiveNumber(
+  fields: string[],
+  columns: Record<string, number>,
+  column: string,
+  row: number,
+): number {
+  const value = requiredNumber(fields, columns, column, row);
+  if (value <= 0) {
+    throw new CanonicalCsvError(
+      row,
+      `${column} must be greater than zero; got "${value}"`,
+    );
+  }
+  return value;
+}
+
 function requiredCurrency(
   fields: string[],
   columns: Record<string, number>,
@@ -282,9 +289,25 @@ function parseTimestamp(
       `Date must be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss"; got "${value}"`,
     );
   }
+  if (!isCalendarDate(match[1])) {
+    throw new CanonicalCsvError(
+      row,
+      `Date is not a real calendar date; got "${value}"`,
+    );
+  }
+  const time = match[2];
+  if (time) {
+    const [hour, minute, second] = time.split(':').map(Number);
+    if (hour > 23 || minute > 59 || second > 59) {
+      throw new CanonicalCsvError(
+        row,
+        `Date time must be a real time of day; got "${value}"`,
+      );
+    }
+  }
   return {
     date: match[1],
-    time: match[2] && match[2] !== '00:00:00' ? match[2] : null,
+    time: time && time !== '00:00:00' ? time : null,
   };
 }
 
@@ -294,10 +317,10 @@ function requiredDate(
   row: number,
 ): string {
   const value = requiredText(fields, columns, 'FXDate', row);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || !isCalendarDate(value)) {
     throw new CanonicalCsvError(
       row,
-      `FXDate must be "YYYY-MM-DD"; got "${value}"`,
+      `FXDate must be a real calendar date "YYYY-MM-DD"; got "${value}"`,
     );
   }
   return value;
@@ -307,24 +330,39 @@ export function parseTransactions(csv: string): Transaction[] {
   const lines = splitLines(csv);
   if (lines.length === 0) return [];
 
-  const columns = readColumns(lines[0], TRANSACTION_COLUMNS, 'transactions CSV');
+  const columns = readColumns(
+    lines[0].text,
+    TRANSACTION_COLUMNS,
+    'transactions CSV',
+  );
 
   return lines.slice(1).map((line, position) => {
-    const row = position + 2;
-    const fields = parseCSVLine(line);
+    const row = line.lineNumber;
+    const fields = parseCSVLine(line.text);
     const { date, time } = parseTimestamp(
       requiredText(fields, columns, 'Date', row),
       row,
     );
+    const amount = requiredNumber(fields, columns, 'Amount', row);
+    const amountUSD = requiredNumber(fields, columns, 'AmountUSD', row);
+    if (
+      (amount > 0 && amountUSD < 0) ||
+      (amount < 0 && amountUSD > 0)
+    ) {
+      throw new CanonicalCsvError(
+        row,
+        `Amount and AmountUSD must have the same sign; got ${amount} and ${amountUSD}`,
+      );
+    }
     return {
       id: position,
       date,
       time,
       merchant: requiredText(fields, columns, 'Merchant', row),
-      amount: requiredNumber(fields, columns, 'Amount', row),
+      amount,
       currency: requiredCurrency(fields, columns, row),
-      amountUSD: requiredNumber(fields, columns, 'AmountUSD', row),
-      fxRate: requiredNumber(fields, columns, 'FXRate', row),
+      amountUSD,
+      fxRate: requiredPositiveNumber(fields, columns, 'FXRate', row),
       fxDate: requiredDate(fields, columns, row),
       category: requiredText(fields, columns, 'Category', row),
       payment: requiredText(fields, columns, 'Payment', row),
@@ -340,7 +378,7 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
   const grandTotal = expenses.reduce((s, t) => s + Math.abs(t.amountUSD), 0);
 
   const byDay: Record<string, Transaction[]> = {};
-  transactions.forEach((t) => {
+  expenses.forEach((t) => {
     if (!byDay[t.date]) byDay[t.date] = [];
     byDay[t.date].push(t);
   });
@@ -529,14 +567,14 @@ export function parseAccommodations(csv: string): AccommodationEntry[] {
   if (lines.length === 0) return [];
 
   const columns = readColumns(
-    lines[0],
+    lines[0].text,
     ACCOMMODATION_COLUMNS,
     'accommodation CSV',
   );
 
   return lines.slice(1).map((line, position) => {
-    const row = position + 2;
-    const fields = parseCSVLine(line);
+    const row = line.lineNumber;
+    const fields = parseCSVLine(line.text);
     const { date } = parseTimestamp(
       requiredText(fields, columns, 'Date', row),
       row,
@@ -546,10 +584,10 @@ export function parseAccommodations(csv: string): AccommodationEntry[] {
       merchant: requiredText(fields, columns, 'Merchant', row),
       city: requiredText(fields, columns, 'City', row),
       country: requiredText(fields, columns, 'Country', row),
-      amount: requiredNumber(fields, columns, 'Amount', row),
+      amount: requiredPositiveNumber(fields, columns, 'Amount', row),
       currency: requiredCurrency(fields, columns, row),
-      amountUSD: requiredNumber(fields, columns, 'AmountUSD', row),
-      fxRate: requiredNumber(fields, columns, 'FXRate', row),
+      amountUSD: requiredPositiveNumber(fields, columns, 'AmountUSD', row),
+      fxRate: requiredPositiveNumber(fields, columns, 'FXRate', row),
       fxDate: requiredDate(fields, columns, row),
       notes: (fields[columns.Notes] ?? '').trim(),
     };

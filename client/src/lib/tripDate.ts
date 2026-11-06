@@ -31,6 +31,14 @@ function calendarDate(input: string | null | undefined): CalendarDate | null {
   return { year, month, day };
 }
 
+/**
+ * Whether the input names a real calendar date. The optional time is ignored;
+ * callers that accept a timestamp validate its time themselves.
+ */
+export function isCalendarDate(input: string | null | undefined): boolean {
+  return calendarDate(input) !== null;
+}
+
 export function formatShortDate(input: string | null | undefined): string {
   const date = calendarDate(input);
   if (!date) return '—';
@@ -57,11 +65,6 @@ export function weekdayIndex(input: string | null | undefined): number | null {
   const date = calendarDate(input);
   if (!date) return null;
   return new Date(Date.UTC(date.year, date.month - 1, date.day)).getUTCDay();
-}
-
-export function weekdayName(input: string | null | undefined): string {
-  const index = weekdayIndex(input);
-  return index === null ? '—' : WEEKDAYS[index];
 }
 
 export function daysBetween(
