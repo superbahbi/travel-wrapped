@@ -5,6 +5,7 @@ import type {
   TripSeries,
   TripSummary,
 } from './csvParser';
+import { isGenericCity } from './csvParser';
 import { hourOfTime, weekdayIndex } from './tripDate';
 
 const BADGE_BASE =
@@ -24,6 +25,7 @@ interface AchievementFacts {
   summary: TripSummary;
   days: DaySeries;
   cities: { visitedCount: number };
+  accommodationCities: number;
   foodTotal: number;
   activitiesTotal: number;
   cafeVisits: number;
@@ -59,16 +61,24 @@ function buildFacts(
     summary: series.summary,
     days: series.days,
     cities: { visitedCount: series.cities.visitedCount },
+    accommodationCities: new Set(
+      spend
+        .filter((t) => t.category === 'Accommodation')
+        .map((t) => t.city)
+        .filter((city) => !isGenericCity(city)),
+    ).size,
     foodTotal: series.categories.foodTotal,
     activitiesTotal: categoryTotal(series.categories, 'Activities'),
-    cafeVisits: spend.filter((t) => {
-      const merchant = t.merchant.toLowerCase();
-      return (
-        merchant.includes('cafe') ||
-        merchant.includes('coffee') ||
-        merchant.includes('tea house')
-      );
-    }).length,
+    cafeVisits: new Set(
+      spend
+        .map((t) => t.merchant.toLowerCase())
+        .filter(
+          (merchant) =>
+            merchant.includes('cafe') ||
+            merchant.includes('coffee') ||
+            merchant.includes('tea house'),
+        ),
+    ).size,
     weekendPurchases: spend.filter((t) => {
       const day = weekdayIndex(t.date);
       return day === 0 || day === 6;
@@ -180,7 +190,7 @@ const RULES: Rule[] = [
     icon: '🏨',
     category: 'travel',
     image: `${BADGE_BASE}/badge-accommodation-collector-MoydeTiPAjMQ5CCnqPVafh.webp`,
-    unlocked: (facts) => facts.cities.visitedCount >= 6,
+    unlocked: (facts) => facts.accommodationCities >= 6,
   },
   {
     id: 'city-explorer',
