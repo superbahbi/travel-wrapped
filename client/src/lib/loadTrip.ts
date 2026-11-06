@@ -1,13 +1,16 @@
 import {
   parseAccommodations,
+  parseIncome,
   parseTransactions,
   type AccommodationEntry,
+  type IncomeEntry,
   type Transaction,
 } from './csvParser';
 
 export interface TripData {
   transactions: Transaction[];
   accommodations: AccommodationEntry[];
+  income: IncomeEntry[];
 }
 
 export type LoadOutcome =
@@ -26,11 +29,13 @@ export type FetchImpl = (url: string) => Promise<FetchResponse>;
 export interface LoadOptions {
   transactionsUrl?: string;
   accommodationUrl?: string;
+  incomeUrl?: string;
   cacheBust?: boolean;
 }
 
 const TRANSACTIONS_URL = '/data/transactions.csv';
 const ACCOMMODATION_URL = '/data/accommodation.csv';
+const INCOME_URL = '/data/income.csv';
 
 class LoadFailure extends Error {
   constructor(
@@ -93,9 +98,24 @@ async function loadAccommodations(
   }
 }
 
+async function loadIncome(
+  fetchImpl: FetchImpl,
+  url: string,
+): Promise<{ entries: IncomeEntry[]; warning?: string }> {
+  try {
+    const text = await readText(fetchImpl, url);
+    return { entries: parseIncome(text) };
+  } catch (error) {
+    return {
+      entries: [],
+      warning: `Income detail unavailable: ${messageOf(error)}`,
+    };
+  }
+}
+
 /**
- * Load the canonical ledger and the optional per-night detail.
- * Only the ledger can fail the trip; accommodation detail degrades to a warning.
+ * Load the canonical ledger plus the optional per-night and income detail.
+ * Only the ledger can fail the trip; the optional files degrade to warnings.
  */
 export async function loadTrip(
   fetchImpl: FetchImpl,
@@ -108,6 +128,10 @@ export async function loadTrip(
   );
   const accommodationUrl = withCacheBust(
     options.accommodationUrl ?? ACCOMMODATION_URL,
+    cacheBust,
+  );
+  const incomeUrl = withCacheBust(
+    options.incomeUrl ?? INCOME_URL,
     cacheBust,
   );
 
@@ -124,14 +148,22 @@ export async function loadTrip(
     return { status: 'error', kind: 'malformed', message: messageOf(error) };
   }
 
-  const accommodation = await loadAccommodations(fetchImpl, accommodationUrl);
+  const [accommodation, income] = await Promise.all([
+    loadAccommodations(fetchImpl, accommodationUrl),
+    loadIncome(fetchImpl, incomeUrl),
+  ]);
+
+  const warnings = [accommodation.warning, income.warning].filter(
+    (warning): warning is string => Boolean(warning),
+  );
 
   return {
     status: 'loaded',
     data: {
       transactions,
       accommodations: accommodation.entries,
+      income: income.entries,
     },
-    warnings: accommodation.warning ? [accommodation.warning] : [],
+    warnings,
   };
 }

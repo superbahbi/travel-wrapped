@@ -1,11 +1,12 @@
 # Canonical CSV schema
 
-Both data files are hand-converted from pasted bank statements into the schema
+The data files are hand-converted from pasted bank statements into the schema
 below. Raw statements are never committed. The app parses these files directly
 and rejects anything that drifts from the documented shape.
 
 - `client/public/data/transactions.csv` — the spending ledger
 - `client/public/data/accommodation.csv` — optional per-night detail
+- `client/public/data/income.csv` — optional earnings detail
 
 ## `transactions.csv`
 
@@ -49,6 +50,22 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 The per-night file is detail only. The ledger owns the accommodation spend
 total; the two files are allowed to differ and are labelled separately in the
 UI.
+
+## `income.csv`
+
+| Column      | Type            | Required | Notes                              |
+| ----------- | --------------- | -------- | ---------------------------------- |
+| `Date`      | `YYYY-MM-DD`    | yes      | Date the payment landed            |
+| `Source`    | text            | yes      | Employer or payer name             |
+| `Amount`    | positive number | yes      | Native currency                    |
+| `Currency`  | ISO 4217        | yes      | Three uppercase letters, e.g. `NZD` |
+| `AmountUSD` | positive number | yes      | Base currency                      |
+| `FXRate`    | positive number | yes      | Native units per USD               |
+| `FXDate`    | `YYYY-MM-DD`    | yes      | Date the rate applies to           |
+| `Notes`     | text            | no       | Statement line reference           |
+
+Income is kept in its own file so it can never be mistaken for a refund or
+folded into a spend aggregate. The UI shows the total separately.
 
 ## Rules
 

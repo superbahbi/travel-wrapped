@@ -107,6 +107,26 @@ export interface AccommodationEntry {
   notes: string;
 }
 
+export interface IncomeEntry {
+  date: string;
+  source: string;
+  amount: number; // positive amount in the row's native currency
+  currency: string;
+  amountUSD: number; // positive amount in the base currency
+  fxRate: number;
+  fxDate: string;
+  notes: string;
+}
+
+export interface IncomeSummary {
+  totalUSD: number;
+  payments: number;
+  averagePayment: number;
+  sources: { source: string; totalUSD: number; payments: number }[];
+  nativeTotals: { currency: string; total: number }[];
+  dateRange: { start: string; end: string };
+}
+
 /** Raised when a canonical CSV does not match the documented schema. */
 export class CanonicalCsvError extends Error {
   constructor(
@@ -138,6 +158,17 @@ const ACCOMMODATION_COLUMNS = [
   'Merchant',
   'City',
   'Country',
+  'Amount',
+  'Currency',
+  'AmountUSD',
+  'FXRate',
+  'FXDate',
+  'Notes',
+] as const;
+
+const INCOME_COLUMNS = [
+  'Date',
+  'Source',
   'Amount',
   'Currency',
   'AmountUSD',
@@ -615,4 +646,70 @@ export function parseAccommodations(csv: string): AccommodationEntry[] {
       notes: (fields[columns.Notes] ?? '').trim(),
     };
   });
+}
+
+export function parseIncome(csv: string): IncomeEntry[] {
+  const lines = splitLines(csv);
+  if (lines.length === 0) return [];
+
+  const columns = readColumns(lines[0].text, INCOME_COLUMNS, 'income CSV');
+
+  return lines.slice(1).map((line) => {
+    const row = line.lineNumber;
+    const fields = parseCSVLine(line.text);
+    const { date } = parseTimestamp(
+      requiredText(fields, columns, 'Date', row),
+      row,
+    );
+    return {
+      date,
+      source: requiredText(fields, columns, 'Source', row),
+      amount: requiredPositiveNumber(fields, columns, 'Amount', row),
+      currency: requiredCurrency(fields, columns, row),
+      amountUSD: requiredPositiveNumber(fields, columns, 'AmountUSD', row),
+      fxRate: requiredPositiveNumber(fields, columns, 'FXRate', row),
+      fxDate: requiredDate(fields, columns, row),
+      notes: (fields[columns.Notes] ?? '').trim(),
+    };
+  });
+}
+
+/**
+ * Income is deliberately kept out of `computeTrip`: it is money coming in, not
+ * a refund, and must never touch a spend aggregate. This summary is the only
+ * consumer of the income file.
+ */
+export function summarizeIncome(entries: IncomeEntry[]): IncomeSummary {
+  const totalUSD = entries.reduce((sum, entry) => sum + entry.amountUSD, 0);
+
+  const bySource: Record<string, { totalUSD: number; payments: number }> = {};
+  const byCurrency: Record<string, number> = {};
+  entries.forEach((entry) => {
+    if (!bySource[entry.source]) {
+      bySource[entry.source] = { totalUSD: 0, payments: 0 };
+    }
+    bySource[entry.source].totalUSD += entry.amountUSD;
+    bySource[entry.source].payments += 1;
+    byCurrency[entry.currency] =
+      (byCurrency[entry.currency] || 0) + entry.amount;
+  });
+
+  const dates = entries.map((entry) => entry.date).sort();
+
+  return {
+    totalUSD,
+    payments: entries.length,
+    averagePayment: entries.length > 0 ? totalUSD / entries.length : 0,
+    sources: Object.entries(bySource)
+      .sort((a, b) => b[1].totalUSD - a[1].totalUSD)
+      .map(([source, totals]) => ({ source, ...totals })),
+    nativeTotals: Object.entries(byCurrency).map(([currency, total]) => ({
+      currency,
+      total,
+    })),
+    dateRange: {
+      start: dates[0] || '',
+      end: dates[dates.length - 1] || '',
+    },
+  };
 }

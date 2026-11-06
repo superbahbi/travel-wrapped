@@ -17,6 +17,14 @@ const AC_CSV = [
   '2026-06-08,Dengba Hostel,Shenzhen,China,60.10,CNY,8.347222,7.2000,2026-06-08,1 night',
 ].join('\n');
 
+const INCOME_HEADER =
+  'Date,Source,Amount,Currency,AmountUSD,FXRate,FXDate,Notes';
+
+const INCOME_CSV = [
+  INCOME_HEADER,
+  '2026-03-10,WHITEHAVEN WINE COMP,1035.17,NZD,621.10,1.666667,2026-03-10,Wise',
+].join('\n');
+
 type Route = string | { ok: boolean; status: number; body?: string; throws?: boolean };
 
 function fakeFetch(routes: Record<string, Route>): FetchImpl {
@@ -38,18 +46,20 @@ function fakeFetch(routes: Record<string, Route>): FetchImpl {
   };
 }
 
-const both = {
+const all = {
   '/data/transactions.csv': TX_CSV,
   '/data/accommodation.csv': AC_CSV,
+  '/data/income.csv': INCOME_CSV,
 };
 
 describe('loadTrip', () => {
-  it('loads the ledger and the per-night detail', async () => {
-    const result = await loadTrip(fakeFetch(both), { cacheBust: false });
+  it('loads the ledger, the per-night detail, and the income detail', async () => {
+    const result = await loadTrip(fakeFetch(all), { cacheBust: false });
     expect(result.status).toBe('loaded');
     if (result.status !== 'loaded') return;
     expect(result.data.transactions).toHaveLength(1);
     expect(result.data.accommodations).toHaveLength(1);
+    expect(result.data.income).toHaveLength(1);
     expect(result.warnings).toEqual([]);
   });
 
@@ -65,6 +75,7 @@ describe('loadTrip', () => {
     expect(urls).toEqual([
       '/data/transactions.csv',
       '/data/accommodation.csv',
+      '/data/income.csv',
     ]);
   });
 
@@ -137,6 +148,7 @@ describe('loadTrip', () => {
       fakeFetch({
         '/data/transactions.csv': TX_CSV,
         '/data/accommodation.csv': { ok: false, status: 404 },
+        '/data/income.csv': INCOME_CSV,
       }),
       { cacheBust: false },
     );
@@ -144,6 +156,21 @@ describe('loadTrip', () => {
     if (result.status !== 'loaded') return;
     expect(result.data.transactions).toHaveLength(1);
     expect(result.data.accommodations).toEqual([]);
+    expect(result.warnings).toHaveLength(1);
+  });
+
+  it('degrades a missing income file to a warning', async () => {
+    const result = await loadTrip(
+      fakeFetch({
+        '/data/transactions.csv': TX_CSV,
+        '/data/accommodation.csv': AC_CSV,
+        '/data/income.csv': { ok: false, status: 404 },
+      }),
+      { cacheBust: false },
+    );
+    expect(result.status).toBe('loaded');
+    if (result.status !== 'loaded') return;
+    expect(result.data.income).toEqual([]);
     expect(result.warnings).toHaveLength(1);
   });
 });

@@ -5,7 +5,9 @@ import {
   computeTrip,
   isLayover,
   parseAccommodations,
+  parseIncome,
   parseTransactions,
+  summarizeIncome,
 } from './csvParser';
 import { buildJourneyView } from './journeyView';
 import { CITY_ROUTE, buildCityRoute } from './city';
@@ -26,6 +28,12 @@ const ACCOMMODATION_FIXTURE = [
   'Date,Merchant,City,Country,Amount,Currency,AmountUSD,FXRate,FXDate,Notes',
   '2026-06-08,Dengba Hostel,Shenzhen,China,60.10,CNY,8.347222,7.2000,2026-06-08,1 night',
   '2026-06-09,Dengba Hostel,Shenzhen,China,58.67,CNY,8.148611,7.2000,2026-06-09,night 2',
+].join('\n');
+
+const INCOME_FIXTURE = [
+  'Date,Source,Amount,Currency,AmountUSD,FXRate,FXDate,Notes',
+  '2026-03-10,WHITEHAVEN WINE COMP,1035.17,NZD,621.10,1.666667,2026-03-10,Wise',
+  '2026-03-17,WHITEHAVEN WINE COMP,1424.12,NZD,854.47,1.666667,2026-03-17,Wise',
 ].join('\n');
 
 describe('parseTransactions', () => {
@@ -468,6 +476,81 @@ describe('parseAccommodations validation', () => {
   });
 });
 
+describe('parseIncome', () => {
+  it('reads the canonical income file', () => {
+    const entries = parseIncome(INCOME_FIXTURE);
+    expect(entries).toHaveLength(2);
+    expect(entries[0].date).toBe('2026-03-10');
+    expect(entries[0].source).toBe('WHITEHAVEN WINE COMP');
+    expect(entries[0].amount).toBeCloseTo(1035.17, 2);
+    expect(entries[0].amountUSD).toBeCloseTo(621.1, 2);
+    expect(entries[0].currency).toBe('NZD');
+    expect(entries[0].fxDate).toBe('2026-03-10');
+  });
+
+  it('returns nothing for an empty or header-only file', () => {
+    expect(parseIncome('')).toEqual([]);
+    expect(
+      parseIncome('Date,Source,Amount,Currency,AmountUSD,FXRate,FXDate,Notes'),
+    ).toEqual([]);
+  });
+
+  it('rejects a negative or zero native Amount', () => {
+    const negative = INCOME_FIXTURE.replace(',1035.17,NZD,', ',-1035.17,NZD,');
+    expect(() => parseIncome(negative)).toThrow(
+      /Row 2: Amount must be greater than zero/,
+    );
+
+    const zero = INCOME_FIXTURE.replace(',1035.17,NZD,', ',0,NZD,');
+    expect(() => parseIncome(zero)).toThrow(
+      /Row 2: Amount must be greater than zero/,
+    );
+  });
+
+  it('rejects a negative or zero AmountUSD', () => {
+    const negative = INCOME_FIXTURE.replace(',621.10,', ',-621.10,');
+    expect(() => parseIncome(negative)).toThrow(
+      /Row 2: AmountUSD must be greater than zero/,
+    );
+
+    const zero = INCOME_FIXTURE.replace(',621.10,', ',0,');
+    expect(() => parseIncome(zero)).toThrow(
+      /Row 2: AmountUSD must be greater than zero/,
+    );
+  });
+});
+
+describe('summarizeIncome', () => {
+  it('totals USD, groups by source and native currency, and keeps the date range', () => {
+    const summary = summarizeIncome(parseIncome(INCOME_FIXTURE));
+    expect(summary.payments).toBe(2);
+    expect(summary.totalUSD).toBeCloseTo(1475.57, 2);
+    expect(summary.averagePayment).toBeCloseTo(737.785, 2);
+    expect(summary.sources).toHaveLength(1);
+    expect(summary.sources[0].source).toBe('WHITEHAVEN WINE COMP');
+    expect(summary.sources[0].payments).toBe(2);
+    expect(summary.sources[0].totalUSD).toBeCloseTo(1475.57, 2);
+    expect(summary.nativeTotals).toHaveLength(1);
+    expect(summary.nativeTotals[0].currency).toBe('NZD');
+    expect(summary.nativeTotals[0].total).toBeCloseTo(2459.29, 2);
+    expect(summary.dateRange).toEqual({
+      start: '2026-03-10',
+      end: '2026-03-17',
+    });
+  });
+
+  it('returns a zero summary for no entries', () => {
+    expect(summarizeIncome([])).toEqual({
+      totalUSD: 0,
+      payments: 0,
+      averagePayment: 0,
+      sources: [],
+      nativeTotals: [],
+      dateRange: { start: '', end: '' },
+    });
+  });
+});
+
 /**
  * Baseline for the merged 2026 ledger (China trip + Chase import). These
  * numbers are the contract the app renders; the accommodation total is
@@ -482,13 +565,13 @@ describe('seeded dataset', () => {
   const stats = computeTrip(transactions);
 
   it('parses every row', () => {
-    expect(transactions).toHaveLength(984);
-    expect(stats.summary.transactionCount).toBe(983);
+    expect(transactions).toHaveLength(929);
+    expect(stats.summary.transactionCount).toBe(928);
   });
 
   it('keeps the seeded totals', () => {
-    expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
-    expect(stats.summary.daysTracked).toBe(194);
+    expect(stats.summary.grandTotal).toBeCloseTo(8822.01, 2);
+    expect(stats.summary.daysTracked).toBe(175);
     expect(stats.cities.visitedCount).toBe(38);
   });
 
@@ -543,7 +626,7 @@ describe('seeded dataset', () => {
   });
 
   it('keeps the date range', () => {
-    expect(stats.summary.dateRange).toEqual({ start: '2026-02-17', end: '2026-11-02' });
+    expect(stats.summary.dateRange).toEqual({ start: '2026-02-18', end: '2026-11-01' });
   });
 
   it('keeps the category breakdown', () => {
@@ -563,9 +646,9 @@ describe('seeded dataset', () => {
 
   it('keeps the day highlights', () => {
     expect(stats.days.mostExpensive?.date).toBe('2026-05-05');
-    expect(stats.days.mostExpensive?.total).toBeCloseTo(443.12, 2);
-    expect(stats.days.cheapest?.date).toBe('2026-04-01');
-    expect(stats.days.cheapest?.total).toBeCloseTo(0.11, 2);
+    expect(stats.days.mostExpensive?.total).toBeCloseTo(433.12, 2);
+    expect(stats.days.cheapest?.date).toBe('2026-05-16');
+    expect(stats.days.cheapest?.total).toBeCloseTo(1.6, 2);
   });
 
   it('keeps the per-night accommodations file intact', () => {
@@ -582,5 +665,20 @@ describe('seeded dataset', () => {
     expect(
       entries.reduce((sum, entry) => sum + entry.amountUSD, 0),
     ).toBeCloseTo(228.9, 1);
+  });
+
+  it('keeps the Whitehaven income file intact', () => {
+    const incomeCsv = readFileSync(
+      new URL('../../public/data/income.csv', import.meta.url),
+      'utf8',
+    );
+    const entries = parseIncome(incomeCsv);
+    const summary = summarizeIncome(entries);
+    expect(entries).toHaveLength(7);
+    expect(summary.totalUSD).toBeCloseTo(5680.58, 2);
+    expect(summary.nativeTotals).toHaveLength(1);
+    expect(summary.nativeTotals[0].currency).toBe('NZD');
+    expect(summary.nativeTotals[0].total).toBeCloseTo(9467.65, 2);
+    expect(summary.sources[0].source).toBe('WHITEHAVEN WINE COMP');
   });
 });

@@ -4,7 +4,7 @@
 // Dark canvas, vivid gradient cards, animated stats
 // ============================================================
 import { useMemo, useState, useEffect, useCallback } from 'react';
-import { computeTrip, Transaction, DayStats, getCategoryColor, AccommodationEntry } from '@/lib/csvParser';
+import { computeTrip, summarizeIncome, Transaction, DayStats, getCategoryColor, AccommodationEntry, IncomeEntry } from '@/lib/csvParser';
 import { loadTrip, LoadOutcome } from '@/lib/loadTrip';
 import { buildJourneyView, JourneyView } from '@/lib/journeyView';
 import { formatFullDate, formatShortDate, WEEKDAYS } from '@/lib/tripDate';
@@ -25,6 +25,7 @@ const WEEK_ORDER = [...WEEKDAYS.slice(1), WEEKDAYS[0]];
 
 const NO_TRANSACTIONS: Transaction[] = [];
 const NO_ACCOMMODATIONS: AccommodationEntry[] = [];
+const NO_INCOME: IncomeEntry[] = [];
 
 export default function Home() {
   const [state, setState] = useState<LoadState>({ status: 'idle' });
@@ -45,6 +46,8 @@ export default function Home() {
   );
   const transactions = data?.transactions ?? NO_TRANSACTIONS;
   const accommodations = data?.accommodations ?? NO_ACCOMMODATIONS;
+  const income = data?.income ?? NO_INCOME;
+  const incomeSummary = useMemo(() => summarizeIncome(income), [income]);
   const view = useMemo(
     () =>
       stats ? buildJourneyView(stats, transactions, accommodations) : null,
@@ -185,6 +188,46 @@ export default function Home() {
                 </div>
               </div>
             </WrappedCard>
+
+            {/* ── CARD 1.5: What I Made ── */}
+            {incomeSummary.payments > 0 && (
+              <WrappedCard gradient="linear-gradient(135deg, #00b09b 0%, #96c93d 100%)">
+                <div className="p-8 text-white">
+                  <div className="text-sm font-semibold tracking-widest uppercase opacity-70 mb-2">What I made</div>
+                  <div className="flex items-end gap-3 mb-1">
+                    <div className="text-7xl sm:text-8xl font-bold text-white" style={{ fontFamily: 'Syne, sans-serif' }}>
+                      {formatUSD(incomeSummary.totalUSD)}
+                    </div>
+                  </div>
+                  <div className="text-white/70 text-lg mb-6">
+                    from <span className="font-bold text-white">{incomeSummary.payments} Whitehaven Wine payments</span>
+                    {stats.summary.grandTotal > 0 && (
+                      <> — that's <span className="font-bold text-white">{((incomeSummary.totalUSD / stats.summary.grandTotal) * 100).toFixed(0)}%</span> of what I spent</>
+                    )}
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <GlassPanel>
+                      <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>{formatUSD(incomeSummary.averagePayment, 0)}</div>
+                      <div className="text-xs opacity-70 mt-1">per payment</div>
+                    </GlassPanel>
+                    <GlassPanel>
+                      <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
+                        {incomeSummary.nativeTotals[0]
+                          ? `NZ${incomeSummary.nativeTotals[0].total.toLocaleString('en-NZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                          : '—'}
+                      </div>
+                      <div className="text-xs opacity-70 mt-1">earned in NZD</div>
+                    </GlassPanel>
+                    <GlassPanel>
+                      <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
+                        {incomeSummary.dateRange.end ? formatShortDate(incomeSummary.dateRange.end) : '—'}
+                      </div>
+                      <div className="text-xs opacity-70 mt-1">last paid</div>
+                    </GlassPanel>
+                  </div>
+                </div>
+              </WrappedCard>
+            )}
 
             {/* ── CARD 2: Daily Burn Chart ── */}
             <WrappedCard gradient="linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%)">

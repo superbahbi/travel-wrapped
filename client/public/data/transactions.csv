@@ -1,10 +1,8 @@
 Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Country,Notes
-2026-02-17 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-02-17,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     42GJ19          WEB ID: 9000142694
 2026-02-18 00:00:00,Walmart,-15.79,USD,-15.79,1.000000,2026-02-18,Food,Chase 3557,Torrance,United States,Chase 3557: WAL-MART #5874 TORRANCE CA                   02/18
 2026-02-19 00:00:00,Din Tai Fung,-67.00,USD,-67.00,1.000000,2026-02-19,Food,Chase 3557,Torrance,United States,Chase 3557: TST* DIN TAI FUNG - TOR TORRANCE CA          02/19
 2026-02-19 00:00:00,Mobimatter,-3.49,USD,-3.49,1.000000,2026-02-19,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
 2026-02-20 00:00:00,GeoBlue,-219.22,USD,-219.22,1.000000,2026-02-20,Fees,Chase 3557,Unknown,United States,Chase 3557: GEOBLUE 855-4816647 PA                       02/19
-2026-02-23 00:00:00,APPLE.COM/BILL,-19.99,USD,-19.99,1.000000,2026-02-23,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-02-23 00:00:00,BKG*BOOKING.COM FLIGHT,-122.25,USD,-122.25,1.000000,2026-02-23,Intercity Transport,Chase 1388,Auckland,New Zealand,Chase 1388: BKG*BOOKING.COM FLIGHT
 2026-02-23 00:00:00,Chevron,-4.09,USD,-4.09,1.000000,2026-02-23,Transport,Chase 3557,Los Angeles,United States,Chase 3557: CHEVRON 0090944 LOS ANGELES CA               02/22
 2026-02-23 00:00:00,Foreign exchange rate adjustment fee,-1.69,USD,-1.69,1.000000,2026-02-23,Fees,Chase 3557,Auckland,New Zealand,Chase 3557: FOREIGN EXCHANGE RATE ADJUSTMENT FEE         02/23INTERCITY
@@ -47,12 +45,10 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-02-28 00:00:00,MOBIL BLENHEIM,-5.17,USD,-5.17,1.000000,2026-02-28,Transport,Chase 1388,Blenheim,New Zealand,Chase 1388: MOBIL BLENHEIM
 2026-03-01 00:00:00,COUPLAND'S BAKERIES BLENH,-2.16,USD,-2.16,1.000000,2026-03-01,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: COUPLAND'S BAKERIES BLENH
 2026-03-01 00:00:00,EASY MART,-5.10,USD,-5.10,1.000000,2026-03-01,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: EASY MART
-2026-03-01 00:00:00,GOOGLE *CLOUD BVGx8S,-0.11,USD,-0.11,1.000000,2026-03-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD BVGx8S
 2026-03-01 00:00:00,KMART,-11.26,USD,-11.26,1.000000,2026-03-01,Shopping,Chase 1388,Blenheim,New Zealand,Chase 1388: KMART
 2026-03-01 00:00:00,Pak N Save Blenheim,-54.13,USD,-54.13,1.000000,2026-03-01,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: Pak N Save Blenheim
 2026-03-01 00:00:00,THE WAREHOUSE 173 BLENHIE,-8.41,USD,-8.41,1.000000,2026-03-01,Shopping,Chase 1388,Blenheim,New Zealand,Chase 1388: THE WAREHOUSE 173 BLENHIE
 2026-03-06 00:00:00,MCDONALDS BLENHEIM,-11.01,USD,-11.01,1.000000,2026-03-06,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: MCDONALDS BLENHEIM
-2026-03-06 00:00:00,PURCHASE INTEREST CHARGE,-25.19,USD,-25.19,1.000000,2026-03-06,Fees,Chase 1388,Unknown,United States,Chase 1388: PURCHASE INTEREST CHARGE
 2026-03-07 00:00:00,Amazon Marketplace AU,-170.83,AUD,-120.52,1.417441,2026-03-07,Shopping,Chase 3557,Sydney,Australia,Chase 3557: AMAZON MARKETPLACE AU SYDNEY                 03/07 AU Dollar  170.83 X 0.7054967 (EXCHG RTE)
 2026-03-07 00:00:00,COUPLAND'S BAKERIES BLENH,-2.32,USD,-2.32,1.000000,2026-03-07,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: COUPLAND'S BAKERIES BLENH
 2026-03-07 00:00:00,Thomas's Cafe,-4.06,USD,-4.06,1.000000,2026-03-07,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: Thomas's Cafe
@@ -60,14 +56,9 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-03-08 00:00:00,Pak N Save Blenheim,-99.59,USD,-99.59,1.000000,2026-03-08,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: Pak N Save Blenheim
 2026-03-08 00:00:00,SAVE MORE BLENHEIM,-17.69,USD,-17.69,1.000000,2026-03-08,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: SAVE MORE BLENHEIM
 2026-03-08 00:00:00,Savemart Blenheim,-4.85,USD,-4.85,1.000000,2026-03-08,Shopping,Chase 1388,Blenheim,New Zealand,Chase 1388: Savemart Blenheim
-2026-03-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-03-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-03-09 00:00:00,Foreign exchange rate adjustment fee,-3.61,USD,-3.61,1.000000,2026-03-09,Fees,Chase 3557,Sydney,Australia,Chase 3557: FOREIGN EXCHANGE RATE ADJUSTMENT FEE         03/07AMAZON MA
 2026-03-10 00:00:00,Fairweathers Bar & Rest,-6.63,USD,-6.63,1.000000,2026-03-10,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: Fairweathers Bar & Rest
 2026-03-11 00:00:00,COUPLAND'S BAKERIES BLENH,-3.44,USD,-3.44,1.000000,2026-03-11,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: COUPLAND'S BAKERIES BLENH
-2026-03-12 00:00:00,Spotify,-6.99,USD,-6.99,1.000000,2026-03-12,Subscription,Chase 3557,Unknown,United States,Chase 3557: Spotify P404A4AEB0 New York NY               03/12
-2026-03-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-03-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
-2026-03-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-03-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
-2026-03-16 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-03-16,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     HMS859          WEB ID: 9000142694
 2026-03-17 00:00:00,Fairweathers Bar & Rest,-6.55,USD,-6.55,1.000000,2026-03-17,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: Fairweathers Bar & Rest
 2026-03-17 00:00:00,Fairweathers Bar & Rest,-7.74,USD,-7.74,1.000000,2026-03-17,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: Fairweathers Bar & Rest
 2026-03-18 00:00:00,COUPLAND'S BAKERIES BLENH,-1.11,USD,-1.11,1.000000,2026-03-18,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: COUPLAND'S BAKERIES BLENH
@@ -80,7 +71,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-03-29 00:00:00,McDonalds 640078,-7.80,USD,-7.80,1.000000,2026-03-29,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: McDonalds 640078
 2026-03-31 00:00:00,EASY MART,-2.81,USD,-2.81,1.000000,2026-03-31,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: EASY MART
 2026-03-31 00:00:00,New World Blenheim,-24.90,USD,-24.90,1.000000,2026-03-31,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: New World Blenheim
-2026-04-01 00:00:00,GOOGLE *CLOUD 5PxGRx,-0.11,USD,-0.11,1.000000,2026-04-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD 5PxGRx
 2026-04-02 00:00:00,THE BURLEIGH,-11.31,USD,-11.31,1.000000,2026-04-02,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: THE BURLEIGH
 2026-04-03 00:00:00,COOPERS CATCH KAIKOU,-16.92,USD,-16.92,1.000000,2026-04-03,Food,Chase 1388,Kaikoura,New Zealand,Chase 1388: COOPERS CATCH KAIKOU
 2026-04-03 00:00:00,Mobimatter,-15.99,USD,-15.99,1.000000,2026-04-03,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
@@ -92,16 +82,11 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-04-07 00:00:00,McDonalds 640078,-4.87,USD,-4.87,1.000000,2026-04-07,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: McDonalds 640078
 2026-04-07 00:00:00,McDonalds 640078,-8.60,USD,-8.60,1.000000,2026-04-07,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: McDonalds 640078
 2026-04-07 00:00:00,New World Blenheim,-20.79,USD,-20.79,1.000000,2026-04-07,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: New World Blenheim
-2026-04-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-04-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-04-11 00:00:00,COUPLAND'S BAKERIES BLENH,-9.10,USD,-9.10,1.000000,2026-04-11,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: COUPLAND'S BAKERIES BLENH
 2026-04-11 00:00:00,DODSON STREET BEER GARDEN,-7.05,USD,-7.05,1.000000,2026-04-11,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: DODSON STREET BEER GARDEN
 2026-04-11 00:00:00,DODSON STREET BEER GARDEN,-7.64,USD,-7.64,1.000000,2026-04-11,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: DODSON STREET BEER GARDEN
 2026-04-11 00:00:00,DODSON STREET BEER GARDEN,-7.93,USD,-7.93,1.000000,2026-04-11,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: DODSON STREET BEER GARDEN
 2026-04-11 00:00:00,New World Blenheim,-31.41,USD,-31.41,1.000000,2026-04-11,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: New World Blenheim
-2026-04-12 00:00:00,FREETAXUSA.COM,-15.99,USD,-15.99,1.000000,2026-04-12,Subscription,Chase 1388,Unknown,United States,Chase 1388: FREETAXUSA.COM
-2026-04-13 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-04-13,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     H48199          WEB ID: 9000142694
-2026-04-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-04-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
-2026-04-14 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-04-14,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-04-16 00:00:00,New World Blenheim,-9.10,USD,-9.10,1.000000,2026-04-16,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: New World Blenheim
 2026-04-17 00:00:00,COUPLAND'S BAKERIES BLENH,-5.92,USD,-5.92,1.000000,2026-04-17,Food,Chase 1388,Blenheim,New Zealand,Chase 1388: COUPLAND'S BAKERIES BLENH
 2026-04-17 00:00:00,Lochmara Lodge Receptio,-13.30,USD,-13.30,1.000000,2026-04-17,Accommodation,Chase 1388,Picton,New Zealand,Chase 1388: Lochmara Lodge Receptio
@@ -149,7 +134,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-01 00:00:00,FRESHCHOICE QUEENSTOWN,-8.45,USD,-8.45,1.000000,2026-05-01,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: FRESHCHOICE QUEENSTOWN
 2026-05-01 00:00:00,Fergbaker,-5.37,USD,-5.37,1.000000,2026-05-01,Food,Chase 1388,Queenstown,New Zealand,Chase 1388: Fergbaker
 2026-05-01 00:00:00,Fergbaker,-9.08,NZD,-5.45,1.666667,2026-05-01,Food,Wise card,Queenstown,New Zealand,Wise: Fergbaker | Groceries | source 9.08 NZD + fee 0.00
-2026-05-01 00:00:00,GOOGLE *CLOUD Z2vz3K,-0.11,USD,-0.11,1.000000,2026-05-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD Z2vz3K
 2026-05-02 00:00:00,AUSTRALIANETA,-14.46,USD,-14.46,1.000000,2026-05-02,Fees,Chase 1388,Sydney,Australia,Chase 1388: AUSTRALIANETA
 2026-05-02 00:00:00,Fergbaker,-9.08,NZD,-5.45,1.666667,2026-05-02,Food,Wise card,Queenstown,New Zealand,Wise: Fergbaker | Groceries | source 9.08 NZD + fee 0.00
 2026-05-02 00:00:00,GetYourGuide,-56.90,USD,-56.90,1.000000,2026-05-02,Activities,Chase 1388,Sydney,Australia,Chase 1388: GetYourGuide
@@ -164,7 +148,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-05 00:00:00,MCDONALDS ELIZABTH S,-11.61,USD,-11.61,1.000000,2026-05-05,Food,Chase 1388,Melbourne,Australia,Chase 1388: MCDONALDS ELIZABTH S
 2026-05-05 00:00:00,MS* SELINACENTRALMELB,-57.87,USD,-57.87,1.000000,2026-05-05,Accommodation,Chase 1388,Melbourne,Australia,Chase 1388: MS* SELINACENTRALMELB
 2026-05-05 00:00:00,MUSEUM VICTORIA ADMISS,-13.02,USD,-13.02,1.000000,2026-05-05,Activities,Chase 1388,Melbourne,Australia,Chase 1388: MUSEUM VICTORIA ADMISS
-2026-05-05 00:00:00,TRANSACTION FEE,-10.00,USD,-10.00,1.000000,2026-05-05,Fees,Chase 1388,Unknown,United States,Chase 1388: TRANSACTION FEE
 2026-05-05 00:00:00,VIRGIN AU,-338.25,USD,-338.25,1.000000,2026-05-05,Intercity Transport,Chase 1388,Melbourne,Australia,Chase 1388: VIRGIN AU
 2026-05-06 00:00:00,CYD FORTUNE PTY LTD,-6.83,USD,-6.83,1.000000,2026-05-06,Food,Chase 1388,Melbourne,Australia,Chase 1388: CYD FORTUNE PTY LTD
 2026-05-06 00:00:00,Mobimatter,-5.99,USD,-5.99,1.000000,2026-05-06,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
@@ -182,7 +165,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-08 00:00:00,MYKI STHRNCRSS RS SST,-5.09,USD,-5.09,1.000000,2026-05-08,Transport,Chase 1388,Melbourne,Australia,Chase 1388: MYKI STHRNCRSS RS SST
 2026-05-08 00:00:00,SQ *AMERICAN DOUGHNUT KIT,-7.99,USD,-7.99,1.000000,2026-05-08,Food,Chase 1388,Melbourne,Australia,Chase 1388: SQ *AMERICAN DOUGHNUT KIT
 2026-05-08 00:00:00,VBROLLS,-12.93,USD,-12.93,1.000000,2026-05-08,Food,Chase 1388,Melbourne,Australia,Chase 1388: VBROLLS
-2026-05-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-05-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-05-09 00:00:00,BWS LIQUOR/CNR BROUGHTON,-6.53,USD,-6.53,1.000000,2026-05-09,Food,Chase 1388,Sydney,Australia,Chase 1388: BWS LIQUOR/CNR BROUGHTON
 2026-05-09 00:00:00,CT GLOBAL GROUP PTY,-15.03,USD,-15.03,1.000000,2026-05-09,Food,Chase 1388,Sydney,Australia,Chase 1388: CT GLOBAL GROUP PTY
 2026-05-09 00:00:00,Hotel at Booking.com,-101.45,USD,-101.45,1.000000,2026-05-09,Accommodation,Chase 1388,Sydney,Australia,Chase 1388: Hotel at Booking.com
@@ -203,11 +185,9 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-12 00:00:00,Yo-Chi George Street,-8.14,USD,-8.14,1.000000,2026-05-12,Food,Chase 1388,Sydney,Australia,Chase 1388: Yo-Chi George Street
 2026-05-13 00:00:00,BAL1112 KORNER BANDARA NG,-0.83,USD,-0.83,1.000000,2026-05-13,Food,Chase 1388,Bali,Indonesia,Chase 1388: BAL1112 KORNER BANDARA NG
 2026-05-13 00:00:00,COCO  PINEAPPLE PANTS,-8.25,USD,-8.25,1.000000,2026-05-13,Transport,Chase 1388,Bali,Indonesia,Chase 1388: COCO  PINEAPPLE PANTS
-2026-05-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-05-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-05-13 00:00:00,MCDONALDS BRIS AIRP,-11.36,USD,-11.36,1.000000,2026-05-13,Food,Chase 1388,Brisbane,Australia,Chase 1388: MCDONALDS BRIS AIRP | Layover Sydney → Bali
 2026-05-14 00:00:00,7 HUNGRY 5,-0.46,USD,-0.46,1.000000,2026-05-14,Food,Chase 1388,Bali,Indonesia,Chase 1388: 7 HUNGRY 5
 2026-05-14 00:00:00,AL BACIO,-2.00,USD,-2.00,1.000000,2026-05-14,Food,Chase 1388,Bali,Indonesia,Chase 1388: AL BACIO
-2026-05-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-05-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     QKVTD9          WEB ID: 9000142694
 2026-05-14 00:00:00,GUARDIAN BATU BALONG,-1.06,USD,-1.06,1.000000,2026-05-14,Personal Care,Chase 1388,Bali,Indonesia,Chase 1388: GUARDIAN BATU BALONG
 2026-05-14 00:00:00,GoPay,-21000.00,IDR,-1.21,17355.371901,2026-05-14,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 1.20 USD + fee 0.01
 2026-05-14 00:00:00,GoPay,-10000.00,IDR,-0.58,17241.379310,2026-05-14,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 0.57 USD + fee 0.01
@@ -220,7 +200,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-15 00:00:00,Gojek,-44000.00,IDR,-2.51,17529.880478,2026-05-15,Transport,Wise card,Bali,Indonesia,Wise: Gojek | Transport | source 2.50 USD + fee 0.01
 2026-05-15 00:00:00,Gojek,-10000.00,IDR,-0.58,17241.379310,2026-05-15,Transport,Wise card,Bali,Indonesia,Wise: Gojek | Transport | source 0.57 USD + fee 0.01
 2026-05-15 00:00:00,MUDA BY SUKA,-7.07,USD,-7.07,1.000000,2026-05-15,Food,Chase 1388,Bali,Indonesia,Chase 1388: MUDA BY SUKA
-2026-05-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-05-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-05-15 00:00:00,WARUNG SIKA HO,-3.53,USD,-3.53,1.000000,2026-05-15,Food,Chase 1388,Bali,Indonesia,Chase 1388: WARUNG SIKA HO
 2026-05-16 00:00:00,CK MUNDUK CATU,-1.60,USD,-1.60,1.000000,2026-05-16,Food,Chase 1388,Bali,Indonesia,Chase 1388: CK MUNDUK CATU
 2026-05-17 00:00:00,GoPay,-39000.00,IDR,-2.23,17488.789238,2026-05-17,Transport,Wise card,Bali,Indonesia,Wise: GoPay | Transport | source 2.22 USD + fee 0.01
@@ -274,8 +253,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-05-31 00:00:00,MCDONALDS-KL SENT00155 AP,-3.79,USD,-3.79,1.000000,2026-05-31,Food,Chase 1388,Kuala Lumpur,Malaysia,Chase 1388: MCDONALDS-KL SENT00155 AP
 2026-05-31 00:00:00,TIC BUSINESS,-1.01,USD,-1.01,1.000000,2026-05-31,Food,Chase 1388,Penang,Malaysia,Chase 1388: TIC BUSINESS
 2026-06-01 00:00:00,7 ELEVEN MALAYSIA SDN BHD,-0.68,USD,-0.68,1.000000,2026-06-01,Food,Chase 1388,Penang,Malaysia,Chase 1388: 7 ELEVEN MALAYSIA SDN BHD
-2026-06-01 00:00:00,ANNUAL MEMBERSHIP FEE,-95.00,USD,-95.00,1.000000,2026-06-01,Fees,Chase 1388,Unknown,United States,Chase 1388: ANNUAL MEMBERSHIP FEE
-2026-06-01 00:00:00,GOOGLE *CLOUD ZLzC6R,-0.11,USD,-0.11,1.000000,2026-06-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD ZLzC6R
 2026-06-01 00:00:00,TIC BUSINESS,-1.52,USD,-1.52,1.000000,2026-06-01,Food,Chase 1388,Penang,Malaysia,Chase 1388: TIC BUSINESS
 2026-06-04 00:00:00,AEON CO-QUEENSBAY MALL,-2.22,USD,-2.22,1.000000,2026-06-04,Food,Chase 1388,Penang,Malaysia,Chase 1388: AEON CO-QUEENSBAY MALL
 2026-06-05 00:00:00,ESIM.DOG,-6.98,USD,-6.98,1.000000,2026-06-05,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: ESIM.DOG
@@ -304,7 +281,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-08 00:00:00,Shenzhen Metro (Octopus),-2.00,CNY,-0.30,6.6667,2026-06-08,Transport,Other,Shenzhen,China,
 2026-06-08 13:48:42,中国旅行小助手,-1.00,CNY,-0.15,6.756757,2026-06-08,Fees,Alipay,Shenzhen,China,Alipay: 商业服务 | 中国旅行小助手 | TestChinaPay Tier1 | Visa(3381)
 2026-06-08 14:44:48,Fast Food,-37.52,CNY,-5.55,6.7604,2026-06-08,Food,Alipay,Shenzhen,China,
-2026-06-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-06-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-06-09 06:55:09,Little Tadpole,-8.80,CNY,-1.30,6.7692,2026-06-09,Food,Alipay,Shenzhen,China,
 2026-06-09 08:26:05,Guangdong 7‑ELEVEN,-12.00,CNY,-1.78,6.7416,2026-06-09,Food,Alipay,Shenzhen,China,
 2026-06-09 09:05:16,China Railway 12306,-23.49,CNY,-3.48,6.756757,2026-06-09,Intercity Transport,Alipay,Shenzhen,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)&支付立减优惠
@@ -359,7 +335,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-12 20:19:36,Shenzhen Weiqi,-15.00,CNY,-2.22,6.7568,2026-06-12,Food,Alipay,Guangzhou,China,
 2026-06-12 20:25:56,Guangdong 7‑ELEVEN,-4.50,CNY,-0.67,6.7164,2026-06-12,Food,Alipay,Guangzhou,China,
 2026-06-12 20:54:18,China Railway 12306,-181.00,CNY,-26.79,6.756757,2026-06-12,Intercity Transport,Alipay,Guangzhou,China,Alipay: 交通出行 | 铁路12306 | 火车票 | Visa(3381)
-2026-06-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-06-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-06-13 09:26:19,Fast Food,-31.32,CNY,-4.63,6.7646,2026-06-13,Food,Alipay,Guangzhou,China,
 2026-06-13 10:16:11,Guangzhou Metro,-4.00,CNY,-0.59,6.7797,2026-06-13,Transport,Alipay,Guangzhou,China,
 2026-06-13 11:25:19,Guangzhou Metro,-2.00,CNY,-0.30,6.6667,2026-06-13,Transport,Alipay,Guangzhou,China,
@@ -370,7 +345,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-13 15:03:25,Miniso,-24.90,CNY,-3.68,6.7663,2026-06-13,Shopping,Alipay,Guangzhou,China,
 2026-06-13 15:21:17,FamilyMart,-6.50,CNY,-0.96,6.7708,2026-06-13,Food,Alipay,Guangzhou,China,
 2026-06-13 19:18:14,Shenzhen Weiqi,-22.28,CNY,-3.30,6.7515,2026-06-13,Food,Alipay,Guangzhou,China,
-2026-06-14 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-06-14,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-06-14 00:00:00,Railway 12306,-181.00,CNY,-26.78,6.7588,2026-06-14,Intercity Transport,Alipay,Guangzhou,China,Guangzhou → Guilin (arrived Jun 14)
 2026-06-14 06:33:33,Fast Food,-26.50,CNY,-3.92,6.7602,2026-06-14,Food,Alipay,Guangzhou,China,
 2026-06-14 07:52:22,Guangzhou Metro,-6.00,CNY,-0.89,6.7416,2026-06-14,Transport,Alipay,Guangzhou,China,
@@ -386,7 +360,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-14 19:23:42,Eden Hostel (refund),20.00,CNY,2.96,6.7568,2026-06-14,Accommodation,Alipay,Guangzhou,China,deposit refund
 2026-06-14 19:54:22,Meituan (e-bike),-3.00,CNY,-0.44,6.8182,2026-06-14,Transport,Alipay,Guilin,China,
 2026-06-14 21:18:57,Hainan Coconut Qingbuliang,-17.90,CNY,-2.65,6.7547,2026-06-14,Food,Alipay,Guilin,China,delivery
-2026-06-15 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-06-15,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     7S9PJ9          WEB ID: 9000142694
 2026-06-15 09:18:10,Yangshuo Sudder Street Guesthouse,-174.00,CNY,-25.74,6.7599,2026-06-15,Accommodation,Alipay,Yangshuo,China,"3 nights (Jun16-18, 58/night)"
 2026-06-15 10:08:12,Lufen Wang Rice Noodles,-7.00,CNY,-1.04,6.7308,2026-06-15,Food,Alipay,Guilin,China,
 2026-06-15 10:34:44,Guilin Youhao Duo Supermarket,-4.78,CNY,-0.71,6.7324,2026-06-15,Food,Alipay,Guilin,China,
@@ -514,7 +487,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-06-30 19:22:31,Hotpot Convenience Store,-16.00,CNY,-2.37,6.7511,2026-06-30,Food,Alipay,Dali,China,
 2026-06-30 20:12:30,Meiyijia (Dali),-7.00,CNY,-1.04,6.7308,2026-06-30,Food,Alipay,Dali,China,
 2026-06-30 21:39:41,远行客国际青年旅舍,-34.00,CNY,-5.03,6.756757,2026-06-30,Accommodation,Alipay,Dali,China,Alipay: 酒店旅游 | 远行客国际青年旅舍 | 收钱码收款 | Visa(3381)
-2026-07-01 00:00:00,GOOGLE *CLOUD QDG3KJ,-0.11,USD,-0.11,1.000000,2026-07-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD QDG3KJ
 2026-07-01 11:42:35,Shufang Restaurant,-24.00,CNY,-3.55,6.7606,2026-07-01,Food,Alipay,Dali,China,
 2026-07-01 11:44:05,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-01,Food,Alipay,Dali,China,
 2026-07-01 15:02:21,Yunnan Lvwu Tong (attraction),-75.00,CNY,-11.09,6.7628,2026-07-01,Activities,Alipay,Dali,China,sightseeing ticket
@@ -589,7 +561,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-09 13:43:13,Minzhulamu Tibetan Restaurant,-106.00,CNY,-15.68,6.7602,2026-07-09,Food,Alipay,Shangri-La,China,
 2026-07-09 19:22:13,W (dinner),-31.00,CNY,-4.59,6.7538,2026-07-09,Food,Alipay,Shangri-La,China,
 2026-07-09 19:24:39,Meiyijia (Shangri-La),-4.00,CNY,-0.59,6.7797,2026-07-09,Food,Alipay,Shangri-La,China,
-2026-07-10 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-07-10,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-07-10 08:08:35,Hongfeng Supermarket,-20.00,CNY,-2.96,6.7568,2026-07-10,Food,Alipay,Shangri-La,China,
 2026-07-10 08:14:44,Muse Weiliang (e-bike),-50.00,CNY,-7.40,6.7568,2026-07-10,Transport,Alipay,Shangri-La,China,
 2026-07-10 16:51:41,Meiyijia (Shangri-La),-4.00,CNY,-0.59,6.7797,2026-07-10,Food,Alipay,Shangri-La,China,
@@ -605,8 +576,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-12 17:23:51,Fast Food,-40.00,CNY,-5.92,6.7568,2026-07-12,Food,Alipay,Shangri-La,China,
 2026-07-12 19:40:53,VPN Service,-6.83,CNY,-1.01,6.7624,2026-07-12,Subscription,Alipay,Shangri-La,China,
 2026-07-12 20:30:06,香格里拉市优十品鲜生超市(个体工商户),-41.60,CNY,-6.16,6.756757,2026-07-12,Food,Alipay,Shangri-La,China,Alipay: 日用百货 | 香格里拉市优十品鲜生超市(个体工商户) | 二维码支付 | Visa(3381)
-2026-07-13 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-07-13,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     B5CGN9          WEB ID: 9000142694
-2026-07-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-07-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-07-13 00:00:00,Youshipin Supermarket,-41.60,CNY,-6.15,6.7642,2026-07-13,Food,Alipay,Yading,China,prepaid Jul 12
 2026-07-13 07:50:00,Diqing Bus,-151.00,CNY,-22.34,6.7592,2026-07-13,Intercity Transport,WeChat,Yading,China,Shangri-La → Yading (prepaid Jul 12)
 2026-07-13 14:06:46,Wang Erjia Handicraft,-75.00,CNY,-11.09,6.7628,2026-07-13,Accommodation,Alipay,Yading,China,night of Jul 13
@@ -622,7 +591,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-14 19:03:20,Haoxianglai Snacks,-9.90,CNY,-1.46,6.7808,2026-07-14,Food,Alipay,Yading,China,
 2026-07-14 20:26:34,Qiangge Xian Tang Mixian,-20.00,CNY,-2.96,6.7568,2026-07-14,Food,Alipay,Yading,China,dinner
 2026-07-14 20:27:42,Mixue Bingcheng,-5.00,CNY,-0.74,6.7568,2026-07-14,Food,Alipay,Yading,China,
-2026-07-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-07-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-07-15 18:14:52,Qingzhou Xiaocai (porridge),-30.00,CNY,-4.44,6.7568,2026-07-15,Food,Alipay,Yading,China,dinner
 2026-07-15 22:05:53,Ctrip - LiTangXingyeInternationalYouthHostel,-48.00,CNY,-7.10,6.756757,2026-07-15,Accommodation,Alipay,Litang,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | LiTangXingyeInternationalYouthHostel | Visa(3381)
 2026-07-16 00:00:00,Xiang (bus),-130.00,CNY,-19.23,6.7603,2026-07-16,Intercity Transport,Alipay,Litang,China,Yading → Litang (prepaid Jul 13)
@@ -731,7 +699,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-07-31 00:00:00,Chongqing City - Alipay,-5.00,CNY,-0.75,6.666667,2026-07-31,Transport,Wise card,Chongqing,China,Wise: Chongqing City - Alipay | Transport | source 0.74 USD + fee 0.01
 2026-07-31 11:04:07,较场口得意世界第三餐厅,-25.72,CNY,-3.81,6.756757,2026-07-31,Food,Alipay,Chongqing,China,Alipay: 餐饮美食 | 较场口得意世界第三餐厅 | 【称重】_渝中区较场口得意世界第三餐厅_292650_01071701 | Visa(3381)
 2026-08-01 00:00:00,Changshashigui - Alipay,-1.80,CNY,-0.27,6.756757,2026-08-01,Transport,Wise card,Changsha,China,Wise: Changshashigui - Alipay | Transport | source 1.80 CNY + fee 0.00
-2026-08-01 00:00:00,GOOGLE *CLOUD PPWDRw,-0.10,USD,-0.10,1.000000,2026-08-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD PPWDRw
 2026-08-01 00:00:00,Meituan - Alipay,-3.50,CNY,-0.52,6.756757,2026-08-01,Food,Wise card,Changsha,China,Wise: Meituan - Alipay | Shopping | source 3.50 CNY + fee 0.00
 2026-08-01 00:00:00,Weixin China Railway N,-296.00,CNY,-43.81,6.756757,2026-08-01,Intercity Transport,Wise card,Changsha,China,Wise: Weixin China Railway N | Transport | source 296.00 CNY + fee 0.00
 2026-08-01 10:11:10,季茉酒店管理有限公司,-35.00,CNY,-5.18,6.756757,2026-08-01,Accommodation,Alipay,Changsha,China,Alipay: 日用百货 | 季茉酒店管理有限公司 | 收钱码收款 | Visa(3381)
@@ -809,7 +776,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-08 17:27:17,沪上美滋源,-31.93,CNY,-4.73,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 沪上美滋源 | 美团收银909700215733651016 | Visa(3381)
 2026-08-08 18:23:42,蜜雪冰城,-6.00,CNY,-0.89,6.756757,2026-08-08,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城 | 蜜雪冰城914165店 | Visa(3381)
 2026-08-08 22:04:16,Ctrip - DayinInternationalYouthHostelTianzifangXin,-93.64,CNY,-13.86,6.756757,2026-08-08,Accommodation,Alipay,Shanghai,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | DayinInternationalYouthHostelTianzifangXintiandi | Visa(3381)
-2026-08-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-08-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
 2026-08-09 00:00:00,Mr Rice - Alipay,-36.00,CNY,-5.35,6.728972,2026-08-09,Food,Wise card,Shanghai,China,Wise: Mr Rice - Alipay | Eating out | source 5.34 USD + fee 0.01
 2026-08-09 00:00:00,Shanghaihuigang - Alipay,-19.40,CNY,-2.89,6.712803,2026-08-09,Food,Wise card,Shanghai,China,Wise: Shanghaihuigang - Alipay | Groceries | source 2.88 USD + fee 0.01
 2026-08-09 07:55:49,淘宝平台商户,-119.50,CNY,-17.69,6.756757,2026-08-09,Shopping,WeChat,Shanghai,China,WeChat: 商户消费 | 淘宝平台商户 | 商户单号11070600726080968796868081543 | VISA(7828)
@@ -841,14 +807,12 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-12 13:20:26,蜜雪冰城935703店,-5.00,CNY,-0.74,6.756757,2026-08-12,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城935703店 | 蜜雪冰城935703店 | Visa(3381)
 2026-08-12 15:23:09,蜜雪冰城914931店,-9.00,CNY,-1.33,6.756757,2026-08-12,Food,Alipay,Shanghai,China,Alipay: 餐饮美食 | 蜜雪冰城914931店 | 蜜雪冰城914931店 | Visa(3381)
 2026-08-12 15:41:12,苏州金拱门食品有限公司,-13.90,CNY,-2.06,6.756757,2026-08-12,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 苏州金拱门食品有限公司 | 苏州金拱门食品有限公司 | Visa(3381)
-2026-08-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-08-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
 2026-08-13 00:00:00,Lao Xiang Ji - Alipay,-28.00,CNY,-4.16,6.730769,2026-08-13,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.15 USD + fee 0.01
 2026-08-13 08:13:19,Ctrip - POSUHostelSuzhou,-173.00,CNY,-25.60,6.756757,2026-08-13,Accommodation,Alipay,Suzhou,China,Alipay: 酒店旅游 | 上海赫程国际旅行社有限公司 | POSUHostelSuzhou | Visa(3381)
 2026-08-13 11:41:38,老乡鸡（苏州观前街店）,-37.00,CNY,-5.48,6.756757,2026-08-13,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 老乡鸡（苏州观前街店） | 江苏老乡鸡 | Visa(3381)
 2026-08-13 11:56:30,姑苏区蜜羽星光饮品店,-8.00,CNY,-1.18,6.756757,2026-08-13,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 姑苏区蜜羽星光饮品店 | 蜜雪冰城914582店 | Visa(3381)
 2026-08-13 18:38:34,蜜雪冰城945543店,-6.00,CNY,-0.89,6.756757,2026-08-13,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 蜜雪冰城945543店 | 蜜雪冰城945543店 | Visa(3381)
 2026-08-14 00:00:00,7 Eleven Store - Alipay,-3.50,CNY,-0.53,6.603774,2026-08-14,Food,Wise card,Suzhou,China,Wise: 7 Eleven Store - Alipay | Shopping | source 0.52 USD + fee 0.01
-2026-08-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-08-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     23CFS9          WEB ID: 9000142694
 2026-08-14 00:00:00,Lao Xiang Ji - Alipay,-28.00,CNY,-4.16,6.730769,2026-08-14,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.15 USD + fee 0.01
 2026-08-14 00:00:00,Lao Xiang Ji - Alipay,-29.00,CNY,-4.31,6.728538,2026-08-14,Food,Wise card,Suzhou,China,Wise: Lao Xiang Ji - Alipay | Eating out | source 4.30 USD + fee 0.01
 2026-08-14 00:00:00,Suzhou Metro - Alipay,-2.00,CNY,-0.31,6.451613,2026-08-14,Transport,Wise card,Suzhou,China,Wise: Suzhou Metro - Alipay | Transport | source 0.30 USD + fee 0.01
@@ -858,7 +822,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-14 00:00:00,Weixin Weihai Weidon,-570.00,CNY,-84.81,6.720906,2026-08-14,Intercity Transport,Wise card,Weihai,China,Wise: Weixin Weihai Weidon | Transport | source 84.54 USD + fee 0.27
 2026-08-14 12:07:15,姑苏区蜜羽星光饮品店,-8.00,CNY,-1.18,6.756757,2026-08-14,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | 姑苏区蜜羽星光饮品店 | 蜜雪冰城914582店 | Visa(3381)
 2026-08-14 18:07:39,CHAGEE霸王茶姬,-20.00,CNY,-2.96,6.756757,2026-08-14,Food,Alipay,Suzhou,China,Alipay: 餐饮美食 | CHAGEE霸王茶姬 | CHAGEE霸王茶姬（江苏苏州观前街旗舰店） | Visa(3381)
-2026-08-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-08-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
 2026-08-15 00:00:00,Weixin Scan Qr Code Fo,-1.60,CNY,-0.25,6.400000,2026-08-15,Shopping,Wise card,Yancheng,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 0.24 USD + fee 0.01
 2026-08-15 00:00:00,Weixin Scan Qr Code Fo,-6.00,CNY,-0.89,6.756757,2026-08-15,Shopping,Wise card,Yancheng,China,Wise: Weixin Scan Qr Code Fo | Shopping | source 6.00 CNY + fee 0.00
 2026-08-15 07:44:10,苏州察院场地铁站二店,-3.50,CNY,-0.52,6.756757,2026-08-15,Food,Alipay,Suzhou,China,Alipay: 日用百货 | 苏州察院场地铁站二店 | 苏州察院场地铁站二店当面付商品交易:26081500950007 | Visa(7828)
@@ -939,13 +902,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-08-30 00:00:00,EOSEOOA,-8.03,USD,-8.03,1.000000,2026-08-30,Food,Chase 1388,Seoul,South Korea,Chase 1388: EOSEOOA
 2026-08-31 00:00:00,DONGGYEONG GYUDON  HAPJEO,-7.22,USD,-7.22,1.000000,2026-08-31,Food,Chase 1388,Seoul,South Korea,Chase 1388: DONGGYEONG GYUDON  HAPJEO
 2026-09-01 00:00:00,BO MUNDANG PHARMACY,-2.20,USD,-2.20,1.000000,2026-09-01,Personal Care,Chase 1388,Seoul,South Korea,Chase 1388: BO MUNDANG PHARMACY
-2026-09-01 00:00:00,GOOGLE *CLOUD 4QSNGW,-0.11,USD,-0.11,1.000000,2026-09-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD 4QSNGW
-2026-09-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-09-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
-2026-09-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-09-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
-2026-09-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-09-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     1N6JX9          WEB ID: 9000142694
-2026-09-15 00:00:00,PAYPAL *PROTON,-12.99,USD,-12.99,1.000000,2026-09-15,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
-2026-09-17 00:00:00,ELEVENLABS.IO,-5.00,USD,-5.00,1.000000,2026-09-17,Subscription,Chase 1388,Unknown,United States,Chase 1388: ELEVENLABS.IO
-2026-10-01 00:00:00,Google CLOUD RXCGTx,-0.09,USD,-0.09,1.000000,2026-10-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: Google CLOUD RXCGTx
 2026-10-01 00:00:00,Korail / 한국철도공사,-10200.00,KRW,-7.55,1350.993377,2026-10-01,Intercity Transport,Wise card,Seoul,South Korea,Wise: Korail / 한국철도공사 | Transport | source 7.51 USD + fee 0.04
 2026-10-01 00:00:00,agoda.com,-16.53,USD,-16.53,1.000000,2026-10-01,Accommodation,Chase 1388,Seoul,South Korea,Chase 1388: agoda.com
 2026-10-04 00:00:00,Trip.com,-5.53,USD,-5.53,1.000000,2026-10-04,Transport,Chase 1388,Seoul,South Korea,Chase 1388: Trip.com
@@ -957,10 +913,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-10-07 00:00:00,E-MART 24  DAEGU  HEAD OF,-1.79,USD,-1.79,1.000000,2026-10-07,Food,Chase 1388,Daegu,South Korea,Chase 1388: E-MART 24  DAEGU  HEAD OF
 2026-10-07 00:00:00,KOREA MCDONALD'S DONGSEON,-3.37,USD,-3.37,1.000000,2026-10-07,Food,Chase 1388,Seoul,South Korea,Chase 1388: KOREA MCDONALD'S DONGSEON
 2026-10-07 00:00:00,KOREA MCDONALD'S DONGSEON,-4.11,USD,-4.11,1.000000,2026-10-07,Food,Chase 1388,Seoul,South Korea,Chase 1388: KOREA MCDONALD'S DONGSEON
-2026-10-07 00:00:00,PAYPAL *PROTON,-1.68,USD,-1.68,1.000000,2026-10-07,Subscription,Chase 1388,Unknown,United States,Chase 1388: PAYPAL *PROTON
-2026-10-09 00:00:00,APPLE.COM/BILL,-9.99,USD,-9.99,1.000000,2026-10-09,Subscription,Chase 1388,Unknown,United States,Chase 1388: APPLE.COM/BILL
-2026-10-13 00:00:00,GOOGLE *Google One,-1.99,USD,-1.99,1.000000,2026-10-13,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *Google One
-2026-10-14 00:00:00,Acorns,-3.00,USD,-3.00,1.000000,2026-10-14,Subscription,Chase 3557 ACH,Unknown,United States,Chase 3557: Subscription     Acorns     N9GC1B          WEB ID: 9000142694
 2026-10-20 00:00:00,Mobimatter,-4.99,USD,-4.99,1.000000,2026-10-20,Subscription,Chase 1388,Unknown,Unknown,Chase 1388: Mobimatter
 2026-10-20 00:00:00,agoda.com,-21.48,USD,-21.48,1.000000,2026-10-20,Accommodation,Chase 1388,Seoul,South Korea,Chase 1388: agoda.com
 2026-10-23 00:00:00,Korail / 한국철도공사,-20900.00,KRW,-15.86,1317.780580,2026-10-23,Intercity Transport,Wise card,Seoul,South Korea,Wise: Korail / 한국철도공사 | Transport | source 15.77 USD + fee 0.09
@@ -973,13 +925,6 @@ Date,Merchant,Amount,Currency,AmountUSD,FXRate,FXDate,Category,Payment,City,Coun
 2026-10-27 00:00:00,KOREA MCDONALD'S HAPJEONG,-4.54,USD,-4.54,1.000000,2026-10-27,Food,Chase 1388,Seoul,South Korea,Chase 1388: KOREA MCDONALD'S HAPJEONG
 2026-10-28 00:00:00,MAEGAEMZISSIKEOPI MANG,-3.71,USD,-3.71,1.000000,2026-10-28,Food,Chase 1388,Seoul,South Korea,Chase 1388: MAEGAEMZISSIKEOPI MANG
 2026-10-29 00:00:00,IN-N-OUT EL SEGUNDO,-13.23,USD,-13.23,1.000000,2026-10-29,Food,Chase 1388,El Segundo,United States,Chase 1388: IN-N-OUT EL SEGUNDO
-2026-10-29 00:00:00,TARGET T-0199,-34.14,USD,-34.14,1.000000,2026-10-29,Shopping,Chase 1388,Unknown,United States,Chase 1388: TARGET T-0199
-2026-10-30 00:00:00,CLAUDE,-5.00,USD,-5.00,1.000000,2026-10-30,Subscription,Revolut card,Unknown,United States,Revolut: CLAUDE
-2026-10-30 00:00:00,CLAUDE,-5.00,USD,-5.00,1.000000,2026-10-30,Subscription,Revolut card,Unknown,United States,Revolut: CLAUDE
-2026-10-30 00:00:00,GOOGLE *CLOUD ZxW4SV,-5.00,USD,-5.00,1.000000,2026-10-30,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD ZxW4SV
 2026-10-30 00:00:00,HABIT SANTA MONICA 213,-15.60,USD,-15.60,1.000000,2026-10-30,Food,Chase 1388,Santa Monica,United States,Chase 1388: HABIT SANTA MONICA 213
-2026-11-01 00:00:00,GOOGLE *CLOUD Fx2S7P,-0.10,USD,-0.10,1.000000,2026-11-01,Subscription,Chase 1388,Unknown,United States,Chase 1388: GOOGLE *CLOUD Fx2S7P
 2026-11-01 00:00:00,MCDONALD'S M5764 OF CA,-2.24,USD,-2.24,1.000000,2026-11-01,Food,Chase 1388,Unknown,United States,Chase 1388: MCDONALD'S M5764 OF CA
 2026-11-01 00:00:00,McDonalds 1288,-1.09,USD,-1.09,1.000000,2026-11-01,Food,Chase 1388,Unknown,United States,Chase 1388: McDonalds 1288
-2026-11-02 00:00:00,OPENCODE,-10.00,USD,-10.00,1.000000,2026-11-02,Subscription,Chase 1388,Unknown,United States,Chase 1388: OPENCODE
-2026-11-02 00:00:00,SANTAMONICA PARKINGVIOL,-75.50,USD,-75.50,1.000000,2026-11-02,Fees,Chase 1388,Santa Monica,United States,Chase 1388: SANTAMONICA PARKINGVIOL
