@@ -159,10 +159,17 @@ export const isGenericCity = (city: string) =>
  * `Layovers`, and `layover-free` are therefore not layovers.
  */
 const LAYOVER_PATTERN = /^layover(?=\s|$)/i;
-export const isLayover = (transaction: Transaction) =>
-  transaction.notes
+export const isLayover = (notes: string) =>
+  notes
     .split('|')
     .some((segment) => LAYOVER_PATTERN.test(segment.trim()));
+
+/**
+ * One rule for "this row's city counts as a visited city". Generic buckets and
+ * layover rows do not; their spend is attributed to `tripWideTotal`.
+ */
+export const isCountedCity = (transaction: Transaction) =>
+  !isGenericCity(transaction.city) && !isLayover(transaction.notes);
 
 // Category color palette — Spotify Wrapped style
 const CATEGORY_COLORS: Record<string, string> = {
@@ -413,12 +420,7 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
     const topCategory =
       Object.entries(catTotals).sort((a, b) => b[1] - a[1])[0]?.[0] || '';
     const cities = Array.from(
-      new Set(
-        spend
-          .filter((t) => !isLayover(t))
-          .map((t) => t.city)
-          .filter((city) => !isGenericCity(city)),
-      ),
+      new Set(spend.filter(isCountedCity).map((t) => t.city)),
     );
     return { date, total, transactions: byDay[date], topCategory, cities };
   });
@@ -444,7 +446,7 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
     { total: number; days: Set<string>; count: number }
   > = {};
   expenses.forEach((t) => {
-    if (isGenericCity(t.city) || isLayover(t)) return;
+    if (!isCountedCity(t)) return;
     if (!cityTotals[t.city])
       cityTotals[t.city] = { total: 0, days: new Set(), count: 0 };
     cityTotals[t.city].total += Math.abs(t.amountUSD);
@@ -499,8 +501,9 @@ export function computeTrip(transactions: Transaction[]): TripSeries {
   const transportTotal =
     (catTotals['Transport']?.total || 0) +
     (catTotals['Intercity Transport']?.total || 0);
+  // Every expense lands in exactly one bucket: its city's total, or here.
   const tripWideTotal = expenses
-    .filter((t) => isGenericCity(t.city))
+    .filter((t) => !isCountedCity(t))
     .reduce((s, t) => s + Math.abs(t.amountUSD), 0);
 
   const weekdaySpend: Record<string, number> = {};

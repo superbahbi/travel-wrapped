@@ -6,7 +6,6 @@ import {
   isLayover,
   parseAccommodations,
   parseTransactions,
-  type Transaction,
 } from './csvParser';
 
 const TRANSACTION_HEADER =
@@ -310,27 +309,11 @@ describe('layover cities', () => {
     expect(stats.cities.visitedCount).toBe(1);
     expect(stats.cities.items.map((city) => city.city)).toEqual(['Bali']);
     expect(stats.days.items[0].cities).toEqual(['Bali']);
+    expect(stats.cities.tripWideTotal).toBeCloseTo(11.36, 2);
   });
 });
 
 describe('layover note matching', () => {
-  const candidate = (notes: string): Transaction => ({
-    id: 0,
-    date: '2026-05-13',
-    time: null,
-    merchant: 'MCDONALDS BRIS AIRP',
-    amount: -11.36,
-    currency: 'USD',
-    amountUSD: -11.36,
-    fxRate: 1,
-    fxDate: '2026-05-13',
-    category: 'Food',
-    payment: 'Chase 1388',
-    city: 'Brisbane',
-    country: 'Australia',
-    notes,
-  });
-
   it.each([
     'Layover Sydney → Bali',
     '  Layover Sydney → Bali  ',
@@ -340,7 +323,7 @@ describe('layover note matching', () => {
     'Chase 1388: MCDONALDS BRIS AIRP | Layover Sydney → Bali',
     'Chase 1388: MCDONALDS BRIS AIRP |layover sydney → bali',
   ])('treats %j as a layover', (notes) => {
-    expect(isLayover(candidate(notes))).toBe(true);
+    expect(isLayover(notes)).toBe(true);
   });
 
   it.each([
@@ -354,7 +337,7 @@ describe('layover note matching', () => {
     'Chase 1388: MCDONALDS BRIS AIRP | Layovers',
     'Chase 1388: MCDONALDS BRIS AIRP | layover-free',
   ])('does not treat %j as a layover', (notes) => {
-    expect(isLayover(candidate(notes))).toBe(false);
+    expect(isLayover(notes)).toBe(false);
   });
 });
 
@@ -458,6 +441,17 @@ describe('seeded dataset', () => {
     expect(stats.summary.grandTotal).toBeCloseTo(9351.21, 2);
     expect(stats.summary.daysTracked).toBe(194);
     expect(stats.cities.visitedCount).toBe(47);
+  });
+
+  it('attributes every expense to exactly one city or the trip-wide bucket', () => {
+    const citySum = stats.cities.items.reduce(
+      (sum, city) => sum + city.total,
+      0,
+    );
+    expect(citySum + stats.cities.tripWideTotal).toBeCloseTo(
+      stats.summary.grandTotal,
+      2,
+    );
   });
 
   it('keeps the date range', () => {

@@ -79,8 +79,12 @@ whitespace or the end of the segment. The seeded convention is
 (`Chase 1388: MCDONALDS BRIS AIRP | Layover Sydney → Bali`). Matching ignores
 the case of the marker and whitespace around each segment. `no layover`,
 `Layovers`, and `layover-free` do not match, because `layover` is not the
-opening word. A matching row's city is excluded from city stats and the city
-route, while its spend still counts in totals and categories.
+opening word.
+
+A matching row's city is excluded from city stats, the city route, and the
+accommodation-city count. Its spend is attributed to `tripWideTotal` — the same
+bucket as a generic city — so every expense lands in exactly one place while
+still counting in `grandTotal` and the category totals.
 
 ## Conversion workflow
 
