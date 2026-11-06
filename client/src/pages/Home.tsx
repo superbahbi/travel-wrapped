@@ -213,7 +213,7 @@ export default function Home() {
                     <GlassPanel>
                       <div className="text-2xl font-bold" style={{ fontFamily: 'Syne, sans-serif' }}>
                         {incomeSummary.nativeTotals[0]
-                          ? `NZ${incomeSummary.nativeTotals[0].total.toLocaleString('en-NZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+                          ? `NZ$${incomeSummary.nativeTotals[0].total.toLocaleString('en-NZ', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
                           : '—'}
                       </div>
                       <div className="text-xs opacity-70 mt-1">earned in NZD</div>
